@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9.7 Resistance to Globalization — AP World History: Modern</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-deep:        #0d0d1a;
+    --bg-card:        #13132a;
+    --bg-elevated:    #1a1a35;
+    --gold:           #b8860b;
+    --gold-light:     #d4a017;
+    --gold-pale:      #f0d080;
+    --parchment:      #e8dfc8;
+    --text-secondary: #b0a898;
+    --text-muted:     #6e6860;
+    --accent-teal:    #2a9d8f;
+    --accent-red:     #c0392b;
+    --accent-green:   #4a9e3f;
+    --accent-blue:    #2980b9;
+    --border-gold:    rgba(184,134,11,0.25);
+    --border-subtle:  rgba(255,255,255,0.07);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg-deep);
+    color: var(--parchment);
+    font-family: 'Source Serif 4', serif;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(160deg, #0d0d1a 0%, #1a1020 50%, #0d0d1a 100%);
+    border-bottom: 1px solid var(--border-gold);
+    padding: 60px 40px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(184,134,11,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    font-weight: 600;
+    color: var(--gold-pale);
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+  .hero-sub {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    max-width: 600px;
+    margin: 0 auto 24px;
+  }
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border-gold);
+    color: var(--gold-light);
+    background: rgba(184,134,11,0.08);
+    letter-spacing: 0.06em;
+  }
+
+  /* ── NAV ── */
+  .dok-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    border-bottom: 1px solid var(--border-gold);
+    background: rgba(13,13,26,0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    overflow-x: auto;
+  }
+  .dok-tab {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    padding: 14px 22px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+  .dok-tab:hover { color: var(--parchment); }
+  .dok-tab.active { color: var(--gold-light); border-bottom-color: var(--gold); }
+
+  /* ── SECTION WRAPPERS ── */
+  .dok-section {
+    display: none;
+    padding: 48px 24px;
+    max-width: 900px;
+    margin: 0 auto;
+    animation: fadeIn 0.3s ease;
+  }
+  .dok-section.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 36px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-gold);
+  }
+  .dok-badge {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    padding: 6px 14px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .dok1-badge { background: rgba(41,128,185,0.2); color: #74b9e8; border: 1px solid rgba(41,128,185,0.4); }
+  .dok2-badge { background: rgba(42,157,143,0.2); color: #6ec9be; border: 1px solid rgba(42,157,143,0.4); }
+  .dok3-badge { background: rgba(184,134,11,0.2); color: var(--gold-light); border: 1px solid var(--border-gold); }
+  .dok4-badge { background: rgba(142,68,173,0.2); color: #c39bd3; border: 1px solid rgba(142,68,173,0.4); }
+
+  .section-header h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--parchment);
+  }
+
+  /* ── CARDS ── */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 28px;
+    margin-bottom: 24px;
+  }
+  .card-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  /* ── VIDEO ── */
+  .video-wrap {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .video-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  blockquote {
+    border-left: 3px solid var(--gold);
+    padding: 12px 20px;
+    color: var(--text-secondary);
+    font-style: italic;
+    font-size: 0.95rem;
+    background: rgba(184,134,11,0.05);
+    border-radius: 0 4px 4px 0;
+    margin: 16px 0;
+  }
+  blockquote cite {
+    display: block;
+    margin-top: 8px;
+    font-style: normal;
+    font-size: 0.78rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--gold);
+  }
+
+  /* ── VISUAL FRAMEWORK (Three-Track) ── */
+  .three-track {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin: 20px 0;
+  }
+  @media (max-width: 620px) { .three-track { grid-template-columns: 1fr; } }
+
+  .track-col {
+    background: var(--bg-elevated);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .track-head {
+    padding: 12px 16px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-align: center;
+  }
+  .track-head.economic { background: rgba(41,128,185,0.25); color: #74b9e8; }
+  .track-head.cultural  { background: rgba(42,157,143,0.25); color: #6ec9be; }
+  .track-head.political { background: rgba(142,68,173,0.25); color: #c39bd3; }
+
+  .track-body { padding: 14px 16px; }
+  .track-item {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border-subtle);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .track-item:last-child { border-bottom: none; }
+  .track-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+  .dot-blue { background: #74b9e8; }
+  .dot-teal { background: #6ec9be; }
+  .dot-purple { background: #c39bd3; }
+
+  /* ── FLIP CARDS ── */
+  .flip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 14px;
+    margin: 16px 0;
+  }
+  .flip-card {
+    perspective: 800px;
+    height: 120px;
+    cursor: pointer;
+  }
+  .flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+  .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
+  .flip-front, .flip-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 6px;
+    padding: 12px;
+    border: 1px solid var(--border-gold);
+  }
+  .flip-front {
+    background: var(--bg-elevated);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    min-height: 120px;
+  }
+  .flip-back {
+    background: rgba(184,134,11,0.1);
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--parchment);
+    line-height: 1.45;
+  }
+  .flip-term {
+    font-family: 'Cinzel', serif;
+    font-size: 0.82rem;
+    color: var(--gold-pale);
+    font-weight: 600;
+    text-align: center;
+  }
+  .flip-hint {
+    position: absolute;
+    bottom: 8px;
+    left: 0; right: 0;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--text-muted);
+  }
+
+  /* ── MCQ ── */
+  .mcq-item { margin-bottom: 28px; }
+  .mcq-question {
+    font-size: 0.92rem;
+    color: var(--parchment);
+    margin-bottom: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .mcq-options { display: flex; flex-direction: column; gap: 8px; }
+  .mcq-option {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    padding: 10px 14px;
+    color: var(--text-secondary);
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.86rem;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .mcq-option:hover:not(.disabled):not(.correct):not(.incorrect) {
+    border-color: var(--border-gold);
+    color: var(--parchment);
+    background: rgba(184,134,11,0.07);
+  }
+  .mcq-option.correct  { background: rgba(74,158,63,0.2); border-color: #4a9e3f; color: #a8e09f; cursor: default; }
+  .mcq-option.incorrect { background: rgba(192,57,43,0.2); border-color: #c0392b; color: #f08080; text-decoration: line-through; cursor: default; }
+  .mcq-option.disabled { cursor: default; pointer-events: none; }
+  .mcq-feedback {
+    display: none;
+    margin-top: 10px;
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-size: 0.84rem;
+    color: var(--text-secondary);
+    background: rgba(74,158,63,0.1);
+    border: 1px solid rgba(74,158,63,0.3);
+    line-height: 1.5;
+  }
+  .mcq-feedback.show { display: block; }
+  .mcq-feedback.wrong-fb { background: rgba(107,45,45,0.3); border-color: #f08080; }
+
+  /* ── MATCHING ── */
+  .match-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 16px 0;
+  }
+  .match-col-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .match-item {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-size: 0.84rem;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+  }
+  .match-item:hover { border-color: var(--border-gold); color: var(--parchment); }
+  .match-item.selected { border-color: var(--gold); background: rgba(184,134,11,0.12); color: var(--gold-pale); }
+  .match-item.matched-correct { border-color: #4a9e3f; background: rgba(74,158,63,0.15); color: #a8e09f; cursor: default; }
+  .match-item.matched-wrong { border-color: #c0392b; background: rgba(192,57,43,0.15); color: #f08080; }
+  .match-reset-btn {
+    margin-top: 12px;
+    padding: 8px 18px;
+    background: transparent;
+    border: 1px solid var(--border-gold);
+    border-radius: 4px;
+    color: var(--gold);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .match-reset-btn:hover { background: rgba(184,134,11,0.1); }
+  .match-status {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 10px;
+    min-height: 20px;
+  }
+
+  /* ── TEXTAREAS ── */
+  textarea {
+    width: 100%;
+    min-height: 100px;
+    margin: 10px 0;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(184,134,11,0.2);
+    border-radius: 4px;
+    color: var(--parchment);
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.88rem;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  textarea:focus { border-color: rgba(184,134,11,0.5); }
+  textarea::placeholder { color: var(--text-muted); }
+
+  /* ── BUTTONS ── */
+  .reveal-btn {
+    background: transparent;
+    border: 1px solid var(--border-gold);
+    border-radius: 4px;
+    color: var(--gold);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    padding: 9px 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+  }
+  .reveal-btn:hover { background: rgba(184,134,11,0.1); }
+
+  .sample-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin: 16px 0 8px;
+    border-top: 1px solid var(--border-gold);
+    padding-top: 14px;
+  }
+  .sample-body {
+    background: rgba(184,134,11,0.06);
+    border: 1px solid rgba(184,134,11,0.15);
+    border-radius: 4px;
+    padding: 14px 18px;
+    font-size: 0.86rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    display: none;
+  }
+  .sample-body.show { display: block; }
+
+  /* ── EXPLAIN DRILLS ── */
+  .drill-prompt {
+    font-size: 1rem;
+    color: var(--parchment);
+    margin-bottom: 8px;
+    line-height: 1.55;
+  }
+  .drill-context {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    font-style: italic;
+  }
+
+  /* ── COMPARISON TABLE ── */
+  .compare-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.86rem; }
+  .compare-table th {
+    padding: 12px 16px;
+    text-align: left;
+    font-family: 'Cinzel', serif;
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    border-bottom: 1px solid var(--border-gold);
+    color: var(--gold-pale);
+  }
+  .compare-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    vertical-align: top;
+  }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table td:first-child {
+    color: var(--parchment);
+    font-weight: 600;
+    width: 22%;
+  }
+  .col-econ { color: #74b9e8 !important; }
+  .col-cult  { color: #6ec9be !important; }
+  .col-pol   { color: #c39bd3 !important; }
+
+  .compare-table td textarea { min-height: 70px; margin: 4px 0; font-size: 0.82rem; }
+
+  /* ── HIPP TABLE ── */
+  .hipp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 16px 0;
+  }
+  @media(max-width:580px) { .hipp-grid { grid-template-columns: 1fr; } }
+  .hipp-source {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .hipp-source-head {
+    padding: 12px 16px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .hipp-source-head.ceo-head { background: rgba(41,128,185,0.2); color: #74b9e8; }
+  .hipp-source-head.union-head { background: rgba(192,57,43,0.2); color: #f08080; }
+  .hipp-source-body { padding: 16px; }
+  .hipp-quote {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    border-left: 3px solid var(--border-gold);
+    padding-left: 12px;
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+  .hipp-row-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 4px;
+  }
+  .hipp-source-body textarea { min-height: 65px; font-size: 0.82rem; }
+
+  /* ── CAUSAL CHAIN ── */
+  .chain-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 20px 0;
+  }
+  .chain-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .chain-line-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40px;
+    flex-shrink: 0;
+  }
+  .node-num {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--gold);
+    flex-shrink: 0;
+    margin-top: 8px;
+  }
+  .chain-connector {
+    width: 2px;
+    flex: 1;
+    min-height: 24px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    margin: 4px 0;
+    opacity: 0.3;
+  }
+  .node-box {
+    flex: 1;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 14px 16px;
+    font-size: 0.86rem;
+    color: var(--text-secondary);
+    margin: 4px 0 16px;
+    line-height: 1.5;
+  }
+  .node-box.blank {
+    border-style: dashed;
+    border-color: rgba(184,134,11,0.3);
+    background: rgba(184,134,11,0.03);
+  }
+  .node-box strong { color: var(--parchment); }
+  .chain-answer {
+    display: none;
+    margin-top: 8px;
+    padding: 10px 14px;
+    background: rgba(74,158,63,0.1);
+    border: 1px solid rgba(74,158,63,0.3);
+    border-radius: 4px;
+    font-size: 0.84rem;
+    color: var(--text-secondary);
+  }
+
+  /* ── THESIS EVALUATOR ── */
+  .thesis-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0;
+  }
+  @media(max-width:580px) { .thesis-grid { grid-template-columns: 1fr; } }
+  .thesis-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.25s;
+    user-select: none;
+  }
+  .thesis-card:hover:not(.revealed) { border-color: var(--border-gold); }
+  .thesis-card .thesis-text {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    font-style: italic;
+  }
+  .thesis-card .click-hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .thesis-card.revealed { cursor: default; }
+  .thesis-card.pass { border-color: #4a9e3f; background: rgba(74,158,63,0.1); }
+  .thesis-card.fail { border-color: #c0392b; background: rgba(192,57,43,0.1); }
+  .thesis-verdict {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border-subtle);
+  }
+  .thesis-card.pass .thesis-verdict { color: #a8e09f; }
+  .thesis-card.fail .thesis-verdict { color: #f08080; }
+  .thesis-explanation {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+
+  /* ── CONTEXTUALIZATION BUILDER ── */
+  .ctx-pathway {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    margin-bottom: 14px;
+    overflow: hidden;
+  }
+  .ctx-head {
+    padding: 16px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s;
+  }
+  .ctx-head:hover { background: rgba(184,134,11,0.05); }
+  .ctx-head-left { display: flex; align-items: center; gap: 14px; }
+  .ctx-num {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    color: var(--gold);
+    width: 28px;
+  }
+  .ctx-title {
+    font-size: 0.9rem;
+    color: var(--parchment);
+    font-weight: 400;
+  }
+  .ctx-arrow {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    transition: transform 0.3s;
+  }
+  .ctx-pathway.open .ctx-arrow { transform: rotate(180deg); }
+  .ctx-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s;
+  }
+  .ctx-pathway.open .ctx-body { max-height: 1200px; padding: 0 20px 20px; }
+  .ctx-stem {
+    background: rgba(184,134,11,0.06);
+    border: 1px solid var(--border-gold);
+    border-radius: 4px;
+    padding: 12px 16px;
+    font-size: 0.86rem;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+    font-style: italic;
+    line-height: 1.55;
+  }
+  .ctx-stem strong { color: var(--gold-pale); font-style: normal; }
+  .ctx-user-label {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin: 12px 0 6px;
+  }
+
+  /* ── SAQ PRACTICE ── */
+  .saq-header {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-gold);
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+  }
+  .saq-prompt-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .saq-prompt-text {
+    font-size: 0.92rem;
+    color: var(--parchment);
+    line-height: 1.6;
+  }
+  .saq-part {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .saq-part-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    color: var(--gold-pale);
+    margin-bottom: 10px;
+  }
+  .saq-part-text {
+    font-size: 0.9rem;
+    color: var(--parchment);
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  .saq-tip {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+
+  /* ── CROSS-UNIT SYNTHESIS ── */
+  .synthesis-connections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  @media(max-width:580px) { .synthesis-connections { grid-template-columns: 1fr; } }
+  .syn-box {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 14px 16px;
+  }
+  .syn-box-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .syn-box p {
+    font-size: 0.84rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  /* ── SELF ASSESSMENT ── */
+  .sa-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .sa-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--bg-elevated);
+    border-radius: 6px;
+    padding: 14px 16px;
+  }
+  .sa-skill {
+    flex: 1;
+    font-size: 0.86rem;
+    color: var(--parchment);
+    line-height: 1.4;
+  }
+  .sa-buttons {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+  .sa-btn {
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 1px solid var(--border-subtle);
+    background: transparent;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    cursor: pointer;
+    white-space: nowrap;
+    min-width: 28px;
+    transition: all 0.2s;
+  }
+  .sa-label-item { min-width: 28px; white-space: nowrap; }
+  .sa-btn:hover { border-color: var(--border-gold); color: var(--gold); }
+  .sa-btn.not-yet.active   { background: rgba(192,57,43,0.3); border-color: #c0392b; color: #f08080; }
+  .sa-btn.getting.active   { background: rgba(184,134,11,0.3); border-color: var(--gold); color: var(--gold-light); }
+  .sa-btn.confident.active { background: rgba(74,158,63,0.3); border-color: #4a9e3f; color: #a8e09f; }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--border-gold);
+    margin: 28px 0;
+    opacity: 0.4;
+  }
+
+  .info-box {
+    background: rgba(41,128,185,0.08);
+    border: 1px solid rgba(41,128,185,0.25);
+    border-radius: 6px;
+    padding: 14px 18px;
+    font-size: 0.86rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .info-box strong { color: #74b9e8; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">Unit 9 · Topic 9.7 · AP World History: Modern</div>
+  <h1>Resistance to Globalization After 1900</h1>
+  <p class="hero-sub">Not everyone welcomed the shrinking world. Explore the economic, cultural, and political pushback that shaped — and still shapes — the global order.</p>
+  <div class="hero-tags">
+    <span class="tag">Learning Objective 9-G</span>
+    <span class="tag">CDI Thematic Focus</span>
+    <span class="tag">Skill: Sourcing &amp; Situation</span>
+    <span class="tag">c. 1900 – Present</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="dok-nav">
+  <button class="dok-tab active" onclick="showDOK(1)">DOK 1 · Acquisition</button>
+  <button class="dok-tab" onclick="showDOK(2)">DOK 2 · Application</button>
+  <button class="dok-tab" onclick="showDOK(3)">DOK 3 · Analysis</button>
+  <button class="dok-tab" onclick="showDOK(4)">DOK 4 · Augmentation</button>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  DOK 1: KNOWLEDGE ACQUISITION                             -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="dok-section active" id="dok1">
+  <div class="section-header">
+    <span class="dok-badge dok1-badge">DOK 1</span>
+    <h2>Knowledge Acquisition — Recall &amp; Recognize</h2>
+  </div>
+
+  <!-- VIDEO -->
+  <div class="card">
+    <div class="card-title">📽 Video Explainer</div>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/vxDxBdtw-zg" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <blockquote>
+      "Globalization wasn't a system for everyone. It was a system built to serve a tiny, super wealthy slice of the population. And that feeling — that sense of deep inequality — that's the fuel for so much of the resistance we're about to explore."
+      <cite>— AP World History Explainer, Topic 9.7</cite>
+    </blockquote>
+    <p style="font-size:0.84rem;color:var(--text-muted);">Watch the video, then work through the activities below before moving to DOK 2.</p>
+  </div>
+
+  <!-- VISUAL FRAMEWORK -->
+  <div class="card">
+    <div class="card-title">🗺 Visual Framework — Three Types of Resistance</div>
+    <p style="font-size:0.86rem;color:var(--text-muted);margin-bottom:14px;">Globalization sparked resistance across three major domains. Learn to identify which category each example belongs to.</p>
+    <div class="three-track">
+
+      <div class="track-col">
+        <div class="track-head economic">Economic</div>
+        <div class="track-body">
+          <div class="track-item"><div class="track-dot dot-blue"></div><span>Anti-WTO protests (Battle in Seattle, 1999)</span></div>
+          <div class="track-item"><div class="track-dot dot-blue"></div><span>Anti-IMF &amp; World Bank activism</span></div>
+          <div class="track-item"><div class="track-dot dot-blue"></div><span>Fair trade movement</span></div>
+          <div class="track-item"><div class="track-dot dot-blue"></div><span>Protests against structural adjustment programs</span></div>
+          <div class="track-item"><div class="track-dot dot-blue"></div><span>Labor rights campaigns (e.g., Rana Plaza aftermath)</span></div>
+        </div>
+      </div>
+
+      <div class="track-col">
+        <div class="track-head cultural">Cultural</div>
+        <div class="track-body">
+          <div class="track-item"><div class="track-dot dot-teal"></div><span>China bans Facebook/Twitter; creates Weibo</span></div>
+          <div class="track-item"><div class="track-dot dot-teal"></div><span>Indigenous language preservation movements</span></div>
+          <div class="track-item"><div class="track-dot dot-teal"></div><span>Reassertion of traditional values &amp; identity</span></div>
+          <div class="track-item"><div class="track-dot dot-teal"></div><span>Rejection of Western tech dominance</span></div>
+        </div>
+      </div>
+
+      <div class="track-col">
+        <div class="track-head political">Political</div>
+        <div class="track-body">
+          <div class="track-item"><div class="track-dot dot-purple"></div><span>Brexit (UK votes to leave EU, 2016)</span></div>
+          <div class="track-item"><div class="track-dot dot-purple"></div><span>Arguments over national sovereignty vs. integration</span></div>
+          <div class="track-item"><div class="track-dot dot-purple"></div><span>State-level policy bans on global platforms</span></div>
+        </div>
+      </div>
+
+    </div>
+    <p style="font-size:0.8rem;color:var(--text-muted);margin-top:8px;">⚠️ AP Exam tip: The <em>same event</em> can reflect multiple types of resistance. Brexit was political AND economic. Weibo was cultural AND political.</p>
+  </div>
+
+  <!-- FLIP CARDS -->
+  <div class="card">
+    <div class="card-title">🃏 Vocabulary — Flip Cards</div>
+    <p style="font-size:0.84rem;color:var(--text-muted);margin-bottom:14px;">Click each card to reveal the definition. Know these terms cold before the exam.</p>
+    <div class="flip-grid">
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-term">Battle in Seattle</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">1999 mass protest in Seattle, WA that shut down the WTO Ministerial Conference. Over 40,000 demonstrators — environmentalists, union workers, activists — marked the birth of a globally recognized anti-globalization movement.</div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-term">Structural Adjustment Programs</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">IMF/World Bank conditions attached to loans requiring developing countries to cut social spending (austerity), privatize state industries, and open markets. Critics called them a form of economic colonialism.</div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-term">Fair Trade Movement</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">An economic alternative to mainstream globalization that ensures farmers and artisans in developing countries receive fair prices, safe conditions, and sustainable practices — using consumer choice as a reform tool.</div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-term">Weibo</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">Chinese social media platform created after China banned Western platforms like Facebook and Twitter. Represents both state control AND cultural assertion — China defining its own digital space rather than accepting Western tech dominance.</div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-term">Brexit</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">2016 United Kingdom referendum to leave the European Union. Driven by arguments that EU membership eroded British national sovereignty. A political rejection of deep regional economic and political integration.</div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-term">Rana Plaza Collapse</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">2013 factory collapse in Bangladesh killing 1,100+ garment workers producing for Western brands. Symbolized the hidden human cost of globalization's race for cheaper goods and unsafe labor conditions in supply chains.</div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-term">Anti-Globalization Movement</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">A broad coalition of activists, labor unions, environmentalists, and NGOs opposing the negative effects of economic globalization — including inequality, labor exploitation, environmental damage, and loss of national sovereignty.</div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-term">GATT / WTO</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">GATT (1947) = General Agreement on Tariffs and Trade, designed to lower trade barriers globally. WTO (1995) = its successor with far greater enforcement power. Both became targets of anti-globalization protests.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- RECALL MCQs -->
+  <div class="card">
+    <div class="card-title">✅ Recall Check — Multiple Choice (5 Questions)</div>
+    <p style="font-size:0.84rem;color:var(--text-muted);margin-bottom:20px;">Wrong answers disable individually — keep trying until you find the right one.</p>
+
+    <div class="mcq-item" id="mcq1">
+      <div class="mcq-question">1. The "Battle in Seattle" (1999) is historically significant primarily because it</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(A) persuaded the WTO to dissolve its trade agreements</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,true)">(B) marked the emergence of a globally recognized anti-globalization movement</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(C) resulted in the United States withdrawing from the WTO</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(D) led directly to the creation of the fair trade movement</button>
+      </div>
+      <div class="mcq-feedback" id="mcq1-fb"><strong>Correct — B.</strong> The Seattle protests brought together environmentalists, labor unions, and activists to shut down the 1999 WTO Ministerial Conference, launching anti-globalization as a globally visible movement broadcast on televisions worldwide.</div>
+    </div>
+
+    <div class="mcq-item" id="mcq2">
+      <div class="mcq-question">2. Critics of the IMF's structural adjustment programs argued that they</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(A) gave developing countries too much control over their own economies</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(B) raised tariffs in ways that hurt global free trade</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,true)">(C) forced developing nations to cut social services while serving wealthy countries' interests</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(D) protected workers' rights in ways that slowed economic growth</button>
+      </div>
+      <div class="mcq-feedback" id="mcq2-fb"><strong>Correct — C.</strong> Activists argued that structural adjustment programs amounted to economic colonialism — requiring austerity (cuts to health, education, welfare) in exchange for loans, benefiting wealthy nations and multinational corporations rather than local populations.</div>
+    </div>
+
+    <div class="mcq-item" id="mcq3">
+      <div class="mcq-question">3. China's creation of Weibo after banning Western social media platforms best illustrates which type of resistance to globalization?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(A) Economic — challenging the IMF's financial authority</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(B) Political — voting to leave a regional trade bloc</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,true)">(C) Cultural — asserting a distinct digital identity against Western tech dominance</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(D) Environmental — protecting local ecosystems from corporate exploitation</button>
+      </div>
+      <div class="mcq-feedback" id="mcq3-fb"><strong>Correct — C.</strong> Weibo represents cultural resistance — China rejected Western platforms and built a homegrown alternative, asserting that it would define its own digital cultural space rather than adopt American-made tools.</div>
+    </div>
+
+    <div class="mcq-item" id="mcq4">
+      <div class="mcq-question">4. The Rana Plaza factory collapse (2013) is most useful as historical evidence for which argument?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(A) Globalization eliminated poverty in South Asia</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,true)">(B) The benefits of globalization came with devastating hidden human costs</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(C) Western corporations actively improved working conditions in developing nations</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(D) International institutions successfully regulated labor standards globally</button>
+      </div>
+      <div class="mcq-feedback" id="mcq4-fb"><strong>Correct — B.</strong> Rana Plaza — killing 1,100+ workers making cheap clothes for Western brands — put a human face on the argument that globalization's economic benefits were built on exploitative, unsafe labor conditions in the developing world.</div>
+    </div>
+
+    <div class="mcq-item" id="mcq5">
+      <div class="mcq-question">5. Which of the following BEST describes the fair trade movement's approach to economic globalization?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(A) Rejecting all international trade to protect local economies</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(B) Supporting the WTO's free trade agenda with minor reforms</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(C) Lobbying governments to impose high tariffs on imported goods</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,true)">(D) Creating an alternative economic model that prioritizes equity and fair prices for producers</button>
+      </div>
+      <div class="mcq-feedback" id="mcq5-fb"><strong>Correct — D.</strong> The fair trade movement didn't reject globalization entirely — instead it offered an alternative model using consumer choice to ensure farmers and artisans received fair wages and worked in humane conditions, reforming rather than reversing global trade.</div>
+    </div>
+  </div>
+
+  <!-- MATCHING -->
+  <div class="card">
+    <div class="card-title">🔗 Matching Activity — Events to Categories</div>
+    <p style="font-size:0.84rem;color:var(--text-muted);margin-bottom:16px;">Click an event on the left, then click its matching resistance type on the right.</p>
+    <div class="match-grid">
+      <div>
+        <div class="match-col-label">Events / Examples</div>
+        <div class="match-item" id="mA" onclick="selectMatch('mA','left')" data-pair="economic">Battle in Seattle, 1999</div>
+        <div class="match-item" id="mB" onclick="selectMatch('mB','left')" data-pair="cultural">China creates Weibo</div>
+        <div class="match-item" id="mC" onclick="selectMatch('mC','left')" data-pair="political">Brexit referendum, 2016</div>
+        <div class="match-item" id="mD" onclick="selectMatch('mD','left')" data-pair="economic">Fair trade certification labels</div>
+        <div class="match-item" id="mE" onclick="selectMatch('mE','left')" data-pair="cultural">Indigenous language revival campaigns</div>
+        <div class="match-item" id="mF" onclick="selectMatch('mF','left')" data-pair="economic">Anti-IMF structural adjustment protests</div>
+      </div>
+      <div>
+        <div class="match-col-label">Resistance Type</div>
+        <div class="match-item" id="r1" onclick="selectMatch('r1','right')" data-pair="economic">Economic Resistance</div>
+        <div class="match-item" id="r2" onclick="selectMatch('r2','right')" data-pair="cultural">Cultural Resistance</div>
+        <div class="match-item" id="r3" onclick="selectMatch('r3','right')" data-pair="political">Political Resistance</div>
+      </div>
+    </div>
+    <div class="match-status" id="match-status">Select an event, then select its category.</div>
+    <button class="match-reset-btn" onclick="resetMatch()">↺ Reset</button>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  DOK 2: KNOWLEDGE APPLICATION                             -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="dok-section" id="dok2">
+  <div class="section-header">
+    <span class="dok-badge dok2-badge">DOK 2</span>
+    <h2>Knowledge Application — Explain &amp; Connect</h2>
+  </div>
+
+  <div class="info-box">
+    <strong>DOK 2 Goal:</strong> Move beyond recall. You must <em>establish and explain with examples</em> — showing how and why, not just what.
+  </div>
+
+  <!-- EXPLAIN DRILL 1 -->
+  <div class="card">
+    <div class="card-title">💬 Explain Drill 1 of 2</div>
+    <p class="drill-context">AP Skill: Causation — explaining why resistance emerged</p>
+    <p class="drill-prompt">Explain why the economic promises of globalization (through organizations like GATT and the WTO) led to significant resistance movements by the late 1990s.</p>
+    <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:10px;">Write 3–5 sentences. Include a specific example (e.g., Rana Plaza, Battle in Seattle, structural adjustment programs).</p>
+    <textarea placeholder="Write your explanation here. Remember: explain HOW and WHY, not just what happened..."></textarea>
+    <button class="reveal-btn" onclick="toggleSample('drill1-sample')">Reveal Model Response ▾</button>
+    <div class="sample-label">Model Response — Drill 1</div>
+    <div class="sample-body" id="drill1-sample">
+      After World War II, institutions like GATT and later the WTO promised that removing trade barriers would create prosperity for all nations. However, the race for cheaper goods produced a devastating contradiction: while multinational corporations and wealthy consumers benefited, workers in developing countries faced brutal conditions and poverty wages. The 2013 Rana Plaza factory collapse in Bangladesh — killing over 1,100 garment workers producing clothes for Western brands — put a human face on this inequality. By 1999, this growing awareness of globalization's hidden costs drove over 40,000 protesters to shut down the WTO Ministerial Conference in Seattle, arguing that the organization served corporate profits rather than people. The resistance was fueled not by a rejection of trade itself, but by a profound sense that the rules of the global economy were rigged against workers, poor nations, and the environment.
+    </div>
+  </div>
+
+  <!-- EXPLAIN DRILL 2 -->
+  <div class="card">
+    <div class="card-title">💬 Explain Drill 2 of 2</div>
+    <p class="drill-context">AP Skill: Comparison — explaining similarity across different resistance forms</p>
+    <p class="drill-prompt">Explain how China's creation of Weibo and the United Kingdom's Brexit vote both represent resistance to globalization, even though they used very different methods.</p>
+    <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:10px;">Identify what both have in common (the underlying resistance) AND what makes them different (method, type, context).</p>
+    <textarea placeholder="Start by identifying the shared goal, then explain how each example shows it differently..."></textarea>
+    <button class="reveal-btn" onclick="toggleSample('drill2-sample')">Reveal Model Response ▾</button>
+    <div class="sample-label">Model Response — Drill 2</div>
+    <div class="sample-body" id="drill2-sample">
+      Both China's creation of Weibo and Brexit share a common core: a rejection of the idea that globalization must mean accepting external control over domestic spaces. In both cases, governments or voters prioritized local autonomy over the benefits of deeper global integration. However, their methods and contexts differed significantly. China's move was cultural resistance — the state banned Western platforms and built a domestic alternative, asserting that it would define its own digital identity rather than let American tech companies dominate Chinese information space. Brexit, by contrast, was political resistance — British voters chose to leave a regional economic and political union, arguing that EU membership gave foreign institutions too much power over British law and borders. One was driven by state authority; the other by a democratic vote. One targeted cultural sovereignty; the other targeted political sovereignty. Together, they illustrate that resistance to globalization took many forms depending on the values and concerns of those doing the resisting.
+    </div>
+  </div>
+
+  <!-- APPLY ACTIVITY: COMPARISON TABLE -->
+  <div class="card">
+    <div class="card-title">📊 Apply Activity — Comparison Table</div>
+    <p style="font-size:0.86rem;color:var(--text-muted);margin-bottom:16px;">Complete the table below. For each row, analyze the three types of resistance across the given dimension. Use specific examples from 9.7 in your responses.</p>
+
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th class="col-econ">Economic Resistance</th>
+            <th class="col-cult">Cultural Resistance</th>
+            <th class="col-pol">Political Resistance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Key Example(s)</td>
+            <td><textarea placeholder="Name 1–2 specific examples of economic resistance..."></textarea></td>
+            <td><textarea placeholder="Name 1–2 specific examples of cultural resistance..."></textarea></td>
+            <td><textarea placeholder="Name 1–2 specific examples of political resistance..."></textarea></td>
+          </tr>
+          <tr>
+            <td>Core Complaint</td>
+            <td><textarea placeholder="What problem were economic resisters responding to?"></textarea></td>
+            <td><textarea placeholder="What problem were cultural resisters responding to?"></textarea></td>
+            <td><textarea placeholder="What problem were political resisters responding to?"></textarea></td>
+          </tr>
+          <tr>
+            <td>Method Used</td>
+            <td><textarea placeholder="How did they resist? (protest, consumer choice, policy, etc.)"></textarea></td>
+            <td><textarea placeholder="How did they resist?"></textarea></td>
+            <td><textarea placeholder="How did they resist?"></textarea></td>
+          </tr>
+          <tr>
+            <td>Reform or Rejection?</td>
+            <td><textarea placeholder="Were they trying to reform globalization or reject it outright?"></textarea></td>
+            <td><textarea placeholder="Reform or reject — and why?"></textarea></td>
+            <td><textarea placeholder="Reform or reject — and why?"></textarea></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <button class="reveal-btn" onclick="toggleSample('compare-sample')" style="margin-top:14px;">Reveal Sample Responses ▾</button>
+    <div class="sample-label">Sample Comparison Responses</div>
+    <div class="sample-body" id="compare-sample">
+      <strong style="color:var(--gold-pale);">Economic:</strong> Examples: Battle in Seattle (1999), anti-IMF protests, fair trade movement, Rana Plaza activism. Core complaint: Globalization created a race to the bottom in wages and conditions while enriching corporations. Method: Mass protest, consumer choice (fair trade labels), advocacy for debt relief. Reform or reject: Mixed — protesters sought reform of global institutions, not elimination of trade.
+      <br><br>
+      <strong style="color:#6ec9be;">Cultural:</strong> Examples: China's Weibo, Indigenous language revival, rejection of Western social media. Core complaint: Cultural globalization was a one-way street dominated by Western (especially American) values and technology. Method: State bans, building domestic alternatives, grassroots preservation campaigns. Reform or reject: Primarily rejection — creating alternatives rather than changing Western platforms.
+      <br><br>
+      <strong style="color:#c39bd3;">Political:</strong> Examples: Brexit (2016), arguments over EU sovereignty, state-level bans on global platforms. Core complaint: Regional and global political integration eroded national sovereignty and democratic self-determination. Method: Democratic referendum, parliamentary legislation. Reform or reject: Outright rejection — leaving the integration framework entirely.
+    </div>
+  </div>
+
+  <!-- APPLY ACTIVITY: HIPP ANALYSIS -->
+  <div class="card">
+    <div class="card-title">🔍 Apply Activity — HIPP Source Analysis</div>
+    <p style="font-size:0.86rem;color:var(--text-muted);margin-bottom:8px;">The AP exam's Suggested Skill for 9.7 is <strong style="color:var(--gold-light);">Sourcing and Situation (Skill 2.C)</strong>. The video highlights two contrasting voices from the height of the anti-WTO debate (1998–1999). Analyze each source using the HIPP framework.</p>
+    <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:20px;font-style:italic;">HIPP = Historical situation · Intended audience · Point of view · Purpose</p>
+
+    <div class="hipp-grid">
+
+      <div class="hipp-source">
+        <div class="hipp-source-head ceo-head">Source A — Corporate Perspective</div>
+        <div class="hipp-source-body">
+          <div class="hipp-quote">"Globalization is not something we can hold off or turn off. It is the economic equivalent of a force of nature — like wind or water... The best any company can do is learn to navigate it well."<br><em style="font-size:0.78rem;">— Phil Condit, CEO of Boeing, c. 1998</em></div>
+
+          <div class="hipp-row-label">H — Historical Situation</div>
+          <textarea placeholder="What was happening in the world when Condit said this? (Think: WTO, global trade debates, 1998 context)"></textarea>
+
+          <div class="hipp-row-label">I — Intended Audience</div>
+          <textarea placeholder="Who was Condit most likely speaking to? Investors? Workers? Policymakers?"></textarea>
+
+          <div class="hipp-row-label">P — Point of View</div>
+          <textarea placeholder="What does Condit's position as a multinational CEO lead him to emphasize or downplay?"></textarea>
+
+          <div class="hipp-row-label">P — Purpose</div>
+          <textarea placeholder="What is Condit trying to accomplish with this statement?"></textarea>
+        </div>
+      </div>
+
+      <div class="hipp-source">
+        <div class="hipp-source-head union-head">Source B — Labor Perspective</div>
+        <div class="hipp-source-body">
+          <div class="hipp-quote">"The WTO's rules are written by and for corporations. They override our environmental laws, our labor standards, our ability to protect our own workers. This is not free trade — this is a race to the bottom."<br><em style="font-size:0.78rem;">— James Hoffa, Teamsters Union President, c. 1999</em></div>
+
+          <div class="hipp-row-label">H — Historical Situation</div>
+          <textarea placeholder="What context shapes Hoffa's statement? (Think: Seattle protest, job losses, NAFTA effects)"></textarea>
+
+          <div class="hipp-row-label">I — Intended Audience</div>
+          <textarea placeholder="Who was Hoffa's primary audience? How does this shape his message?"></textarea>
+
+          <div class="hipp-row-label">P — Point of View</div>
+          <textarea placeholder="What does Hoffa's role as a union leader lead him to prioritize?"></textarea>
+
+          <div class="hipp-row-label">P — Purpose</div>
+          <textarea placeholder="What is Hoffa trying to achieve with this statement?"></textarea>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:20px;">
+      <p style="font-size:0.88rem;color:var(--parchment);margin-bottom:8px;font-weight:600;">Synthesis Question:</p>
+      <p style="font-size:0.86rem;color:var(--text-secondary);margin-bottom:10px;">Both Condit and Hoffa are discussing the same phenomenon — economic globalization. Explain how their different positions (CEO vs. union leader) lead them to opposite conclusions about its effects. What does this contrast tell us about <em>why</em> there is no single story of resistance to globalization?</p>
+      <textarea style="min-height:120px;" placeholder="Write your synthesis response here (3–5 sentences)..."></textarea>
+    </div>
+
+    <button class="reveal-btn" onclick="toggleSample('hipp-sample')" style="margin-top:14px;">Reveal HIPP Model Responses ▾</button>
+    <div class="sample-label">Model HIPP Responses</div>
+    <div class="sample-body" id="hipp-sample">
+      <strong style="color:var(--gold-pale);">Source A (Condit) — Key Points:</strong><br>
+      H: 1998 — peak of WTO expansion, NAFTA's effects visible, global trade growing rapidly.<br>
+      I: Shareholders, business leaders, possibly policymakers — people who benefit from frictionless global commerce.<br>
+      P: As CEO of a major exporter (Boeing), Condit benefits enormously from open markets; he frames resistance as futile ("force of nature") to discourage reform efforts.<br>
+      P: To normalize globalization and discourage regulation — making the status quo seem inevitable rather than chosen.<br><br>
+      <strong style="color:#f08080;">Source B (Hoffa) — Key Points:</strong><br>
+      H: 1999 — just before Seattle protests, American manufacturing jobs declining, NAFTA blamed for outsourcing.<br>
+      I: Union members and workers whose livelihoods are threatened — to mobilize them for protest and political action.<br>
+      P: As a union leader, Hoffa represents workers who directly bear the costs of globalization's "race to the bottom" in wages and conditions.<br>
+      P: To delegitimize the WTO and build support for the anti-globalization movement ahead of Seattle.<br><br>
+      <strong style="color:var(--parchment);">Synthesis:</strong> Condit and Hoffa's opposing views reflect their material interests — one profits from global markets, one represents those harmed by them. This contrast reveals a central truth: resistance to globalization was not irrational or monolithic. It arose from real, documented harm experienced by specific groups. There is no single story because there is no single experience of globalization.
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  DOK 3: KNOWLEDGE ANALYSIS                                -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="dok-section" id="dok3">
+  <div class="section-header">
+    <span class="dok-badge dok3-badge">DOK 3</span>
+    <h2>Knowledge Analysis — Argue with Evidence</h2>
+  </div>
+
+  <div class="info-box" style="background:rgba(184,134,11,0.07);border-color:var(--border-gold);">
+    <strong style="color:var(--gold-light);">DOK 3 Goal:</strong> You must <em>examine and explain with evidence</em> — construct arguments, evaluate claims, and use specific historical evidence to support your reasoning.
+  </div>
+
+  <!-- CAUSAL CHAIN -->
+  <div class="card">
+    <div class="card-title">⛓ Causal Chain — From Globalization to Resistance</div>
+    <p style="font-size:0.86rem;color:var(--text-muted);margin-bottom:20px;">Two nodes are blank. Think carefully about what fits in the causal sequence, write your response in the text area inside each blank node, then reveal the answers to check your reasoning.</p>
+
+    <div class="chain-wrap">
+
+      <!-- Node 1 -->
+      <div class="chain-row">
+        <div class="chain-line-wrap">
+          <div class="node-num">1</div>
+          <div class="chain-connector"></div>
+        </div>
+        <div class="node-box">
+          <strong>Post-WWII promise of globalization:</strong> GATT (1947) and later the WTO (1995) lower tariffs and trade barriers, promising that open markets will create shared prosperity for all nations.
+        </div>
+      </div>
+
+      <!-- Node 2 — BLANK -->
+      <div class="chain-row">
+        <div class="chain-line-wrap">
+          <div class="node-num" style="border-color:rgba(184,134,11,0.6);color:var(--gold-light);">2</div>
+          <div class="chain-connector"></div>
+        </div>
+        <div class="node-box blank">
+          <em style="font-size:0.78rem;color:var(--gold);display:block;margin-bottom:6px;">🔍 What contradictions emerged as globalization expanded? What were the real-world costs?</em>
+          <textarea class="causal-input" placeholder="Describe the problems that appeared as globalization grew — think labor, environment, inequality..." style="width:100%;min-height:70px;background:transparent;border:none;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;"></textarea>
+          <div class="chain-answer" id="chain2-answer"></div>
+        </div>
+      </div>
+
+      <!-- Node 3 -->
+      <div class="chain-row">
+        <div class="chain-line-wrap">
+          <div class="node-num">3</div>
+          <div class="chain-connector"></div>
+        </div>
+        <div class="node-box">
+          <strong>Economic resistance emerges:</strong> Anti-IMF/World Bank protests grow through the 1980s–90s. Activists argue structural adjustment programs represent a new economic colonialism. The 1999 Battle in Seattle — 40,000+ protesters shut down the WTO Ministerial — launches a globally visible anti-globalization movement.
+        </div>
+      </div>
+
+      <!-- Node 4 — BLANK -->
+      <div class="chain-row">
+        <div class="chain-line-wrap">
+          <div class="node-num" style="border-color:rgba(184,134,11,0.6);color:var(--gold-light);">4</div>
+          <div class="chain-connector"></div>
+        </div>
+        <div class="node-box blank">
+          <em style="font-size:0.78rem;color:var(--gold);display:block;margin-bottom:6px;">🔍 Resistance spread beyond economics. What cultural and political forms did it take — and what examples illustrate this?</em>
+          <textarea class="causal-input" placeholder="Describe how resistance expanded into the cultural and political domains — use specific examples (Weibo, Brexit, language movements)..." style="width:100%;min-height:70px;background:transparent;border:none;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;"></textarea>
+          <div class="chain-answer" id="chain4-answer"></div>
+        </div>
+      </div>
+
+      <!-- Node 5 -->
+      <div class="chain-row">
+        <div class="chain-line-wrap">
+          <div class="node-num">5</div>
+        </div>
+        <div class="node-box">
+          <strong>Key AP Takeaway:</strong> No single story of resistance exists. Responses ranged across a wide spectrum — from street protest to consumer choice, from state policy bans to national referendums — each shaped by the specific concerns and contexts of those resisting. The central debate over whether a truly fair global system is possible remains unresolved.
+        </div>
+      </div>
+
+    </div>
+
+    <button class="reveal-btn" onclick="revealChain()">Reveal Model Answers for Nodes 2 &amp; 4 ▾</button>
+  </div>
+
+  <!-- THESIS EVALUATOR -->
+  <div class="card">
+    <div class="card-title">⚖️ Thesis Evaluator — Pass or Fail?</div>
+    <p style="font-size:0.86rem;color:var(--text-muted);margin-bottom:8px;">Click each thesis to evaluate it. Two will <strong style="color:#a8e09f;">PASS</strong> the AP rubric; two will <strong style="color:#f08080;">FAIL</strong>. The AP thesis must make a defensible, historically specific claim that establishes a line of reasoning — not just restate the prompt or list facts.</p>
+    <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:18px;font-style:italic;">Prompt: "Evaluate the extent to which resistance to globalization after 1900 was primarily economic in nature."</p>
+
+    <div class="thesis-grid">
+
+      <div class="thesis-card" onclick="revThesis(this,'fail',\x27FAIL — This is a restatement of the prompt, not a thesis. It identifies that resistance happened and mentions a category, but establishes no line of reasoning, makes no argument about degree or causation, and sets up no analytical framework for an essay.\x27)">
+        <div class="thesis-text">"After 1900, people around the world resisted globalization in many ways, including economic protests and cultural movements."</div>
+        <div class="click-hint">↓ click to evaluate</div>
+      </div>
+
+      <div class="thesis-card" onclick="revThesis(this,'pass',\x27PASS — This thesis makes a defensible claim (resistance was not primarily economic), establishes an analytical line of reasoning (multiple domains: economic, cultural, political), and previews the argument structure. It directly addresses the \x22extent\x22 language of the prompt.\x27)">
+        <div class="thesis-text">"While economic grievances against institutions like the WTO and IMF provided the initial spark for anti-globalization movements, resistance quickly expanded into cultural and political domains — from China\x27s rejection of Western social media to Brexit — demonstrating that the pushback against globalization was far broader than economics alone."</div>
+        <div class="click-hint">↓ click to evaluate</div>
+      </div>
+
+      <div class="thesis-card" onclick="revThesis(this,'fail',\x27FAIL — This is historically defensible but does NOT establish a line of reasoning. It states a fact (economic resistance existed) without making an argument about extent, causation, or significance. A reader cannot tell what the essay will argue beyond \x22economic resistance happened.\x22\x27)">
+        <div class="thesis-text">"Economic resistance to globalization occurred after 1900, including the Battle in Seattle and protests against the IMF."</div>
+        <div class="click-hint">↓ click to evaluate</div>
+      </div>
+
+      <div class="thesis-card" onclick="revThesis(this,'pass',\x27PASS — This thesis makes a specific, defensible claim with a clear line of reasoning. It acknowledges the economic dimension while arguing it was not primary (the \x22extent\x22 question), and establishes categories: cultural and political resistance driven by sovereignty concerns. Strong roadmap for an essay.\x27)">
+        <div class="thesis-text">"Although economic inequality fueled early resistance to globalization through protests against the WTO and IMF, the most enduring and politically significant forms of pushback — including Brexit and the reassertion of cultural sovereignty in nations like China — were ultimately driven by concerns over identity and national self-determination rather than economics."</div>
+        <div class="click-hint">↓ click to evaluate</div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  DOK 4: KNOWLEDGE AUGMENTATION                            -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="dok-section" id="dok4">
+  <div class="section-header">
+    <span class="dok-badge dok4-badge">DOK 4</span>
+    <h2>Knowledge Augmentation — Synthesize &amp; Apply</h2>
+  </div>
+
+  <div class="info-box" style="background:rgba(142,68,173,0.07);border-color:rgba(142,68,173,0.3);">
+    <strong style="color:#c39bd3;">DOK 4 Goal:</strong> <em>Explore and explain with examples and evidence.</em> You are building toward full AP exam performance — writing contextualization, practicing SAQ, and connecting 9.7 to the broader arc of modern history.
+  </div>
+
+  <!-- CONTEXTUALIZATION BUILDER -->
+  <div class="card">
+    <div class="card-title">🌐 Contextualization Builder — 3 Pathways</div>
+    <p style="font-size:0.86rem;color:var(--text-muted);margin-bottom:16px;">To earn the <strong style="color:var(--parchment);">contextualization point</strong> on the AP exam, you must describe a broader historical context that is <em>relevant to, but distinct from</em> the topic. Choose one pathway, write your paragraph using the stem, then reveal the model.</p>
+
+    <!-- Pathway 1 -->
+    <div class="ctx-pathway" id="ctx1">
+      <div class="ctx-head" onclick="toggleCtx('ctx1')">
+        <div class="ctx-head-left">
+          <span class="ctx-num">1</span>
+          <span class="ctx-title">Pathway 1 — Colonial Economic Legacies</span>
+        </div>
+        <span class="ctx-arrow">▼</span>
+      </div>
+      <div class="ctx-body">
+        <div class="ctx-stem">
+          <strong>Stem:</strong> "Resistance to globalization after 1900 was shaped by the long shadow of European imperialism. During the 19th century, colonial powers [describe the economic extraction system]... This legacy of economic exploitation meant that when institutions like the IMF and World Bank imposed structural adjustment programs, many in the developing world [explain the connection to colonial memory]..."
+        </div>
+        <p class="ctx-user-label">Your Contextualization — Pathway 1:</p>
+        <textarea rows="5" style="width:100%;background:#1a1a2e;color:#e0d6f0;border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:10px;font-size:0.92rem;resize:vertical;" placeholder="Write your contextualization paragraph using the Pathway 1 stem above. Aim for 3–5 sentences that place 9.7's resistance movements in the context of colonial economic history..."></textarea>
+        <div class="sample-label">Model Contextualization — Pathway 1</div>
+        <div class="sample-body" id="ctx1-sample">
+          During the 19th and early 20th centuries, European imperial powers systematically extracted raw materials and wealth from colonized regions in Africa, Asia, and Latin America, integrating these territories into a global economy designed to serve European industrial interests rather than local development. Colonial administrations suppressed local manufacturing, forced cash crop production, and created dependency relationships that left formerly colonized nations structurally disadvantaged when they gained independence in the mid-20th century. This history of economic exploitation gave the anti-globalization movements of the late 20th century a powerful resonance in the developing world: when the IMF and World Bank attached austerity conditions to their loans through structural adjustment programs, activists in countries from Argentina to Ghana drew explicit parallels to colonial extraction — arguing that the language had changed but the power dynamics had not. The resistance to globalization, therefore, was not merely a reaction to contemporary inequality but was shaped by generations of experience with economic systems that promised development while delivering dependency.
+        </div>
+        <button class="reveal-btn" onclick="toggleSample('ctx1-sample')" style="margin-top:12px;">Reveal Model ▾</button>
+      </div>
+    </div>
+
+    <!-- Pathway 2 -->
+    <div class="ctx-pathway" id="ctx2">
+      <div class="ctx-head" onclick="toggleCtx('ctx2')">
+        <div class="ctx-head-left">
+          <span class="ctx-num">2</span>
+          <span class="ctx-title">Pathway 2 — Cold War Ideological Competition</span>
+        </div>
+        <span class="ctx-arrow">▼</span>
+      </div>
+      <div class="ctx-body">
+        <div class="ctx-stem">
+          <strong>Stem:</strong> "The resistance to economic globalization that emerged in the late 20th century built on a longer history of ideological alternatives to free-market capitalism. During the Cold War, [describe how socialist/communist movements offered critiques of capitalism]... When the Soviet Union collapsed in 1991 and capitalism appeared triumphant, [explain how this shaped the anti-globalization movement that followed]..."
+        </div>
+        <p class="ctx-user-label">Your Contextualization — Pathway 2:</p>
+        <textarea rows="5" style="width:100%;background:#1a1a2e;color:#e0d6f0;border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:10px;font-size:0.92rem;resize:vertical;" placeholder="Write your contextualization paragraph using the Pathway 2 stem above..."></textarea>
+        <div class="sample-label">Model Contextualization — Pathway 2</div>
+        <div class="sample-body" id="ctx2-sample">
+          Throughout the Cold War era, the Soviet Union and socialist movements around the world offered a sustained ideological critique of Western capitalism, arguing that free markets produced inequality, exploitation, and imperialism. Labor movements in Western countries, liberation movements in the developing world, and socialist governments from Cuba to Tanzania pursued alternatives to the free-market model championed by the United States. When the Soviet Union collapsed in 1991, many observers declared the "end of history" and the permanent triumph of liberal capitalism and free trade. However, rather than eliminating resistance to capitalism's global expansion, the Cold War's end paradoxically intensified it: with no Soviet alternative to constrain Western financial institutions, the IMF and World Bank pursued aggressive structural adjustment programs across the developing world, and the WTO was established in 1995 with unprecedented enforcement power. The anti-globalization movement that erupted at Seattle in 1999 can thus be understood as a continuation of Cold War-era critiques of capitalism, now directed at the specific institutions managing the post-Cold War economic order.
+        </div>
+        <button class="reveal-btn" onclick="toggleSample('ctx2-sample')" style="margin-top:12px;">Reveal Model ▾</button>
+      </div>
+    </div>
+
+    <!-- Pathway 3 -->
+    <div class="ctx-pathway" id="ctx3">
+      <div class="ctx-head" onclick="toggleCtx('ctx3')">
+        <div class="ctx-head-left">
+          <span class="ctx-num">3</span>
+          <span class="ctx-title">Pathway 3 — Nationalism and the Nation-State</span>
+        </div>
+        <span class="ctx-arrow">▼</span>
+      </div>
+      <div class="ctx-body">
+        <div class="ctx-stem">
+          <strong>Stem:</strong> "Political resistance to globalization — most dramatically illustrated by Brexit — drew on a long tradition of nationalism that prized state sovereignty over international integration. Since the 19th century, [describe the rise of nationalism and its connection to state identity]... The post-WWII project of international integration [through the UN, EU, Bretton Woods institutions] challenged these nationalist traditions, and by the early 21st century [explain how the tension exploded]..."
+        </div>
+        <p class="ctx-user-label">Your Contextualization — Pathway 3:</p>
+        <textarea rows="5" style="width:100%;background:#1a1a2e;color:#e0d6f0;border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:10px;font-size:0.92rem;resize:vertical;" placeholder="Write your contextualization paragraph using the Pathway 3 stem above..."></textarea>
+        <div class="sample-label">Model Contextualization — Pathway 3</div>
+        <div class="sample-body" id="ctx3-sample">
+          Since the French Revolution and the nationalist movements of the 19th century, the nation-state had emerged as the primary framework for political identity and self-determination — the idea that a distinct people should govern their own affairs within defined borders. This tradition held that sovereignty was not to be surrendered to outside authorities, and it powered both the consolidation of European nations and the decolonization movements of the 20th century. After World War II, Western powers built international institutions — the United Nations, the European Economic Community (later the EU), and the Bretton Woods financial system — that deliberately transferred some degree of national authority to supranational bodies, on the theory that cooperation would prevent another catastrophic war. However, as the EU deepened economic and political integration, and as the WTO gained authority to override national regulations, a backlash built among populations who felt that elected governments had ceded control over fundamental decisions about immigration, trade, and law to unaccountable technocrats. Britain's 2016 Brexit vote crystallized this tension: for many voters, "taking back control" from Brussels was not anti-modern but rather a reaffirmation of the 19th-century nationalist principle that legitimate authority must rest with the people of a sovereign nation.
+        </div>
+        <button class="reveal-btn" onclick="toggleSample('ctx3-sample')" style="margin-top:12px;">Reveal Model ▾</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SAQ PRACTICE -->
+  <div class="card">
+    <div class="card-title">📝 SAQ Practice — Parts A, B, C</div>
+
+    <div class="saq-header">
+      <div class="saq-prompt-label">SAQ Prompt — No Stimulus (Period 8–9 type)</div>
+      <div class="saq-prompt-text">Answer parts A, B, and C. Answer each part in 2–3 sentences. Specific historical evidence is required. Do not write an introduction or conclusion.</div>
+    </div>
+
+    <div class="saq-part">
+      <div class="saq-part-label">Part A</div>
+      <div class="saq-part-text"><strong>Identify</strong> one specific example of economic resistance to globalization after 1900 and briefly describe what it opposed.</div>
+      <p class="saq-tip">Tip: "Identify" means name it clearly enough that the reader knows exactly what you mean. Then describe what it was resisting — 2 sentences is enough.</p>
+      <textarea placeholder="Part A response (2–3 sentences)..."></textarea>
+      <button class="reveal-btn" onclick="toggleSample('saqA-sample')">Reveal Model ▾</button>
+      <div class="sample-label">Model Response — Part A</div>
+      <div class="sample-body" id="saqA-sample">
+        One example of economic resistance to globalization was the 1999 "Battle in Seattle," in which over 40,000 protesters shut down the World Trade Organization's Ministerial Conference. These demonstrators — including labor unions, environmental groups, and human rights activists — opposed the WTO's rules, which they argued prioritized corporate profits over workers' rights, environmental protections, and the sovereignty of developing nations.
+      </div>
+    </div>
+
+    <div class="saq-part">
+      <div class="saq-part-label">Part B</div>
+      <div class="saq-part-text"><strong>Explain</strong> how ONE cultural or political form of resistance to globalization after 1900 reflected concerns beyond economic inequality.</div>
+      <p class="saq-tip">Tip: "Explain" means show the <em>how</em> or <em>why</em>. Don't just name the example — connect it to the specific non-economic concern it addressed.</p>
+      <textarea placeholder="Part B response (2–3 sentences)..."></textarea>
+      <button class="reveal-btn" onclick="toggleSample('saqB-sample')">Reveal Model ▾</button>
+      <div class="sample-label">Model Response — Part B</div>
+      <div class="sample-body" id="saqB-sample">
+        China's decision to ban Western social media platforms like Facebook and Twitter, and to create the domestic alternative Weibo, reflected concerns about cultural sovereignty rather than purely economic grievances. By building its own digital infrastructure, China asserted the right to define its own information space and resist the cultural dominance of American technology companies — a form of resistance rooted in national identity and state authority rather than labor rights or trade rules. This example illustrates that resistance to globalization could be as much about who controls cultural spaces as who controls economic ones.
+      </div>
+    </div>
+
+    <div class="saq-part">
+      <div class="saq-part-label">Part C</div>
+      <div class="saq-part-text"><strong>Explain</strong> how the variety of responses to globalization after 1900 — economic, cultural, and political — reflects the larger argument that globalization created both winners and losers.</div>
+      <p class="saq-tip">Tip: This is the synthesis part. Connect all three types of resistance to the underlying idea about globalization's unequal impact. This earns the "explain" point when you show the mechanism.</p>
+      <textarea placeholder="Part C response (2–3 sentences)..."></textarea>
+      <button class="reveal-btn" onclick="toggleSample('saqC-sample')">Reveal Model ▾</button>
+      <div class="sample-label">Model Response — Part C</div>
+      <div class="sample-body" id="saqC-sample">
+        The diversity of resistance to globalization — from street protests against the WTO to Brexit to China's digital sovereignty — reflects the fact that globalization's costs were distributed unequally across economic classes, cultures, and nations. Workers in developing countries bore the physical dangers of unsafe factories; local cultures felt overwhelmed by the dominance of Western media and technology; and citizens in nations like the UK perceived that economic integration had transferred democratic power to unaccountable supranational institutions. Each form of resistance, though different in method and target, shared the common conviction that the benefits of a more connected world were being captured by a narrow group of winners while the costs — lost jobs, eroded identities, diminished sovereignty — fell on everyone else.
+      </div>
+    </div>
+  </div>
+
+  <!-- CROSS-UNIT SYNTHESIS -->
+  <div class="card">
+    <div class="card-title">🔗 Cross-Unit Synthesis</div>
+    <p style="font-size:0.86rem;color:var(--text-muted);margin-bottom:16px;">AP complexity points and LEQ arguments require connecting across time periods and units. Consider the connections below, then write a synthesis paragraph.</p>
+
+    <div class="synthesis-connections">
+      <div class="syn-box">
+        <div class="syn-box-title">Unit 7 Connection</div>
+        <p>The devastation of WWI and WWII led nations to build supranational institutions (UN, IMF, World Bank) designed to prevent future conflict through cooperation. How does 9.7's resistance to those very institutions complicate this story?</p>
+      </div>
+      <div class="syn-box">
+        <div class="syn-box-title">Unit 8 Connection</div>
+        <p>Cold War decolonization movements (Unit 8) and anti-globalization activism (Unit 9) both challenged Western-dominated economic and political systems. How did the end of colonialism shape the conditions for anti-globalization resistance?</p>
+      </div>
+      <div class="syn-box">
+        <div class="syn-box-title">Units 4–5 Connection</div>
+        <p>Early modern European empires extracted resources from colonized regions (Units 4–5), creating economic dependency. How does this long-term pattern of extraction connect to developing-world resistance to IMF structural adjustment programs?</p>
+      </div>
+      <div class="syn-box">
+        <div class="syn-box-title">CCOT Connection</div>
+        <p>What has <em>stayed the same</em> about resistance to external economic control from the era of colonialism (Units 4–5) to the anti-globalization era (Unit 9)? What has changed about the methods and actors involved?</p>
+      </div>
+    </div>
+
+    <p style="font-size:0.88rem;color:var(--parchment);margin-bottom:8px;font-weight:600;">Choose ONE connection above and write a synthesis paragraph (4–6 sentences):</p>
+    <textarea style="min-height:130px;" placeholder="Identify which connection you're addressing, then develop the comparison, causation, or CCOT argument with specific historical evidence from both units..."></textarea>
+  </div>
+
+  <!-- SELF ASSESSMENT -->
+  <div class="card">
+    <div class="card-title">🎯 Self-Assessment — Rate Your AP Skills</div>
+    <p style="font-size:0.84rem;color:var(--text-muted);margin-bottom:16px;">Honestly evaluate where you stand on each skill. Use this to guide your study priorities before the exam.</p>
+
+    <div class="sa-grid">
+
+      <div class="sa-row">
+        <div class="sa-skill">I can <strong>identify</strong> specific examples of economic, cultural, and political resistance to globalization after 1900.</div>
+        <div class="sa-buttons">
+          <button class="sa-btn not-yet sa-label-item" onclick="setSA(this)">Not Yet</button>
+          <button class="sa-btn getting sa-label-item" onclick="setSA(this)">Getting There</button>
+          <button class="sa-btn confident sa-label-item" onclick="setSA(this)">Confident</button>
+        </div>
+      </div>
+
+      <div class="sa-row">
+        <div class="sa-skill">I can <strong>explain</strong> (how/why) resistance movements emerged as responses to the real costs of globalization.</div>
+        <div class="sa-buttons">
+          <button class="sa-btn not-yet sa-label-item" onclick="setSA(this)">Not Yet</button>
+          <button class="sa-btn getting sa-label-item" onclick="setSA(this)">Getting There</button>
+          <button class="sa-btn confident sa-label-item" onclick="setSA(this)">Confident</button>
+        </div>
+      </div>
+
+      <div class="sa-row">
+        <div class="sa-skill">I can apply <strong>HIPP sourcing</strong> (Historical situation, Intended audience, Point of View, Purpose) to documents about globalization and resistance.</div>
+        <div class="sa-buttons">
+          <button class="sa-btn not-yet sa-label-item" onclick="setSA(this)">Not Yet</button>
+          <button class="sa-btn getting sa-label-item" onclick="setSA(this)">Getting There</button>
+          <button class="sa-btn confident sa-label-item" onclick="setSA(this)">Confident</button>
+        </div>
+      </div>
+
+      <div class="sa-row">
+        <div class="sa-skill">I can write a <strong>thesis</strong> for a prompt about resistance to globalization that makes a defensible claim with a line of reasoning (not just a restatement).</div>
+        <div class="sa-buttons">
+          <button class="sa-btn not-yet sa-label-item" onclick="setSA(this)">Not Yet</button>
+          <button class="sa-btn getting sa-label-item" onclick="setSA(this)">Getting There</button>
+          <button class="sa-btn confident sa-label-item" onclick="setSA(this)">Confident</button>
+        </div>
+      </div>
+
+      <div class="sa-row">
+        <div class="sa-skill">I can write a <strong>contextualization paragraph</strong> connecting resistance to globalization to a broader historical development (colonialism, Cold War, nationalism).</div>
+        <div class="sa-buttons">
+          <button class="sa-btn not-yet sa-label-item" onclick="setSA(this)">Not Yet</button>
+          <button class="sa-btn getting sa-label-item" onclick="setSA(this)">Getting There</button>
+          <button class="sa-btn confident sa-label-item" onclick="setSA(this)">Confident</button>
+        </div>
+      </div>
+
+      <div class="sa-row">
+        <div class="sa-skill">I can connect 9.7's resistance movements to other units (7, 8, or earlier) to demonstrate <strong>continuity and change over time</strong>.</div>
+        <div class="sa-buttons">
+          <button class="sa-btn not-yet sa-label-item" onclick="setSA(this)">Not Yet</button>
+          <button class="sa-btn getting sa-label-item" onclick="setSA(this)">Getting There</button>
+          <button class="sa-btn confident sa-label-item" onclick="setSA(this)">Confident</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  JAVASCRIPT                                               -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script>
+// ── DOK TAB NAVIGATION ──
+function showDOK(n) {
+  document.querySelectorAll('.dok-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.dok-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('dok' + n).classList.add('active');
+  document.querySelectorAll('.dok-tab')[n - 1].classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── MCQ RETRY LOGIC ──
+function checkMCQ(qid, btn, isCorrect) {
+  const item = document.getElementById(qid);
+  const fb   = document.getElementById(qid + '-fb');
+  if (!fb._orig) fb._orig = fb.innerHTML;
+  if (isCorrect) {
+    item.querySelectorAll('.mcq-option').forEach(b => {
+      b.classList.add('disabled');
+      b.onclick = null;
+    });
+    btn.classList.add('correct');
+    fb.innerHTML = fb._orig;
+    fb.classList.remove('wrong-fb');
+    fb.classList.add('show');
+  } else {
+    btn.classList.add('incorrect', 'disabled');
+    btn.onclick = null;
+    fb.innerHTML = '<strong>Incorrect.</strong> That\x27s not it — try another option.';
+    fb.classList.add('show', 'wrong-fb');
+  }
+}
+
+// ── MATCHING ACTIVITY ──
+let matchSelected = null;
+let matchSide = null;
+
+function selectMatch(id, side) {
+  const el = document.getElementById(id);
+  if (el.classList.contains('matched-correct')) return;
+
+  // Deselect previous same-side selection
+  if (matchSelected && matchSide === side) {
+    document.getElementById(matchSelected).classList.remove('selected');
+  }
+
+  if (matchSelected && matchSide !== side) {
+    // Attempt a match
+    const leftId  = side === 'right' ? matchSelected : id;
+    const rightId = side === 'right' ? id : matchSelected;
+    const leftEl  = document.getElementById(leftId);
+    const rightEl = document.getElementById(rightId);
+
+    if (leftEl.dataset.pair === rightEl.dataset.pair) {
+      // Correct match — find all left items with this pair and mark them
+      document.querySelectorAll(`.match-item[data-pair="${leftEl.dataset.pair}"]`).forEach(item => {
+        if (!item.id.startsWith('r')) {
+          item.classList.add('matched-correct');
+          item.classList.remove('selected');
+          item.onclick = null;
+        }
+      });
+      rightEl.classList.add('matched-correct');
+      rightEl.classList.remove('selected');
+      rightEl.onclick = null;
+      document.getElementById('match-status').textContent = '✓ Correct! ' + rightEl.textContent.trim();
+      document.getElementById('match-status').style.color = '#a8e09f';
+    } else {
+      leftEl.classList.add('matched-wrong');
+      setTimeout(() => leftEl.classList.remove('matched-wrong', 'selected'), 800);
+      rightEl.classList.add('matched-wrong');
+      setTimeout(() => rightEl.classList.remove('matched-wrong', 'selected'), 800);
+      document.getElementById('match-status').textContent = '✗ Not quite — try a different combination.';
+      document.getElementById('match-status').style.color = '#f08080';
+    }
+    matchSelected = null;
+    matchSide = null;
+  } else {
+    el.classList.add('selected');
+    matchSelected = id;
+    matchSide = side;
+    document.getElementById('match-status').textContent = 'Now click its match on the ' + (side === 'left' ? 'right' : 'left') + '.';
+    document.getElementById('match-status').style.color = 'var(--text-muted)';
+  }
+}
+
+function resetMatch() {
+  document.querySelectorAll('.match-item').forEach(el => {
+    el.classList.remove('selected', 'matched-correct', 'matched-wrong');
+    el.onclick = function() { selectMatch(this.id, this.closest('.match-grid > div').children[0].classList.contains('match-col-label') ? (this.parentElement.children[0] === this.parentElement.firstElementChild ? 'right' : 'left') : 'left'); };
+  });
+  // Re-wire onclick properly
+  ['mA','mB','mC','mD','mE','mF'].forEach(id => {
+    document.getElementById(id).onclick = function() { selectMatch(this.id, 'left'); };
+  });
+  ['r1','r2','r3'].forEach(id => {
+    document.getElementById(id).onclick = function() { selectMatch(this.id, 'right'); };
+  });
+  matchSelected = null;
+  matchSide = null;
+  document.getElementById('match-status').textContent = 'Select an event, then select its category.';
+  document.getElementById('match-status').style.color = 'var(--text-muted)';
+}
+
+// ── SAMPLE / REVEAL TOGGLES ──
+function toggleSample(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle('show');
+}
+
+// ── CAUSAL CHAIN REVEAL ──
+function revealChain() {
+  const a2 = document.getElementById('chain2-answer');
+  const a4 = document.getElementById('chain4-answer');
+  a2.textContent = 'As globalization accelerated, a massive contradiction emerged: the race for cheaper goods led to brutal working conditions in developing countries (symbolized by the 2013 Rana Plaza collapse in Bangladesh), serious environmental damage, growing inequality between wealthy and poor nations, and deep resentment that countries were losing economic sovereignty to multinational corporations. The benefits of globalization were not being shared equally, and the human and environmental costs were mounting.';
+  a2.style.display = 'block';
+  a4.textContent = 'Resistance spread beyond economic protest into cultural and political domains. Culturally: China banned Western social media platforms and created Weibo, asserting digital sovereignty; Indigenous language revival movements pushed back against the spread of English; communities reasserted traditional values against Western cultural dominance. Politically: the UK\'s 2016 Brexit vote represented a dramatic rejection of the EU integration project, driven by arguments that supranational bodies had eroded British national sovereignty. These responses used fundamentally different methods — state policy, democratic referendum, grassroots activism — but all shared the conviction that globalization was eroding local control.';
+  a4.style.display = 'block';
+}
+
+// ── THESIS EVALUATOR ──
+function revThesis(el, verdict, explanation) {
+  if (el.classList.contains('revealed')) return;
+  el.classList.add('revealed', verdict);
+  const verdictLabel = verdict === 'pass' ? '✓ PASS — AP Rubric Met' : '✗ FAIL — Does Not Earn the Point';
+  el.querySelector('.click-hint').style.display = 'none';
+  el.innerHTML += '<div class="thesis-verdict">' + verdictLabel + '</div><div class="thesis-explanation">' + explanation + '</div>';
+}
+
+// ── CONTEXTUALIZATION BUILDER ──
+function toggleCtx(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle('open');
+}
+
+// ── SELF ASSESSMENT ──
+function setSA(btn) {
+  const row = btn.closest('.sa-buttons');
+  row.querySelectorAll('.sa-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+</script>
+
+</body>
+</html>

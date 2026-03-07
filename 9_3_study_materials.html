@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9.3 Technology &amp; the Environment | AP World History</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-deep: #0d1117;
+    --bg-mid: #161b22;
+    --bg-card: #1c2230;
+    --bg-hover: #222c3c;
+    --parchment: #e8dfc8;
+    --text-primary: #cdd6e8;
+    --text-secondary: #8b9bbf;
+    --text-muted: #556080;
+    --gold: #b8860b;
+    --gold-bright: #d4a72c;
+    --gold-glow: rgba(184,134,11,0.15);
+    --green: #3a9f5c;
+    --green-dim: rgba(58,159,92,0.12);
+    --red: #c94040;
+    --red-dim: rgba(201,64,64,0.12);
+    --blue: #4a8ccc;
+    --blue-dim: rgba(74,140,204,0.12);
+    --border: rgba(184,134,11,0.18);
+    --border-subtle: rgba(255,255,255,0.06);
+    --radius: 8px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg-deep);
+    color: var(--text-primary);
+    font-family: 'Source Serif 4', serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+  .site-header {
+    background: linear-gradient(135deg, #0a0e14 0%, #111827 60%, #0d1f2d 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 48px 24px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .site-header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(184,134,11,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .unit-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    opacity: 0.85;
+  }
+  .site-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 900;
+    color: var(--parchment);
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+  .site-header h1 span { color: var(--gold-bright); }
+  .header-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    max-width: 560px;
+    margin: 0 auto 20px;
+  }
+  .header-meta {
+    display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+  }
+  .header-meta span { display: flex; align-items: center; gap: 6px; }
+  .header-meta span::before { content: 'â—†'; color: var(--gold); font-size: 0.5rem; }
+  .dok-nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(13,17,23,0.96);
+    border-bottom: 1px solid var(--border-subtle);
+    backdrop-filter: blur(12px);
+    display: flex; justify-content: center; gap: 4px;
+    padding: 10px 16px;
+    flex-wrap: wrap;
+  }
+  .dok-nav a {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    color: var(--text-muted);
+    transition: all 0.2s;
+  }
+  .dok-nav a:hover, .dok-nav a.active {
+    color: var(--gold-bright);
+    border-color: var(--border);
+    background: var(--gold-glow);
+  }
+  .content-wrap { max-width: 880px; margin: 0 auto; padding: 0 20px 60px; }
+  .dok-section {
+    margin-top: 56px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-subtle);
+  }
+  .dok-badge {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: var(--gold-glow);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 4px 14px;
+    margin-bottom: 8px;
+  }
+  .dok-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--parchment);
+    margin-bottom: 4px;
+  }
+  .dok-section .dok-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+  .act-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 28px 0 10px;
+  }
+  .video-wrap {
+    position: relative;
+    background: #000;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  .video-wrap iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: block;
+    border: none;
+  }
+  .opening-quote {
+    background: linear-gradient(135deg, rgba(184,134,11,0.06), rgba(184,134,11,0.02));
+    border-left: 3px solid var(--gold);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 14px 20px;
+    margin-bottom: 24px;
+  }
+  .opening-quote p {
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--parchment);
+    margin-bottom: 6px;
+  }
+  .opening-quote cite {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-style: normal;
+  }
+  .visual-framework {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 8px;
+  }
+  .vf-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .causal-flow {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+  .cf-node {
+    flex: 1; min-width: 120px;
+    background: var(--bg-mid);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 12px 10px;
+    text-align: center;
+    position: relative;
+  }
+  .cf-node .cf-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .cf-node .cf-text { font-size: 0.82rem; color: var(--text-primary); line-height: 1.4; }
+  .cf-arrow {
+    display: flex; align-items: center; justify-content: center;
+    padding: 0 6px; color: var(--gold); font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+  .effects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .effect-card {
+    background: var(--bg-mid);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 12px;
+  }
+  .effect-card .eff-icon { font-size: 1.4rem; margin-bottom: 6px; }
+  .effect-card .eff-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+  .effect-card .eff-text { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; }
+  .flip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .flip-card { height: 120px; cursor: pointer; perspective: 800px; }
+  .flip-inner {
+    width: 100%; height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
+  .flip-front, .flip-back {
+    position: absolute; inset: 0;
+    backface-visibility: hidden;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 12px;
+  }
+  .flip-front {
+    background: var(--bg-card);
+    min-height: 120px;
+    position: absolute;
+  }
+  .flip-front .term {
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--parchment);
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .flip-hint {
+    position: absolute;
+    bottom: 8px; left: 0; right: 0;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--text-muted);
+  }
+  .flip-back {
+    background: linear-gradient(135deg, rgba(184,134,11,0.08), rgba(184,134,11,0.02));
+    border-color: var(--border);
+    transform: rotateY(180deg);
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+    text-align: center;
+  }
+  .mcq-set { display: flex; flex-direction: column; gap: 16px; }
+  .mcq-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 18px;
+  }
+  .mcq-question {
+    font-size: 0.92rem;
+    color: var(--parchment);
+    margin-bottom: 12px;
+    line-height: 1.55;
+  }
+  .mcq-options { display: flex; flex-direction: column; gap: 7px; }
+  .mcq-option {
+    background: var(--bg-mid);
+    border: 1px solid var(--border-subtle);
+    border-radius: 5px;
+    padding: 9px 14px;
+    text-align: left;
+    cursor: pointer;
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.86rem;
+    color: var(--text-primary);
+    transition: all 0.15s;
+  }
+  .mcq-option:hover:not(.disabled) { background: var(--bg-hover); border-color: var(--border); color: var(--parchment); }
+  .mcq-option.correct { background: rgba(58,159,92,0.2); border-color: var(--green); color: #7fd19a; cursor: default; }
+  .mcq-option.incorrect { background: rgba(201,64,64,0.15); border-color: #a03030; color: #e08080; }
+  .mcq-option.disabled { cursor: default; pointer-events: none; opacity: 0.55; }
+  .mcq-feedback {
+    margin-top: 10px;
+    font-size: 0.83rem;
+    color: var(--text-secondary);
+    background: var(--green-dim);
+    border: 1px solid rgba(58,159,92,0.2);
+    border-radius: 5px;
+    padding: 10px 14px;
+    display: none;
+    line-height: 1.5;
+  }
+  .mcq-feedback.show { display: block; }
+  .mcq-feedback.wrong-fb { background: rgba(107,45,45,0.3); border-color: #f08080; }
+  .match-col-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .match-col { display: flex; flex-direction: column; gap: 8px; }
+  .match-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 0.84rem;
+    line-height: 1.45;
+    transition: all 0.2s;
+    user-select: none;
+  }
+  .match-item:hover:not(.matched):not(.matched-def) { border-color: var(--gold); background: var(--gold-glow); }
+  .match-item.selected { border-color: var(--blue); background: var(--blue-dim); color: var(--parchment); }
+  .match-item.matched { border-color: var(--green); background: var(--green-dim); cursor: default; opacity: 0.75; }
+  .match-item.matched-def { border-color: var(--green); background: var(--green-dim); cursor: default; opacity: 0.75; }
+  .match-item.wrong-flash { border-color: var(--red); background: var(--red-dim); }
+  .match-reveal-btn {
+    margin-top: 12px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 8px 20px;
+    color: var(--gold);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .match-reveal-btn:hover { background: var(--gold-glow); }
+  #match-score {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 8px;
+    text-align: center;
+  }
+  .drill-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 22px;
+    margin-bottom: 8px;
+  }
+  .drill-prompt { font-size: 1rem; color: var(--parchment); margin-bottom: 14px; line-height: 1.6; }
+  .drill-hint { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--text-muted); margin-bottom: 10px; }
+  textarea {
+    width: 100%; min-height: 100px;
+    margin: 10px 0;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(184,134,11,0.2);
+    border-radius: 4px;
+    color: var(--parchment);
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.88rem;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  textarea:focus { border-color: rgba(184,134,11,0.5); }
+  .reveal-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 8px 20px;
+    color: var(--gold);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .reveal-btn:hover { background: var(--gold-glow); }
+  .model-response {
+    display: none;
+    margin-top: 14px;
+    background: rgba(58,159,92,0.06);
+    border: 1px solid rgba(58,159,92,0.2);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    font-size: 0.87rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  .model-response.show { display: block; }
+  .model-response strong { color: var(--green); font-size: 0.7rem; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.1em; text-transform: uppercase; }
+  .apply-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; margin-bottom: 12px; }
+  .apply-table th {
+    background: rgba(184,134,11,0.08);
+    border: 1px solid var(--border-subtle);
+    padding: 10px 14px;
+    text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  .apply-table td {
+    border: 1px solid var(--border-subtle);
+    padding: 8px 10px;
+    vertical-align: top;
+    color: var(--text-secondary);
+    font-size: 0.83rem;
+  }
+  .apply-table td textarea { min-height: 70px; margin: 4px 0; }
+  .chain-wrap {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 8px;
+  }
+  .chain-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .chain-steps { display: flex; flex-direction: column; gap: 4px; }
+  .chain-step { display: flex; align-items: flex-start; gap: 14px; }
+  .node-num {
+    width: 28px; height: 28px; flex-shrink: 0;
+    background: var(--gold-glow);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gold);
+    margin-top: 6px;
+  }
+  .node-box {
+    flex: 1;
+    background: var(--bg-mid);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 12px 14px;
+    font-size: 0.88rem;
+    color: var(--text-primary);
+    line-height: 1.5;
+  }
+  .node-box.blank {
+    border-style: dashed;
+    border-color: rgba(184,134,11,0.25);
+    background: rgba(184,134,11,0.03);
+  }
+  .node-box .blank-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 6px;
+  }
+  .chain-connector { display: flex; align-items: center; padding: 2px 0 2px 42px; color: var(--text-muted); font-size: 1rem; }
+  .chain-answer {
+    display: none;
+    margin-left: 42px;
+    margin-top: 6px;
+    padding: 10px 14px;
+    background: rgba(74,158,63,0.1);
+    border: 1px solid rgba(74,158,63,0.3);
+    border-radius: 4px;
+    font-size: 0.86rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  .thesis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 8px; }
+  @media(max-width:600px){ .thesis-grid { grid-template-columns: 1fr; } }
+  .thesis-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .thesis-card:hover:not(.revealed) { border-color: var(--border); background: var(--bg-hover); }
+  .thesis-card .tc-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .thesis-card .tc-text { font-size: 0.87rem; color: var(--text-primary); line-height: 1.55; font-style: italic; }
+  .thesis-card .tc-click { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--text-muted); margin-top: 10px; text-align: right; }
+  .thesis-card.revealed { cursor: default; }
+  .thesis-card.pass { border-color: var(--green); background: var(--green-dim); }
+  .thesis-card.fail { border-color: var(--red); background: var(--red-dim); }
+  .thesis-verdict {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    margin-top: 12px;
+    padding: 4px 10px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .pass .thesis-verdict { background: rgba(58,159,92,0.2); color: #7fd19a; }
+  .fail .thesis-verdict { background: rgba(201,64,64,0.2); color: #e08080; }
+  .thesis-explanation { font-size: 0.82rem; color: var(--text-secondary); margin-top: 8px; line-height: 1.5; border-top: 1px solid var(--border-subtle); padding-top: 8px; }
+  .ctx-pathway {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  .ctx-header {
+    padding: 14px 20px;
+    cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    transition: background 0.2s;
+  }
+  .ctx-header:hover { background: var(--bg-hover); }
+  .ctx-header-left { display: flex; flex-direction: column; gap: 3px; }
+  .ctx-num { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--gold); letter-spacing: 0.12em; text-transform: uppercase; }
+  .ctx-title { font-size: 0.95rem; color: var(--parchment); font-weight: 600; }
+  .ctx-arrow { color: var(--text-muted); font-size: 0.8rem; transition: transform 0.3s; }
+  .ctx-pathway.open .ctx-arrow { transform: rotate(180deg); }
+  .ctx-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 20px; }
+  .ctx-pathway.open .ctx-body { max-height: 1200px; padding: 0 20px 20px; }
+  .ctx-stem {
+    background: rgba(184,134,11,0.05);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 4px 4px 0;
+    padding: 12px 16px;
+    font-size: 0.87rem;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+  .ctx-stem strong { color: var(--gold-bright); }
+  .sample-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin: 14px 0 6px;
+  }
+  .sample-body {
+    font-size: 0.86rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    background: rgba(58,159,92,0.05);
+    border: 1px solid rgba(58,159,92,0.15);
+    border-radius: 4px;
+    padding: 12px 16px;
+  }
+  .saq-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 22px;
+    margin-bottom: 8px;
+  }
+  .saq-source {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border-subtle);
+    border-radius: 5px;
+    padding: 14px 18px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.6;
+    font-style: italic;
+  }
+  .saq-source cite {
+    display: block;
+    font-style: normal;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    margin-top: 8px;
+  }
+  .saq-parts { display: flex; flex-direction: column; gap: 16px; }
+  .saq-part-label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+  .saq-part-prompt { font-size: 0.92rem; color: var(--parchment); margin-bottom: 4px; line-height: 1.55; }
+  .saq-tip { font-size: 0.78rem; color: var(--text-muted); font-style: italic; margin-top: 4px; }
+  .saq-model { display: none; margin-top: 12px; background: rgba(58,159,92,0.06); border: 1px solid rgba(58,159,92,0.2); border-radius: 5px; padding: 12px 16px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+  .saq-model.show { display: block; }
+  .synthesis-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius); padding: 20px 22px; }
+  .syn-connections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 12px 0;
+  }
+  .syn-conn { background: var(--bg-mid); border: 1px solid var(--border-subtle); border-radius: 5px; padding: 10px 14px; font-size: 0.82rem; color: var(--text-secondary); line-height: 1.45; }
+  .syn-conn strong { display: block; font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--blue); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px; }
+  .sa-grid { display: flex; flex-direction: column; gap: 10px; }
+  .sa-row { display: flex; align-items: center; gap: 12px; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius); padding: 12px 16px; }
+  .sa-skill { flex: 1; font-size: 0.88rem; color: var(--text-primary); }
+  .sa-labels { display: flex; gap: 4px; flex-shrink: 0; }
+  .sa-btn {
+    background: var(--bg-mid);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    min-width: 28px;
+  }
+  .sa-btn:hover { border-color: var(--border); color: var(--text-secondary); }
+  .sa-btn.not-yet.active { background: var(--red-dim); border-color: var(--red); color: #e08080; }
+  .sa-btn.getting-there.active { background: rgba(212,167,44,0.12); border-color: var(--gold); color: var(--gold-bright); }
+  .sa-btn.confident.active { background: var(--green-dim); border-color: var(--green); color: #7fd19a; }
+  .sa-label-item { min-width: 28px; white-space: nowrap; }
+  .info-box { background: var(--blue-dim); border: 1px solid rgba(74,140,204,0.2); border-radius: var(--radius); padding: 12px 16px; font-size: 0.84rem; color: var(--text-secondary); margin-bottom: 16px; line-height: 1.55; }
+  .info-box strong { color: var(--blue); }
+  @media(max-width:600px){
+    .causal-flow { flex-direction: column; }
+    .apply-table { font-size: 0.78rem; }
+    .thesis-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="unit-label">AP World History: Modern &nbsp;&#183;&nbsp; Unit 9 &nbsp;&#183;&nbsp; Topic 9.3</div>
+  <h1>Technology &amp; the <span>Environment</span></h1>
+  <p class="header-subtitle">"Climate change does not respect border; it does not respect who you are&#8212;rich and poor, small and big."</p>
+  <div class="header-meta">
+    <span>Skill: Contextualization</span>
+    <span>Theme: Humans &amp; the Environment</span>
+    <span>Period: 1900&#8211;Present</span>
+  </div>
+</header>
+
+<nav class="dok-nav">
+  <a href="#dok1">DOK 1 &middot; Acquire</a>
+  <a href="#dok2">DOK 2 &middot; Apply</a>
+  <a href="#dok3">DOK 3 &middot; Analyze</a>
+  <a href="#dok4">DOK 4 &middot; Augment</a>
+</nav>
+
+<div class="content-wrap">
+
+<!-- ══ DOK 1 ══ -->
+<section class="dok-section" id="dok1">
+  <div class="dok-badge">DOK 1 &middot; Knowledge Acquisition</div>
+  <h2>Build Your Foundation</h2>
+  <p class="dok-desc">Watch, read, recall &#8212; answer correctly by identifying key facts, terms, and developments.</p>
+
+  <div class="act-label">&#9658; Video Explainer</div>
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/wVuz1kOYxDw" allowfullscreen loading="lazy"></iframe>
+  </div>
+  <div class="opening-quote">
+    <p>"Climate change does not respect border; it does not respect who you are&#8212;rich and poor, small and big. Therefore this is what we call global challenges which require global solidarity."</p>
+    <cite>&#8212; Ban Ki-moon, UN Secretary General, 2007&#8211;2016</cite>
+  </div>
+
+  <div class="act-label">&#9658; Visual Framework &#8212; The Environmental Story</div>
+  <div class="visual-framework">
+    <div class="vf-title">The Human Footprint &#8594; Environmental Crisis &#8594; Global Debate</div>
+    <div class="causal-flow">
+      <div class="cf-node">
+        <div class="cf-label">Root Causes</div>
+        <div class="cf-text">Population growth<br>(1.6B &#8594; 6B+)<br>Industrialization<br>Urbanization</div>
+      </div>
+      <div class="cf-arrow">&#8594;</div>
+      <div class="cf-node">
+        <div class="cf-label">Environmental Effects</div>
+        <div class="cf-text">Deforestation<br>Desertification<br>Air pollution<br>Water scarcity</div>
+      </div>
+      <div class="cf-arrow">&#8594;</div>
+      <div class="cf-node">
+        <div class="cf-label">Global Warming</div>
+        <div class="cf-text">Greenhouse gases thicken Earth&#39;s heat-trapping layer; rising avg. temp.</div>
+      </div>
+      <div class="cf-arrow">&#8594;</div>
+      <div class="cf-node">
+        <div class="cf-label">Global Debate</div>
+        <div class="cf-text">Kyoto (1997)<br>Paris (2015)<br>Activism<br>Skepticism</div>
+      </div>
+    </div>
+    <div class="effects-grid">
+      <div class="effect-card">
+        <div class="eff-icon">&#127795;</div>
+        <div class="eff-title">Deforestation</div>
+        <div class="eff-text">Amazon cleared for farms &amp; ranches; carbon sinks destroyed</div>
+      </div>
+      <div class="effect-card">
+        <div class="eff-icon">&#127964;</div>
+        <div class="eff-title">Desertification</div>
+        <div class="eff-text">Sahel overgrazing; Aral Sea drained by Soviet irrigation</div>
+      </div>
+      <div class="effect-card">
+        <div class="eff-icon">&#127787;</div>
+        <div class="eff-title">Air Quality</div>
+        <div class="eff-text">Factory &amp; auto pollutants; industrial smog as public health crisis</div>
+      </div>
+      <div class="effect-card">
+        <div class="eff-icon">&#128167;</div>
+        <div class="eff-title">Water Scarcity</div>
+        <div class="eff-text">Global water use skyrockets post-1950; women &amp; children bear the burden</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="act-label">&#9658; Vocabulary Flip Cards &#8212; click each card to reveal the definition</div>
+  <div class="flip-grid" id="flip-grid"></div>
+
+  <div class="act-label">&#9658; Recall Check &#8212; 5 Multiple Choice Questions</div>
+  <div class="mcq-set">
+    <div class="mcq-item" id="mcq1">
+      <div class="mcq-question">1. Which of the following best describes the primary driver of increased environmental pressure after 1900?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(A) The decline of global trade networks</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,true)">(B) Rapid population growth and industrial expansion creating unprecedented demand for resources</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(C) The spread of democratic governments that encouraged environmental regulation</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(D) A global cooling trend that reduced agricultural productivity</button>
+      </div>
+      <div class="mcq-feedback" id="mcq1-fb"><strong>Correct &#8212; B.</strong> The video and textbook both emphasize that population growth from 1.6 billion to over 6 billion, combined with industrial-era urbanization, drove unprecedented resource demands that stressed forests, land, air, and water systems worldwide.</div>
+    </div>
+    <div class="mcq-item" id="mcq2">
+      <div class="mcq-question">2. The Aral Sea disaster is used as an example of which environmental problem?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(A) Deforestation caused by logging industries</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(B) Air pollution from industrial factories</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,true)">(C) Desertification resulting from Soviet irrigation projects that drained the water source</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(D) Greenhouse gas accumulation from fossil fuel combustion</button>
+      </div>
+      <div class="mcq-feedback" id="mcq2-fb"><strong>Correct &#8212; C.</strong> The Aral Sea was once one of the world&#39;s largest lakes. Soviet-era irrigation projects diverted the rivers feeding it, causing it to shrink drastically and leave behind a toxic desert &#8212; a prime example of desertification driven by human activity.</div>
+    </div>
+    <div class="mcq-item" id="mcq3">
+      <div class="mcq-question">3. According to the greenhouse gas theory, what is the mechanism by which fossil fuel combustion causes global warming?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(A) Burning fuels depletes the ozone layer, allowing more solar radiation to reach Earth</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,true)">(B) Releasing extra CO&#8322; thickens Earth&#39;s natural heat-trapping atmosphere, raising global temperatures</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(C) Industrial processes consume oxygen faster than it can be replenished by forests</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(D) Fossil fuels release particles that reflect sunlight, cooling the planet unevenly</button>
+      </div>
+      <div class="mcq-feedback" id="mcq3-fb"><strong>Correct &#8212; B.</strong> The video uses the &#34;thickening blanket&#34; analogy: Earth already has a natural heat-trapping atmosphere. Burning fossil fuels adds more CO&#8322;, making that blanket thicker and trapping more heat &#8212; the core mechanism of global warming.</div>
+    </div>
+    <div class="mcq-item" id="mcq4">
+      <div class="mcq-question">4. Which international agreement, reached in 2015, represented the broadest global commitment to limiting temperature rise?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(A) The Kyoto Protocol</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(B) The Brundtland Commission Report</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,true)">(C) The Paris Agreement</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(D) The Montreal Protocol</button>
+      </div>
+      <div class="mcq-feedback" id="mcq4-fb"><strong>Correct &#8212; C.</strong> In 2015, 195 countries signed the Paris Agreement, committing to limit global temperature rise to well below 2&#176;C. It built on the Kyoto Protocol (1997) but involved far more nations. The US later withdrew under President Trump in 2017.</div>
+    </div>
+    <div class="mcq-item" id="mcq5">
+      <div class="mcq-question">5. The term "Anthropocene" is used by scientists to describe what?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(A) The 12,000-year geological epoch that began after the last ice age</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(B) A new field of climate science that uses satellite data</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,true)">(C) A proposed new geological epoch defined by humanity&#39;s dominant influence on Earth&#39;s climate and environment</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(D) The period of mass extinction events caused by asteroid impacts</button>
+      </div>
+      <div class="mcq-feedback" id="mcq5-fb"><strong>Correct &#8212; C.</strong> &#34;Anthropocene&#34; literally means &#34;age of humans.&#34; Scientists proposed this to reflect that humanity has become the single largest force shaping the planet&#39;s climate and environment &#8212; for better and for worse.</div>
+    </div>
+  </div>
+
+  <div class="act-label">&#9658; Matching Activity &#8212; click a term, then click its matching definition</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+    <div>
+      <div class="match-col-label">Terms</div>
+      <div class="match-col" id="match-terms"></div>
+    </div>
+    <div>
+      <div class="match-col-label">Definitions</div>
+      <div class="match-col" id="match-defs"></div>
+    </div>
+  </div>
+  <div id="match-score"></div>
+  <button class="match-reveal-btn" onclick="revealAllMatches()">Show All Answers</button>
+</section>
+
+<!-- ══ DOK 2 ══ -->
+<section class="dok-section" id="dok2">
+  <div class="dok-badge">DOK 2 &middot; Knowledge Application</div>
+  <h2>Show Your Understanding</h2>
+  <p class="dok-desc">Apply concepts &#8212; establish and explain with examples. Go beyond recall to show how and why.</p>
+
+  <div class="act-label">&#9658; Explain Drill 1 of 2 &#8212; Causation</div>
+  <div class="drill-card">
+    <div class="drill-prompt">Explain how population growth after 1900 contributed to environmental degradation. <em>Your response should show a clear cause-and-effect chain, not just list facts.</em></div>
+    <div class="drill-hint">Hint: Think population &#8594; demand &#8594; land use &#8594; specific effects (deforestation, desertification, etc.)</div>
+    <textarea placeholder="Write your explanation here (aim for 3&#8211;5 sentences)..."></textarea>
+    <button class="reveal-btn" onclick="revealModel('model1')">Show Model Response</button>
+    <div class="model-response" id="model1">
+      <strong>Model Response</strong><br>
+      The rapid growth of the world&#39;s population&#8212;from 1.6 billion in 1900 to over 6 billion by 2000&#8212;created an enormous demand for food, water, and energy that the Earth had never before faced. To feed billions more people, vast areas of forest were cleared for croplands and ranches, particularly in places like the Amazon rainforest, destroying habitats and weakening the planet&#39;s natural ability to absorb carbon dioxide. At the same time, the need for more agricultural land in drier regions led to overgrazing and the exhaustion of soil, causing desertification in places like Africa&#39;s Sahel region. Industrial cities powered by coal and oil poured pollutants into the air, while agricultural and industrial water demand caused global freshwater consumption to skyrocket after 1950. In this way, population growth set in motion a cascade of environmental pressures across forests, land, air, and water simultaneously.
+    </div>
+  </div>
+
+  <div class="act-label">&#9658; Explain Drill 2 of 2 &#8212; Multiple Perspectives</div>
+  <div class="drill-card">
+    <div class="drill-prompt">Explain why developed and developing nations have often disagreed about responsibility for addressing climate change. Use specific examples or evidence to support your explanation.</div>
+    <div class="drill-hint">Hint: Think about who created the problem historically vs. who is industrializing now. What does each side argue?</div>
+    <textarea placeholder="Write your explanation here (aim for 3&#8211;5 sentences)..."></textarea>
+    <button class="reveal-btn" onclick="revealModel('model2')">Show Model Response</button>
+    <div class="model-response" id="model2">
+      <strong>Model Response</strong><br>
+      Developed and developing nations have clashed over climate responsibility because they have fundamentally different historical relationships with industrialization. Wealthy nations like the United States and those in Western Europe spent over 150 years burning fossil fuels to build their economies, creating the bulk of the accumulated greenhouse gases in the atmosphere today. When these nations called on rapidly industrializing countries like China and India to cut emissions, developing nations pushed back, arguing that it was unjust to deny them the same path to economic growth that made the West wealthy. Additionally, developed nations still maintain much higher per-capita emissions than developing ones, strengthening the argument that industrialized countries must lead the transition. This tension is visible in agreements like the Paris Agreement (2015), which acknowledged that developing countries would need more time to reach peak emissions&#8212;a compromise reflecting the unequal historical contributions to the problem.
+    </div>
+  </div>
+
+  <div class="act-label">&#9658; Apply Activity &#8212; Comparing Environmental Debates: Two Perspectives</div>
+  <div class="info-box"><strong>Task:</strong> Complete the comparison table below. For each category, note what the scientific consensus position argues versus what the skeptic/economic-concern position argues. Then write a reflection connecting this debate to the historical context of industrialization.</div>
+  <table class="apply-table">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Scientific Consensus Position</th>
+        <th>Skeptic / Economic Concern Position</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Cause of climate change</strong></td>
+        <td><textarea placeholder="What does the IPCC / scientific community argue?"></textarea></td>
+        <td><textarea placeholder="What do skeptics or economic critics argue?"></textarea></td>
+      </tr>
+      <tr>
+        <td><strong>Who is responsible</strong></td>
+        <td><textarea placeholder="What does the developing world perspective say?"></textarea></td>
+        <td><textarea placeholder="What do developed nations often argue about China / India?"></textarea></td>
+      </tr>
+      <tr>
+        <td><strong>Proposed solutions</strong></td>
+        <td><textarea placeholder="What solutions does the scientific consensus support?"></textarea></td>
+        <td><textarea placeholder="What objections do economic critics raise?"></textarea></td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="margin-top:8px;font-size:0.85rem;color:var(--text-secondary);margin-bottom:6px;">Reflection: How does the history of industrialization (Units 6&#8211;8) help explain why this debate became so contentious in the 20th century?</div>
+  <textarea placeholder="Write your reflection here..."></textarea>
+</section>
+
+<!-- ══ DOK 3 ══ -->
+<section class="dok-section" id="dok3">
+  <div class="dok-badge">DOK 3 &middot; Knowledge Analysis</div>
+  <h2>Think Strategically</h2>
+  <p class="dok-desc">Examine and explain with evidence &#8212; analyze causes, evaluate arguments, construct reasoning.</p>
+
+  <div class="act-label">&#9658; Causal Chain &#8212; From Industrialization to the Anthropocene</div>
+  <div class="chain-wrap">
+    <div class="chain-title">Complete the two blank nodes, then click Reveal to check your answers</div>
+    <div class="chain-steps">
+      <div class="chain-step">
+        <div class="node-num">1</div>
+        <div class="node-box">
+          <strong>Industrialization &amp; Population Boom (1800s&#8211;1900s)</strong><br>
+          The Industrial Revolution dramatically increased fossil fuel use; world population grew from ~1 billion to 1.6 billion by 1900, accelerating demand for land, energy, and resources.
+        </div>
+      </div>
+      <div class="chain-connector">&#8595;</div>
+      <div class="chain-step">
+        <div class="node-num">2</div>
+        <div class="node-box blank">
+          <div class="blank-label">&#9998; Your Turn &#8212; Blank Node 1</div>
+          <textarea class="causal-input" placeholder="What were the direct environmental effects of industrial-era growth? Think: deforestation, desertification, air quality, water..." style="width:100%;min-height:70px;background:transparent;border:none;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;"></textarea>
+        </div>
+      </div>
+      <div class="chain-answer" id="chain2-answer"></div>
+      <div class="chain-connector">&#8595;</div>
+      <div class="chain-step">
+        <div class="node-num">3</div>
+        <div class="node-box">
+          <strong>Greenhouse Gas Accumulation &amp; Global Warming</strong><br>
+          Burning coal, oil, and gas released massive amounts of CO&#8322; into the atmosphere, thickening Earth&#39;s heat-trapping layer and causing a steady rise in global temperatures with effects ranging from extreme weather to rising sea levels.
+        </div>
+      </div>
+      <div class="chain-connector">&#8595;</div>
+      <div class="chain-step">
+        <div class="node-num">4</div>
+        <div class="node-box blank">
+          <div class="blank-label">&#9998; Your Turn &#8212; Blank Node 2</div>
+          <textarea class="causal-input" placeholder="What were the global political and social responses to climate change? Think: Kyoto, Paris Agreement, activism, Anthropocene..." style="width:100%;min-height:70px;background:transparent;border:none;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;"></textarea>
+        </div>
+      </div>
+      <div class="chain-answer" id="chain4-answer"></div>
+    </div>
+    <div style="margin-top:16px;">
+      <button class="reveal-btn" onclick="revealChain()">Reveal Model Answers</button>
+    </div>
+  </div>
+
+  <div class="act-label">&#9658; Thesis Evaluator &#8212; click each card to see if it earns the AP point</div>
+  <div class="info-box">Each thesis responds to this prompt: <strong>"Evaluate the extent to which human industrial activity caused environmental changes in the period from 1900 to the present."</strong> Click each card to see the verdict and explanation.</div>
+  <div class="thesis-grid">
+    <div class="thesis-card" id="tc1" onclick="revThesis('tc1','fail','FAIL \u2014 This is a restatement of the prompt, not a thesis. It tells us what happened but provides no line of reasoning, no categories of analysis, and no argument about extent or mechanism. A thesis must go beyond restating the obvious.')">
+      <div class="tc-label">Thesis Card 1</div>
+      <div class="tc-text">"Human industrial activity caused many environmental changes after 1900, including deforestation, desertification, air pollution, and global warming."</div>
+      <div class="tc-click">click to evaluate &#9658;</div>
+    </div>
+    <div class="thesis-card" id="tc2" onclick="revThesis('tc2','fail','FAIL \u2014 This thesis makes a defensible claim but lacks a line of reasoning. It identifies one effect (greenhouse gases) but does not establish categories of analysis or address extent. It does not explain the mechanism by which industrial activity caused this change, nor does it frame the broader argument.')">
+      <div class="tc-label">Thesis Card 2</div>
+      <div class="tc-text">"After 1900, human industrial activity contributed to the release of greenhouse gases into the atmosphere."</div>
+      <div class="tc-click">click to evaluate &#9658;</div>
+    </div>
+    <div class="thesis-card" id="tc3" onclick="revThesis('tc3','pass','PASS \u2014 This thesis earns the point. It makes a defensible claim AND establishes a line of reasoning with two clear categories: direct resource depletion and long-term climate destabilization. It addresses extent (\u201cprimarily\u201d) and previews how the argument will be structured, giving the reader a roadmap.')">
+      <div class="tc-label">Thesis Card 3</div>
+      <div class="tc-text">"Human industrial activity was primarily responsible for environmental changes after 1900, as the burning of fossil fuels and agricultural expansion both directly depleted natural resources like forests and water and contributed to long-term atmospheric changes that destabilized global climate systems."</div>
+      <div class="tc-click">click to evaluate &#9658;</div>
+    </div>
+    <div class="thesis-card" id="tc4" onclick="revThesis('tc4','pass','PASS \u2014 This thesis earns the point. It establishes a clear line of reasoning using a complexity move: acknowledging the dominant role of industrial nations while introducing the counterpoint about developing nations. This sets up two categories of analysis (historical responsibility, timing of industrialization) and addresses extent through nuanced framing.')">
+      <div class="tc-label">Thesis Card 4</div>
+      <div class="tc-text">"While industrialized nations in Europe and North America drove the majority of environmental change after 1900 through centuries of fossil fuel use, the global nature of climate change created international debates over shared responsibility, particularly as developing nations began industrializing in the late 20th century."</div>
+      <div class="tc-click">click to evaluate &#9658;</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DOK 4 ══ -->
+<section class="dok-section" id="dok4">
+  <div class="dok-badge">DOK 4 &middot; Knowledge Augmentation</div>
+  <h2>Extend &amp; Synthesize</h2>
+  <p class="dok-desc">Explore and explain with examples and evidence &#8212; connect across time, place, and context to build AP-level arguments.</p>
+
+  <div class="act-label">&#9658; Contextualization Builder &#8212; 3 Pathways</div>
+  <div class="info-box">Contextualization means connecting this topic to a <strong>broader historical context</strong> that came before, during, or after. Write your own paragraph using the stem, then compare to the model response. Aim for 3&#8211;5 sentences that describe the broader context AND explicitly connect it to Topic 9.3.</div>
+
+  <div class="ctx-pathway" id="ctx1">
+    <div class="ctx-header" onclick="toggleCtx('ctx1')">
+      <div class="ctx-header-left">
+        <div class="ctx-num">Pathway 1</div>
+        <div class="ctx-title">The Industrial Revolution as Context for Environmental Change</div>
+      </div>
+      <div class="ctx-arrow">&#9660;</div>
+    </div>
+    <div class="ctx-body">
+      <div class="ctx-stem">
+        <strong>Stem:</strong> Beginning in Britain in the late 18th century and spreading globally through the 19th and 20th centuries, the Industrial Revolution transformed how humans produced goods, organized cities, and consumed energy. [Continue describing this broader development, then connect it explicitly to why the environmental debates of the 20th century emerged when and how they did.]
+      </div>
+      <p style="font-size:0.88rem;color:var(--text-muted);margin:12px 0 6px;">Your Contextualization &#8212; Pathway 1:</p>
+      <textarea rows="5" style="width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;padding:10px 14px;" placeholder="Write your contextualization paragraph using the Pathway 1 stem above..."></textarea>
+      <div class="sample-label">Model Contextualization &#8212; Pathway 1</div>
+      <div class="sample-body">Beginning in Britain in the late 18th century and spreading globally through the 19th and into the 20th century, the Industrial Revolution fundamentally transformed how humans produced goods, consumed energy, and organized society. Driven by coal-powered steam engines, factories, and railroads, industrializing nations burned fossil fuels on an unprecedented scale and accelerated urbanization, drawing millions away from rural subsistence into dense, energy-hungry cities. By the early 20th century, industrialization had also triggered a population surge as improved medicine and food production supported billions more lives on Earth. These long-term trends&#8212;accelerating fossil fuel use, massive urban growth, and population expansion&#8212;set the stage for the environmental crises of Topic 9.3, as the cumulative effects of more than a century of industrial activity began to destabilize global climate systems, deplete natural resources, and spark an international debate over how to balance economic development with environmental sustainability.</div>
+    </div>
+  </div>
+
+  <div class="ctx-pathway" id="ctx2">
+    <div class="ctx-header" onclick="toggleCtx('ctx2')">
+      <div class="ctx-header-left">
+        <div class="ctx-num">Pathway 2</div>
+        <div class="ctx-title">Imperialism, Resource Extraction &amp; Environmental Exploitation</div>
+      </div>
+      <div class="ctx-arrow">&#9660;</div>
+    </div>
+    <div class="ctx-body">
+      <div class="ctx-stem">
+        <strong>Stem:</strong> During the 19th century, European powers dramatically expanded their empires across Africa, Asia, and the Americas, driven in large part by the demand for raw materials to fuel industrial economies. [Describe this context further and connect it to how global resource consumption patterns after 1900 contributed to environmental change.]
+      </div>
+      <p style="font-size:0.88rem;color:var(--text-muted);margin:12px 0 6px;">Your Contextualization &#8212; Pathway 2:</p>
+      <textarea rows="5" style="width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;padding:10px 14px;" placeholder="Write your contextualization paragraph using the Pathway 2 stem above..."></textarea>
+      <div class="sample-label">Model Contextualization &#8212; Pathway 2</div>
+      <div class="sample-body">During the 19th century, European powers dramatically expanded their empires across Africa, Asia, and the Americas, driven largely by the demand for raw materials to feed industrial economies back home. Colonial powers extracted rubber, timber, minerals, and agricultural products on a massive scale, clearing forests, reorganizing land use, and introducing monoculture farming practices that degraded local ecosystems. The global systems of resource extraction established under imperialism created entrenched patterns of environmental exploitation that continued well into the 20th century, even after formal colonialism ended. These patterns help explain why, in debates over climate change after 1900, formerly colonized and developing nations argued that the wealthiest countries bore the greatest historical responsibility&#8212;because it was the industrialized world&#39;s centuries-long exploitation of global resources that created the environmental crisis in the first place.</div>
+    </div>
+  </div>
+
+  <div class="ctx-pathway" id="ctx3">
+    <div class="ctx-header" onclick="toggleCtx('ctx3')">
+      <div class="ctx-header-left">
+        <div class="ctx-num">Pathway 3</div>
+        <div class="ctx-title">The Green Revolution &amp; Intensified Agricultural Pressure</div>
+      </div>
+      <div class="ctx-arrow">&#9660;</div>
+    </div>
+    <div class="ctx-body">
+      <div class="ctx-stem">
+        <strong>Stem:</strong> Beginning in the 1940s and accelerating through the 1960s&#8211;70s, the Green Revolution used new high-yield crop varieties, synthetic fertilizers, and pesticides to dramatically increase global food production. [Describe this broader context and connect it to why freshwater consumption and land-use pressures accelerated so sharply after 1950.]
+      </div>
+      <p style="font-size:0.88rem;color:var(--text-muted);margin:12px 0 6px;">Your Contextualization &#8212; Pathway 3:</p>
+      <textarea rows="5" style="width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;padding:10px 14px;" placeholder="Write your contextualization paragraph using the Pathway 3 stem above..."></textarea>
+      <div class="sample-label">Model Contextualization &#8212; Pathway 3</div>
+      <div class="sample-body">Beginning in the 1940s and accelerating through the 1960s and 1970s, the Green Revolution used new high-yield crop varieties, synthetic fertilizers, and chemical pesticides to dramatically increase global food production, particularly in South Asia and Latin America. While this technological transformation helped avert widespread famine for a rapidly growing global population, it came with significant environmental costs: massive irrigation projects consumed freshwater at unsustainable rates, chemical runoff contaminated rivers and soils, and the expansion of farmland into previously uncultivated areas accelerated deforestation. These dynamics help explain why, as shown in Topic 9.3, global water use skyrocketed particularly after 1950&#8212;the very period when Green Revolution agriculture was being most intensively deployed. The environmental pressures created by the effort to feed a post-WWII population boom thus became a major driver of the resource competition and water scarcity debates that define the environmental story of the 20th and 21st centuries.</div>
+    </div>
+  </div>
+
+  <div class="act-label">&#9658; SAQ Practice &#8212; Short Answer Question (Source-Based)</div>
+  <div class="saq-card">
+    <div class="saq-source">
+      <em>Excerpts from key articles of the Paris Agreement, 2015:</em><br><br>
+      &#8220;The Paris Agreement, in seeking to strengthen the global response to climate change, reaffirms the goal of limiting global temperature increase to well below 2 degrees Celsius, while pursuing efforts to limit the increase to 1.5 degrees.&#8221;<br><br>
+      &#8220;Parties aim to reach global peaking of greenhouse gas emissions as soon as possible, recognizing peaking will take longer for developing country Parties&#8230;&#8221;<br><br>
+      &#8220;The Paris Agreement also encourages Parties to conserve and enhance, as appropriate, sinks and reservoirs of [greenhouse gases], including forests.&#8221;
+      <cite>&#8212; United Nations, Paris Agreement, December 2015</cite>
+    </div>
+    <div class="saq-parts">
+      <div>
+        <div class="saq-part-label">Part A &#8212; Describe</div>
+        <div class="saq-part-prompt">Describe the historical context in which the Paris Agreement was developed.</div>
+        <div class="saq-tip">Tip: Think about the broader environmental and political developments from the late 20th century that made this agreement necessary. What had been happening to the climate, and what earlier efforts had already been made?</div>
+        <textarea placeholder="Write your Part A response here (2&#8211;3 sentences)..."></textarea>
+        <button class="reveal-btn" onclick="revealSAQ('saq-a')">Show Model</button>
+        <div class="saq-model" id="saq-a"><strong>Model Response:</strong> The Paris Agreement was developed in the context of growing scientific consensus and global alarm about climate change, following decades of accumulating evidence that human greenhouse gas emissions were driving dangerous rises in global temperature. Earlier agreements like the Kyoto Protocol (1997) had attempted to address emissions but were limited in scope and enforcement, particularly as major emitters like the United States and China were not fully bound by its commitments. By 2015, visible effects of climate change&#8212;more extreme weather events, rising sea levels, and shrinking glaciers&#8212;had increased public pressure on governments to reach a more comprehensive and globally inclusive agreement.</div>
+      </div>
+      <div>
+        <div class="saq-part-label">Part B &#8212; Explain</div>
+        <div class="saq-part-prompt">Explain ONE way in which environmental changes influenced the content or structure of the Paris Agreement.</div>
+        <div class="saq-tip">Tip: Look at what the agreement specifically prioritizes&#8212;temperature limits, forests, emissions timelines. Connect one of these directly to an environmental development from the textbook or video.</div>
+        <textarea placeholder="Write your Part B response here (2&#8211;3 sentences)..."></textarea>
+        <button class="reveal-btn" onclick="revealSAQ('saq-b')">Show Model</button>
+        <div class="saq-model" id="saq-b"><strong>Model Response:</strong> The widespread deforestation of the 20th century&#8212;driven by agricultural expansion, population growth, and industrial demand&#8212;directly influenced the Paris Agreement&#39;s inclusion of a provision encouraging countries to conserve and restore forests as &#34;sinks&#34; for greenhouse gases. Because forests absorb CO&#8322;, their destruction had accelerated atmospheric warming; the agreement therefore recognized that protecting them was an essential part of any credible climate strategy. This provision reflects how the specific environmental changes documented in Topic 9.3, particularly deforestation, shaped the international community&#39;s approach to limiting emissions.</div>
+      </div>
+      <div>
+        <div class="saq-part-label">Part C &#8212; Explain</div>
+        <div class="saq-part-prompt">Explain the significance of the Paris Agreement in light of the broader environmental debates after 1900.</div>
+        <div class="saq-tip">Tip: Think about what makes this agreement historically significant compared to earlier efforts. How did it try to address the tension between developed and developing nations that had defined climate debates throughout the 20th century?</div>
+        <textarea placeholder="Write your Part C response here (2&#8211;3 sentences)..."></textarea>
+        <button class="reveal-btn" onclick="revealSAQ('saq-c')">Show Model</button>
+        <div class="saq-model" id="saq-c"><strong>Model Response:</strong> The Paris Agreement is historically significant because it represented the broadest international consensus on climate action since the modern environmental debate began, bringing together 195 nations&#8212;including both industrialized and developing countries&#8212;around a shared framework. It also acknowledged the central tension in climate debates after 1900: that developing nations would need more time to peak their emissions, reflecting the longstanding argument that wealthy industrialized nations had created the problem over 150 years of fossil fuel use and could not simply demand that poorer nations forego development. While critics argued the agreement lacked binding enforcement, it marked a turning point in global recognition that the shared environmental crisis required collective, planetary-scale solutions.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="act-label">&#9658; Cross-Unit Synthesis</div>
+  <div class="synthesis-card">
+    <p style="font-size:0.92rem;color:var(--text-primary);margin-bottom:12px;line-height:1.6;">Topic 9.3 does not exist in isolation. The connections below show how environmental debates fit into the larger story of AP World History.</p>
+    <div class="syn-connections">
+      <div class="syn-conn">
+        <strong>Units 6&#8211;7 &middot; Industrial Revolution &amp; WWI</strong>
+        The same fossil fuel technology that powered industrialization and modern warfare is the primary cause of greenhouse gas accumulation. Industrialization created the environmental crisis.
+      </div>
+      <div class="syn-conn">
+        <strong>Unit 8 &middot; Cold War</strong>
+        The Aral Sea disaster was a direct product of Soviet-era centralized planning and irrigation projects. Cold War competition also delayed international environmental cooperation.
+      </div>
+      <div class="syn-conn">
+        <strong>Topic 9.4 &middot; Global Economy</strong>
+        Debates about climate action are inseparable from debates about economic growth&#8212;who bears the cost of transitioning away from fossil fuels, and who benefits from cheap energy.
+      </div>
+      <div class="syn-conn">
+        <strong>Topic 9.5 &middot; Calls for Reform</strong>
+        Climate activism (Greta Thunberg, Extinction Rebellion) mirrors other post-1900 reform movements in its use of protest, civil disobedience, and international organizing to pressure governments.
+      </div>
+    </div>
+    <div style="font-size:0.88rem;color:var(--text-secondary);margin:12px 0 6px;">Synthesis prompt: Choose ONE connection above and write 3&#8211;5 sentences explaining how it deepens your understanding of the environmental debates in Topic 9.3.</div>
+    <textarea placeholder="Write your synthesis response here..."></textarea>
+  </div>
+
+  <div class="act-label">&#9658; Self-Assessment &#8212; Rate Your AP Skills</div>
+  <div class="sa-grid" id="sa-grid"></div>
+</section>
+
+</div>
+
+<script>
+// ── FLIP CARDS ──────────────────────────────────────────────────
+const flipData = [
+  { term: 'Deforestation', def: 'Large-scale removal of forests for agriculture; reduces carbon sinks and accelerates soil erosion' },
+  { term: 'Desertification', def: 'Conversion of fertile land to desert through overgrazing or poor farming; e.g. Sahel, Aral Sea basin' },
+  { term: 'Greenhouse Gases', def: 'Gases (especially CO\u2082) that trap heat in Earth\'s atmosphere; emitted by burning fossil fuels' },
+  { term: 'Global Warming', def: 'Slow rise in Earth\'s average temperature caused by thickening greenhouse gas layer' },
+  { term: 'Kyoto Protocol', def: '1997 international agreement setting legally binding emissions targets for industrialized nations' },
+  { term: 'Paris Agreement', def: '2015 accord signed by 195 nations; aims to limit global temperature rise to well below 2\u00b0C' },
+  { term: 'IPCC', def: 'UN body that evaluates climate science and publishes consensus reports on climate change' },
+  { term: 'Anthropocene', def: 'Proposed epoch defined by dominant human influence on Earth\'s climate; proposed to replace Holocene' },
+  { term: 'Carbon Footprint', def: 'Total greenhouse gas emissions caused by an individual, organization, or nation' },
+  { term: 'Water Scarcity', def: 'Insufficient freshwater to meet demand; driven by population growth and industrial/agricultural use post-1950' },
+  { term: 'Fossil Fuels', def: 'Coal, oil, and natural gas; burned for energy, releasing CO\u2082; primary driver of greenhouse gas accumulation' },
+  { term: 'Holocene', def: 'The geological epoch spanning ~11,700 years since the last ice age; preceding the proposed Anthropocene' }
+];
+
+const grid = document.getElementById('flip-grid');
+flipData.forEach(card => {
+  const el = document.createElement('div');
+  el.className = 'flip-card';
+  el.innerHTML = '<div class="flip-inner"><div class="flip-front"><div class="term">' + card.term + '</div><div class="flip-hint">click to flip</div></div><div class="flip-back">' + card.def + '</div></div>';
+  el.addEventListener('click', () => el.classList.toggle('flipped'));
+  grid.appendChild(el);
+});
+
+// ── MCQ ──────────────────────────────────────────────────────────
+function checkMCQ(qid, btn, isCorrect) {
+  const item = document.getElementById(qid);
+  const fb = document.getElementById(qid + '-fb');
+  if (!fb._orig) fb._orig = fb.innerHTML;
+  if (isCorrect) {
+    item.querySelectorAll('.mcq-option').forEach(b => { b.classList.add('disabled'); b.onclick = null; });
+    btn.classList.add('correct');
+    fb.innerHTML = fb._orig;
+    fb.classList.remove('wrong-fb');
+    fb.classList.add('show');
+  } else {
+    btn.classList.add('incorrect', 'disabled');
+    btn.onclick = null;
+    fb.innerHTML = '<strong>Incorrect.</strong> That\u0027s not it \u2014 try again.';
+    fb.classList.add('show', 'wrong-fb');
+  }
+}
+
+// ── MATCHING ─────────────────────────────────────────────────────
+const matchPairs = [
+  { term: 'Deforestation', def: 'Amazon cleared for agriculture, weakening carbon absorption' },
+  { term: 'Desertification', def: 'Aral Sea drained by Soviet irrigation, leaving a toxic desert' },
+  { term: 'Greenhouse Effect', def: 'CO\u2082 from fossil fuels thickens Earth\u0027s heat-trapping atmosphere' },
+  { term: 'Paris Agreement', def: '195 nations in 2015 agreed to limit warming to below 2\u00b0C' },
+  { term: 'Anthropocene', def: 'Proposed epoch in which humanity is Earth\u0027s dominant environmental force' },
+  { term: 'Water Scarcity', def: 'Post-1950 surge in agricultural demand drains global freshwater supplies' },
+];
+let selectedTerm = null, selectedTermEl = null, matchScore = 0;
+function shuffleArr(arr) {
+  for (let i = arr.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [arr[i], arr[j]] = [arr[j], arr[i]]; }
+  return arr;
+}
+const shuffledDefs = shuffleArr([...matchPairs]);
+const termsCol = document.getElementById('match-terms');
+const defsCol = document.getElementById('match-defs');
+matchPairs.forEach(pair => {
+  const termEl = document.createElement('div');
+  termEl.className = 'match-item';
+  termEl.textContent = pair.term;
+  termEl.dataset.term = pair.term;
+  termEl.addEventListener('click', () => selectTerm(pair.term, termEl));
+  termsCol.appendChild(termEl);
+});
+shuffledDefs.forEach(pair => {
+  const defEl = document.createElement('div');
+  defEl.className = 'match-item';
+  defEl.textContent = pair.def;
+  defEl.dataset.term = pair.term;
+  defEl.addEventListener('click', () => selectDef(pair.term, defEl));
+  defsCol.appendChild(defEl);
+});
+function selectTerm(term, el) {
+  if (el.classList.contains('matched')) return;
+  document.querySelectorAll('#match-terms .match-item.selected').forEach(e => e.classList.remove('selected'));
+  selectedTerm = term; selectedTermEl = el; el.classList.add('selected');
+}
+function selectDef(term, el) {
+  if (!selectedTerm || el.classList.contains('matched-def')) return;
+  if (term === selectedTerm) {
+    el.classList.remove('selected'); el.classList.add('matched-def');
+    selectedTermEl.classList.remove('selected'); selectedTermEl.classList.add('matched');
+    matchScore++;
+    document.getElementById('match-score').textContent = 'Matched: ' + matchScore + ' / ' + matchPairs.length + (matchScore === matchPairs.length ? ' \u2014 All matched!' : '');
+  } else {
+    el.classList.add('wrong-flash');
+    setTimeout(() => el.classList.remove('wrong-flash'), 500);
+  }
+  selectedTerm = null; selectedTermEl = null;
+  document.querySelectorAll('#match-terms .match-item.selected').forEach(e => e.classList.remove('selected'));
+}
+function revealAllMatches() {
+  document.querySelectorAll('#match-terms .match-item').forEach(el => { el.classList.add('matched'); el.onclick = null; });
+  document.querySelectorAll('#match-defs .match-item').forEach(el => { el.classList.add('matched-def'); el.onclick = null; });
+  document.getElementById('match-score').textContent = 'All answers revealed.';
+}
+
+// ── REVEAL BUTTONS ────────────────────────────────────────────────
+function revealModel(id) { document.getElementById(id).classList.toggle('show'); }
+function revealSAQ(id) { document.getElementById(id).classList.toggle('show'); }
+
+// ── CAUSAL CHAIN ──────────────────────────────────────────────────
+function revealChain() {
+  const a2 = document.getElementById('chain2-answer');
+  const a4 = document.getElementById('chain4-answer');
+  a2.innerHTML = '<strong>Model Answer \u2014 Node 2:</strong> The industrial era\u0027s demands produced four interconnected environmental effects: (1) Deforestation \u2014 especially in the Amazon \u2014 as vast areas of forest were cleared for cropland and ranching, destroying critical carbon sinks; (2) Desertification in arid zones like Africa\u0027s Sahel, where overgrazing exhausted soils, and the Aral Sea basin, drained by Soviet irrigation projects; (3) A severe decline in air quality in industrial cities as factory and vehicle emissions created dangerous smog; and (4) Rapidly increasing consumption of global freshwater, particularly after 1950 when industrial and agricultural demand skyrocketed.';
+  a2.style.display = 'block';
+  a4.innerHTML = '<strong>Model Answer \u2014 Node 4:</strong> As scientific evidence for human-caused climate change mounted, it triggered a complex global political and social response. International cooperation emerged through the Kyoto Protocol (1997) and Paris Agreement (2015), attempting to limit emissions across nations. Civil society activism surged \u2014 Greta Thunberg launched a global school strike in 2018, and Extinction Rebellion engaged in civil disobedience in major cities. The debate remained deeply contested: some challenged the science or raised economic objections, while developing nations argued that industrialized countries bore primary historical responsibility for the crisis. Scientists proposed naming this era the \u201cAnthropocene\u201d to reflect the defining reality that humanity had become the dominant force shaping Earth\u0027s climate and environment \u2014 for better and for worse.';
+  a4.style.display = 'block';
+}
+
+// ── THESIS EVALUATOR ─────────────────────────────────────────────
+function revThesis(id, verdict, explanation) {
+  const el = document.getElementById(id);
+  if (el.classList.contains('revealed')) return;
+  el.classList.add('revealed', verdict);
+  const clickHint = el.querySelector('.tc-click');
+  if (clickHint) clickHint.style.display = 'none';
+  el.innerHTML += '<div class="thesis-verdict">' + verdict.toUpperCase() + '</div><div class="thesis-explanation">' + explanation + '</div>';
+}
+
+// ── CONTEXTUALIZATION BUILDER ────────────────────────────────────
+function toggleCtx(id) { document.getElementById(id).classList.toggle('open'); }
+
+// ── SELF-ASSESSMENT ───────────────────────────────────────────────
+const saSkills = [
+  'I can identify the causes of environmental changes after 1900',
+  'I can describe the effects of deforestation, desertification, and greenhouse gases using specific examples',
+  'I can explain how population growth and industrialization contributed to environmental degradation (causation)',
+  'I can explain the different perspectives in the climate change debate (developed vs. developing nations)',
+  'I can analyze the causal chain from industrialization to the Anthropocene using evidence',
+  'I can evaluate whether a thesis earns the AP thesis point for a prompt on environmental change',
+  'I can write a contextualization paragraph connecting 9.3 to broader industrial or imperial history',
+  'I can write a complete SAQ response on the Paris Agreement with accurate Parts A, B, and C',
+];
+const saGrid = document.getElementById('sa-grid');
+saSkills.forEach(skill => {
+  const row = document.createElement('div');
+  row.className = 'sa-row';
+  row.innerHTML = '<div class="sa-skill">' + skill + '</div><div class="sa-labels"><button class="sa-btn not-yet sa-label-item" onclick="setSA(this)">Not Yet</button><button class="sa-btn getting-there sa-label-item" onclick="setSA(this)">Getting There</button><button class="sa-btn confident sa-label-item" onclick="setSA(this)">Confident</button></div>';
+  saGrid.appendChild(row);
+});
+function setSA(btn) {
+  const row = btn.closest('.sa-row');
+  row.querySelectorAll('.sa-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+// ── NAV SCROLL SPY ────────────────────────────────────────────────
+const navLinks = document.querySelectorAll('.dok-nav a');
+const sections = document.querySelectorAll('.dok-section');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      const match = document.querySelector('.dok-nav a[href="#' + entry.target.id + '"]');
+      if (match) match.classList.add('active');
+    }
+  });
+}, { rootMargin: '-30% 0px -60% 0px' });
+sections.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>

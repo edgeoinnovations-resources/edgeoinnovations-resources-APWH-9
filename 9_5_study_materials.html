@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 9.5 — Calls for Reform After 1900 | AP World History: Modern</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:wght@300;400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-deep: #0d0d1a;
+    --bg-card: #13131f;
+    --bg-section: #111120;
+    --parchment: #e8dcc8;
+    --text-secondary: #b8aa96;
+    --text-muted: #7a6e5f;
+    --gold: #b8860b;
+    --gold-light: #d4a820;
+    --dok1: #2d5a27;
+    --dok1-light: #3d7a35;
+    --dok2: #1a3d6e;
+    --dok2-light: #2a5090;
+    --dok3: #6b2d2d;
+    --dok3-light: #8a3a3a;
+    --dok4: #4a2d6b;
+    --dok4-light: #6a3d8a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg-deep); color: var(--parchment); font-family: 'Source Serif 4', serif; line-height: 1.7; min-height: 100vh; }
+
+  /* PROGRESS BAR */
+  #progress-bar-wrap { position: sticky; top: 0; z-index: 100; background: rgba(13,13,26,0.97); border-bottom: 1px solid rgba(184,134,11,0.3); padding: 8px 20px; display: flex; align-items: center; gap: 12px; }
+  #progress-track { flex: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; position: relative; }
+  #progress-fill { height: 100%; background: linear-gradient(90deg, var(--dok1), var(--dok2), var(--dok3), var(--dok4)); border-radius: 3px; width: 0%; transition: width 0.6s ease; }
+  .prog-marker { position: absolute; top: -4px; width: 2px; height: 14px; background: rgba(184,134,11,0.5); }
+  .prog-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--text-muted); white-space: nowrap; }
+
+  /* HEADER */
+  .page-header { text-align: center; padding: 60px 20px 40px; background: radial-gradient(ellipse at center, rgba(184,134,11,0.08) 0%, transparent 70%); border-bottom: 1px solid rgba(184,134,11,0.2); }
+  .unit-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+  .page-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; color: var(--parchment); line-height: 1.2; margin-bottom: 10px; }
+  .page-subtitle { font-size: 1rem; color: var(--text-secondary); font-style: italic; }
+
+  /* HOW-TO BANNER */
+  .howto-banner { max-width: 900px; margin: 30px auto; background: linear-gradient(135deg, rgba(184,134,11,0.12), rgba(184,134,11,0.04)); border: 1px solid rgba(184,134,11,0.4); border-radius: 8px; padding: 20px 28px; }
+  .howto-banner h3 { font-family: 'Playfair Display', serif; color: var(--gold-light); margin-bottom: 10px; font-size: 1rem; }
+  .howto-banner p { font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 6px; }
+  .howto-banner .dok-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .dok-pill { font-family: 'JetBrains Mono', monospace; font-size: 10px; padding: 4px 10px; border-radius: 20px; }
+  .dok-pill.d1 { background: rgba(45,90,39,0.3); border: 1px solid var(--dok1); color: #7ec87a; }
+  .dok-pill.d2 { background: rgba(26,61,110,0.3); border: 1px solid var(--dok2); color: #7aaee8; }
+  .dok-pill.d3 { background: rgba(107,45,45,0.3); border: 1px solid var(--dok3); color: #e87a7a; }
+  .dok-pill.d4 { background: rgba(74,45,107,0.3); border: 1px solid var(--dok4); color: #c07ae8; }
+
+  /* DOK SECTION WRAPPER */
+  .dok-section { max-width: 960px; margin: 0 auto 50px; padding: 0 20px; }
+  .dok-header { display: flex; align-items: center; gap: 16px; padding: 24px 0 20px; border-bottom: 2px solid; margin-bottom: 30px; }
+  .dok-header.d1 { border-color: var(--dok1); }
+  .dok-header.d2 { border-color: var(--dok2); }
+  .dok-header.d3 { border-color: var(--dok3); }
+  .dok-header.d4 { border-color: var(--dok4); }
+  .dok-badge { font-family: 'JetBrains Mono', monospace; font-size: 10px; padding: 6px 12px; border-radius: 4px; font-weight: 600; letter-spacing: 1px; }
+  .dok-badge.d1 { background: var(--dok1); color: #9fd89a; }
+  .dok-badge.d2 { background: var(--dok2); color: #9ac0f0; }
+  .dok-badge.d3 { background: var(--dok3); color: #f0a0a0; }
+  .dok-badge.d4 { background: var(--dok4); color: #c8a0f0; }
+  .dok-title-block h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; }
+  .dok-title-block p { font-size: 0.82rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
+
+  /* CALLOUT BOXES */
+  .callout { border-radius: 8px; padding: 16px 20px; margin-bottom: 28px; }
+  .callout.blue { background: rgba(26,61,110,0.2); border: 1px solid rgba(42,80,144,0.6); }
+  .callout.gold { background: rgba(184,134,11,0.12); border: 1px solid rgba(184,134,11,0.5); }
+  .callout-title { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+  .callout.blue .callout-title { color: #7aaee8; }
+  .callout.gold .callout-title { color: var(--gold-light); }
+  .callout p { font-size: 0.88rem; color: var(--text-secondary); }
+  .callout ul { font-size: 0.88rem; color: var(--text-secondary); padding-left: 18px; }
+  .callout ul li { margin-bottom: 4px; }
+
+  /* VIDEO */
+  .video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin-bottom: 28px; border: 1px solid rgba(184,134,11,0.2); }
+  .video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+  /* VISUAL FRAMEWORK */
+  .framework-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 28px; }
+  .framework-card { background: var(--bg-card); border: 1px solid rgba(184,134,11,0.15); border-radius: 8px; padding: 16px; }
+  .framework-card .fc-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
+  .framework-card .fc-title { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--parchment); margin-bottom: 6px; }
+  .framework-card .fc-body { font-size: 0.82rem; color: var(--text-secondary); }
+
+  /* FLIP CARDS */
+  .flip-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; margin-bottom: 28px; }
+  .flip-card { height: 140px; cursor: pointer; perspective: 800px; }
+  .flip-inner { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.5s; }
+  .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
+  .flip-front, .flip-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 8px; padding: 12px; }
+  .flip-front { background: var(--bg-card); border: 1px solid rgba(184,134,11,0.25); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; min-height: 120px; }
+  .flip-front .term { font-family: 'Playfair Display', serif; font-size: 0.95rem; color: var(--parchment); }
+  .flip-hint { position: absolute; bottom: 8px; left: 0; right: 0; text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--text-muted); }
+  .flip-back { background: linear-gradient(135deg, var(--bg-card), rgba(184,134,11,0.06)); border: 1px solid rgba(184,134,11,0.4); transform: rotateY(180deg); display: flex; align-items: center; justify-content: center; text-align: center; }
+  .flip-back .def { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5; }
+
+  /* MCQ */
+  .mcq-block { margin-bottom: 28px; }
+  .mcq-item { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 18px; margin-bottom: 14px; }
+  .mcq-question { font-size: 0.9rem; color: var(--parchment); margin-bottom: 12px; font-weight: 600; }
+  .mcq-options { display: flex; flex-direction: column; gap: 8px; }
+  .mcq-option { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 5px; padding: 10px 14px; color: var(--text-secondary); text-align: left; cursor: pointer; font-family: 'Source Serif 4', serif; font-size: 0.85rem; transition: all 0.2s; }
+  .mcq-option:hover:not(.disabled) { background: rgba(255,255,255,0.08); border-color: rgba(184,134,11,0.4); }
+  .mcq-option.correct { background: rgba(45,90,39,0.3); border-color: #4a9840; color: #9fd89a; }
+  .mcq-option.incorrect { background: rgba(107,45,45,0.3); border-color: #a04040; color: #e89090; }
+  .mcq-option.disabled { cursor: default; pointer-events: none; }
+  .mcq-feedback { font-size: 0.82rem; margin-top: 10px; padding: 10px 14px; border-radius: 5px; background: rgba(45,90,39,0.15); border: 1px solid rgba(45,90,39,0.4); color: var(--text-secondary); display: none; }
+  .mcq-feedback.show { display: block; }
+  .mcq-feedback.wrong-fb { background: rgba(107,45,45,0.3); border-color: #f08080; }
+
+  /* MATCHING */
+  .matching-block { margin-bottom: 28px; }
+  .matching-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+  .match-item { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 10px 14px; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; user-select: none; }
+  .match-item:hover:not(.matched):not(.selected) { border-color: rgba(184,134,11,0.5); }
+  .match-item.selected { border-color: var(--gold); background: rgba(184,134,11,0.12); color: var(--parchment); }
+  .match-item.matched { border-color: #4a9840; background: rgba(45,90,39,0.2); color: #9fd89a; cursor: default; }
+  .match-item.wrong { border-color: #a04040; background: rgba(107,45,45,0.2); color: #e89090; }
+  #match-score { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: var(--gold); margin-top: 8px; }
+  .match-reset-btn { margin-top: 10px; }
+
+  /* EXPLAIN DRILL */
+  .drill-block { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 20px; margin-bottom: 20px; }
+  .drill-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--dok2-light); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+  .drill-prompt { font-size: 0.92rem; color: var(--parchment); margin-bottom: 14px; line-height: 1.6; }
+  textarea { width: 100%; min-height: 100px; margin: 10px 0; padding: 10px 14px; background: rgba(255,255,255,0.04); border: 1px solid rgba(184,134,11,0.2); border-radius: 4px; color: var(--parchment); font-family: 'Source Serif 4', serif; font-size: 0.88rem; resize: vertical; outline: none; }
+  textarea:focus { border-color: rgba(184,134,11,0.5); }
+
+  /* ACCORDION */
+  .accordion { border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; overflow: hidden; margin-top: 10px; }
+  .accordion-btn { width: 100%; background: rgba(255,255,255,0.04); border: none; color: var(--text-secondary); padding: 10px 16px; text-align: left; cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1px; display: flex; justify-content: space-between; align-items: center; }
+  .accordion-btn:hover { background: rgba(255,255,255,0.08); }
+  .accordion-body { display: none; padding: 14px 16px; background: rgba(45,90,39,0.08); border-top: 1px solid rgba(255,255,255,0.07); font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; }
+  .accordion-body.open { display: block; }
+
+  /* COMPARISON TABLE */
+  .compare-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 0.85rem; }
+  .compare-table th { background: rgba(26,61,110,0.3); color: #9ac0f0; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1px; padding: 10px 14px; text-align: left; border: 1px solid rgba(42,80,144,0.4); }
+  .compare-table td { padding: 10px 14px; border: 1px solid rgba(255,255,255,0.07); color: var(--text-secondary); vertical-align: top; }
+  .compare-table td:first-child { color: var(--parchment); font-weight: 600; }
+
+  /* HIPP TABLE */
+  .hipp-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 0.85rem; }
+  .hipp-table th { background: rgba(26,61,110,0.3); color: #9ac0f0; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1px; padding: 8px 12px; text-align: left; border: 1px solid rgba(42,80,144,0.4); }
+  .hipp-table td { padding: 6px 10px; border: 1px solid rgba(255,255,255,0.07); vertical-align: top; }
+  .hipp-table textarea { min-height: 70px; margin: 4px 0; }
+
+  /* CAUSAL CHAIN */
+  .causal-chain { margin-bottom: 28px; }
+  .chain-step { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 8px; }
+  .node-num { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 6px; }
+  .node-num.filled { background: var(--dok3); color: #f0a0a0; }
+  .node-num.blank-num { background: rgba(107,45,45,0.2); border: 2px dashed var(--dok3); color: var(--dok3); }
+  .node-box { flex: 1; background: var(--bg-card); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 14px 16px; }
+  .node-box.blank { border: 2px dashed rgba(107,45,45,0.5); background: rgba(107,45,45,0.05); }
+  .node-box .node-title { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+  .node-box .node-content { font-size: 0.88rem; color: var(--text-secondary); }
+  .chain-arrow { text-align: center; color: var(--dok3); font-size: 1.2rem; margin: 2px 0 2px 24px; }
+  .chain-answer-box { display: none; margin-left: 48px; margin-top: 6px; padding: 10px 14px; background: rgba(45,90,39,0.1); border: 1px solid rgba(45,90,39,0.3); border-radius: 4px; font-size: 0.85rem; color: var(--text-secondary); }
+
+  /* CCOT GRID */
+  .ccot-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-bottom: 20px; }
+  .ccot-card { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 14px; }
+  .ccot-card .ccot-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--dok3-light); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
+  .ccot-card .ccot-body { font-size: 0.82rem; color: var(--text-secondary); }
+
+  /* THESIS EVALUATOR */
+  .thesis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
+  .thesis-card { background: var(--bg-card); border: 2px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 18px; cursor: pointer; transition: all 0.2s; }
+  .thesis-card:hover:not(.revealed) { border-color: rgba(184,134,11,0.4); }
+  .thesis-card .thesis-text { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; font-style: italic; }
+  .thesis-card .click-hint { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--text-muted); margin-top: 10px; }
+  .thesis-card.revealed.fail { border-color: #a04040; background: rgba(107,45,45,0.15); }
+  .thesis-card.revealed.pass { border-color: #4a9840; background: rgba(45,90,39,0.15); }
+  .thesis-verdict { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; margin-top: 12px; }
+  .thesis-card.fail .thesis-verdict { color: #e87a7a; }
+  .thesis-card.pass .thesis-verdict { color: #7ec87a; }
+  .thesis-explanation { font-size: 0.8rem; color: var(--text-secondary); margin-top: 6px; line-height: 1.5; }
+
+  /* SAQ */
+  .saq-block { background: var(--bg-card); border: 1px solid rgba(107,45,45,0.3); border-radius: 8px; padding: 20px; margin-bottom: 20px; }
+  .saq-source { background: rgba(0,0,0,0.3); border-left: 3px solid var(--gold); padding: 14px 18px; margin-bottom: 16px; border-radius: 0 6px 6px 0; font-size: 0.88rem; color: var(--text-secondary); font-style: italic; line-height: 1.7; }
+  .saq-source .attrib { font-style: normal; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 10px; display: block; margin-top: 8px; }
+  .saq-part { margin-bottom: 18px; }
+  .saq-part-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--dok3-light); letter-spacing: 2px; margin-bottom: 6px; }
+  .saq-part-prompt { font-size: 0.9rem; color: var(--parchment); margin-bottom: 8px; line-height: 1.6; }
+
+  /* CONTEXTUALIZATION BUILDER */
+  .ctx-pathway { background: var(--bg-card); border: 1px solid rgba(74,45,107,0.4); border-radius: 8px; margin-bottom: 14px; overflow: hidden; }
+  .ctx-header { padding: 16px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(74,45,107,0.2); }
+  .ctx-header:hover { background: rgba(74,45,107,0.1); }
+  .ctx-header h4 { font-family: 'Playfair Display', serif; font-size: 1rem; color: #c8a0f0; }
+  .ctx-header .ctx-toggle { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); }
+  .ctx-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 20px; }
+  .ctx-pathway.open .ctx-body { max-height: 1200px; padding: 0 20px 20px; }
+  .ctx-stem { font-size: 0.88rem; color: var(--text-secondary); margin: 14px 0 10px; line-height: 1.6; }
+  .sample-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin: 14px 0 6px; }
+  .sample-body { background: rgba(184,134,11,0.06); border: 1px solid rgba(184,134,11,0.2); border-radius: 6px; padding: 12px 16px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; }
+
+  /* CROSS-UNIT SYNTHESIS */
+  .synthesis-block { background: var(--bg-card); border: 1px solid rgba(74,45,107,0.3); border-radius: 8px; padding: 20px; margin-bottom: 20px; }
+  .synthesis-block h4 { font-family: 'Playfair Display', serif; font-size: 1rem; color: #c8a0f0; margin-bottom: 12px; }
+  .syn-connections { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+  .syn-card { background: rgba(74,45,107,0.1); border: 1px solid rgba(74,45,107,0.3); border-radius: 6px; padding: 12px; font-size: 0.82rem; color: var(--text-secondary); }
+  .syn-card strong { color: #c8a0f0; font-size: 0.8rem; display: block; margin-bottom: 4px; }
+
+  /* SELF ASSESSMENT */
+  .sa-grid { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+  .sa-row { display: flex; align-items: center; gap: 16px; background: var(--bg-card); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 12px 16px; }
+  .sa-text { flex: 1; font-size: 0.88rem; color: var(--text-secondary); }
+  .sa-dots { display: flex; gap: 8px; align-items: center; }
+  .sa-dot { width: 18px; height: 18px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.2); cursor: pointer; transition: all 0.2s; }
+  .sa-dot:hover { border-color: var(--gold); }
+  .sa-dot.lit { background: var(--gold); border-color: var(--gold-light); }
+  .sa-labels { display: flex; gap: 8px; align-items: center; }
+  .sa-label-item { min-width: 28px; white-space: nowrap; font-family: 'JetBrains Mono', monospace; font-size: 8px; color: var(--text-muted); }
+
+  /* COMPLETE BUTTON */
+  .complete-btn { display: block; width: 100%; padding: 14px; margin-top: 30px; background: rgba(184,134,11,0.1); border: 1px solid rgba(184,134,11,0.4); border-radius: 6px; color: var(--gold-light); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 2px; cursor: pointer; transition: all 0.2s; text-transform: uppercase; }
+  .complete-btn:hover { background: rgba(184,134,11,0.2); }
+  .complete-btn.done { background: rgba(45,90,39,0.2); border-color: var(--dok1); color: #7ec87a; }
+
+  /* BUTTONS */
+  .btn { padding: 9px 18px; border-radius: 5px; cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; border: 1px solid; transition: all 0.2s; }
+  .btn-gold { background: rgba(184,134,11,0.15); border-color: rgba(184,134,11,0.5); color: var(--gold-light); }
+  .btn-gold:hover { background: rgba(184,134,11,0.28); }
+  .btn-green { background: rgba(45,90,39,0.2); border-color: var(--dok1); color: #7ec87a; }
+  .btn-red { background: rgba(107,45,45,0.2); border-color: var(--dok3); color: #e87a7a; }
+  .btn-reset { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.15); color: var(--text-muted); }
+  .btn-reset:hover { background: rgba(255,255,255,0.08); }
+
+  /* DIVIDER */
+  .section-divider { border: none; border-top: 1px solid rgba(184,134,11,0.1); margin: 30px 0; }
+
+  @media (max-width: 640px) {
+    .matching-grid { grid-template-columns: 1fr; }
+    .thesis-grid { grid-template-columns: 1fr; }
+    .ccot-grid { grid-template-columns: 1fr; }
+    .syn-connections { grid-template-columns: 1fr; }
+    .flip-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div id="progress-bar-wrap">
+  <span class="prog-label">PROGRESS</span>
+  <div id="progress-track">
+    <div id="progress-fill"></div>
+    <div class="prog-marker" style="left:25%"></div>
+    <div class="prog-marker" style="left:50%"></div>
+    <div class="prog-marker" style="left:75%"></div>
+  </div>
+  <span class="prog-label" id="prog-pct">0%</span>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="unit-label">Unit 9 · Topic 9.5 · Social Interactions &amp; Organization (SIO)</div>
+  <h1 class="page-title">Calls for Reform After 1900</h1>
+  <p class="page-subtitle">How did 20th-century movements challenge old assumptions about race, class, gender, and religion?</p>
+</div>
+
+<!-- HOW-TO BANNER -->
+<div class="howto-banner" style="max-width:960px;margin:30px auto;">
+  <h3>How to Use This Module</h3>
+  <p>This module is built around the AP Learning Objective: <em>Explain how social categories, roles, and practices have been maintained and challenged over time.</em> Work through each DOK level in order — earlier levels build the knowledge you need for the harder thinking ahead.</p>
+  <p style="margin-top:8px;">Start with the <strong>Video Explainer</strong> to anchor the big picture. Use the <strong>Infographic</strong> (from NotebookLM) during DOK 2 as a reference. At DOK 3 and 4, you will practice the exact skills tested on the AP exam.</p>
+  <div class="dok-pills">
+    <span class="dok-pill d1">DOK 1 · Acquire: Recall &amp; Recognize</span>
+    <span class="dok-pill d2">DOK 2 · Apply: Explain with Examples</span>
+    <span class="dok-pill d3">DOK 3 · Analyze: Explain with Evidence</span>
+    <span class="dok-pill d4">DOK 4 · Augment: Contextualize &amp; Argue</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!--  DOK 1 — KNOWLEDGE ACQUISITION                      -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="dok-section">
+  <div class="dok-header d1">
+    <span class="dok-badge d1">DOK 1 · KNOWLEDGE ACQUISITION</span>
+    <div class="dok-title-block">
+      <h2 style="color:#7ec87a;">Watch · Recall · Recognize</h2>
+      <p>TASK: Answer correctly — identify key facts, terms, and developments</p>
+    </div>
+  </div>
+
+  <!-- NOTEBOOKLM VIDEO CALLOUT -->
+  <div class="callout blue">
+    <div class="callout-title">📽 NotebookLM — Watch the Video Explainer First</div>
+    <p>Before moving to any activity, watch the full explainer. As you watch, listen for these three things:</p>
+    <ul style="margin-top:8px;">
+      <li>What event in 1948 set the universal standard for human rights — and why was the word "universal" so radical?</li>
+      <li>What is the difference between the U.S. suffrage victory of 1920 and full voting rights protection for African-American women?</li>
+      <li>What two very different movements in West Africa and Latin America both used cultural identity as a tool for liberation?</li>
+    </ul>
+  </div>
+
+  <!-- VIDEO EMBED -->
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/uH2pwyvbW_g" title="APWH 9.5 Calls for Reform After 1900" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <!-- VISUAL FRAMEWORK -->
+  <h3 style="font-family:'Playfair Display',serif;color:var(--gold-light);margin-bottom:16px;font-size:1.1rem;">The Six-Part Framework: Forces for Reform After 1900</h3>
+  <div class="framework-grid">
+    <div class="framework-card"><div class="fc-label">Part 1</div><div class="fc-title">Universal Blueprint</div><div class="fc-body">UN + UDHR (1948) — a radical declaration that every person holds equal rights regardless of race, class, or gender</div></div>
+    <div class="framework-card"><div class="fc-label">Part 2</div><div class="fc-title">New Ideas &amp; Voices</div><div class="fc-body">Global feminism, Negritude movement, liberation theology — different movements using identity as a tool for justice</div></div>
+    <div class="framework-card"><div class="fc-label">Part 3</div><div class="fc-title">Fight for Legal Equality</div><div class="fc-body">Dismantling apartheid (South Africa), U.S. Civil Rights/Voting Rights Acts, caste reform in India</div></div>
+    <div class="framework-card"><div class="fc-label">Part 4</div><div class="fc-title">Expanding Rights</div><div class="fc-body">Progress was uneven — voting rights won in stages across decades in different nations</div></div>
+    <div class="framework-card"><div class="fc-label">Part 5</div><div class="fc-title">Environmental &amp; Economic Justice</div><div class="fc-body">Greenpeace, Green Belt Movement (Kenya), World Fair Trade Organization — rights applied to planet and economy</div></div>
+    <div class="framework-card"><div class="fc-label">Part 6</div><div class="fc-title">AP Contextualization</div><div class="fc-body">Connect movements to decolonization, Cold War, and 19th-century abolitionism / suffrage — the roots and the ripples</div></div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- FLIP CARDS -->
+  <h3 style="font-family:'Playfair Display',serif;color:var(--gold-light);margin-bottom:16px;font-size:1.1rem;">Vocabulary: Click Each Card to Flip</h3>
+  <div class="flip-grid">
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front"><span class="term">Universal Declaration of Human Rights</span><span class="flip-hint">click to flip</span></div>
+        <div class="flip-back"><span class="def">1948 UN document declaring every person's equal rights regardless of race, class, or gender — radical in an era still marked by colonialism and segregation</span></div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front"><span class="term">Negritude Movement</span><span class="flip-hint">click to flip</span></div>
+        <div class="flip-back"><span class="def">West African and Caribbean intellectual movement celebrating Black culture and identity as a direct challenge to colonial racism and Eurocentric values</span></div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front"><span class="term">Liberation Theology</span><span class="flip-hint">click to flip</span></div>
+        <div class="flip-back"><span class="def">Latin American movement that reinterpreted Catholic teaching to demand social and economic justice for the poor — using religious identity as a call to action</span></div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front"><span class="term">Apartheid</span><span class="flip-hint">click to flip</span></div>
+        <div class="flip-back"><span class="def">System of institutionalized racial segregation and minority white rule in South Africa (1948–1994) — designed to control 85% of the population through law, pass books, and forced separation</span></div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front"><span class="term">Global Feminism</span><span class="flip-hint">click to flip</span></div>
+        <div class="flip-back"><span class="def">Century-long international movement for women's political, social, and economic equality — culminating in the 1995 Beijing declaration that women's rights are human rights</span></div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front"><span class="term">Green Belt Movement</span><span class="flip-hint">click to flip</span></div>
+        <div class="flip-back"><span class="def">Grassroots environmental movement in Kenya founded by Wangari Maathai — empowering women to plant trees, restore land, and link environmental healing to social justice</span></div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front"><span class="term">Caste Reservation System</span><span class="flip-hint">click to flip</span></div>
+        <div class="flip-back"><span class="def">India's constitutional policy reserving seats in education and government for historically marginalized groups (Dalits, tribal communities) — an attempt to undo centuries of caste inequality</span></div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front"><span class="term">Truth and Reconciliation Commission</span><span class="flip-hint">click to flip</span></div>
+        <div class="flip-back"><span class="def">South African body established after apartheid's end — offering amnesty in exchange for public testimony, prioritizing national healing over retributive punishment (unlike Nuremberg)</span></div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front"><span class="term">World Fair Trade Organization</span><span class="flip-hint">click to flip</span></div>
+        <div class="flip-back"><span class="def">International organization advocating for fair prices, ethical labor practices, and equitable trade relationships — challenging exploitative structures of economic globalization</span></div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front"><span class="term">Rights-Based Discourse</span><span class="flip-hint">click to flip</span></div>
+        <div class="flip-back"><span class="def">The use of the language of universal human rights to challenge discrimination — a framework that empowered movements around race, class, gender, environment, and economic justice after 1900</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- MCQs -->
+  <h3 style="font-family:'Playfair Display',serif;color:var(--gold-light);margin-bottom:16px;font-size:1.1rem;">Recall Check: 5 Multiple Choice Questions</h3>
+  <div class="mcq-block">
+
+    <div class="mcq-item" id="mcq1">
+      <div class="mcq-question">1. The Universal Declaration of Human Rights (1948) was considered radical in its historical context primarily because it</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(A) established the United Nations as the governing body of the world</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,true)">(B) declared all people equal at a time when colonialism and racial segregation remained widespread</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(C) gave women the right to vote in every member nation immediately</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(D) replaced existing national constitutions with a single global standard</button>
+      </div>
+      <div class="mcq-feedback" id="mcq1-fb"><strong>Correct — B.</strong> The word "universal" was the radical act. Colonial empires still existed and racial segregation was legally enforced in many nations, making a declaration of universal equality a direct challenge to those systems.</div>
+    </div>
+
+    <div class="mcq-item" id="mcq2">
+      <div class="mcq-question">2. Which of the following best describes the Negritude movement's primary strategy?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(A) Armed resistance against colonial governments in West Africa</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(B) Economic boycotts of European-owned businesses</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,true)">(C) Celebrating Black cultural identity as a form of resistance to colonial racism</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(D) Petitioning the UN for immediate political independence</button>
+      </div>
+      <div class="mcq-feedback" id="mcq2-fb"><strong>Correct — C.</strong> The Negritude movement "flipped the script" on colonial racism by reclaiming and celebrating Black culture and identity rather than accepting European cultural supremacy — using culture itself as the weapon.</div>
+    </div>
+
+    <div class="mcq-item" id="mcq3">
+      <div class="mcq-question">3. The U.S. suffrage victory of 1920 is described in the video as an incomplete victory because</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(A) the amendment was never ratified by enough states</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,true)">(B) African-American women still faced systematic denial of voting rights for another 45 years</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(C) it only applied to women over the age of 30</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(D) no women actually exercised the right until the 1930s</button>
+      </div>
+      <div class="mcq-feedback" id="mcq3-fb"><strong>Correct — B.</strong> The 1920 victory was largely for white women. African-American women's voting rights were not fully protected until the Voting Rights Act of 1965 — 45 years of continued struggle, demonstrating that progress was "incredibly uneven."</div>
+    </div>
+
+    <div class="mcq-item" id="mcq4">
+      <div class="mcq-question">4. What made apartheid in South Africa particularly systematic compared to other forms of racial discrimination?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(A) It was enforced only in major cities</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(B) It was a temporary wartime measure</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,true)">(C) It used a comprehensive legal architecture — pass books, residential laws, language requirements — to control 85% of the population</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(D) It was imposed by a foreign colonial power rather than the domestic government</button>
+      </div>
+      <div class="mcq-feedback" id="mcq4-fb"><strong>Correct — C.</strong> Apartheid was "a brutal, meticulously designed system" — not just informal racism. It used pass books, forced residential separation, marriage laws, and language mandates to dehumanize 85% of the population under the rule of a tiny white minority.</div>
+    </div>
+
+    <div class="mcq-item" id="mcq5">
+      <div class="mcq-question">5. Liberation theology and the Negritude movement were similar in that both</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(A) originated in the same region and shared the same leadership</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(B) rejected religion as a tool for social change</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,true)">(C) used their own cultural or religious identity as a foundation for demanding justice</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(D) focused exclusively on gaining political voting rights</button>
+      </div>
+      <div class="mcq-feedback" id="mcq5-fb"><strong>Correct — C.</strong> These were very different movements in different places, but they shared a common strategy: taking their own identity (Black culture; Catholic faith) and turning it into a powerful argument for liberation and justice rather than accepting the terms imposed by dominant powers.</div>
+    </div>
+
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- MATCHING -->
+  <h3 style="font-family:'Playfair Display',serif;color:var(--gold-light);margin-bottom:16px;font-size:1.1rem;">Matching Activity</h3>
+  <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:14px;">Click a term on the left, then click its matching description on the right. <span id="match-score"></span></p>
+  <div class="matching-grid" id="match-grid">
+    <div class="match-item" data-id="a" data-type="term" onclick="handleMatch(this)">Wangari Maathai</div>
+    <div class="match-item" data-id="b" data-type="term" onclick="handleMatch(this)">UNICEF / UNHCR</div>
+    <div class="match-item" data-id="c" data-type="term" onclick="handleMatch(this)">1965 Voting Rights Act</div>
+    <div class="match-item" data-id="d" data-type="term" onclick="handleMatch(this)">Greenpeace</div>
+    <div class="match-item" data-id="e" data-type="term" onclick="handleMatch(this)">Nelson Mandela</div>
+
+    <div class="match-item" data-id="c" data-type="def" onclick="handleMatch(this)">Dismantled legal barriers preventing African-American voting rights in the United States</div>
+    <div class="match-item" data-id="e" data-type="def" onclick="handleMatch(this)">Led the anti-apartheid movement in South Africa; imprisoned for 27 years; first post-apartheid president</div>
+    <div class="match-item" data-id="a" data-type="def" onclick="handleMatch(this)">Founded the Green Belt Movement in Kenya, linking tree planting to women's empowerment and environmental justice</div>
+    <div class="match-item" data-id="b" data-type="def" onclick="handleMatch(this)">UN agencies created to turn the ideals of the UDHR into on-the-ground action for children and refugees</div>
+    <div class="match-item" data-id="d" data-type="def" onclick="handleMatch(this)">Environmental organization known for direct, confrontational action on the high seas to protest ecological destruction</div>
+  </div>
+  <button class="btn btn-reset match-reset-btn" onclick="resetMatch()">Reset Matching</button>
+
+  <button class="complete-btn" id="complete-dok1" onclick="markComplete(1)">✓ Mark DOK 1 Complete — Advance Progress Bar</button>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!--  DOK 2 — KNOWLEDGE APPLICATION                      -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="dok-section">
+  <div class="dok-header d2">
+    <span class="dok-badge d2">DOK 2 · KNOWLEDGE APPLICATION</span>
+    <div class="dok-title-block">
+      <h2 style="color:#9ac0f0;">Explain · Compare · Apply</h2>
+      <p>TASK: Establish and explain with examples — show how and why, not just what</p>
+    </div>
+  </div>
+
+  <div class="callout gold">
+    <div class="callout-title">🗺 NotebookLM — Review the Infographic Now</div>
+    <p>Open the NotebookLM Infographic for Topic 9.5. Use it as a visual reference as you work through the application activities below. Look especially for how the different movements connect to each other and to the broader theme of rights-based discourse.</p>
+  </div>
+
+  <!-- EXPLAIN DRILL 1 -->
+  <div class="drill-block">
+    <div class="drill-label">Explain Drill 1 of 2 · AP Skill: Causation</div>
+    <p class="drill-prompt"><strong>Explain</strong> why the creation of the United Nations and the Universal Declaration of Human Rights in 1948 represented a significant turning point in global history. Your answer must show the <em>mechanism</em> — how or why this mattered — not just what happened.</p>
+    <textarea placeholder="Write your explanation here. Remember: 'explain' means showing HOW or WHY — connect cause to effect. Aim for 3–4 sentences."></textarea>
+    <div class="accordion">
+      <button class="accordion-btn" onclick="toggleAcc(this)">▶ REVEAL SAMPLE ANSWER <span>click to expand</span></button>
+      <div class="accordion-body">
+        <strong>Sample Explanation (DOK 2 — Explain with Examples):</strong><br><br>
+        The UN and UDHR represented a turning point because they established a universal moral framework at a moment when the world had just witnessed what happens when no such framework exists. After two devastating world wars and the Holocaust, there was collective recognition that without enforceable standards of human dignity, atrocities would continue. The UDHR's power was not just symbolic — it provided the language and the legitimacy for future reform movements around the world to make their case. For example, anti-apartheid activists, global feminists, and caste reform advocates in India could all point to the UDHR as evidence that their demands were not just local grievances but violations of a universally recognized standard. The UN then created agencies like UNICEF and UNHCR to translate those ideals into concrete action.
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPLAIN DRILL 2 -->
+  <div class="drill-block">
+    <div class="drill-label">Explain Drill 2 of 2 · AP Skill: Causation + Comparison</div>
+    <p class="drill-prompt"><strong>Explain</strong> how the dismantling of apartheid in South Africa required both internal resistance and international pressure. What made that combination effective?</p>
+    <textarea placeholder="Explain the mechanism — what did internal resistance provide that international pressure could not, and vice versa? Use specific examples."></textarea>
+    <div class="accordion">
+      <button class="accordion-btn" onclick="toggleAcc(this)">▶ REVEAL SAMPLE ANSWER <span>click to expand</span></button>
+      <div class="accordion-body">
+        <strong>Sample Explanation (DOK 2 — Explain with Examples):</strong><br><br>
+        Apartheid's collapse required a "one-two punch" because neither force alone was sufficient. Internal resistance — led by figures like Nelson Mandela and the ANC — provided moral legitimacy and demonstrated that a majority of South Africans refused to accept the system as permanent. Without this, international pressure would have had no credible partner to support. International pressure — through economic sanctions, cultural boycotts, and diplomatic isolation — strangled South Africa's economy and removed the regime's ability to sustain itself financially. Without internal resistance, sanctions might have simply hardened the government's resolve. Together, these two forces made the cost of maintaining apartheid unsustainable, leading to the first free elections in 1994. This shows that successful reform movements often depend on an alignment between grassroots pressure from below and structural pressure from outside.
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- COMPARISON TABLE -->
+  <h3 style="font-family:'Playfair Display',serif;color:#9ac0f0;margin-bottom:14px;font-size:1.1rem;">Apply Activity: Comparison Table</h3>
+  <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:16px;">Compare three reform movements on the key dimensions below. Use your notes and the textbook to complete any cells you are unsure about.</p>
+  <div style="overflow-x:auto;">
+  <table class="compare-table">
+    <tr>
+      <th>Dimension</th>
+      <th>Global Feminism</th>
+      <th>Negritude Movement</th>
+      <th>Liberation Theology</th>
+    </tr>
+    <tr>
+      <td>Region / Origin</td>
+      <td>International — rooted in Western Europe and North America, then global</td>
+      <td>West Africa and the Caribbean (French-speaking intellectuals)</td>
+      <td>Latin America (Catholic countries)</td>
+    </tr>
+    <tr>
+      <td>Primary Identity Used</td>
+      <td>Gender</td>
+      <td>Race / Cultural heritage</td>
+      <td>Religious faith (Catholicism)</td>
+    </tr>
+    <tr>
+      <td>Key Goal</td>
+      <td>Political, social, and economic equality for women</td>
+      <td>Reclaim Black identity; challenge Eurocentric cultural assumptions</td>
+      <td>Social and economic justice for the poor</td>
+    </tr>
+    <tr>
+      <td>Key Example / Milestone</td>
+      <td>1995 Beijing Conference: "women's rights are human rights"</td>
+      <td>Works of Aimé Césaire and Léopold Senghor challenging colonial ideology</td>
+      <td>Base communities organizing the rural poor across Brazil and Central America</td>
+    </tr>
+    <tr>
+      <td>Connection to UDHR</td>
+      <td>Used UDHR framework to demand legal equality</td>
+      <td>Challenged colonial assumptions that contradicted UDHR principles</td>
+      <td>Applied UDHR principles to argue that poverty is a human rights violation</td>
+    </tr>
+  </table>
+  </div>
+  <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:8px;margin-top:4px;">Reflection: What is one <em>similarity</em> and one <em>difference</em> among these three movements?</p>
+  <textarea placeholder="Similarity: All three movements shared... because... Difference: While [movement A]..., [movement B]..."></textarea>
+  <div class="accordion">
+    <button class="accordion-btn" onclick="toggleAcc(this)">▶ REVEAL SAMPLE REFLECTION <span>click to expand</span></button>
+    <div class="accordion-body">
+      <strong>Similarity:</strong> All three movements used their own identity — gender, race, or religious faith — as a tool of empowerment rather than a source of shame, turning what dominant systems had used to marginalize them into the foundation of their argument for justice.<br><br>
+      <strong>Difference:</strong> While global feminism and liberation theology both eventually engaged with formal international institutions (UN conferences, Vatican councils), the Negritude movement was primarily an intellectual and cultural project that worked through literature, poetry, and art rather than legal or political lobbying.
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- HIPP APPLY ACTIVITY -->
+  <h3 style="font-family:'Playfair Display',serif;color:#9ac0f0;margin-bottom:14px;font-size:1.1rem;">Apply Activity: HIPP Source Analysis</h3>
+  <div class="saq-source" style="margin-bottom:14px;">
+    "My name is Chai Ling. I am twenty-three years old... I believe that democracy is a natural desire. It should guarantee human rights and independence, and foster self-respect — all of which people are entitled to. Unfortunately, the basic human instinct for independence has been greatly inhibited and degraded among the Chinese... If we lose it, China will retreat into another dark age."
+    <span class="attrib">— Chai Ling, Interview at Tiananmen Square, 1989</span>
+  </div>
+  <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:14px;">For each HIPP element, write a 1–2 sentence analysis of how it shapes the meaning of this source.</p>
+  <table class="hipp-table">
+    <tr>
+      <th>HIPP Element</th>
+      <th>Your Analysis</th>
+    </tr>
+    <tr>
+      <td style="color:#9ac0f0;font-family:'JetBrains Mono',monospace;font-size:10px;"><strong>H</strong>istorical Situation</td>
+      <td><textarea placeholder="What broader historical context shapes what Chai Ling says and how she says it?"></textarea></td>
+    </tr>
+    <tr>
+      <td style="color:#9ac0f0;font-family:'JetBrains Mono',monospace;font-size:10px;"><strong>I</strong>ntended Audience</td>
+      <td><textarea placeholder="Who is she speaking to, and how does that shape her word choices?"></textarea></td>
+    </tr>
+    <tr>
+      <td style="color:#9ac0f0;font-family:'JetBrains Mono',monospace;font-size:10px;"><strong>P</strong>oint of View</td>
+      <td><textarea placeholder="How does her identity as a 23-year-old Chinese student activist shape her perspective?"></textarea></td>
+    </tr>
+    <tr>
+      <td style="color:#9ac0f0;font-family:'JetBrains Mono',monospace;font-size:10px;"><strong>P</strong>urpose</td>
+      <td><textarea placeholder="What is she trying to accomplish by giving this interview — what outcome does she want?"></textarea></td>
+    </tr>
+  </table>
+  <div class="accordion">
+    <button class="accordion-btn" onclick="toggleAcc(this)">▶ REVEAL SAMPLE HIPP ANALYSIS <span>click to expand</span></button>
+    <div class="accordion-body">
+      <strong>H — Historical Situation:</strong> Chai Ling speaks in the final days of the Tiananmen Square protests (June 1989), after weeks of student-led demonstrations for democratic reform. The Chinese government is on the verge of military crackdown. This context explains her sense of urgency and her framing of this moment as civilization's last stand.<br><br>
+      <strong>I — Intended Audience:</strong> She appears to be speaking to an international audience through the media, possibly knowing the interview could reach foreign journalists. This shapes her use of universalist language ("democracy is a natural desire," "all of which people are entitled to") — framing the struggle in terms the world outside China would recognize.<br><br>
+      <strong>P — Point of View:</strong> As a young Chinese student activist whose name is already on a government blacklist, she speaks from a position of personal danger. This shapes her urgent, almost elegiac tone — she is effectively writing a political testament, not a calm argument.<br><br>
+      <strong>P — Purpose:</strong> Her immediate purpose is likely to document the students' cause before the crackdown, creating a record that would outlast suppression. Her broader purpose is to appeal for international attention and moral support, and to frame the student movement as part of the global rights-based tradition described throughout Topic 9.5.
+    </div>
+  </div>
+
+  <button class="complete-btn" id="complete-dok2" onclick="markComplete(2)">✓ Mark DOK 2 Complete — Advance Progress Bar</button>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!--  DOK 3 — KNOWLEDGE ANALYSIS                         -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="dok-section">
+  <div class="dok-header d3">
+    <span class="dok-badge d3">DOK 3 · KNOWLEDGE ANALYSIS</span>
+    <div class="dok-title-block">
+      <h2 style="color:#f0a0a0;">Analyze · Argue · Evaluate</h2>
+      <p>TASK: Examine and explain with evidence — support claims with specific historical reasoning</p>
+    </div>
+  </div>
+
+  <!-- CAUSAL CHAIN -->
+  <h3 style="font-family:'Playfair Display',serif;color:#f0a0a0;margin-bottom:16px;font-size:1.1rem;">Causal Chain: The Road from Post-War Crisis to Legal Reform</h3>
+  <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:18px;">Two nodes are blank. Fill them in using the textareas, then reveal the answers to check your reasoning.</p>
+
+  <div class="causal-chain">
+    <div class="chain-step">
+      <div class="node-num filled">1</div>
+      <div class="node-box">
+        <div class="node-title">Trigger</div>
+        <div class="node-content">World War II ends (1945) — millions dead, cities destroyed, Holocaust revealed. Moral crisis: humanity needs a new framework to prevent future atrocities.</div>
+      </div>
+    </div>
+    <div class="chain-arrow">↓</div>
+
+    <div class="chain-step">
+      <div class="node-num blank-num">2</div>
+      <div class="node-box blank">
+        <div class="node-title">International Response — What was created, and why did "universal" matter?</div>
+        <textarea class="causal-input" placeholder="What institution and document emerged from this crisis? Why was the word 'universal' significant?" style="width:100%;min-height:60px;background:transparent;border:none;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;"></textarea>
+      </div>
+    </div>
+    <div id="chain2-answer" class="chain-answer-box"></div>
+    <div class="chain-arrow">↓</div>
+
+    <div class="chain-step">
+      <div class="node-num filled">3</div>
+      <div class="node-box">
+        <div class="node-title">New Movements Energized</div>
+        <div class="node-content">The UDHR's universal language gave global legitimacy to local struggles. Movements for racial equality, gender rights, and decolonization could now frame their cause as violations of a globally recognized standard.</div>
+      </div>
+    </div>
+    <div class="chain-arrow">↓</div>
+
+    <div class="chain-step">
+      <div class="node-num blank-num">4</div>
+      <div class="node-box blank">
+        <div class="node-title">Legal Reform Examples — Name at least TWO specific examples of countries using law to dismantle discrimination</div>
+        <textarea class="causal-input" placeholder="Name two specific legal reforms in different countries. What systems did each dismantle?" style="width:100%;min-height:60px;background:transparent;border:none;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;"></textarea>
+      </div>
+    </div>
+    <div id="chain4-answer" class="chain-answer-box"></div>
+    <div class="chain-arrow">↓</div>
+
+    <div class="chain-step">
+      <div class="node-num filled">5</div>
+      <div class="node-box">
+        <div class="node-title">Expanding Frontier</div>
+        <div class="node-content">Rights-based language expanded beyond race and gender to environmental justice (Greenpeace, Green Belt) and economic justice (World Fair Trade Organization) — showing that the definition of human dignity kept growing.</div>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-gold" onclick="revealChain()" style="margin-bottom:24px;">▶ Reveal Chain Answers</button>
+
+  <hr class="section-divider">
+
+  <!-- CCOT GRID -->
+  <h3 style="font-family:'Playfair Display',serif;color:#f0a0a0;margin-bottom:14px;font-size:1.1rem;">CCOT Grid: Social Categories, Roles, and Practices (1900–2000)</h3>
+  <div class="ccot-grid">
+    <div class="ccot-card">
+      <div class="ccot-label">What Changed</div>
+      <div class="ccot-body">
+        <ul style="padding-left:16px;font-size:0.82rem;color:var(--text-secondary);">
+          <li>Legal equality expanded dramatically — apartheid ended, caste discrimination outlawed in India, women gained voting rights across dozens of nations</li>
+          <li>Rights-based discourse became the dominant language for reform globally</li>
+          <li>International institutions (UN) created shared standards across national borders</li>
+          <li>Environmental and economic justice recognized as human rights issues</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ccot-card">
+      <div class="ccot-label">What Continued</div>
+      <div class="ccot-body">
+        <ul style="padding-left:16px;font-size:0.82rem;color:var(--text-secondary);">
+          <li>Progress remained deeply uneven — legal victories often preceded actual equality by decades (U.S. 1920 vs. 1965)</li>
+          <li>Economic inequality between Global North and South persisted despite fair trade movements</li>
+          <li>Gender discrimination continued even in nations that formally recognized women's rights</li>
+          <li>New battlegrounds emerged (digital rights) as old ones were partially won</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ccot-card">
+      <div class="ccot-label">Why Change Happened</div>
+      <div class="ccot-body">
+        <ul style="padding-left:16px;font-size:0.82rem;color:var(--text-secondary);">
+          <li>Post-WWII moral reckoning created political will for reform institutions</li>
+          <li>Decolonization amplified voices of the formerly colonized on the world stage</li>
+          <li>Cold War dynamics put human rights in the international spotlight</li>
+          <li>Reform movements built on 19th-century abolition and suffrage foundations</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- THESIS EVALUATOR -->
+  <h3 style="font-family:'Playfair Display',serif;color:#f0a0a0;margin-bottom:12px;font-size:1.1rem;">Thesis Evaluator</h3>
+  <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:16px;">Prompt: <em>"Evaluate the extent to which calls for reform after 1900 successfully challenged traditional social hierarchies."</em><br>Click each card to reveal whether it earns the thesis point and why.</p>
+
+  <div class="thesis-grid">
+    <div class="thesis-card" onclick="revThesis(this,'fail',\x27FAIL — Restates the prompt without a line of reasoning. The phrase \x22calls for reform challenged social hierarchies\x22 simply echoes the question. No argument, no degree judgment, no reasoning established.\x27)">
+      <div class="thesis-text">"Calls for reform after 1900 challenged traditional social hierarchies in many ways. Movements around the world worked to create a more equal society."</div>
+      <div class="click-hint">click to evaluate →</div>
+    </div>
+
+    <div class="thesis-card" onclick="revThesis(this,'fail',\x27FAIL — Makes a defensible claim but offers no line of reasoning. Saying reforms \x22made significant progress\x22 is a degree judgment, but there is no \x22because\x22 — no mechanism explaining WHY or HOW. A thesis needs a line of reasoning, not just a verdict.\x27)">
+      <div class="thesis-text">"Calls for reform after 1900 made significant progress in challenging social hierarchies, particularly in the areas of race and gender equality."</div>
+      <div class="click-hint">click to evaluate →</div>
+    </div>
+
+    <div class="thesis-card" onclick="revThesis(this,'pass',\x27PASS — Defensible claim with a clear line of reasoning. The thesis argues that reforms achieved legal victories but left structural inequalities intact, and explains the mechanism: legal change outpaced social and economic reality. This is a genuine degree argument with reasoning that can structure an essay.\x27)">
+      <div class="thesis-text">"While 20th-century reform movements achieved landmark legal victories — from the UDHR to the end of apartheid — they only partially challenged social hierarchies because legal equality rarely translated into immediate social and economic equality, leaving structural discrimination intact."</div>
+      <div class="click-hint">click to evaluate →</div>
+    </div>
+
+    <div class="thesis-card" onclick="revThesis(this,'pass',\x27PASS — Equally valid but takes the opposite position. This thesis argues for significant transformation, pointing to the expansion of rights-based discourse as the mechanism. It establishes a line of reasoning (a new global framework shifted the terms of political legitimacy) that differs from Card 3\x27s emphasis on incompleteness. Both are defensible.\x27)">
+      <div class="thesis-text">"Calls for reform after 1900 fundamentally transformed traditional social hierarchies by establishing rights-based discourse as the dominant global framework for political legitimacy, forcing governments from South Africa to India to justify — or dismantle — systems of formal discrimination."</div>
+      <div class="click-hint">click to evaluate →</div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- SAQ PRACTICE -->
+  <h3 style="font-family:'Playfair Display',serif;color:#f0a0a0;margin-bottom:16px;font-size:1.1rem;">SAQ Practice</h3>
+  <div class="saq-block">
+    <p style="font-size:0.82rem;color:var(--text-muted);font-family:'JetBrains Mono',monospace;margin-bottom:14px;">Use the passage below and your knowledge to answer all three parts. Write 2–3 sentences per part. Label each answer clearly.</p>
+    <div class="saq-source">
+      "They were not asking for little handouts or charity. They were demanding the full, unequivocal menu of rights and the complete takedown of a criminal system."
+      <span class="attrib">— Archbishop Desmond Tutu, describing the anti-apartheid movement (paraphrased in the video explainer)</span>
+    </div>
+
+    <div class="saq-part">
+      <div class="saq-part-label">PART A · Identify</div>
+      <p class="saq-part-prompt"><strong>Identify</strong> ONE specific method used by the anti-apartheid movement to dismantle apartheid in South Africa.</p>
+      <textarea placeholder="Part A: Identify one method. One specific sentence is sufficient — name it precisely enough that the reader knows what you mean."></textarea>
+      <div class="accordion">
+        <button class="accordion-btn" onclick="toggleAcc(this)">▶ SAMPLE ANSWER A <span>click</span></button>
+        <div class="accordion-body">
+          <strong>Sample (DOK 1 — Identify):</strong> One method used to dismantle apartheid was the international campaign of economic sanctions, in which foreign governments and corporations refused to trade with or invest in South Africa, strangling the regime's financial resources and increasing the economic cost of maintaining white minority rule.
+        </div>
+      </div>
+    </div>
+
+    <div class="saq-part">
+      <div class="saq-part-label">PART B · Explain</div>
+      <p class="saq-part-prompt"><strong>Explain</strong> how the historical context following World War II contributed to the growth of global reform movements like the anti-apartheid movement.</p>
+      <textarea placeholder="Part B: Explain the HOW or WHY — connect the post-WWII context to the growth of reform movements. Use specific evidence."></textarea>
+      <div class="accordion">
+        <button class="accordion-btn" onclick="toggleAcc(this)">▶ SAMPLE ANSWER B <span>click</span></button>
+        <div class="accordion-body">
+          <strong>Sample (DOK 2/3 — Explain with Evidence):</strong> The post-WWII context contributed to global reform movements by creating both a moral imperative and institutional infrastructure for challenging discrimination. The Holocaust's revelation made it impossible to defend racial hierarchies on rational grounds, producing the political will to establish the United Nations and the Universal Declaration of Human Rights in 1948. This gave reform movements like the anti-apartheid struggle a powerful new tool: they could frame apartheid not as a domestic South African matter but as a violation of universally recognized human rights, legitimizing international pressure through sanctions and cultural boycotts that would not have had the same moral authority before the UDHR existed.
+        </div>
+      </div>
+    </div>
+
+    <div class="saq-part">
+      <div class="saq-part-label">PART C · Explain (Comparison)</div>
+      <p class="saq-part-prompt"><strong>Explain</strong> ONE similarity between the struggle against apartheid in South Africa and another reform movement covered in Topic 9.5.</p>
+      <textarea placeholder="Part C: Name the similarity, explain the mechanism, and use specific evidence from BOTH movements to support your claim."></textarea>
+      <div class="accordion">
+        <button class="accordion-btn" onclick="toggleAcc(this)">▶ SAMPLE ANSWER C <span>click</span></button>
+        <div class="accordion-body">
+          <strong>Sample (DOK 3 — Examine with Evidence, Comparison):</strong> A key similarity between the anti-apartheid movement and the U.S. Civil Rights movement is that both used legal strategies alongside mass mobilization to dismantle state-enforced racial discrimination. In South Africa, decades of internal resistance combined with international pressure produced the 1994 elections and the Truth and Reconciliation Commission. Similarly, in the United States, the Civil Rights movement's combination of direct action protests and legal litigation produced the Civil Rights Act (1964) and Voting Rights Act (1965), dismantling the Jim Crow system of legalized segregation. Both movements demonstrate that challenging formal legal structures required both pressure from below (grassroots activism) and leverage over the state itself.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="complete-btn" id="complete-dok3" onclick="markComplete(3)">✓ Mark DOK 3 Complete — Advance Progress Bar</button>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!--  DOK 4 — KNOWLEDGE AUGMENTATION                     -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="dok-section">
+  <div class="dok-header d4">
+    <span class="dok-badge d4">DOK 4 · KNOWLEDGE AUGMENTATION</span>
+    <div class="dok-title-block">
+      <h2 style="color:#c8a0f0;">Contextualize · Synthesize · Connect</h2>
+      <p>TASK: Explore and explain with examples and evidence — situate this topic in the broader arc of history</p>
+    </div>
+  </div>
+
+  <!-- CONTEXTUALIZATION BUILDER -->
+  <h3 style="font-family:'Playfair Display',serif;color:#c8a0f0;margin-bottom:16px;font-size:1.1rem;">Contextualization Builder — 3 Pathways</h3>
+  <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:18px;">The AP exam's highest-value skill is <strong>contextualization</strong> — placing your topic within a broader historical process. The video explicitly names three contextual connections for 9.5. Open each pathway, write your own contextualization paragraph, then compare to the model.</p>
+
+  <!-- PATHWAY 1 -->
+  <div class="ctx-pathway" id="ctx1">
+    <div class="ctx-header" onclick="toggleCtx('ctx1')">
+      <h4>Pathway 1: Connect to Decolonization (Unit 8)</h4>
+      <span class="ctx-toggle">▼ open</span>
+    </div>
+    <div class="ctx-body">
+      <p class="ctx-stem"><strong>Stem:</strong> As colonial empires crumbled after WWII, newly independent nations and cultural movements needed new frameworks for identity and political legitimacy. The Negritude movement and other cultural assertions of pride rose directly in response to colonial dehumanization. This broader process of decolonization created the political and cultural conditions in which 9.5's reform movements could gain global traction.</p>
+      <p style="font-size:0.88rem;color:var(--text-muted);margin:12px 0 6px;">Your Contextualization — Pathway 1:</p>
+      <textarea rows="5" style="width:100%;background:rgba(255,255,255,0.03);color:var(--parchment);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:10px;font-size:0.92rem;resize:vertical;" placeholder="Write a contextualization paragraph connecting 9.5 reform movements to decolonization. Begin with the broader process, then explain how it connects to Topic 9.5 specifically..."></textarea>
+      <div class="sample-label">Model Contextualization — Pathway 1</div>
+      <div class="sample-body">The global wave of decolonization that followed World War II fundamentally reshaped the context in which reform movements operated. As European empires dismantled across Asia and Africa through the 1940s–1960s, formerly colonized peoples demanded not merely political independence but cultural recognition — a rejection of the colonial assumption that European civilization represented the pinnacle of human achievement. This created fertile ground for Topic 9.5's reform movements: the Negritude movement, which emerged from French West Africa and the Caribbean, directly challenged the racial and cultural hierarchies that colonialism had imposed, celebrating Black identity at precisely the moment when colonial frameworks were losing their political legitimacy. The global context of decolonization thus provided both an audience and a moral vocabulary for rights-based challenges to race, class, and cultural hierarchy that would define 20th-century reform movements.</div>
+    </div>
+  </div>
+
+  <!-- PATHWAY 2 -->
+  <div class="ctx-pathway" id="ctx2">
+    <div class="ctx-header" onclick="toggleCtx('ctx2')">
+      <h4>Pathway 2: Connect to the Cold War (Units 8)</h4>
+      <span class="ctx-toggle">▼ open</span>
+    </div>
+    <div class="ctx-body">
+      <p class="ctx-stem"><strong>Stem:</strong> The Cold War created an unusual dynamic for human rights: both superpowers weaponized human rights discourse, each pointing to the other's abuses as evidence of their system's moral failure. This put a global spotlight on issues of racial segregation (U.S. Jim Crow), political repression (Soviet gulags), and colonial subjugation. Paradoxically, Cold War rivalry both complicated and accelerated reform movements.</p>
+      <p style="font-size:0.88rem;color:var(--text-muted);margin:12px 0 6px;">Your Contextualization — Pathway 2:</p>
+      <textarea rows="5" style="width:100%;background:rgba(255,255,255,0.03);color:var(--parchment);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:10px;font-size:0.92rem;resize:vertical;" placeholder="Write a contextualization paragraph connecting 9.5 reform movements to the Cold War. How did superpower rivalry create conditions that influenced these movements?"></textarea>
+      <div class="sample-label">Model Contextualization — Pathway 2</div>
+      <div class="sample-body">The Cold War rivalry between the United States and the Soviet Union placed human rights at the center of global politics, creating a paradoxical context for the reform movements of Topic 9.5. Both superpowers sought to win the allegiance of newly independent nations in Asia, Africa, and Latin America by presenting their system as the true defender of human dignity. This meant the United States faced intense international pressure over its domestic practice of racial segregation — the Soviet Union consistently highlighted Jim Crow laws as evidence of American hypocrisy. This Cold War spotlight accelerated the Civil Rights movement by giving its demands a geopolitical urgency: maintaining racial apartheid in the American South was becoming an international liability. Similarly, the U.S. supported anti-colonial movements in certain contexts to counter Soviet influence, inadvertently lending legitimacy to the broader language of rights and self-determination that empowered many reform movements of this period.</div>
+    </div>
+  </div>
+
+  <!-- PATHWAY 3 -->
+  <div class="ctx-pathway" id="ctx3">
+    <div class="ctx-header" onclick="toggleCtx('ctx3')">
+      <h4>Pathway 3: Connect to 19th-Century Roots (Units 6–7)</h4>
+      <span class="ctx-toggle">▼ open</span>
+    </div>
+    <div class="ctx-body">
+      <p class="ctx-stem"><strong>Stem:</strong> The video emphasizes that 20th-century reform movements "stood on the shoulders of earlier abolitionists and suffragettes." 19th-century abolitionism established the principle that human beings could not be legally owned; suffrage movements established that political participation was a universal right. These earlier struggles created the moral and legal vocabulary that 20th-century movements would inherit and radicalize.</p>
+      <p style="font-size:0.88rem;color:var(--text-muted);margin:12px 0 6px;">Your Contextualization — Pathway 3:</p>
+      <textarea rows="5" style="width:100%;background:rgba(255,255,255,0.03);color:var(--parchment);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:10px;font-size:0.92rem;resize:vertical;" placeholder="Write a contextualization paragraph connecting 9.5 movements to their 19th-century predecessors. What did earlier abolitionists and suffragettes establish that 20th-century movements built on?"></textarea>
+      <div class="sample-label">Model Contextualization — Pathway 3</div>
+      <div class="sample-body">The reform movements of the 20th century did not emerge from a vacuum but built upon a foundation established by 19th-century abolitionists and suffragettes who had already begun to challenge the legal and social hierarchies that defined the modern world. The abolition of slavery across the Atlantic World — from the Haitian Revolution to the British Slavery Abolition Act (1833) to the U.S. 13th Amendment (1865) — established the foundational principle that human beings possessed inherent dignity that could not be legally negated. Similarly, early women's suffrage movements in New Zealand (1893) and parts of Europe created the precedent that political participation was not inherently male. These earlier victories gave 20th-century reform movements their moral language, their organizational models (mass petition campaigns, international advocacy), and their central claim: that rights once recognized could not logically be withheld from anyone. The global feminism, anti-apartheid, and rights-based movements of Topic 9.5 were therefore not new inventions but radical extensions of a project that had begun a century earlier.</div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- CROSS-UNIT SYNTHESIS -->
+  <div class="synthesis-block">
+    <h4>Cross-Unit Synthesis: From Reform to Resistance</h4>
+    <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:14px;">Topic 9.5 and Topic 9.7 (Resistance to Globalization) are in direct conversation. Reform movements demanded inclusion and rights within the global system; resistance movements questioned whether the global system itself could deliver justice.</p>
+    <div class="syn-connections">
+      <div class="syn-card"><strong>← 9.4 Economics in the Global Age</strong>The World Fair Trade Organization emerged precisely because economic globalization created new forms of inequality — 9.5's call for economic justice is a direct response to 9.4's global integration.</div>
+      <div class="syn-card"><strong>→ 9.7 Resistance to Globalization</strong>When reform movements failed to change the system from within, some groups turned to outright resistance — anti-globalization protests, religious fundamentalist movements, and nationalist backlash that rejected the entire framework.</div>
+      <div class="syn-card"><strong>← Unit 8 Decolonization</strong>Newly independent nations carried the unresolved tensions of colonial racial hierarchies into the post-independence era, making 9.5's rights-based movements both more urgent and more complicated.</div>
+      <div class="syn-card"><strong>→ Today's Digital Frontier</strong>The textbook's "Human Rights in a Digital Age" section extends 9.5's argument forward: bots, disinformation, and algorithmic control now threaten the right to think freely — the next battleground in the same fight.</div>
+    </div>
+    <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:10px;">Synthesis Question: <em>In what ways did the successes AND failures of the reform movements in Topic 9.5 create the conditions for the resistance movements in Topic 9.7?</em></p>
+    <textarea placeholder="Your synthesis response: Consider both what reform movements achieved (which might provoke backlash) and what they failed to achieve (which might provoke more radical alternatives)..."></textarea>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- SELF-ASSESSMENT -->
+  <h3 style="font-family:'Playfair Display',serif;color:#c8a0f0;margin-bottom:16px;font-size:1.1rem;">Rate Your AP Skills — Topic 9.5</h3>
+  <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:16px;">Click the dots to rate yourself: 1 dot = Not Yet | 2 dots = Getting There | 3 dots = Confident</p>
+  <div class="sa-grid">
+
+    <div class="sa-row">
+      <div class="sa-text">I can <strong>identify</strong> the key developments that challenged social hierarchies after 1900 (UDHR, apartheid's end, Civil Rights Act, caste reform, environmental movements)</div>
+      <div>
+        <div class="sa-labels" style="display:flex;gap:4px;margin-bottom:4px;">
+          <span class="sa-label-item" style="width:18px;text-align:center;">1</span>
+          <span class="sa-label-item" style="width:18px;text-align:center;">2</span>
+          <span class="sa-label-item" style="width:18px;text-align:center;">3</span>
+        </div>
+        <div class="sa-dots">
+          <div class="sa-dot" onclick="rateSA(this,1,0)"></div>
+          <div class="sa-dot" onclick="rateSA(this,2,0)"></div>
+          <div class="sa-dot" onclick="rateSA(this,3,0)"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sa-row">
+      <div class="sa-text">I can <strong>explain</strong> why the UDHR (1948) was a turning point — connecting the post-WWII moral crisis to the creation of international rights institutions</div>
+      <div>
+        <div class="sa-labels" style="display:flex;gap:4px;margin-bottom:4px;">
+          <span class="sa-label-item" style="width:18px;text-align:center;">1</span>
+          <span class="sa-label-item" style="width:18px;text-align:center;">2</span>
+          <span class="sa-label-item" style="width:18px;text-align:center;">3</span>
+        </div>
+        <div class="sa-dots">
+          <div class="sa-dot" onclick="rateSA(this,1,1)"></div>
+          <div class="sa-dot" onclick="rateSA(this,2,1)"></div>
+          <div class="sa-dot" onclick="rateSA(this,3,1)"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sa-row">
+      <div class="sa-text">I can <strong>compare</strong> how different movements (feminism, Negritude, liberation theology, anti-apartheid) used different strategies toward similar goals</div>
+      <div>
+        <div class="sa-labels" style="display:flex;gap:4px;margin-bottom:4px;">
+          <span class="sa-label-item" style="width:18px;text-align:center;">1</span>
+          <span class="sa-label-item" style="width:18px;text-align:center;">2</span>
+          <span class="sa-label-item" style="width:18px;text-align:center;">3</span>
+        </div>
+        <div class="sa-dots">
+          <div class="sa-dot" onclick="rateSA(this,1,2)"></div>
+          <div class="sa-dot" onclick="rateSA(this,2,2)"></div>
+          <div class="sa-dot" onclick="rateSA(this,3,2)"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sa-row">
+      <div class="sa-text">I can write an SAQ response to a source about 20th-century reform movements — correctly using <em>identify</em>, <em>describe</em>, and <em>explain</em> as the prompt requires</div>
+      <div>
+        <div class="sa-labels" style="display:flex;gap:4px;margin-bottom:4px;">
+          <span class="sa-label-item" style="width:18px;text-align:center;">1</span>
+          <span class="sa-label-item" style="width:18px;text-align:center;">2</span>
+          <span class="sa-label-item" style="width:18px;text-align:center;">3</span>
+        </div>
+        <div class="sa-dots">
+          <div class="sa-dot" onclick="rateSA(this,1,3)"></div>
+          <div class="sa-dot" onclick="rateSA(this,2,3)"></div>
+          <div class="sa-dot" onclick="rateSA(this,3,3)"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sa-row">
+      <div class="sa-text">I can write a <strong>passing thesis</strong> that evaluates the extent to which reform movements challenged social hierarchies — with a defensible degree claim and a line of reasoning</div>
+      <div>
+        <div class="sa-labels" style="display:flex;gap:4px;margin-bottom:4px;">
+          <span class="sa-label-item" style="width:18px;text-align:center;">1</span>
+          <span class="sa-label-item" style="width:18px;text-align:center;">2</span>
+          <span class="sa-label-item" style="width:18px;text-align:center;">3</span>
+        </div>
+        <div class="sa-dots">
+          <div class="sa-dot" onclick="rateSA(this,1,4)"></div>
+          <div class="sa-dot" onclick="rateSA(this,2,4)"></div>
+          <div class="sa-dot" onclick="rateSA(this,3,4)"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sa-row">
+      <div class="sa-text">I can write a <strong>contextualization paragraph</strong> connecting 9.5 to decolonization, the Cold War, or 19th-century reform predecessors</div>
+      <div>
+        <div class="sa-labels" style="display:flex;gap:4px;margin-bottom:4px;">
+          <span class="sa-label-item" style="width:18px;text-align:center;">1</span>
+          <span class="sa-label-item" style="width:18px;text-align:center;">2</span>
+          <span class="sa-label-item" style="width:18px;text-align:center;">3</span>
+        </div>
+        <div class="sa-dots">
+          <div class="sa-dot" onclick="rateSA(this,1,5)"></div>
+          <div class="sa-dot" onclick="rateSA(this,2,5)"></div>
+          <div class="sa-dot" onclick="rateSA(this,3,5)"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sa-row">
+      <div class="sa-text">I can connect Topic 9.5 to the unit chain — explaining how economic globalization (9.4) produced the conditions for reform movements (9.5) which in turn help explain resistance (9.7)</div>
+      <div>
+        <div class="sa-labels" style="display:flex;gap:4px;margin-bottom:4px;">
+          <span class="sa-label-item" style="width:18px;text-align:center;">1</span>
+          <span class="sa-label-item" style="width:18px;text-align:center;">2</span>
+          <span class="sa-label-item" style="width:18px;text-align:center;">3</span>
+        </div>
+        <div class="sa-dots">
+          <div class="sa-dot" onclick="rateSA(this,1,6)"></div>
+          <div class="sa-dot" onclick="rateSA(this,2,6)"></div>
+          <div class="sa-dot" onclick="rateSA(this,3,6)"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="complete-btn" id="complete-dok4" onclick="markComplete(4)">✓ Mark DOK 4 Complete — Module Finished!</button>
+</div>
+
+<div style="height:60px;"></div>
+
+<script>
+// PROGRESS BAR
+let completed = 0;
+function markComplete(n) {
+  const btn = document.getElementById('complete-dok' + n);
+  if (btn.classList.contains('done')) return;
+  btn.classList.add('done');
+  btn.textContent = '✓ Section Complete';
+  completed++;
+  const pct = completed * 25;
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('prog-pct').textContent = pct + '%';
+}
+
+// MCQ RETRY LOGIC
+function checkMCQ(qid, btn, isCorrect) {
+  const item = document.getElementById(qid);
+  const fb = document.getElementById(qid + '-fb');
+  if (!fb._orig) fb._orig = fb.innerHTML;
+  if (isCorrect) {
+    item.querySelectorAll('.mcq-option').forEach(b => {
+      b.classList.add('disabled');
+      b.onclick = null;
+    });
+    btn.classList.add('correct');
+    fb.innerHTML = fb._orig;
+    fb.classList.remove('wrong-fb');
+    fb.classList.add('show');
+  } else {
+    btn.classList.add('incorrect', 'disabled');
+    btn.onclick = null;
+    fb.innerHTML = '<strong>Incorrect.</strong> That\x27s not it \u2014 try again.';
+    fb.classList.add('show', 'wrong-fb');
+  }
+}
+
+// MATCHING
+let selectedTerm = null;
+let matchScore = 0;
+function handleMatch(el) {
+  if (el.classList.contains('matched') || el.classList.contains('disabled')) return;
+  if (el.dataset.type === 'term') {
+    document.querySelectorAll('.match-item[data-type="term"]').forEach(i => i.classList.remove('selected'));
+    selectedTerm = el;
+    el.classList.add('selected');
+  } else if (el.dataset.type === 'def' && selectedTerm) {
+    if (el.dataset.id === selectedTerm.dataset.id) {
+      el.classList.add('matched');
+      selectedTerm.classList.remove('selected');
+      selectedTerm.classList.add('matched');
+      selectedTerm = null;
+      matchScore++;
+      document.getElementById('match-score').textContent = matchScore + '/5 matched';
+    } else {
+      el.classList.add('wrong');
+      selectedTerm.classList.remove('selected');
+      selectedTerm = null;
+      setTimeout(() => el.classList.remove('wrong'), 900);
+    }
+  }
+}
+function resetMatch() {
+  document.querySelectorAll('.match-item').forEach(i => {
+    i.classList.remove('matched','selected','wrong','disabled');
+    i.onclick = function(){ handleMatch(this); };
+  });
+  selectedTerm = null;
+  matchScore = 0;
+  document.getElementById('match-score').textContent = '';
+}
+
+// ACCORDION
+function toggleAcc(btn) {
+  const body = btn.nextElementSibling;
+  body.classList.toggle('open');
+  btn.querySelector('span').textContent = body.classList.contains('open') ? 'click to collapse' : 'click to expand';
+  btn.querySelector('span').previousSibling.textContent = body.classList.contains('open') ? '▼ HIDE SAMPLE ANSWER ' : '▶ REVEAL SAMPLE ANSWER ';
+}
+
+// CAUSAL CHAIN REVEAL
+function revealChain() {
+  const a2 = document.getElementById('chain2-answer');
+  const a4 = document.getElementById('chain4-answer');
+  a2.textContent = 'Answer: The United Nations was created in 1945 and passed the Universal Declaration of Human Rights in 1948. The word "universal" was radical because it applied to ALL people everywhere — directly contradicting the existence of colonial empires, racial segregation laws, and gender discrimination that were still the norm in many nations. It meant governments could no longer claim discrimination was simply a domestic matter.';
+  a2.style.display = 'block';
+  a4.textContent = 'Answer: (1) South Africa — the anti-apartheid movement combined internal resistance (ANC, Nelson Mandela) with international sanctions and boycotts to end the system in 1994, followed by the TRC. (2) United States — the Civil Rights Act (1964) and Voting Rights Act (1965) used federal law to dismantle legal segregation. (3) India — the new constitution outlawed caste discrimination and created reservation systems for Dalits and tribal communities.';
+  a4.style.display = 'block';
+}
+
+// THESIS EVALUATOR
+function revThesis(el, verdict, explanation) {
+  if (el.classList.contains('revealed')) return;
+  el.classList.add('revealed', verdict);
+  el.querySelector('.click-hint').style.display = 'none';
+  el.innerHTML += '<div class="thesis-verdict">' + verdict.toUpperCase() + ' \u2014 ' + (verdict === 'pass' ? '\u2705' : '\u274c') + '</div><div class="thesis-explanation">' + explanation + '</div>';
+}
+
+// CONTEXTUALIZATION TOGGLE
+function toggleCtx(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle('open');
+  const toggle = el.querySelector('.ctx-toggle');
+  toggle.textContent = el.classList.contains('open') ? '▲ close' : '▼ open';
+}
+
+// SELF ASSESSMENT
+function rateSA(dot, level, rowIdx) {
+  const row = dot.closest('.sa-row');
+  const dots = row.querySelectorAll('.sa-dot');
+  dots.forEach((d,i) => {
+    if (i < level) d.classList.add('lit');
+    else d.classList.remove('lit');
+  });
+}
+</script>
+</body>
+</html>

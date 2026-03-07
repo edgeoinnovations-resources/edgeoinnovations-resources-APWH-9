@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9.9 — Globalization & Argumentation | AP World History</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:wght@300;400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark-bg: #0d0d14;
+    --card-bg: #12121e;
+    --surface: #1a1a2e;
+    --surface-2: #1e1e32;
+    --gold: #b8860b;
+    --gold-light: #d4a820;
+    --parchment: #e8dcc8;
+    --text-primary: #e8dcc8;
+    --text-secondary: #b8a89a;
+    --text-muted: #6e6560;
+    --dok1: #2d5a27;
+    --dok1-light: rgba(45,90,39,0.15);
+    --dok2: #1a3d6e;
+    --dok2-light: rgba(26,61,110,0.15);
+    --dok3: #6b2d2d;
+    --dok3-light: rgba(107,45,45,0.15);
+    --dok4: #4a2d6b;
+    --dok4-light: rgba(74,45,107,0.15);
+    --border: rgba(184,134,11,0.2);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--dark-bg);
+    color: var(--text-primary);
+    font-family: 'Source Serif 4', serif;
+    line-height: 1.7;
+    font-size: 1rem;
+  }
+
+  /* ── PROGRESS BAR ── */
+  .progress-bar-wrap {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(13,13,20,0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 20px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .progress-label { font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--text-muted); white-space:nowrap; }
+  .progress-track { flex:1; height:6px; background:rgba(255,255,255,0.07); border-radius:3px; position:relative; }
+  .progress-fill { height:100%; border-radius:3px; background:linear-gradient(90deg,var(--gold),var(--gold-light)); transition:width 0.6s ease; width:0%; }
+  .progress-marks { display:flex; justify-content:space-between; padding:2px 0 0; }
+  .progress-mark { font-family:'JetBrains Mono',monospace; font-size:0.65rem; color:var(--text-muted); }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    background: linear-gradient(135deg, #0d0d14 0%, #1a1220 50%, #0d0d14 100%);
+    border-bottom: 2px solid var(--gold);
+    padding: 48px 32px 36px;
+    text-align: center;
+  }
+  .unit-label { font-family:'JetBrains Mono',monospace; font-size:0.8rem; color:var(--gold); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:8px; }
+  .page-title { font-family:'Playfair Display',serif; font-size:2.8rem; font-weight:900; color:var(--parchment); line-height:1.15; margin-bottom:10px; }
+  .page-subtitle { font-family:'Source Serif 4',serif; font-size:1.1rem; color:var(--text-secondary); font-style:italic; }
+  .ced-skill { display:inline-block; margin-top:14px; padding:6px 14px; background:rgba(184,134,11,0.1); border:1px solid var(--border); border-radius:20px; font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--gold-light); }
+
+  /* ── HOW-TO BANNER ── */
+  .how-to-banner {
+    background: linear-gradient(135deg, rgba(184,134,11,0.12), rgba(184,134,11,0.05));
+    border: 1px solid rgba(184,134,11,0.35);
+    border-radius: 8px;
+    margin: 24px 32px;
+    padding: 20px 24px;
+  }
+  .how-to-banner h3 { font-family:'Playfair Display',serif; font-size:1.05rem; color:var(--gold-light); margin-bottom:8px; }
+  .how-to-banner p { font-size:0.9rem; color:var(--text-secondary); line-height:1.6; }
+  .how-to-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:14px; }
+  .how-to-step { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07); border-radius:6px; padding:10px 12px; text-align:center; }
+  .how-to-step .step-num { font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:var(--gold); margin-bottom:4px; }
+  .how-to-step .step-text { font-size:0.8rem; color:var(--text-secondary); }
+
+  /* ── MAIN LAYOUT ── */
+  .main-content { max-width: 900px; margin: 0 auto; padding: 0 24px 60px; }
+
+  /* ── DOK SECTIONS ── */
+  .dok-section { margin-bottom: 48px; }
+  .dok-header {
+    display: flex; align-items: center; gap: 14px;
+    padding: 18px 24px; border-radius: 8px 8px 0 0;
+    border-bottom: 2px solid currentColor;
+    margin-bottom: 0;
+  }
+  .dok-badge {
+    font-family:'JetBrains Mono',monospace; font-size:0.7rem; font-weight:500;
+    padding: 4px 10px; border-radius: 12px; white-space:nowrap;
+    border: 1px solid currentColor;
+  }
+  .dok-title { font-family:'Playfair Display',serif; font-size:1.3rem; font-weight:700; }
+  .dok-tagline { font-size:0.85rem; font-style:italic; margin-left:auto; opacity:0.8; }
+  .dok1-header { background:var(--dok1-light); color:#4a9e3f; border-color:#4a9e3f; }
+  .dok2-header { background:var(--dok2-light); color:#4a7fc1; border-color:#4a7fc1; }
+  .dok3-header { background:var(--dok3-light); color:#c14a4a; border-color:#c14a4a; }
+  .dok4-header { background:var(--dok4-light); color:#9a6ac4; border-color:#9a6ac4; }
+  .dok-body { background:var(--card-bg); border:1px solid rgba(255,255,255,0.06); border-top:none; border-radius:0 0 8px 8px; padding:28px 24px; }
+
+  /* ── NOTEBOOKLM CALLOUTS ── */
+  .nb-callout {
+    border-radius: 6px; padding: 14px 18px; margin-bottom: 22px;
+    display: flex; gap: 14px; align-items: flex-start;
+  }
+  .nb-callout.blue { background:rgba(26,61,110,0.2); border:1px solid rgba(74,127,193,0.35); }
+  .nb-callout.gold { background:rgba(184,134,11,0.1); border:1px solid rgba(184,134,11,0.3); }
+  .nb-callout-icon { font-size:1.3rem; flex-shrink:0; margin-top:2px; }
+  .nb-callout-text { font-size:0.88rem; color:var(--text-secondary); line-height:1.6; }
+  .nb-callout-text strong { color:var(--parchment); }
+  .nb-callout-text a { color:var(--gold-light); }
+
+  /* ── ACTIVITY HEADERS ── */
+  .activity-header { margin-bottom:14px; }
+  .activity-label { font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:var(--text-muted); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:4px; }
+  .activity-title { font-family:'Playfair Display',serif; font-size:1.15rem; color:var(--parchment); }
+  .activity-divider { height:1px; background:rgba(255,255,255,0.06); margin:24px 0; }
+
+  /* ── FLIP CARDS ── */
+  .flip-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-top:4px; }
+  .flip-card { height:120px; perspective:600px; cursor:pointer; }
+  .flip-inner { position:relative; width:100%; height:100%; transform-style:preserve-3d; transition:transform 0.5s; }
+  .flip-card.flipped .flip-inner { transform:rotateY(180deg); }
+  .flip-front, .flip-back {
+    position:absolute; inset:0; backface-visibility:hidden;
+    background:var(--surface); border:1px solid var(--border);
+    border-radius:6px; padding:10px 8px;
+    display:flex; flex-direction:column; justify-content:center;
+    align-items:center; text-align:center;
+  }
+  .flip-back { transform:rotateY(180deg); background:var(--surface-2); }
+  .flip-front { position:relative; min-height:120px; }
+  .flip-front .flip-term { font-family:'Source Serif 4',serif; font-size:0.82rem; font-weight:600; color:var(--gold-light); }
+  .flip-hint {
+    position:absolute; bottom:8px; left:0; right:0;
+    text-align:center; font-family:'JetBrains Mono',monospace;
+    font-size:9px; color:var(--text-muted);
+  }
+  .flip-back .flip-def { font-size:0.75rem; color:var(--text-secondary); line-height:1.5; }
+
+  /* ── MCQ ── */
+  .mcq-item { margin-bottom:20px; padding:16px; background:var(--surface); border:1px solid rgba(255,255,255,0.06); border-radius:6px; }
+  .mcq-question { font-size:0.92rem; color:var(--parchment); margin-bottom:10px; font-weight:600; }
+  .mcq-options { display:flex; flex-direction:column; gap:6px; }
+  .mcq-option {
+    text-align:left; padding:8px 12px; border-radius:4px;
+    background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);
+    color:var(--text-secondary); font-family:'Source Serif 4',serif; font-size:0.85rem;
+    cursor:pointer; transition:all 0.2s;
+  }
+  .mcq-option:hover:not(.disabled) { background:rgba(184,134,11,0.1); border-color:rgba(184,134,11,0.3); color:var(--parchment); }
+  .mcq-option.correct { background:rgba(45,90,39,0.25); border-color:#4a9e3f; color:#a0e090; }
+  .mcq-option.incorrect { background:rgba(107,45,45,0.2); border-color:#c14a4a; color:#e08080; text-decoration:line-through; }
+  .mcq-option.disabled { cursor:default; pointer-events:none; }
+  .mcq-feedback { display:none; margin-top:10px; padding:10px 12px; background:rgba(45,90,39,0.15); border:1px solid rgba(74,158,63,0.3); border-radius:4px; font-size:0.83rem; color:var(--text-secondary); }
+  .mcq-feedback.show { display:block; }
+  .mcq-feedback.wrong-fb { background:rgba(107,45,45,0.3); border-color:#f08080; }
+
+  /* ── MATCHING ── */
+  .match-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  .match-col { display:flex; flex-direction:column; gap:6px; }
+  .match-item {
+    padding:10px 12px; border-radius:4px; cursor:pointer;
+    border:1px solid rgba(255,255,255,0.08);
+    background:rgba(255,255,255,0.03); font-size:0.84rem;
+    color:var(--text-secondary); transition:all 0.2s; user-select:none;
+  }
+  .match-item:hover:not(.matched):not(.disabled) { border-color:var(--gold); color:var(--parchment); }
+  .match-item.selected { background:rgba(184,134,11,0.12); border-color:var(--gold-light); color:var(--parchment); }
+  .match-item.matched { background:rgba(45,90,39,0.2); border-color:#4a9e3f; color:#a0e090; cursor:default; pointer-events:none; }
+  .match-item.wrong { background:rgba(107,45,45,0.2); border-color:#c14a4a; color:#e08080; }
+  .match-label { font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:var(--text-muted); margin-bottom:6px; text-transform:uppercase; letter-spacing:0.08em; }
+  .match-status { font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--text-muted); text-align:center; margin-top:8px; }
+
+  /* ── TEXTAREA ── */
+  textarea {
+    width:100%; min-height:100px; margin:10px 0; padding:10px 14px;
+    background:rgba(255,255,255,0.04); border:1px solid rgba(184,134,11,0.2);
+    border-radius:4px; color:var(--parchment); font-family:'Source Serif 4',serif;
+    font-size:0.88rem; resize:vertical; outline:none; line-height:1.6;
+  }
+  textarea::placeholder { color:var(--text-muted); }
+  textarea:focus { border-color:rgba(184,134,11,0.45); }
+
+  /* ── ACCORDION / REVEAL ── */
+  .reveal-btn {
+    margin-top:4px; padding:8px 16px; border-radius:4px; cursor:pointer;
+    background:rgba(184,134,11,0.1); border:1px solid rgba(184,134,11,0.25);
+    color:var(--gold-light); font-family:'JetBrains Mono',monospace; font-size:0.75rem;
+    letter-spacing:0.05em; transition:all 0.2s;
+  }
+  .reveal-btn:hover { background:rgba(184,134,11,0.18); }
+  .sample-label { font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:var(--gold); text-transform:uppercase; letter-spacing:0.1em; margin:14px 0 6px; }
+  .sample-body { background:rgba(184,134,11,0.06); border:1px solid rgba(184,134,11,0.15); border-radius:4px; padding:12px 14px; font-size:0.86rem; color:var(--text-secondary); line-height:1.65; display:none; }
+  .sample-body.show { display:block; }
+
+  /* ── COMPARISON TABLE ── */
+  .comp-table { width:100%; border-collapse:collapse; margin-top:10px; }
+  .comp-table th { padding:10px 12px; font-family:'JetBrains Mono',monospace; font-size:0.72rem; color:var(--gold); text-transform:uppercase; letter-spacing:0.08em; border-bottom:1px solid var(--border); text-align:left; }
+  .comp-table td { padding:10px 12px; vertical-align:top; border-bottom:1px solid rgba(255,255,255,0.04); font-size:0.87rem; color:var(--text-secondary); }
+  .comp-table tr:last-child td { border-bottom:none; }
+
+  /* ── CAUSAL CHAIN ── */
+  .chain-wrap { display:flex; flex-direction:column; gap:0; }
+  .chain-row { display:flex; align-items:flex-start; gap:16px; margin-bottom:4px; }
+  .node-num { flex-shrink:0; width:28px; height:28px; border-radius:50%; border:2px solid var(--gold); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--gold); margin-top:8px; }
+  .node-box { flex:1; padding:12px 14px; border-radius:6px; font-size:0.87rem; }
+  .node-box.filled { background:rgba(184,134,11,0.08); border:1px solid rgba(184,134,11,0.2); color:var(--text-secondary); }
+  .node-box.blank { background:rgba(255,255,255,0.03); border:2px dashed rgba(255,255,255,0.12); }
+  .chain-arrow { text-align:center; color:var(--text-muted); font-size:1.1rem; margin:4px 0 4px 22px; }
+  .chain-answer-box { display:none; margin-left:44px; margin-top:4px; margin-bottom:8px; padding:10px 14px; background:rgba(74,158,63,0.1); border:1px solid rgba(74,158,63,0.3); border-radius:4px; font-size:0.87rem; color:var(--text-secondary); }
+
+  /* ── THESIS CARDS ── */
+  .thesis-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:6px; }
+  .thesis-card {
+    padding:16px; border-radius:6px; cursor:pointer; transition:all 0.2s;
+    background:var(--surface); border:1px solid rgba(255,255,255,0.08);
+    font-size:0.87rem; color:var(--text-secondary); line-height:1.6;
+    position:relative;
+  }
+  .thesis-card:hover:not(.revealed) { border-color:var(--gold); }
+  .thesis-card.revealed.fail { background:rgba(107,45,45,0.2); border-color:#c14a4a; }
+  .thesis-card.revealed.pass { background:rgba(45,90,39,0.2); border-color:#4a9e3f; }
+  .thesis-verdict { font-family:'JetBrains Mono',monospace; font-size:0.75rem; font-weight:700; margin-top:10px; }
+  .thesis-card.revealed.fail .thesis-verdict { color:#e08080; }
+  .thesis-card.revealed.pass .thesis-verdict { color:#a0e090; }
+  .thesis-explanation { font-size:0.8rem; color:var(--text-secondary); margin-top:6px; border-top:1px solid rgba(255,255,255,0.08); padding-top:8px; }
+  .thesis-prompt { font-size:0.85rem; color:var(--text-muted); font-style:italic; margin-bottom:12px; padding:12px 14px; background:rgba(255,255,255,0.02); border-radius:4px; border-left:3px solid var(--gold); }
+  .click-hint { font-family:'JetBrains Mono',monospace; font-size:0.68rem; color:var(--text-muted); text-align:center; margin-top:8px; }
+
+  /* ── CCOT GRID ── */
+  .ccot-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:10px; }
+  .ccot-box { padding:14px 16px; border-radius:6px; }
+  .ccot-change { background:rgba(107,45,45,0.12); border:1px solid rgba(193,74,74,0.3); }
+  .ccot-cont { background:rgba(26,61,110,0.12); border:1px solid rgba(74,127,193,0.3); }
+  .ccot-box-title { font-family:'JetBrains Mono',monospace; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:8px; }
+  .ccot-change .ccot-box-title { color:#c14a4a; }
+  .ccot-cont .ccot-box-title { color:#4a7fc1; }
+  .ccot-items { list-style:none; display:flex; flex-direction:column; gap:6px; }
+  .ccot-items li { font-size:0.84rem; color:var(--text-secondary); padding-left:14px; position:relative; }
+  .ccot-items li::before { content:'→'; position:absolute; left:0; color:var(--text-muted); }
+  .ccot-cont .ccot-items li::before { content:'↔'; }
+
+  /* ── CTX BUILDER ── */
+  .ctx-pathway { border:1px solid rgba(255,255,255,0.08); border-radius:6px; margin-bottom:10px; overflow:hidden; }
+  .ctx-trigger { padding:14px 18px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.02); transition:background 0.2s; font-size:0.9rem; color:var(--text-secondary); }
+  .ctx-trigger:hover { background:rgba(255,255,255,0.05); color:var(--parchment); }
+  .ctx-trigger .ctx-arrow { transition:transform 0.3s; color:var(--text-muted); }
+  .ctx-pathway.open .ctx-arrow { transform:rotate(180deg); }
+  .ctx-body { max-height:0; overflow:hidden; transition:max-height 0.4s ease, padding 0.3s; padding:0 20px; }
+  .ctx-pathway.open .ctx-body { max-height:1200px; padding:0 20px 20px; }
+  .ctx-pathway-label { font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:var(--gold); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px; margin-top:14px; }
+  .ctx-stem { background:rgba(184,134,11,0.06); border:1px solid rgba(184,134,11,0.15); border-radius:4px; padding:10px 12px; font-size:0.86rem; color:var(--text-secondary); font-style:italic; margin-bottom:8px; }
+
+  /* ── SAQ SECTION ── */
+  .saq-prompt-box { background:rgba(74,45,107,0.1); border:1px solid rgba(154,106,196,0.25); border-radius:6px; padding:16px 18px; margin-bottom:18px; }
+  .saq-prompt-label { font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:#9a6ac4; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px; }
+  .saq-prompt-text { font-size:0.9rem; color:var(--parchment); line-height:1.65; }
+  .saq-part { margin-bottom:20px; }
+  .saq-part-label { font-family:'JetBrains Mono',monospace; font-size:0.72rem; color:#9a6ac4; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px; }
+  .saq-part-text { font-size:0.9rem; color:var(--text-secondary); margin-bottom:2px; }
+
+  /* ── LEQ WORKSHOP ── */
+  .leq-section { margin-top:24px; }
+  .leq-prompt-box { background:rgba(74,45,107,0.12); border:1px solid rgba(154,106,196,0.3); border-radius:6px; padding:18px 20px; margin-bottom:16px; }
+  .leq-prompt-label { font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:#9a6ac4; margin-bottom:8px; }
+  .leq-stage { margin-bottom:18px; }
+  .leq-stage-title { font-family:'JetBrains Mono',monospace; font-size:0.72rem; color:var(--gold); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px; padding:6px 10px; background:rgba(184,134,11,0.07); border-radius:4px; display:inline-block; }
+  .leq-stage-text { font-size:0.88rem; color:var(--text-secondary); margin-bottom:6px; }
+
+  /* ── CROSS-UNIT ── */
+  .cross-unit-box { background:rgba(74,45,107,0.08); border:1px solid rgba(154,106,196,0.2); border-radius:6px; padding:18px 20px; }
+  .cross-unit-title { font-family:'Playfair Display',serif; font-size:1rem; color:#9a6ac4; margin-bottom:10px; }
+  .cross-unit-prompts { list-style:none; display:flex; flex-direction:column; gap:8px; }
+  .cross-unit-prompts li { font-size:0.87rem; color:var(--text-secondary); padding-left:16px; position:relative; }
+  .cross-unit-prompts li::before { content:'◆'; position:absolute; left:0; font-size:0.6rem; color:var(--gold); top:5px; }
+
+  /* ── SELF ASSESSMENT ── */
+  .sa-grid { display:flex; flex-direction:column; gap:10px; }
+  .sa-row { display:flex; align-items:center; gap:12px; padding:10px 14px; background:var(--surface); border:1px solid rgba(255,255,255,0.05); border-radius:6px; }
+  .sa-skill { flex:1; font-size:0.87rem; color:var(--text-secondary); }
+  .sa-skill strong { color:var(--parchment); font-size:0.85rem; }
+  .sa-skill small { display:block; font-family:'JetBrains Mono',monospace; font-size:0.65rem; color:var(--text-muted); margin-top:2px; }
+  .sa-dots { display:flex; gap:6px; align-items:center; }
+  .sa-dot { width:20px; height:20px; border-radius:50%; border:2px solid rgba(255,255,255,0.15); cursor:pointer; transition:all 0.2s; flex-shrink:0; }
+  .sa-dot:hover { border-color:var(--gold); }
+  .sa-dot.active-1 { background:#c14a4a; border-color:#c14a4a; }
+  .sa-dot.active-2 { background:#d4a820; border-color:#d4a820; }
+  .sa-dot.active-3 { background:#4a9e3f; border-color:#4a9e3f; }
+  .sa-labels { display:flex; flex-direction:column; gap:2px; }
+  .sa-label-item { font-family:'JetBrains Mono',monospace; font-size:0.6rem; color:var(--text-muted); min-width:28px; white-space:nowrap; }
+
+  /* ── COMPLETE BUTTON ── */
+  .complete-btn {
+    display:block; width:100%; padding:12px; margin-top:20px;
+    background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1);
+    border-radius:6px; color:var(--text-muted); font-family:'JetBrains Mono',monospace;
+    font-size:0.75rem; cursor:pointer; text-align:center; letter-spacing:0.08em;
+    transition:all 0.2s; text-transform:uppercase;
+  }
+  .complete-btn:hover { background:rgba(184,134,11,0.1); border-color:var(--gold); color:var(--gold-light); }
+  .complete-btn.done { background:rgba(45,90,39,0.15); border-color:#4a9e3f; color:#a0e090; }
+
+  /* ── DBQ SECTION ── */
+  .dbq-box { background:rgba(26,61,110,0.1); border:1px solid rgba(74,127,193,0.25); border-radius:6px; padding:16px 18px; margin-bottom:14px; }
+  .dbq-label { font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:#4a7fc1; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px; }
+
+  @media (max-width:680px) {
+    .flip-grid { grid-template-columns:repeat(2,1fr); }
+    .thesis-grid { grid-template-columns:1fr; }
+    .ccot-grid { grid-template-columns:1fr; }
+    .how-to-grid { grid-template-columns:1fr 1fr; }
+    .match-grid { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar-wrap">
+  <span class="progress-label">Progress</span>
+  <div style="flex:1;">
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-marks">
+      <span class="progress-mark">DOK 1</span>
+      <span class="progress-mark">DOK 2</span>
+      <span class="progress-mark">DOK 3</span>
+      <span class="progress-mark">DOK 4 ✓</span>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="unit-label">Unit 9 · Topic 9.9 · Capstone</div>
+  <h1 class="page-title">Globalization &amp; Argumentation</h1>
+  <p class="page-subtitle">Synthesizing Unit 9 · Mastering the Complex Argument</p>
+  <span class="ced-skill">CED Skill 6.D — Corroborate, Qualify, or Modify · CCOT Reasoning</span>
+</div>
+
+<!-- HOW-TO BANNER -->
+<div class="how-to-banner">
+  <h3>📋 How to Use This Module</h3>
+  <p>This is the <strong>capstone of Unit 9</strong> — there is no new content to learn. Instead, you will synthesize everything you know about globalization and master the most important AP exam skill: building a <strong>complex, evidence-based argument</strong>. Move through each DOK level in order. The video explains the three keys to complexity: <em>corroborate, qualify, and modify</em>.</p>
+  <div class="how-to-grid">
+    <div class="how-to-step"><div class="step-num">DOK 1</div><div class="step-text">Recall argument anatomy &amp; evidence categories</div></div>
+    <div class="how-to-step"><div class="step-num">DOK 2</div><div class="step-text">Apply corroborate / qualify / modify to globalization evidence</div></div>
+    <div class="how-to-step"><div class="step-num">DOK 3</div><div class="step-text">Analyze thesis quality &amp; build a CCOT argument</div></div>
+    <div class="how-to-step"><div class="step-num">DOK 4</div><div class="step-text">Write full SAQ, LEQ, and DBQ practice responses</div></div>
+  </div>
+</div>
+
+<div class="main-content">
+
+<!-- ═══════════════════════════════════════════════
+     DOK 1 — KNOWLEDGE ACQUISITION
+═══════════════════════════════════════════════ -->
+<div class="dok-section" id="dok1">
+  <div class="dok-header dok1-header">
+    <span class="dok-badge">DOK 1</span>
+    <span class="dok-title">Knowledge Acquisition</span>
+    <span class="dok-tagline">Recall · Recognize · Name</span>
+  </div>
+  <div class="dok-body">
+
+    <!-- NOTEBOOKLM VIDEO CALLOUT -->
+    <div class="nb-callout blue">
+      <div class="nb-callout-icon">🎬</div>
+      <div class="nb-callout-text">
+        <strong>Watch the Video Explainer first.</strong> As you watch <a href="https://youtu.be/9ohmho93RYk" target="_blank">APWH 9.9 Globalization &amp; Argumentation</a>, listen for: (1) the three words that are the <em>keys to complexity</em>, (2) what the acronym <strong>TCERC</strong> stands for, and (3) the difference between a <em>simple</em> and a <em>complex</em> thesis.
+      </div>
+    </div>
+
+    <!-- VIDEO IFRAME -->
+    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:6px;margin-bottom:22px;">
+      <iframe src="https://www.youtube.com/embed/9ohmho93RYk" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" allowfullscreen></iframe>
+    </div>
+
+    <!-- SECTION 1: VOCABULARY FLIP CARDS -->
+    <div class="activity-header">
+      <div class="activity-label">Activity 1 of 5</div>
+      <div class="activity-title">Argumentation Vocabulary — Flip Cards</div>
+    </div>
+    <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:12px;">Click each card to reveal the definition. These are the key terms and concepts for building complex AP arguments.</p>
+
+    <div class="flip-grid">
+      <!-- Card 1 -->
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-term">Corroborate</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back"><span class="flip-def">To back up a claim with multiple, independent pieces of evidence. Corroborating evidence strengthens an argument's credibility.</span></div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-term">Qualify</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back"><span class="flip-def">To acknowledge limits, exceptions, or counterarguments to a claim. Signal words: "however," "on the other hand," "while." The secret sauce for AP complexity.</span></div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-term">Modify</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back"><span class="flip-def">To adjust or refine an argument in response to new or contradictory evidence. Shows intellectual flexibility and sophistication.</span></div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-term">Line of Reasoning</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back"><span class="flip-def">The logical framework connecting a thesis to its evidence. A thesis must establish a line of reasoning — not just a fact, but a WHY or HOW.</span></div>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-term">TCERC</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back"><span class="flip-def">AP essay quality checklist: Thesis · Context · Evidence · Reasoning · Complexity. "The Clearest Essays Require Care."</span></div>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-term">Contextualization</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back"><span class="flip-def">Connecting the topic to broader historical developments BEFORE, DURING, or AFTER the time period. Must be more than a phrase — requires a developed explanation.</span></div>
+        </div>
+      </div>
+      <!-- Card 7 -->
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-term">Evaluate the Extent</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back"><span class="flip-def">A command verb requiring a judgment about DEGREE — how much, for whom, in what contexts. Cannot be answered with a simple yes/no.</span></div>
+        </div>
+      </div>
+      <!-- Card 8 -->
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-term">CCOT</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back"><span class="flip-def">Continuity and Change Over Time — a historical thinking skill. Asks what genuinely changed and what old patterns merely appeared in new forms.</span></div>
+        </div>
+      </div>
+      <!-- Card 9 -->
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-term">HIPP Analysis</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back"><span class="flip-def">A framework for analyzing primary sources: Historical situation · Intended audience · Point of view · Purpose. Required for DBQ sourcing points.</span></div>
+        </div>
+      </div>
+      <!-- Card 10 -->
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-term">Complexity Point</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back"><span class="flip-def">The hardest AP rubric point to earn. Requires nuance: explaining multiple variables, cross-period connections, insightful comparisons, or effective counterarguments.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-divider"></div>
+
+    <!-- SECTION 2: RECALL MCQs -->
+    <div class="activity-header">
+      <div class="activity-label">Activity 2 of 5</div>
+      <div class="activity-title">Recall Check — Multiple Choice</div>
+    </div>
+    <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:14px;">Click an answer. Wrong answers are disabled individually — keep trying until you find the correct one.</p>
+
+    <!-- MCQ 1 -->
+    <div class="mcq-item" id="mcq1">
+      <div class="mcq-question">1. According to the video, which THREE words are the "keys to the kingdom of complexity" in AP argumentaton?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(A) Identify, Describe, Explain</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,true)">(B) Corroborate, Qualify, Modify</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(C) Thesis, Context, Evidence</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(D) Compare, Analyze, Synthesize</button>
+      </div>
+      <div class="mcq-feedback" id="mcq1-fb"><strong>Correct — B.</strong> The video explicitly names Corroborate (back up with evidence), Qualify (use "however" to acknowledge nuance), and Modify (adjust your argument for new evidence) as the three keys to building a complex argument.</div>
+    </div>
+
+    <!-- MCQ 2 -->
+    <div class="mcq-item" id="mcq2">
+      <div class="mcq-question">2. What does the "Q" in TCERC stand for?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(A) Quotation</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(B) Question</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(C) There is no Q — TCERC stands for Thesis, Context, Evidence, Reasoning, Complexity</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,true)">(D) There is no Q — TCERC = Thesis, Context, Evidence, Reasoning, Complexity</button>
+      </div>
+      <div class="mcq-feedback" id="mcq2-fb"><strong>Correct — D.</strong> TCERC = Thesis · Context · Evidence · Reasoning · Complexity. The mnemonic the video offers is "The Clearest Essays Require Care." There is no Q — this is a trick to test careful reading of the acronym.</div>
+    </div>
+
+    <!-- MCQ 3 -->
+    <div class="mcq-item" id="mcq3">
+      <div class="mcq-question">3. Which of the following is a CONTINUITY of globalization, according to the video — something that was NOT new after 1900?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(A) The internet connecting people globally</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(B) The speed and scale of economic exchange</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,true)">(C) Economic inequality and competition over resources</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(D) Multinational corporations dominating world trade</button>
+      </div>
+      <div class="mcq-feedback" id="mcq3-fb"><strong>Correct — C.</strong> The video explicitly identifies inequality, competition for resources, and resistance to outside cultures as continuities — "patterns that have been around for centuries." Globalization "put them on hyperdrive, but it didn't invent them."</div>
+    </div>
+
+    <!-- MCQ 4 -->
+    <div class="mcq-item" id="mcq4">
+      <div class="mcq-question">4. When an AP prompt uses the phrase "to what extent," what does it signal?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(A) A simple yes-or-no answer is expected</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(B) Only one correct historical interpretation exists</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,true)">(C) You must analyze degree — how much, what kind, for whom — not just state what happened</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(D) You should focus only on causes, not effects</button>
+      </div>
+      <div class="mcq-feedback" id="mcq4-fb"><strong>Correct — C.</strong> "To what extent" is your "big flashing sign that you need to analyze, not just spit back facts." Your thesis must tell the reader how much change, what kind of change, and for whom — establishing a line of reasoning with a degree judgment.</div>
+    </div>
+
+    <!-- MCQ 5 -->
+    <div class="mcq-item" id="mcq5">
+      <div class="mcq-question">5. The video uses a 1914 quote about a wealthy London man ordering goods from around the world to make which historical argument?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(A) Globalization was entirely new after 1900</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(B) Britain was the world's most globalized nation</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,true)">(C) Some form of global connection existed before 1900 — what changed was speed, scale, and reach to everyone, not just the wealthy</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(D) Economic inequality was a new problem created by globalization</button>
+      </div>
+      <div class="mcq-feedback" id="mcq5-fb"><strong>Correct — C.</strong> The 1914 quote establishes a CCOT point: global interconnection is a continuity, not a change. What genuinely changed after 1900 was "the incredible speed, the massive scale, and the intensity with which it affected everyone — not just the rich." This is exactly the kind of nuanced argument that earns complexity points.</div>
+    </div>
+
+    <div class="activity-divider"></div>
+
+    <!-- SECTION 3: MATCHING -->
+    <div class="activity-header">
+      <div class="activity-label">Activity 3 of 5 — Evidence Locker</div>
+      <div class="activity-title">Match the Evidence to the Globalization Theme</div>
+    </div>
+    <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:12px;">Click a term on the left, then its matching theme on the right. Match all 5 pairs.</p>
+    <div class="match-label" style="margin-bottom:4px;">Left = Specific Evidence · Right = Globalization Theme</div>
+
+    <div class="match-grid">
+      <div class="match-col">
+        <div class="match-label">Evidence</div>
+        <div class="match-item" id="ml1" onclick="selectMatch('ml1','left')">Arab Spring protests coordinated via social media</div>
+        <div class="match-item" id="ml2" onclick="selectMatch('ml2','left')">Reagan &amp; Thatcher promoting free market policies</div>
+        <div class="match-item" id="ml3" onclick="selectMatch('ml3','left')">Reggae music and Bollywood films spreading globally</div>
+        <div class="match-item" id="ml4" onclick="selectMatch('ml4','left')">Protests against the IMF and World Trade Organization</div>
+        <div class="match-item" id="ml5" onclick="selectMatch('ml5','left')">Green Revolution feeding a booming global population</div>
+      </div>
+      <div class="match-col">
+        <div class="match-label">Theme</div>
+        <div class="match-item" id="mr1" onclick="selectMatch('mr1','right')">Resistance to Globalization</div>
+        <div class="match-item" id="mr2" onclick="selectMatch('mr2','right')">Calls for Reform / Rights Movements</div>
+        <div class="match-item" id="mr3" onclick="selectMatch('mr3','right')">Technology &amp; Agricultural Advances</div>
+        <div class="match-item" id="mr4" onclick="selectMatch('mr4','right')">Economic Globalization</div>
+        <div class="match-item" id="mr5" onclick="selectMatch('mr5','right')">Globalized Culture (Two-Way Exchange)</div>
+      </div>
+    </div>
+    <div class="match-status" id="matchStatus">0 / 5 matched</div>
+
+    <button class="complete-btn" id="dok1-complete" onclick="completeDOK(1)">
+      ✓ Mark DOK 1 Complete
+    </button>
+  </div><!-- /dok-body -->
+</div><!-- /dok1 -->
+
+<!-- ═══════════════════════════════════════════════
+     DOK 2 — KNOWLEDGE APPLICATION
+═══════════════════════════════════════════════ -->
+<div class="dok-section" id="dok2">
+  <div class="dok-header dok2-header">
+    <span class="dok-badge">DOK 2</span>
+    <span class="dok-title">Knowledge Application</span>
+    <span class="dok-tagline">Explain · Compare · Apply</span>
+  </div>
+  <div class="dok-body">
+
+    <!-- NOTEBOOKLM INFOGRAPHIC CALLOUT -->
+    <div class="nb-callout gold">
+      <div class="nb-callout-icon">📊</div>
+      <div class="nb-callout-text">
+        <strong>Review the NotebookLM Infographic now.</strong> Use it as a reference as you complete the application activities. The infographic should summarize the Unit 9 evidence locker and the corroborate / qualify / modify framework. Keep it open as you work through the Explain Drills and Comparison Table below.
+      </div>
+    </div>
+
+    <!-- EXPLAIN DRILL 1 -->
+    <div class="activity-header">
+      <div class="activity-label">Explain Drill 1 of 2</div>
+      <div class="activity-title">How does technology function as evidence for globalization?</div>
+    </div>
+    <p style="font-size:0.87rem;color:var(--text-secondary);margin-bottom:8px;">
+      <strong>Prompt:</strong> Explain how technological developments after 1900 accelerated globalization. Your answer must name at least TWO specific technologies and describe the mechanism by which each one connected the world — not just what it is, but how it functioned as a force of globalization.
+    </p>
+    <textarea placeholder="Write your response here. Remember: EXPLAIN means show HOW or WHY, not just what happened. (2-4 sentences minimum)"></textarea>
+    <button class="reveal-btn" onclick="toggleSample('ed1-sample',this)">▼ Reveal Sample Response</button>
+    <div class="sample-label">Model Explain Response — Drill 1</div>
+    <div class="sample-body" id="ed1-sample">
+      Technological developments after 1900 dramatically accelerated globalization by shrinking the friction of distance. The internet and smartphones created a near-instantaneous global communication network, allowing activists like those in the Arab Spring to coordinate mass protests across borders in ways that would have been impossible a generation earlier. Jet travel similarly compressed physical distance, making it economically viable for multinational corporations to operate supply chains across multiple continents — extracting raw materials in one region, manufacturing in another, and selling to consumers in a third. In both cases, the mechanism is the same: technology eliminated the barriers of time and distance that previously limited the scope and speed of global connection.
+    </div>
+
+    <div class="activity-divider"></div>
+
+    <!-- EXPLAIN DRILL 2 -->
+    <div class="activity-header">
+      <div class="activity-label">Explain Drill 2 of 2</div>
+      <div class="activity-title">How did globalization produce both progress and inequality simultaneously?</div>
+    </div>
+    <p style="font-size:0.87rem;color:var(--text-secondary);margin-bottom:8px;">
+      <strong>Prompt:</strong> Explain how the same forces of economic globalization produced both new prosperity AND increased inequality after 1900. This is a QUALIFY task — your explanation must use "however" or "on the other hand" to acknowledge both sides and show how they are connected.
+    </p>
+    <textarea placeholder="Write your response here. Practice the 'qualify' move: acknowledge one side, then pivot with 'however' to show the counterforce. (3-5 sentences)"></textarea>
+    <button class="reveal-btn" onclick="toggleSample('ed2-sample',this)">▼ Reveal Sample Response</button>
+    <div class="sample-label">Model Explain Response — Drill 2</div>
+    <div class="sample-body" id="ed2-sample">
+      The free market economic policies championed by Reagan and Thatcher in the 1980s helped integrate the global economy and contributed to the explosive rise of new economic centers in Asia, as Japan, South Korea, and later China industrialized and lifted millions out of poverty. However, these same policies also concentrated wealth among multinational corporations and contributed to what critics called "brain drain" — the flow of educated workers and capital from developing nations to wealthier ones, deepening the dependency of poorer countries. On the other hand, this inequality itself became a catalyst for reform movements: the large-scale protests against the IMF and WTO in the 1990s emerged directly because populations in developing nations experienced free trade as exploitative rather than beneficial. The force and the resistance to that force were products of the same process.
+    </div>
+
+    <div class="activity-divider"></div>
+
+    <!-- APPLY ACTIVITY: COMPARISON TABLE (Simple vs Complex Thesis) -->
+    <div class="activity-header">
+      <div class="activity-label">Apply Activity</div>
+      <div class="activity-title">Simple Thesis vs. Complex Thesis — Comparison Table</div>
+    </div>
+    <p style="font-size:0.87rem;color:var(--text-secondary);margin-bottom:10px;">
+      The video contrasts a <em>flat</em> thesis ("globalization was good for humanity") with a <em>complex</em> thesis that uses qualifying language. Study the table below, then complete the analysis.
+    </p>
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Criterion</th>
+          <th>Simple Thesis</th>
+          <th>Complex Thesis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Example</strong></td>
+          <td>"Globalization was good for humanity."</td>
+          <td>"While globalization generated significant economic growth and cultural exchange across the world, it simultaneously deepened inequality between wealthy and developing nations and accelerated environmental degradation."</td>
+        </tr>
+        <tr>
+          <td><strong>Line of Reasoning?</strong></td>
+          <td>No — states a position but no reasoning WHY</td>
+          <td>Yes — identifies competing forces and implies that the relationship between them IS the argument</td>
+        </tr>
+        <tr>
+          <td><strong>Degree Judgment?</strong></td>
+          <td>None — just "good"</td>
+          <td>Implicit: "significant growth" + "simultaneously deepened inequality" — acknowledges scale and contradiction</td>
+        </tr>
+        <tr>
+          <td><strong>Qualifying word?</strong></td>
+          <td>None</td>
+          <td>"While" — signals that the thesis holds two forces in tension</td>
+        </tr>
+        <tr>
+          <td><strong>Would earn thesis point?</strong></td>
+          <td>No — defensible claim, but no line of reasoning</td>
+          <td>Yes — establishes categories of argument (growth vs. inequality) and implies causation</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.87rem;color:var(--text-secondary);margin:14px 0 6px;"><strong>Your turn:</strong> Write your OWN complex thesis for this prompt: <em>"Evaluate the extent to which globalization transformed human societies after 1900."</em> Use the "while/however" structure. Your thesis must take a position on DEGREE.</p>
+    <textarea placeholder="Your complex thesis here. Aim for 2-3 sentences. Include: (1) a degree judgment, (2) qualifying language like 'while' or 'however', (3) at least two specific historical categories of evidence."></textarea>
+    <button class="reveal-btn" onclick="toggleSample('ct-sample',this)">▼ Reveal Model Thesis</button>
+    <div class="sample-label">Model Complex Thesis</div>
+    <div class="sample-body" id="ct-sample">
+      While globalization after 1900 fundamentally transformed human societies by dramatically accelerating the pace of economic integration, cultural exchange, and rights-based reform movements on a global scale, its transformative power was uneven — deepening inequality between wealthy nations and the developing world and intensifying competition for resources in ways that echoed centuries-old patterns of exploitation. The degree of transformation, therefore, depended largely on one's position in the global economic order.
+    </div>
+
+    <div class="activity-divider"></div>
+
+    <!-- APPLY ACTIVITY 2: EVIDENCE LOCKER ORGANIZER -->
+    <div class="activity-header">
+      <div class="activity-label">Apply Activity 2 — Evidence Locker</div>
+      <div class="activity-title">Organize Your Unit 9 Evidence by Theme</div>
+    </div>
+    <p style="font-size:0.87rem;color:var(--text-secondary);margin-bottom:10px;">
+      Before you can qualify or corroborate an argument, you need to know what evidence you have. Fill in the table below with at least ONE specific example per theme from Unit 9. These become your "bricks and mortar" for essay writing.
+    </p>
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Theme</th>
+          <th>Evidence FOR globalization's benefits</th>
+          <th>Evidence AGAINST / Complications</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Technology</strong></td>
+          <td><textarea style="min-height:60px;" placeholder="e.g., Internet, Green Revolution..."></textarea></td>
+          <td><textarea style="min-height:60px;" placeholder="e.g., digital divide, environmental cost..."></textarea></td>
+        </tr>
+        <tr>
+          <td><strong>Economics</strong></td>
+          <td><textarea style="min-height:60px;" placeholder="e.g., Rise of Asian tigers..."></textarea></td>
+          <td><textarea style="min-height:60px;" placeholder="e.g., brain drain, IMF protests..."></textarea></td>
+        </tr>
+        <tr>
+          <td><strong>Social / Rights</strong></td>
+          <td><textarea style="min-height:60px;" placeholder="e.g., Civil rights movement, Arab Spring..."></textarea></td>
+          <td><textarea style="min-height:60px;" placeholder="e.g., population stress, ongoing inequality..."></textarea></td>
+        </tr>
+        <tr>
+          <td><strong>Culture</strong></td>
+          <td><textarea style="min-height:60px;" placeholder="e.g., two-way cultural exchange, reggae, Bollywood..."></textarea></td>
+          <td><textarea style="min-height:60px;" placeholder="e.g., Americanization concerns, resistance in Saudi Arabia/China..."></textarea></td>
+        </tr>
+        <tr>
+          <td><strong>Environment</strong></td>
+          <td><textarea style="min-height:60px;" placeholder="e.g., vaccines, longer lifespans..."></textarea></td>
+          <td><textarea style="min-height:60px;" placeholder="e.g., pollution, climate change, resource competition..."></textarea></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button class="complete-btn" id="dok2-complete" onclick="completeDOK(2)">
+      ✓ Mark DOK 2 Complete
+    </button>
+  </div>
+</div><!-- /dok2 -->
+
+
+<!-- ═══════════════════════════════════════════════
+     DOK 3 — KNOWLEDGE ANALYSIS
+═══════════════════════════════════════════════ -->
+<div class="dok-section" id="dok3">
+  <div class="dok-header dok3-header">
+    <span class="dok-badge">DOK 3</span>
+    <span class="dok-title">Knowledge Analysis</span>
+    <span class="dok-tagline">Examine · Argue · Evaluate with Evidence</span>
+  </div>
+  <div class="dok-body">
+
+    <!-- CAUSAL CHAIN -->
+    <div class="activity-header">
+      <div class="activity-label">Activity 1 of 4</div>
+      <div class="activity-title">Causal Chain — How Globalization Generates Both Integration AND Resistance</div>
+    </div>
+    <p style="font-size:0.87rem;color:var(--text-secondary);margin-bottom:14px;">
+      This chain traces the logic of a complex globalization argument. Nodes 1, 3, and 5 are filled. You must supply the missing links (Nodes 2 and 4) — the mechanisms that connect each stage. Then click "Reveal Answers" to check.
+    </p>
+    <div class="chain-wrap">
+      <div class="chain-row">
+        <div class="node-num">1</div>
+        <div class="node-box filled">Post-WWII economic institutions (WTO, IMF, World Bank) and free market policies (Reagan, Thatcher) lower trade barriers and integrate the global economy.</div>
+      </div>
+      <div class="chain-arrow">↓</div>
+      <div class="chain-row">
+        <div class="node-num">2</div>
+        <div class="node-box blank">
+          <textarea class="causal-input" placeholder="What mechanism connects global economic integration to UNEQUAL outcomes? Think: who benefits, who doesn't, and why?" style="width:100%;min-height:60px;background:transparent;border:none;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;"></textarea>
+        </div>
+      </div>
+      <div id="chain2-answer" class="chain-answer-box"></div>
+      <div class="chain-arrow">↓</div>
+      <div class="chain-row">
+        <div class="node-num">3</div>
+        <div class="node-box filled">Economic globalization produces explosive growth in some regions (Asian tigers: Japan, South Korea, China, India) while deepening dependency and "brain drain" in others (many African and Latin American nations).</div>
+      </div>
+      <div class="chain-arrow">↓</div>
+      <div class="chain-row">
+        <div class="node-num">4</div>
+        <div class="node-box blank">
+          <textarea class="causal-input" placeholder="How does inequality under globalization lead to organized resistance? What is the mechanism connecting uneven outcomes to protest movements?" style="width:100%;min-height:60px;background:transparent;border:none;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;"></textarea>
+        </div>
+      </div>
+      <div id="chain4-answer" class="chain-answer-box"></div>
+      <div class="chain-arrow">↓</div>
+      <div class="chain-row">
+        <div class="node-num">5</div>
+        <div class="node-box filled">Organized resistance emerges globally — anti-IMF/WTO protests in the 1990s, cultural protectionism in nations like China and Saudi Arabia — demonstrating that globalization generates both integration and the forces that push back against it simultaneously.</div>
+      </div>
+    </div>
+    <button class="reveal-btn" style="margin-top:14px;" onclick="revealChain()">▼ Reveal Missing Links</button>
+
+    <div class="activity-divider"></div>
+
+    <!-- CCOT GRID -->
+    <div class="activity-header">
+      <div class="activity-label">Activity 2 of 4</div>
+      <div class="activity-title">CCOT Grid — Globalization After 1900</div>
+    </div>
+    <p style="font-size:0.87rem;color:var(--text-secondary);margin-bottom:12px;">
+      A key analytical move in 9.9 is distinguishing what was genuinely new from what were old patterns in new forms. Study this grid — it maps the historical thinking you need for contextualization and CCOT arguments.
+    </p>
+    <div class="ccot-grid">
+      <div class="ccot-box ccot-change">
+        <div class="ccot-box-title">🔴 Changes (genuinely new after 1900)</div>
+        <ul class="ccot-items">
+          <li>Speed of communication: telephone → internet → smartphone in one century</li>
+          <li>Scale of cultural exchange: non-elite populations worldwide participate for the first time</li>
+          <li>Institutional management of global economy (WTO, IMF, World Bank, UN)</li>
+          <li>Green Revolution: global food production transformed through science</li>
+          <li>Mass air travel compressing physical distance for commerce and migration</li>
+          <li>Rights movements gaining global visibility through mass media and social media</li>
+        </ul>
+      </div>
+      <div class="ccot-box ccot-cont">
+        <div class="ccot-box-title">🔵 Continuities (old patterns, new forms)</div>
+        <ul class="ccot-items">
+          <li>Economic inequality between wealthy &amp; developing nations (echoes of imperialism)</li>
+          <li>Competition for resources (oil replacing earlier resource rivalries)</li>
+          <li>Resistance to outside cultural influence (new technologies, same impulse)</li>
+          <li>Powerful nations dominating weaker ones economically (neo-colonialism)</li>
+          <li>Elite-first benefits: global connections existed in 1914 but only for the wealthy</li>
+          <li>Disease crossing borders with trade (COVID ↔ Black Death as pattern)</li>
+        </ul>
+      </div>
+    </div>
+    <p style="font-size:0.87rem;color:var(--text-secondary);margin:14px 0 6px;"><strong>Analysis question:</strong> Using the CCOT grid above, write 2-3 sentences explaining why it would be historically inaccurate to argue that globalization "created" inequality after 1900. What does continuity tell us about the argument?</p>
+    <textarea placeholder="Your analysis here. Start with a claim, then support it with specific evidence from the grid above..."></textarea>
+    <button class="reveal-btn" onclick="toggleSample('ccot-sample',this)">▼ Reveal Sample Analysis</button>
+    <div class="sample-label">Model Analysis — CCOT</div>
+    <div class="sample-body" id="ccot-sample">
+      To argue that globalization "created" inequality after 1900 would ignore centuries of historical precedent. Economic inequality between wealthy and developing nations existed long before the 20th century — it was a defining feature of European imperialism, the Atlantic slave trade, and mercantilist economic systems dating back to the 1500s. What globalization after 1900 actually did was accelerate and intensify pre-existing patterns of unequal exchange, particularly as multinational corporations stepped into roles previously played by colonial governments. The continuity here strengthens a nuanced argument: globalization did not invent exploitation, it modernized it.
+    </div>
+
+    <div class="activity-divider"></div>
+
+    <!-- THESIS EVALUATOR -->
+    <div class="activity-header">
+      <div class="activity-label">Activity 3 of 4</div>
+      <div class="activity-title">Thesis Evaluator — PASS or FAIL?</div>
+    </div>
+    <div class="thesis-prompt">
+      <strong>LEQ Prompt:</strong> Evaluate the extent to which globalization transformed human societies in the period from 1900 to the present.
+    </div>
+    <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:10px;">Click each thesis card to reveal whether it earns the AP thesis point and why.</p>
+    <div class="click-hint">↓ Click each card to evaluate ↓</div>
+    <div class="thesis-grid" style="margin-top:8px;">
+      <div class="thesis-card" onclick="revThesis(this,\x27fail\x27,\x27FAIL: This restates the prompt. It tells us what the essay is about (globalization transformed societies) but establishes NO line of reasoning — no WHY, no HOW, no degree judgment. A reader cannot predict the argument from this statement.\x27)">
+        <em>"Globalization transformed human societies in many ways from 1900 to the present."</em>
+      </div>
+      <div class="thesis-card" onclick="revThesis(this,\x27fail\x27,\x27FAIL: This is a defensible claim, but it has no line of reasoning. It names ONE effect (cultural exchange) but does not establish WHY or through what mechanism, and it does not address degree or any competing force. It would NOT earn the thesis point.\x27)">
+        <em>"Globalization led to significant cultural exchange between societies around the world after 1900."</em>
+      </div>
+      <div class="thesis-card" onclick="revThesis(this,\x27pass\x27,\x27PASS: This earns the thesis point. It makes a defensible degree claim (transformed fundamentally BUT unevenly), establishes categories of argument (economic integration vs. social inequality), and uses qualifying language (\x27while\x27) to set up a line of reasoning the essay will develop.\x27)">
+        <em>"While globalization after 1900 fundamentally transformed global economies through the rise of multinational corporations and new Asian economic powers, its social impact was deeply uneven — generating new rights movements in some regions while deepening economic dependency and inequality in others."</em>
+      </div>
+      <div class="thesis-card" onclick="revThesis(this,\x27pass\x27,\x27PASS: This also earns the thesis point, taking a different but equally valid position. It makes a defensible claim about LIMITED transformation by emphasizing continuity. The key move is the \x27however\x27 + line of reasoning about old patterns in new forms — this is the CCOT argument and it qualifies the extent of change effectively.\x27)">
+        <em>"Although globalization accelerated the pace of economic and cultural exchange to an unprecedented degree after 1900, its most significant transformations were in form rather than substance — inequality, resource competition, and resistance to outside influence were not new phenomena, but ancient patterns that globalization intensified without fundamentally altering."</em>
+      </div>
+    </div>
+
+    <div class="activity-divider"></div>
+
+    <!-- SAQ PRACTICE (DOK 3) -->
+    <div class="activity-header">
+      <div class="activity-label">Activity 4 of 4</div>
+      <div class="activity-title">SAQ Practice — Short Answer Question</div>
+    </div>
+    <div class="saq-prompt-box">
+      <div class="saq-prompt-label">SAQ Prompt — No Stimulus (Type: Q4 / Period 3–8)</div>
+      <div class="saq-prompt-text">
+        Use your knowledge of AP World History: Modern to answer all parts of the following question.<br><br>
+        Answer (a), (b), and (c).
+      </div>
+    </div>
+
+    <div class="saq-part">
+      <div class="saq-part-label">Part A — Identify</div>
+      <div class="saq-part-text">Identify ONE specific development in Unit 9 that serves as evidence of the <em>benefits</em> of globalization after 1900.</div>
+      <textarea placeholder="One specific, named piece of evidence. 1-2 sentences. You do NOT need to explain — just identify with enough specificity that a reader knows what you mean."></textarea>
+      <button class="reveal-btn" onclick="toggleSample('saq-a-sample',this)">▼ Reveal Sample Answer</button>
+      <div class="sample-label">Model SAQ Part A</div>
+      <div class="sample-body" id="saq-a-sample">
+        The Green Revolution of the mid-20th century introduced high-yield crop varieties, synthetic fertilizers, and new irrigation techniques to agriculture in Asia, Latin America, and parts of Africa, dramatically increasing food production and contributing to a sharp decline in famine deaths globally.
+      </div>
+    </div>
+
+    <div class="saq-part">
+      <div class="saq-part-label">Part B — Describe</div>
+      <div class="saq-part-text">Describe ONE specific way in which resistance to globalization manifested after 1900. Your answer must include relevant characteristics — not just a term.</div>
+      <textarea placeholder="Describe means give relevant characteristics — more than a name alone. Include: what it was, who was involved, what they were resisting, and roughly when/where."></textarea>
+      <button class="reveal-btn" onclick="toggleSample('saq-b-sample',this)">▼ Reveal Sample Answer</button>
+      <div class="sample-label">Model SAQ Part B</div>
+      <div class="sample-body" id="saq-b-sample">
+        Anti-globalization protests, particularly those directed at the World Trade Organization (WTO) and the International Monetary Fund (IMF) in the 1990s and early 2000s, represented a significant form of organized resistance. Protesters — drawn from labor unions, environmental organizations, and advocacy groups in both developing and wealthy nations — argued that the rules governing global trade prioritized corporate profit over workers' rights, environmental protections, and the economic sovereignty of poorer nations. The 1999 WTO protests in Seattle became a defining symbol of this resistance movement.
+      </div>
+    </div>
+
+    <div class="saq-part">
+      <div class="saq-part-label">Part C — Explain</div>
+      <div class="saq-part-text">Explain how ONE continuity from the period before 1900 helps historians understand the nature and limits of globalization after 1900. Your answer must show HOW the continuity connects to the argument — not just what it was.</div>
+      <textarea placeholder="Explain = show HOW or WHY. Name a pre-1900 pattern, then explicitly connect it to what globalization did or did not change. Use a 'because' or 'this means that' construction."></textarea>
+      <button class="reveal-btn" onclick="toggleSample('saq-c-sample',this)">▼ Reveal Sample Answer</button>
+      <div class="sample-label">Model SAQ Part C</div>
+      <div class="sample-body" id="saq-c-sample">
+        The centuries-long pattern of economic inequality between colonizing and colonized societies helps explain why post-1900 globalization produced such uneven outcomes. Because European imperialism had already structured the global economy to extract resources from Africa, Asia, and Latin America for the benefit of wealthy industrialized nations, the free trade frameworks of the 20th century — championed by institutions like the IMF and WTO — operated within an already unequal system. This means that what appeared as a new global economic order was, for many developing nations, a continuation of dependency rather than a genuinely equal integration, because the structural advantages that wealthy nations held from centuries of imperialism did not disappear simply because formal colonial rule ended.
+      </div>
+    </div>
+
+    <button class="complete-btn" id="dok3-complete" onclick="completeDOK(3)">
+      ✓ Mark DOK 3 Complete
+    </button>
+  </div>
+</div><!-- /dok3 -->
+
+
+<!-- ═══════════════════════════════════════════════
+     DOK 4 — KNOWLEDGE AUGMENTATION (CAPSTONE)
+═══════════════════════════════════════════════ -->
+<div class="dok-section" id="dok4">
+  <div class="dok-header dok4-header">
+    <span class="dok-badge">DOK 4</span>
+    <span class="dok-title">Knowledge Augmentation — LEQ &amp; DBQ Workshop</span>
+    <span class="dok-tagline">Synthesize · Construct · Master the Exam</span>
+  </div>
+  <div class="dok-body">
+
+    <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:20px;">
+      This is the capstone of Unit 9. You will build a complete LEQ response step-by-step, practice DBQ strategies, and connect Unit 9 to the broader arc of the course. Work through each stage before revealing the model.
+    </p>
+
+    <!-- CONTEXTUALIZATION BUILDER -->
+    <div class="activity-header">
+      <div class="activity-label">Activity 1 of 4</div>
+      <div class="activity-title">Contextualization Builder — Three Pathways</div>
+    </div>
+    <p style="font-size:0.87rem;color:var(--text-secondary);margin-bottom:12px;">
+      Contextualization requires a developed paragraph — not just a mention — connecting globalization to a broader historical pattern. Three valid pathways are below. Open one, write your paragraph, then check the model.
+    </p>
+
+    <!-- Pathway 1 -->
+    <div class="ctx-pathway" id="ctx1">
+      <div class="ctx-trigger" onclick="toggleCtx('ctx1')">
+        <span><strong>Pathway 1:</strong> Connect to Industrial Revolution &amp; imperialism (pre-1900 origins of global economic inequality)</span>
+        <span class="ctx-arrow">▼</span>
+      </div>
+      <div class="ctx-body">
+        <div class="ctx-stem">Stem: "In order to understand the uneven benefits of globalization after 1900, it is necessary to consider the century of industrial capitalism and European imperialism that preceded it. By 1900, the global economy was already structured to benefit industrialized nations at the expense of colonized peoples..."</div>
+        <div class="ctx-pathway-label">Your Contextualization — Pathway 1:</div>
+        <textarea rows="5" style="width:100%;background:#1a1a2e;color:#e0d6f0;border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:10px;font-size:0.92rem;resize:vertical;" placeholder="Write your contextualization paragraph using the Pathway 1 stem above. 3-5 sentences. Must explain the connection, not just mention it."></textarea>
+        <div class="sample-label">Model Contextualization — Pathway 1</div>
+        <div class="sample-body" id="ctx1-sample" style="display:block;margin-top:6px;">
+          In order to understand the uneven benefits of globalization after 1900, it is necessary to examine the century of industrial capitalism and European imperialism that had already structured the global economy by that point. The Industrial Revolution, beginning in Britain in the late 18th century and spreading to Western Europe and North America by the mid-19th century, gave industrialized nations enormous technological and military advantages over non-industrialized societies. European imperial powers exploited these advantages to colonize much of Africa, Asia, and parts of Latin America, integrating these regions into the global economy primarily as suppliers of raw materials and consumers of manufactured goods rather than as equal participants in trade. By 1900, the world was already profoundly interconnected, but interconnected in ways that overwhelmingly benefited European powers. The economic globalization of the 20th century therefore did not create a level playing field — it inherited and, in many ways, amplified the structural inequalities that imperialism had built.
+        </div>
+        <button class="reveal-btn" onclick="toggleSample('ctx1-sample',this)" style="margin-top:8px;">▲ Hide / Show Model</button>
+      </div>
+    </div>
+
+    <!-- Pathway 2 -->
+    <div class="ctx-pathway" id="ctx2">
+      <div class="ctx-trigger" onclick="toggleCtx('ctx2')">
+        <span><strong>Pathway 2:</strong> Connect to Cold War (ideological competition that shaped post-1945 globalization)</span>
+        <span class="ctx-arrow">▼</span>
+      </div>
+      <div class="ctx-body">
+        <div class="ctx-stem">Stem: "The nature of post-WWII globalization cannot be understood apart from the Cold War ideological competition between the United States and the Soviet Union that shaped which economic models, institutions, and alliances would govern the newly integrated world..."</div>
+        <div class="ctx-pathway-label">Your Contextualization — Pathway 2:</div>
+        <textarea rows="5" style="width:100%;background:#1a1a2e;color:#e0d6f0;border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:10px;font-size:0.92rem;resize:vertical;" placeholder="Write your contextualization paragraph using the Pathway 2 stem above."></textarea>
+        <div class="sample-label">Model Contextualization — Pathway 2</div>
+        <div class="sample-body" id="ctx2-sample" style="display:block;margin-top:6px;">
+          The shape of 20th-century globalization was fundamentally determined by the Cold War rivalry between the United States and the Soviet Union that dominated international relations from 1947 to 1991. The United States championed a capitalist, free-market model of global integration, funding institutions like the World Bank and IMF to spread American-aligned economic frameworks and supporting non-communist governments, even authoritarian ones, in Asia, Latin America, and Africa. The Soviet Union, by contrast, offered an alternative model of state-directed industrialization and economic integration through COMECON, its economic alliance of Eastern bloc nations. This ideological competition meant that globalization after 1945 was never purely economic — it was also geopolitical, with developing nations often forced to choose sides or navigate between competing powers. When the Cold War ended in 1991 and the Soviet model collapsed, the result was an accelerated and largely unchallenged spread of free-market globalization in the 1990s, directly producing both the economic integration and the backlash movements that define the period.
+        </div>
+        <button class="reveal-btn" onclick="toggleSample('ctx2-sample',this)" style="margin-top:8px;">▲ Hide / Show Model</button>
+      </div>
+    </div>
+
+    <!-- Pathway 3 -->
+    <div class="ctx-pathway" id="ctx3">
+      <div class="ctx-trigger" onclick="toggleCtx('ctx3')">
+        <span><strong>Pathway 3:</strong> Connect to World Wars (how global conflict accelerated and redirected globalization)</span>
+        <span class="ctx-arrow">▼</span>
+      </div>
+      <div class="ctx-body">
+        <div class="ctx-stem">Stem: "The two World Wars of the 20th century profoundly disrupted existing patterns of global economic integration but also created the conditions for a new, more institutionally managed form of globalization to emerge after 1945..."</div>
+        <div class="ctx-pathway-label">Your Contextualization — Pathway 3:</div>
+        <textarea rows="5" style="width:100%;background:#1a1a2e;color:#e0d6f0;border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:10px;font-size:0.92rem;resize:vertical;" placeholder="Write your contextualization paragraph using the Pathway 3 stem above."></textarea>
+        <div class="sample-label">Model Contextualization — Pathway 3</div>
+        <div class="sample-body" id="ctx3-sample" style="display:block;margin-top:6px;">
+          The two World Wars of the 20th century paradoxically both disrupted and ultimately accelerated globalization. World War I fractured the relatively open international trading system that had developed in the 19th century, ushering in an era of economic nationalism, protective tariffs, and the Great Depression, which further contracted global trade in the 1930s. World War II was even more destructive but also more transformative: the massive cost of rebuilding shattered economies created powerful political incentives among Allied powers to design a new international economic framework that would prevent the economic instability they believed had contributed to fascism and the war itself. The Bretton Woods agreements of 1944 established the dollar as the world's reserve currency, created the World Bank and IMF, and laid the institutional groundwork for the free trade order that would define globalization for the rest of the century. In this sense, the destruction of the World Wars was a direct precondition for the global institutional architecture that made post-1945 economic integration possible.
+        </div>
+        <button class="reveal-btn" onclick="toggleSample('ctx3-sample',this)" style="margin-top:8px;">▲ Hide / Show Model</button>
+      </div>
+    </div>
+
+    <div class="activity-divider"></div>
+
+    <!-- LEQ WORKSHOP -->
+    <div class="activity-header">
+      <div class="activity-label">Activity 2 of 4 — LEQ Workshop</div>
+      <div class="activity-title">Build Your Long Essay Response — Stage by Stage</div>
+    </div>
+
+    <div class="leq-prompt-box">
+      <div class="leq-prompt-label">LEQ Prompt</div>
+      <p style="font-size:0.95rem;color:var(--parchment);font-style:italic;">"Evaluate the extent to which globalization transformed human societies in the period from 1900 to the present."</p>
+      <p style="font-size:0.8rem;color:var(--text-muted);margin-top:8px;">AP Rubric: Thesis (1pt) + Contextualization (1pt) + Evidence (2pt) + Analysis &amp; Reasoning (2pt) = 6 points total</p>
+    </div>
+
+    <!-- Stage 1: Thesis -->
+    <div class="leq-stage">
+      <div class="leq-stage-title">Stage 1 — Thesis (1 point)</div>
+      <div class="leq-stage-text">Write a thesis that: (a) makes a historically defensible claim, (b) establishes a line of reasoning (not just a fact), and (c) addresses DEGREE — "to what extent." Use qualifying language ("while," "although," "however").</div>
+      <textarea placeholder="Your thesis (2-3 sentences). Must address degree and set up categories of argument for your body paragraphs."></textarea>
+      <button class="reveal-btn" onclick="toggleSample('leq-thesis',this)">▼ Reveal Model Thesis</button>
+      <div class="sample-label">Model LEQ Thesis</div>
+      <div class="sample-body" id="leq-thesis">
+        Although globalization after 1900 dramatically transformed the pace and scale of economic integration, cultural exchange, and reform movements worldwide, it did so unevenly — generating transformative prosperity for some nations and populations while reinforcing and accelerating pre-existing patterns of inequality and resource competition for others. The extent of transformation, therefore, depended fundamentally on one's position in the global economic hierarchy, making globalization a force of simultaneous liberation and exploitation.
+      </div>
+    </div>
+
+    <!-- Stage 2: Contextualization -->
+    <div class="leq-stage">
+      <div class="leq-stage-title">Stage 2 — Contextualization (1 point)</div>
+      <div class="leq-stage-text">Choose ONE of your three pathways from the Contextualization Builder above and write your full paragraph here. Remember: a mention is NOT enough — you must develop the connection.</div>
+      <textarea style="min-height:140px;" placeholder="Your contextualization paragraph (3-5 sentences). Connects to a broader historical development BEFORE or DURING the period that explains the context for globalization."></textarea>
+    </div>
+
+    <!-- Stage 3: Body Paragraphs -->
+    <div class="leq-stage">
+      <div class="leq-stage-title">Stage 3 — Body Paragraphs (2 points evidence + 2 points analysis)</div>
+      <div class="leq-stage-text">Write TWO body paragraphs. Each must: (1) open with a topic sentence tied to your thesis, (2) include at least one specific piece of evidence, and (3) use historical reasoning (causation, comparison, or CCOT) to connect evidence to argument. Paragraph 2 should QUALIFY your argument — use "however" to introduce a complication.</div>
+      <p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--gold);margin:10px 0 4px;">BODY PARAGRAPH 1 — Supports your main argument</p>
+      <textarea style="min-height:160px;" placeholder="Topic sentence → Specific evidence (name it!) → Reasoning: HOW does this evidence support your argument? → Connect back to thesis."></textarea>
+      <p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--gold);margin:10px 0 4px;">BODY PARAGRAPH 2 — Qualifies / Complicates (use 'however' or 'on the other hand')</p>
+      <textarea style="min-height:160px;" placeholder="Topic sentence with qualifying language → Evidence that complicates your main argument → Reasoning: How does this MODIFY or QUALIFY your thesis? → Does this strengthen or weaken your overall claim?"></textarea>
+      <button class="reveal-btn" onclick="toggleSample('leq-body',this)">▼ Reveal Model Body Paragraphs</button>
+      <div class="sample-label">Model LEQ Body Paragraphs</div>
+      <div class="sample-body" id="leq-body">
+        <strong>Body Paragraph 1:</strong> Globalization most profoundly transformed the global economy by redistributing economic power away from exclusively Western nations and toward new centers in Asia, fundamentally altering the landscape of global development. The free market policies championed by Reagan and Thatcher in the 1980s helped accelerate trade liberalization, which, combined with deliberate state-led industrialization strategies in East Asia, produced the explosive rise of Japan, South Korea, Taiwan, and eventually China as major economic powers. By the early 21st century, China had become the world's second-largest economy, and hundreds of millions of Chinese citizens had escaped extreme poverty — a transformation of historic proportions that would have been difficult to imagine in 1900. This economic transformation demonstrates that globalization could generate genuinely new outcomes, not merely reproduce old patterns, at least for nations that were positioned to benefit from open markets.<br><br>
+        <strong>Body Paragraph 2:</strong> However, the same economic forces that powered Asia's rise simultaneously entrenched inequality for many nations in Africa and Latin America, suggesting that globalization's transformative power was deeply conditional rather than universal. The structural adjustment programs mandated by the IMF as conditions for loans required developing nations to privatize public industries, cut social spending, and open their markets to foreign competition — policies that, in many cases, produced short-term economic disruption and long-term dependency on foreign capital rather than self-sustaining development. This exploitation was not structurally new: it echoed the extractive logic of 19th-century imperialism, where periphery nations supplied raw materials while wealthy industrial nations captured the value of manufacturing. The large-scale anti-IMF and anti-WTO protests of the 1990s and early 2000s, drawing participants from across the political spectrum and from both wealthy and developing nations, represented a direct repudiation of the claim that free trade was universally beneficial — and thereby qualified the extent to which globalization should be understood as "transformation" rather than intensification of existing hierarchies.
+      </div>
+    </div>
+
+    <!-- Stage 4: Complexity -->
+    <div class="leq-stage">
+      <div class="leq-stage-title">Stage 4 — Complexity (bonus / hardest point)</div>
+      <div class="leq-stage-text">The complexity point requires more than a good essay — it requires demonstrating sophisticated historical understanding. Three reliable strategies: (1) a cross-period connection, (2) explain how different groups experienced globalization differently, or (3) argue both sides explicitly and explain the contradiction. Choose ONE and write 2-4 sentences to add to your conclusion.</div>
+      <textarea placeholder="Your complexity move. Label which strategy you're using: (1) Cross-period connection, (2) Different experiences by group/region, or (3) Explicit acknowledgment of contradiction. Then execute it."></textarea>
+      <button class="reveal-btn" onclick="toggleSample('leq-complex',this)">▼ Reveal Model Complexity Statement</button>
+      <div class="sample-label">Model Complexity Statement</div>
+      <div class="sample-body" id="leq-complex">
+        <strong>[Strategy: Cross-period connection + multiple variables]</strong> The tension at the heart of globalization — that the same forces of interconnection that generate prosperity also generate exploitation — is not unique to the 20th and 21st centuries. The Silk Road trade networks of the classical era, the Atlantic trading system of the 16th–18th centuries, and the industrialized imperial order of the 19th century all exhibited the same fundamental pattern: the benefits of global exchange flowed disproportionately to those who controlled the terms of trade, while those on the periphery found themselves integrated into a system they had little power to shape. What makes post-1900 globalization historically significant is not that it created this dynamic, but that it made it visible to, and contested by, a far larger portion of the world's population than ever before — suggesting that the truly transformative development may not be globalization itself, but the democratic and rights-based movements that arose in response to it.
+      </div>
+    </div>
+
+    <div class="activity-divider"></div>
+
+    <!-- DBQ STRATEGY GUIDE -->
+    <div class="activity-header">
+      <div class="activity-label">Activity 3 of 4 — DBQ Strategy</div>
+      <div class="activity-title">Applying Globalization Arguments to the DBQ</div>
+    </div>
+
+    <div class="dbq-box">
+      <div class="dbq-label">DBQ Key Differences from LEQ</div>
+      <p style="font-size:0.87rem;color:var(--text-secondary);">The DBQ uses the same thesis and contextualization skills as the LEQ, but adds three additional requirements: (1) use of at least 3 documents as evidence, (2) HIPP sourcing on at least 2 documents, and (3) at least 1 piece of outside evidence beyond the documents. The complexity point is most reliably earned by sourcing 4+ documents AND showing how documents represent competing perspectives.</p>
+    </div>
+
+    <p style="font-size:0.87rem;color:var(--text-secondary);margin:12px 0 6px;"><strong>Practice prompt:</strong> A DBQ might present you with 7 documents including: a speech by a WTO official, an anti-globalization protest flyer, a graph of GDP growth in South Korea, a Nigerian economist's critique of IMF structural adjustment, a quote from Malala Yousafzai on social media and reform, a report on climate change, and a chart of rising life expectancy globally. For each "document type" below, practice your HIPP sourcing move:</p>
+
+    <table class="comp-table" style="margin-top:10px;">
+      <thead>
+        <tr><th>Document Type</th><th>HIPP Element to Analyze</th><th>Write your sourcing sentence here</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>WTO official's speech</td>
+          <td><strong>Purpose / Point of View:</strong> Why might this person frame globalization positively? What is their institutional interest?</td>
+          <td><textarea style="min-height:70px;" placeholder="The WTO official's argument that free trade benefits all nations must be understood in the context of their point of view as..."></textarea></td>
+        </tr>
+        <tr>
+          <td>Nigerian economist's critique of IMF</td>
+          <td><strong>Historical Situation:</strong> What specific historical context makes this perspective understandable?</td>
+          <td><textarea style="min-height:70px;" placeholder="This document's critical perspective on IMF policies reflects the historical situation of..."></textarea></td>
+        </tr>
+        <tr>
+          <td>Graph of South Korea GDP growth</td>
+          <td><strong>Purpose / Limitations:</strong> What does a GDP graph show and what does it NOT show about the impact of globalization?</td>
+          <td><textarea style="min-height:70px;" placeholder="While this graph corroborates the argument that globalization raised living standards in South Korea, it must be qualified because GDP data does not show..."></textarea></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="activity-divider"></div>
+
+    <!-- CROSS-UNIT SYNTHESIS -->
+    <div class="activity-header">
+      <div class="activity-label">Activity 4 of 4</div>
+      <div class="activity-title">Cross-Unit Synthesis — Looking Forward</div>
+    </div>
+    <div class="cross-unit-box">
+      <div class="cross-unit-title">🔗 Connecting Unit 9 to the Full Course</div>
+      <p style="font-size:0.87rem;color:var(--text-secondary);margin-bottom:12px;">The AP World History exam will ask you to connect ideas across units and time periods. Consider these synthesis questions:</p>
+      <ul class="cross-unit-prompts">
+        <li><strong>Unit 9 → Units 7 &amp; 8:</strong> How did the political outcomes of WWI, WWII, and the Cold War directly shape the institutions and economic frameworks that defined globalization? (Think: Bretton Woods, decolonization, non-alignment)</li>
+        <li><strong>Unit 9 → Unit 4 (1450–1750):</strong> In what ways does the economic globalization of the 20th century echo the mercantilist trading systems of the early modern period? What is the same? What genuinely changed?</li>
+        <li><strong>Unit 9 → Unit 6 (Industrialization):</strong> How does the rise of multinational corporations continue the logic of industrial capitalism? Is economic globalization the final stage of industrialization or something fundamentally new?</li>
+        <li><strong>Current connections:</strong> The video asks: "Which force will be more powerful in the decades to come — connection or conflict?" Using evidence from Unit 9, make a specific historical argument for your answer.</li>
+      </ul>
+      <p style="font-size:0.87rem;color:var(--text-secondary);margin:14px 0 6px;"><strong>Choose ONE of the above connections and write a 3-5 sentence synthesis argument:</strong></p>
+      <textarea style="min-height:120px;" placeholder="Name which connection you are addressing, then develop your argument with specific evidence from at least TWO different units or time periods."></textarea>
+      <button class="reveal-btn" onclick="toggleSample('cross-unit-sample',this)">▼ Reveal Model Synthesis</button>
+      <div class="sample-label">Model Cross-Unit Synthesis</div>
+      <div class="sample-body" id="cross-unit-sample">
+        <strong>[Unit 9 → Unit 4 connection]</strong> The economic structure of 20th-century globalization closely echoes the mercantilist trading systems of the early modern period (c. 1450–1750), suggesting that what changed was primarily the speed and scale of exchange rather than its fundamental logic. Just as European mercantilist powers organized their colonial empires to extract raw materials from the periphery — silver from the Americas, spices from South and Southeast Asia, enslaved labor from Africa — to enrich the metropolitan core, the multinational corporations and trade frameworks of the 20th century organized global supply chains along similar hierarchical lines: manufacturing cheap goods in low-wage economies while capturing profits in wealthy nations. The most significant genuine change between these periods is the emergence of international institutions like the WTO, IMF, and UN that, at least in theory, subject these relationships to international rules and oversight — and the corresponding rise of global advocacy organizations and protest movements that hold those institutions accountable in ways that colonized peoples in 1600 had no equivalent mechanism to do.
+      </div>
+    </div>
+
+    <div class="activity-divider"></div>
+
+    <!-- SELF ASSESSMENT -->
+    <div class="activity-header">
+      <div class="activity-label">Self-Assessment</div>
+      <div class="activity-title">Rate Your AP Skills — 9.9 Argumentation</div>
+    </div>
+    <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:12px;">Click the dot that best represents your current confidence. Be honest — this helps you know what to review before the exam.</p>
+
+    <div class="sa-grid">
+      <div class="sa-row">
+        <div class="sa-skill"><strong>Corroborate / Qualify / Modify</strong><small>Skill 6.D — Complex Argumentation</small></div>
+        <div class="sa-dots">
+          <div class="sa-dot" onclick="setDot(this,1)" title="Not Yet"></div>
+          <div class="sa-dot" onclick="setDot(this,2)" title="Getting There"></div>
+          <div class="sa-dot" onclick="setDot(this,3)" title="Confident"></div>
+        </div>
+        <div class="sa-labels">
+          <div class="sa-label-item">Not Yet</div>
+          <div class="sa-label-item">Getting There</div>
+          <div class="sa-label-item">Confident</div>
+        </div>
+      </div>
+      <div class="sa-row">
+        <div class="sa-skill"><strong>Writing a Complex Thesis</strong><small>Must address degree + establish line of reasoning</small></div>
+        <div class="sa-dots">
+          <div class="sa-dot" onclick="setDot(this,1)"></div>
+          <div class="sa-dot" onclick="setDot(this,2)"></div>
+          <div class="sa-dot" onclick="setDot(this,3)"></div>
+        </div>
+        <div class="sa-labels">
+          <div class="sa-label-item">Not Yet</div>
+          <div class="sa-label-item">Getting There</div>
+          <div class="sa-label-item">Confident</div>
+        </div>
+      </div>
+      <div class="sa-row">
+        <div class="sa-skill"><strong>Contextualization Paragraph</strong><small>3-5 sentences, developed connection, not just a mention</small></div>
+        <div class="sa-dots">
+          <div class="sa-dot" onclick="setDot(this,1)"></div>
+          <div class="sa-dot" onclick="setDot(this,2)"></div>
+          <div class="sa-dot" onclick="setDot(this,3)"></div>
+        </div>
+        <div class="sa-labels">
+          <div class="sa-label-item">Not Yet</div>
+          <div class="sa-label-item">Getting There</div>
+          <div class="sa-label-item">Confident</div>
+        </div>
+      </div>
+      <div class="sa-row">
+        <div class="sa-skill"><strong>CCOT Analysis</strong><small>Distinguishing genuine change from old patterns in new forms</small></div>
+        <div class="sa-dots">
+          <div class="sa-dot" onclick="setDot(this,1)"></div>
+          <div class="sa-dot" onclick="setDot(this,2)"></div>
+          <div class="sa-dot" onclick="setDot(this,3)"></div>
+        </div>
+        <div class="sa-labels">
+          <div class="sa-label-item">Not Yet</div>
+          <div class="sa-label-item">Getting There</div>
+          <div class="sa-label-item">Confident</div>
+        </div>
+      </div>
+      <div class="sa-row">
+        <div class="sa-skill"><strong>HIPP Sourcing (DBQ)</strong><small>Historical situation, Audience, POV, Purpose — 2+ documents</small></div>
+        <div class="sa-dots">
+          <div class="sa-dot" onclick="setDot(this,1)"></div>
+          <div class="sa-dot" onclick="setDot(this,2)"></div>
+          <div class="sa-dot" onclick="setDot(this,3)"></div>
+        </div>
+        <div class="sa-labels">
+          <div class="sa-label-item">Not Yet</div>
+          <div class="sa-label-item">Getting There</div>
+          <div class="sa-label-item">Confident</div>
+        </div>
+      </div>
+      <div class="sa-row">
+        <div class="sa-skill"><strong>Unit 9 Evidence Locker</strong><small>Can name 2+ specific examples per theme from memory</small></div>
+        <div class="sa-dots">
+          <div class="sa-dot" onclick="setDot(this,1)"></div>
+          <div class="sa-dot" onclick="setDot(this,2)"></div>
+          <div class="sa-dot" onclick="setDot(this,3)"></div>
+        </div>
+        <div class="sa-labels">
+          <div class="sa-label-item">Not Yet</div>
+          <div class="sa-label-item">Getting There</div>
+          <div class="sa-label-item">Confident</div>
+        </div>
+      </div>
+      <div class="sa-row">
+        <div class="sa-skill"><strong>TCERC Exam Checklist</strong><small>Can apply Thesis / Context / Evidence / Reasoning / Complexity on demand</small></div>
+        <div class="sa-dots">
+          <div class="sa-dot" onclick="setDot(this,1)"></div>
+          <div class="sa-dot" onclick="setDot(this,2)"></div>
+          <div class="sa-dot" onclick="setDot(this,3)"></div>
+        </div>
+        <div class="sa-labels">
+          <div class="sa-label-item">Not Yet</div>
+          <div class="sa-label-item">Getting There</div>
+          <div class="sa-label-item">Confident</div>
+        </div>
+      </div>
+    </div>
+
+    <button class="complete-btn" id="dok4-complete" onclick="completeDOK(4)">
+      ✓ Mark DOK 4 Complete — Unit 9 Finished!
+    </button>
+
+  </div>
+</div><!-- /dok4 -->
+
+</div><!-- /main-content -->
+
+<script>
+// ── PROGRESS BAR ──
+let completed = {1:false, 2:false, 3:false, 4:false};
+function completeDOK(n) {
+  completed[n] = true;
+  const btn = document.getElementById('dok'+n+'-complete');
+  if (btn) { btn.classList.add('done'); btn.textContent = '✓ DOK '+n+' Complete!'; }
+  const total = Object.values(completed).filter(Boolean).length;
+  document.getElementById('progressFill').style.width = (total * 25) + '%';
+}
+
+// ── MCQ RETRY LOGIC ──
+function checkMCQ(qid, btn, isCorrect) {
+  const item = document.getElementById(qid);
+  const fb = document.getElementById(qid + '-fb');
+  if (!fb._orig) fb._orig = fb.innerHTML;
+  if (isCorrect) {
+    item.querySelectorAll('.mcq-option').forEach(b => { b.classList.add('disabled'); b.onclick = null; });
+    btn.classList.add('correct');
+    fb.innerHTML = fb._orig;
+    fb.classList.remove('wrong-fb');
+    fb.classList.add('show');
+  } else {
+    btn.classList.add('incorrect', 'disabled');
+    btn.onclick = null;
+    fb.innerHTML = '<strong>Incorrect.</strong> That\x27s not it \u2014 try another answer.';
+    fb.classList.add('show', 'wrong-fb');
+  }
+}
+
+// ── MATCHING ──
+let matchSelected = {left: null, right: null};
+const matchPairs = {ml1:'mr2', ml2:'mr4', ml3:'mr5', ml4:'mr1', ml5:'mr3'};
+let matchCount = 0;
+
+function selectMatch(id, side) {
+  const el = document.getElementById(id);
+  if (el.classList.contains('matched')) return;
+
+  // Deselect previous on same side
+  if (matchSelected[side]) {
+    const prev = document.getElementById(matchSelected[side]);
+    if (prev) prev.classList.remove('selected');
+  }
+  matchSelected[side] = id;
+  el.classList.add('selected');
+
+  // Check for pair
+  if (matchSelected.left && matchSelected.right) {
+    const leftId = matchSelected.left;
+    const rightId = matchSelected.right;
+    const leftEl = document.getElementById(leftId);
+    const rightEl = document.getElementById(rightId);
+
+    if (matchPairs[leftId] === rightId) {
+      // Correct match
+      leftEl.classList.remove('selected'); leftEl.classList.add('matched');
+      rightEl.classList.remove('selected'); rightEl.classList.add('matched');
+      matchCount++;
+      document.getElementById('matchStatus').textContent = matchCount + ' / 5 matched' + (matchCount === 5 ? ' — All correct! ✓' : '');
+    } else {
+      // Wrong — flash red then reset
+      leftEl.classList.add('wrong'); rightEl.classList.add('wrong');
+      setTimeout(() => {
+        leftEl.classList.remove('wrong','selected');
+        rightEl.classList.remove('wrong','selected');
+      }, 800);
+    }
+    matchSelected = {left: null, right: null};
+  }
+}
+
+// ── SAMPLE ACCORDIONS ──
+function toggleSample(id, btn) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const isOpen = el.classList.contains('show');
+  el.classList.toggle('show');
+  if (btn) btn.textContent = isOpen ? '▼ Reveal Sample Response' : '▲ Hide Sample Response';
+}
+
+// ── CAUSAL CHAIN REVEAL ──
+function revealChain() {
+  const a2 = document.getElementById('chain2-answer');
+  const a4 = document.getElementById('chain4-answer');
+  a2.textContent = 'NODE 2 — Mechanism: Global economic integration through free trade does not automatically distribute gains equally because wealthy nations and corporations enter the system with existing advantages — established capital, infrastructure, technology, and legal frameworks — that developing nations lack. This structural imbalance means that "free trade" often operates more freely for those who already hold power, while weaker economies face pressure to open their markets without receiving equivalent market access in return.';
+  a2.style.display = 'block';
+  a4.textContent = 'NODE 4 — Mechanism: When populations in developing nations experience globalization as exploitation rather than opportunity — through falling wages, loss of local industries to cheap imports, and IMF-mandated austerity — they gain concrete grievances and, crucially, new tools to organize resistance. The same communication technologies that accelerated economic globalization (internet, cell phones, social media) also enabled anti-globalization movements to coordinate across borders, amplify their message, and build coalitions between labor groups, environmentalists, and human rights organizations worldwide.';
+  a4.style.display = 'block';
+}
+
+// ── THESIS EVALUATOR ──
+function revThesis(el, verdict, explanation) {
+  if (el.classList.contains('revealed')) return;
+  el.classList.add('revealed', verdict);
+  el.innerHTML += '<div class="thesis-verdict">' + verdict.toUpperCase() + (verdict === 'pass' ? ' ✓' : ' ✗') + '</div><div class="thesis-explanation">' + explanation + '</div>';
+}
+
+// ── CONTEXTUALIZATION PATHWAYS ──
+function toggleCtx(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle('open');
+}
+
+// ── SELF ASSESSMENT DOTS ──
+function setDot(clickedDot, level) {
+  const row = clickedDot.closest('.sa-dots');
+  const dots = row.querySelectorAll('.sa-dot');
+  dots.forEach((d, i) => {
+    d.classList.remove('active-1','active-2','active-3');
+    if (i === level - 1) d.classList.add('active-' + level);
+  });
+}
+</script>
+</body>
+</html>

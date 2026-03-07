@@ -1,0 +1,156 @@
+═══════════════════════════════════════════════════════════════
+  GOOGLE APPS SCRIPT SETUP — Student Completion Reports
+  AP World History Unit 9
+═══════════════════════════════════════════════════════════════
+
+This sends student completion reports to your email AND logs them
+in a Google Sheet. Free, unlimited, no server needed.
+
+STEP 1: Create a new Google Sheet
+──────────────────────────────────
+1. Go to https://sheets.google.com
+2. Create a new spreadsheet
+3. Name it "AP World History — Completion Reports"
+4. In Row 1, add these headers (the script will also create them):
+   A: Timestamp | B: Student Name | C: Chapter ID | D: Chapter Title
+   E: MCQ Score | F: Self-Assessment | G: Responses
+
+STEP 2: Open the Apps Script editor
+────────────────────────────────────
+1. In the spreadsheet, go to Extensions > Apps Script
+2. Delete any existing code in the editor
+3. Paste the ENTIRE code block below
+4. Click the save icon (or Ctrl+S)
+
+STEP 3: Deploy as a Web App
+───────────────────────────
+1. Click "Deploy" > "New deployment"
+2. Click the gear icon next to "Select type" and choose "Web app"
+3. Set:
+   - Description: "Student Completion Reports"
+   - Execute as: "Me"
+   - Who has access: "Anyone"
+4. Click "Deploy"
+5. Authorize when prompted (click through the "unsafe" warning — it's your own script)
+6. COPY the Web App URL — it looks like:
+   https://script.google.com/macros/s/AKfycb.../exec
+
+STEP 4: Paste the URL into shared.js
+─────────────────────────────────────
+1. Open shared.js in a text editor
+2. Find this line near the top:
+   const APPS_SCRIPT_URL = 'PASTE_YOUR_APPS_SCRIPT_URL_HERE';
+3. Replace PASTE_YOUR_APPS_SCRIPT_URL_HERE with your Web App URL
+4. Save the file and push to GitHub
+
+That's it! Student reports will now go to your Sheet and your email.
+
+
+═══════════════════════════════════════════════════════════════
+  PASTE THIS CODE INTO GOOGLE APPS SCRIPT
+═══════════════════════════════════════════════════════════════
+
+function doPost(e) {
+  try {
+    var data = JSON.parse(e.postData.contents);
+
+    // Log to spreadsheet
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+
+    // Create headers if the sheet is empty
+    if (sheet.getLastRow() === 0) {
+      sheet.appendRow([
+        'Timestamp', 'Student Name', 'Chapter ID', 'Chapter Title',
+        'MCQ Score', 'Self-Assessment', 'Written Responses'
+      ]);
+      // Bold the header row
+      sheet.getRange(1, 1, 1, 7).setFontWeight('bold');
+    }
+
+    // Format MCQ score
+    var mcqScore = data.mcqScore
+      ? data.mcqScore.correct + ' / ' + data.mcqScore.total
+      : 'N/A';
+
+    // Format self-assessment
+    var selfAssess = '';
+    if (data.selfAssessment && data.selfAssessment.length > 0) {
+      selfAssess = data.selfAssessment.map(function(s) {
+        return s.skill + ': ' + s.rating + '/3';
+      }).join('\n');
+    }
+
+    // Format written responses
+    var responses = '';
+    if (data.responses && data.responses.length > 0) {
+      responses = data.responses.map(function(r) {
+        return '--- ' + r.activity + ' ---\n' + r.response;
+      }).join('\n\n');
+    }
+
+    // Add row to sheet
+    sheet.appendRow([
+      new Date().toLocaleString(),
+      data.studentName || 'Unknown',
+      data.chapterId || '',
+      data.chapterTitle || '',
+      mcqScore,
+      selfAssess,
+      responses
+    ]);
+
+    // Send email notification
+    var emailBody = 'Student: ' + (data.studentName || 'Unknown') + '\n'
+      + 'Chapter: ' + (data.chapterTitle || data.chapterId || 'Unknown') + '\n'
+      + 'Completed: ' + new Date().toLocaleString() + '\n'
+      + 'MCQ Score: ' + mcqScore + '\n\n';
+
+    if (selfAssess) {
+      emailBody += 'SELF-ASSESSMENT:\n' + selfAssess + '\n\n';
+    }
+
+    if (responses) {
+      emailBody += 'WRITTEN RESPONSES:\n' + responses + '\n';
+    }
+
+    MailApp.sendEmail({
+      to: 'pstrootman@asdubai.org',
+      subject: 'APWH Completion: ' + (data.studentName || 'Unknown') + ' — ' + (data.chapterTitle || ''),
+      body: emailBody
+    });
+
+    return ContentService.createTextOutput(
+      JSON.stringify({ result: 'success' })
+    ).setMimeType(ContentService.MimeType.JSON);
+
+  } catch (error) {
+    // Log the error to the sheet
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    sheet.appendRow([new Date().toLocaleString(), 'ERROR', error.toString()]);
+
+    return ContentService.createTextOutput(
+      JSON.stringify({ result: 'error', message: error.toString() })
+    ).setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+// Also handle GET requests (for testing)
+function doGet(e) {
+  return ContentService.createTextOutput(
+    'AP World History completion report endpoint is active.'
+  );
+}
+
+
+═══════════════════════════════════════════════════════════════
+  TESTING
+═══════════════════════════════════════════════════════════════
+
+After deploying, visit your Web App URL in a browser.
+You should see: "AP World History completion report endpoint is active."
+
+Then have a student complete a module and submit — check your
+email and the Google Sheet to confirm it works.
+
+Note: If you update the Apps Script code, you need to create a
+NEW deployment (Deploy > New deployment) for changes to take effect.

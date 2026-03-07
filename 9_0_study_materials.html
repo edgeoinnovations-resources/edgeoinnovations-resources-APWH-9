@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AP World History: Unit 9.0 — Globalization Overview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --deep-navy: #0d1117;
+    --navy-mid: #161b22;
+    --navy-light: #1f2937;
+    --parchment: #e8dcc8;
+    --parchment-dim: #b8a990;
+    --gold: #d4a820;
+    --gold-light: #f0c840;
+    --gold-dim: #b8860b;
+    --text-secondary: #9ca3af;
+    --text-muted: #6b7280;
+    --dok1: #2d5a27;
+    --dok1-border: rgba(45,90,39,0.4);
+    --dok2: #1a3d6e;
+    --dok2-border: rgba(26,61,110,0.4);
+    --dok3: #6b2d2d;
+    --dok3-border: rgba(107,45,45,0.4);
+    --dok4: #4a2d6b;
+    --dok4-border: rgba(74,45,107,0.4);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--deep-navy);
+    color: var(--parchment);
+    font-family: 'Source Serif 4', serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* PROGRESS BAR */
+  #progress-bar-wrap {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--navy-mid);
+    border-bottom: 1px solid rgba(212,168,32,0.2);
+    padding: 8px 24px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  #progress-track {
+    flex: 1; height: 6px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 3px; overflow: hidden;
+  }
+  #progress-fill {
+    height: 100%; width: 0%;
+    background: linear-gradient(90deg, var(--dok1), var(--dok2), var(--dok3), var(--dok4));
+    border-radius: 3px; transition: width 0.5s ease;
+  }
+  .prog-label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--text-muted); white-space: nowrap; }
+  .prog-dots { display: flex; gap: 6px; align-items: center; }
+  .prog-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.12); transition: background 0.3s; }
+  .prog-dot.done { background: var(--gold); }
+
+  /* PAGE HEADER */
+  .page-header {
+    background: linear-gradient(135deg, #0a0e14 0%, #1a1430 50%, #0d1a0a 100%);
+    border-bottom: 2px solid var(--gold-dim);
+    padding: 48px 32px 36px; text-align: center; position: relative; overflow: hidden;
+  }
+  .page-header::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(212,168,32,0.06) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 50%, rgba(74,45,107,0.08) 0%, transparent 60%);
+  }
+  .unit-label { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-bottom: 12px; opacity: 0.9; }
+  .page-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; color: var(--parchment); line-height: 1.15; margin-bottom: 8px; position: relative; }
+  .page-subtitle { font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(1rem, 2.5vw, 1.3rem); color: var(--gold); margin-bottom: 16px; }
+  .page-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--text-muted); letter-spacing: 0.08em; }
+
+  /* HOW-TO BANNER */
+  .howto-banner {
+    background: linear-gradient(135deg, rgba(212,168,32,0.12), rgba(212,168,32,0.06));
+    border: 1px solid rgba(212,168,32,0.3); border-left: 4px solid var(--gold);
+    margin: 24px 24px 0; padding: 20px 24px; border-radius: 4px;
+  }
+  .howto-banner strong { color: var(--gold); font-family: 'Playfair Display', serif; font-size: 1.05rem; display: block; margin-bottom: 8px; }
+  .howto-banner p { font-size: 0.9rem; color: var(--parchment-dim); line-height: 1.6; }
+  .howto-banner .central-q { margin-top: 12px; padding: 12px 16px; background: rgba(212,168,32,0.08); border-radius: 4px; font-style: italic; color: var(--parchment); font-size: 0.95rem; }
+
+  /* MAIN */
+  .main { max-width: 900px; margin: 0 auto; padding: 0 24px 64px; }
+
+  /* DOK SECTIONS */
+  .dok-section { margin-top: 40px; border-radius: 8px; overflow: hidden; border: 1px solid transparent; }
+  .dok-section.dok1 { border-color: var(--dok1-border); }
+  .dok-section.dok2 { border-color: var(--dok2-border); }
+  .dok-section.dok3 { border-color: var(--dok3-border); }
+  .dok-section.dok4 { border-color: var(--dok4-border); }
+  .dok-header { display: flex; align-items: center; gap: 16px; padding: 18px 24px; }
+  .dok1 .dok-header { background: linear-gradient(135deg, rgba(45,90,39,0.4), rgba(45,90,39,0.2)); }
+  .dok2 .dok-header { background: linear-gradient(135deg, rgba(26,61,110,0.4), rgba(26,61,110,0.2)); }
+  .dok3 .dok-header { background: linear-gradient(135deg, rgba(107,45,45,0.4), rgba(107,45,45,0.2)); }
+  .dok4 .dok-header { background: linear-gradient(135deg, rgba(74,45,107,0.4), rgba(74,45,107,0.2)); }
+  .dok-badge { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 500; padding: 4px 10px; border-radius: 3px; white-space: nowrap; letter-spacing: 0.05em; }
+  .dok1 .dok-badge { background: var(--dok1); color: #a8d5a2; }
+  .dok2 .dok-badge { background: var(--dok2); color: #a2b8e0; }
+  .dok3 .dok-badge { background: var(--dok3); color: #e0a2a2; }
+  .dok4 .dok-badge { background: var(--dok4); color: #c4a2e0; }
+  .dok-title-group { flex: 1; }
+  .dok-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--parchment); }
+  .dok-subtitle { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--text-muted); margin-top: 2px; }
+  .complete-btn { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; padding: 8px 16px; border-radius: 4px; border: 1px solid rgba(212,168,32,0.4); background: rgba(212,168,32,0.08); color: var(--gold); cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+  .complete-btn:hover { background: rgba(212,168,32,0.18); border-color: var(--gold); }
+  .complete-btn.done { background: rgba(212,168,32,0.25); border-color: var(--gold); color: var(--gold-light); }
+  .dok-body { padding: 24px; background: rgba(255,255,255,0.015); }
+
+  /* CALLOUTS */
+  .callout-video { background: linear-gradient(135deg, rgba(26,61,110,0.25), rgba(26,61,110,0.12)); border: 1px solid rgba(100,149,237,0.35); border-left: 4px solid #6495ed; padding: 16px 20px; border-radius: 4px; margin-bottom: 24px; }
+  .callout-video strong { color: #6495ed; font-family: 'Playfair Display', serif; }
+  .callout-infographic { background: linear-gradient(135deg, rgba(212,168,32,0.15), rgba(212,168,32,0.06)); border: 1px solid rgba(212,168,32,0.35); border-left: 4px solid var(--gold); padding: 16px 20px; border-radius: 4px; margin-bottom: 24px; }
+  .callout-infographic strong { color: var(--gold); font-family: 'Playfair Display', serif; }
+  .callout-video p, .callout-infographic p { font-size: 0.88rem; margin-top: 6px; color: var(--parchment-dim); }
+  .callout-video ul, .callout-infographic ul { font-size: 0.88rem; margin-top: 8px; padding-left: 20px; color: var(--parchment-dim); }
+  .callout-video ul li, .callout-infographic ul li { margin-bottom: 4px; }
+
+  /* VIDEO */
+  .video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px; border: 1px solid rgba(212,168,32,0.2); margin-bottom: 24px; }
+  .video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+  .opening-quote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin-bottom: 24px; font-style: italic; color: var(--parchment-dim); font-size: 0.95rem; background: rgba(212,168,32,0.04); border-radius: 0 4px 4px 0; }
+
+  /* FRAMEWORK GRID */
+  .framework-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin: 16px 0 24px; }
+  @media(max-width:600px){ .framework-grid { grid-template-columns: 1fr; } }
+  .framework-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 16px; transition: border-color 0.2s; }
+  .framework-card:hover { border-color: rgba(212,168,32,0.3); }
+  .fc-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--gold-dim); line-height: 1; margin-bottom: 8px; }
+  .fc-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: var(--parchment); margin-bottom: 6px; }
+  .fc-topics { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--text-muted); margin-bottom: 8px; }
+  .fc-desc { font-size: 0.82rem; color: var(--parchment-dim); line-height: 1.5; }
+
+  /* SECTION TITLES */
+  .section-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--parchment); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .section-title span { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--text-muted); font-weight: 400; margin-left: 10px; vertical-align: middle; }
+
+  /* FLIP CARDS */
+  .flip-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px,1fr)); gap: 12px; margin-bottom: 32px; }
+  .flip-card { height: 120px; perspective: 800px; cursor: pointer; }
+  .flip-inner { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.5s ease; }
+  .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
+  .flip-front, .flip-back { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 6px; padding: 12px; }
+  .flip-front { background: rgba(255,255,255,0.04); border: 1px solid rgba(212,168,32,0.2); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 120px; }
+  .flip-back { background: rgba(212,168,32,0.08); border: 1px solid rgba(212,168,32,0.3); transform: rotateY(180deg); display: flex; align-items: center; justify-content: center; text-align: center; }
+  .flip-term { font-family: 'Playfair Display', serif; font-size: 0.88rem; font-weight: 700; color: var(--parchment); line-height: 1.3; }
+  .flip-hint { position: absolute; bottom: 8px; left: 0; right: 0; text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--text-muted); }
+  .flip-def { font-size: 0.78rem; color: var(--parchment-dim); line-height: 1.4; }
+
+  /* MCQ */
+  .mcq-set { margin-bottom: 32px; }
+  .mcq-item { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; padding: 16px; margin-bottom: 12px; }
+  .mcq-question { font-size: 0.9rem; color: var(--parchment); margin-bottom: 12px; font-weight: 600; }
+  .mcq-options { display: flex; flex-direction: column; gap: 6px; }
+  .mcq-option { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 4px; padding: 8px 12px; color: var(--parchment-dim); font-size: 0.85rem; text-align: left; cursor: pointer; font-family: 'Source Serif 4', serif; transition: all 0.15s; }
+  .mcq-option:hover:not(.disabled) { background: rgba(255,255,255,0.07); border-color: rgba(212,168,32,0.3); }
+  .mcq-option.correct { background: rgba(45,90,39,0.3); border-color: #4a9e3f; color: #a8d5a2; }
+  .mcq-option.incorrect { background: rgba(107,45,45,0.25); border-color: #8b3d3d; color: #e09090; }
+  .mcq-option.disabled { cursor: default; pointer-events: none; opacity: 0.6; }
+  .mcq-option.incorrect.disabled { opacity: 0.5; }
+  .mcq-feedback { display: none; margin-top: 10px; padding: 10px 14px; border-radius: 4px; font-size: 0.83rem; background: rgba(45,90,39,0.2); border: 1px solid rgba(74,158,63,0.3); color: var(--parchment-dim); }
+  .mcq-feedback.show { display: block; }
+  .mcq-feedback.wrong-fb { background: rgba(107,45,45,0.3); border-color: #f08080; }
+
+  /* MATCHING */
+  .matching-wrap { margin-bottom: 32px; }
+  .matching-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+  @media(max-width:500px){ .matching-grid { grid-template-columns: 1fr; } }
+  .match-col { display: flex; flex-direction: column; gap: 8px; }
+  .match-item { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 5px; padding: 10px 14px; font-size: 0.85rem; cursor: pointer; transition: all 0.15s; min-height: 52px; display: flex; align-items: center; }
+  .match-item:hover { border-color: rgba(212,168,32,0.3); background: rgba(212,168,32,0.05); }
+  .match-item.selected { border-color: var(--gold); background: rgba(212,168,32,0.12); color: var(--parchment); }
+  .match-item.matched-correct { border-color: #4a9e3f; background: rgba(45,90,39,0.25); color: #a8d5a2; pointer-events: none; }
+  .match-item.matched-wrong { border-color: #f08080; background: rgba(107,45,45,0.25); color: #e09090; }
+  .match-term-item { color: var(--gold); font-weight: 600; font-family: 'Playfair Display', serif; }
+  .match-def-item { color: var(--parchment-dim); }
+  .match-btn { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; padding: 8px 18px; background: rgba(212,168,32,0.1); border: 1px solid rgba(212,168,32,0.3); border-radius: 4px; color: var(--gold); cursor: pointer; transition: all 0.2s; margin-top: 8px; }
+  .match-btn:hover { background: rgba(212,168,32,0.2); }
+
+  /* TEXTAREAS */
+  textarea { width: 100%; min-height: 100px; margin: 10px 0; padding: 10px 14px; background: rgba(255,255,255,0.04); border: 1px solid rgba(184,134,11,0.2); border-radius: 4px; color: var(--parchment); font-family: 'Source Serif 4', serif; font-size: 0.88rem; resize: vertical; outline: none; transition: border-color 0.2s; }
+  textarea:focus { border-color: rgba(212,168,32,0.5); }
+  textarea::placeholder { color: var(--text-muted); }
+
+  /* EXPLAIN DRILLS */
+  .drill-box { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 6px; padding: 20px; margin-bottom: 20px; }
+  .drill-label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--gold-dim); letter-spacing: 0.08em; margin-bottom: 8px; }
+  .drill-prompt { font-size: 0.92rem; color: var(--parchment); margin-bottom: 4px; font-weight: 600; }
+  .drill-verb { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; background: rgba(212,168,32,0.15); border: 1px solid rgba(212,168,32,0.3); color: var(--gold); padding: 2px 8px; border-radius: 3px; margin-bottom: 10px; }
+  .reveal-btn { font-family: 'JetBrains Mono', monospace; font-size: 0.73rem; padding: 8px 16px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; color: var(--text-secondary); cursor: pointer; transition: all 0.2s; margin-top: 4px; }
+  .reveal-btn:hover { background: rgba(255,255,255,0.08); color: var(--parchment); }
+  .sample-accordion { display: none; margin-top: 12px; padding: 14px 16px; background: rgba(212,168,32,0.06); border: 1px solid rgba(212,168,32,0.2); border-radius: 4px; font-size: 0.85rem; color: var(--parchment-dim); line-height: 1.6; }
+  .sample-accordion.open { display: block; }
+  .sample-label { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--gold-dim); letter-spacing: 0.06em; margin-bottom: 8px; }
+
+  /* COMPARE TABLE */
+  .compare-table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: 0.85rem; }
+  .compare-table th { background: rgba(212,168,32,0.1); color: var(--gold); font-family: 'Playfair Display', serif; font-weight: 700; padding: 10px 14px; border: 1px solid rgba(212,168,32,0.2); text-align: left; }
+  .compare-table td { padding: 10px 14px; border: 1px solid rgba(255,255,255,0.07); color: var(--parchment-dim); vertical-align: top; }
+  .compare-table td strong { color: var(--parchment); }
+  .compare-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+
+  /* CAUSAL CHAIN */
+  .causal-chain { margin: 16px 0 24px; }
+  .chain-row { display: flex; align-items: flex-start; gap: 14px; }
+  .node-num { width: 30px; height: 30px; border-radius: 50%; background: rgba(212,168,32,0.15); border: 1px solid rgba(212,168,32,0.3); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--gold); flex-shrink: 0; margin-top: 6px; }
+  .node-box { flex: 1; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 12px 14px; font-size: 0.86rem; color: var(--parchment-dim); margin-bottom: 4px; }
+  .node-box.blank { border-style: dashed; border-color: rgba(212,168,32,0.25); background: rgba(212,168,32,0.03); }
+  .node-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--gold-dim); margin-bottom: 4px; }
+  .chain-arrow { margin-left: 14px; height: 20px; display: flex; align-items: center; color: var(--gold-dim); font-size: 1.1rem; }
+  .chain-answer { display: none; margin-left: 44px; margin-top: 6px; margin-bottom: 8px; padding: 10px 14px; background: rgba(74,158,63,0.1); border: 1px solid rgba(74,158,63,0.3); border-radius: 4px; font-size: 0.85rem; color: var(--parchment-dim); }
+
+  /* THESIS EVALUATOR */
+  .thesis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0 20px; }
+  @media(max-width:600px){ .thesis-grid { grid-template-columns: 1fr; } }
+  .thesis-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 16px; cursor: pointer; transition: all 0.2s; font-size: 0.85rem; color: var(--parchment-dim); font-style: italic; line-height: 1.5; position: relative; }
+  .thesis-card:hover:not(.revealed) { border-color: rgba(212,168,32,0.3); background: rgba(212,168,32,0.04); }
+  .tc-prompt { font-family: 'JetBrains Mono', monospace; font-style: normal; font-size: 0.68rem; color: var(--text-muted); margin-bottom: 8px; }
+  .thesis-card.revealed.pass { border-color: #4a9e3f; background: rgba(45,90,39,0.2); }
+  .thesis-card.revealed.fail { border-color: #8b3d3d; background: rgba(107,45,45,0.2); }
+  .thesis-verdict { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-style: normal; font-weight: 700; margin-top: 10px; padding: 4px 10px; border-radius: 3px; display: inline-block; }
+  .pass .thesis-verdict { background: rgba(45,90,39,0.4); color: #a8d5a2; }
+  .fail .thesis-verdict { background: rgba(107,45,45,0.4); color: #e09090; }
+  .thesis-explanation { font-style: normal; font-size: 0.8rem; color: var(--parchment-dim); margin-top: 8px; line-height: 1.5; }
+  .tc-click-hint { position: absolute; bottom: 8px; right: 10px; font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--text-muted); }
+
+  /* CCOT GRID */
+  .ccot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 12px 0 24px; }
+  @media(max-width:500px){ .ccot-grid { grid-template-columns: 1fr; } }
+  .ccot-box { background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.07); border-radius: 6px; padding: 14px; }
+  .ccot-box h4 { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700; margin-bottom: 8px; }
+  .ccot-box.change h4 { color: #6495ed; }
+  .ccot-box.continuity h4 { color: #d4a820; }
+  .ccot-box p { font-size: 0.82rem; color: var(--parchment-dim); margin-bottom: 6px; line-height: 1.5; }
+
+  /* CONTEXTUALIZATION BUILDER */
+  .ctx-pathway { border: 1px solid rgba(255,255,255,0.07); border-radius: 6px; margin-bottom: 12px; overflow: hidden; }
+  .ctx-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: rgba(74,45,107,0.2); cursor: pointer; transition: background 0.2s; }
+  .ctx-header:hover { background: rgba(74,45,107,0.3); }
+  .ctx-pathway-label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #c4a2e0; margin-bottom: 2px; }
+  .ctx-pathway-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; color: var(--parchment); }
+  .ctx-toggle { font-size: 1rem; color: var(--text-muted); transition: transform 0.3s; }
+  .ctx-pathway.open .ctx-toggle { transform: rotate(180deg); }
+  .ctx-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 20px; }
+  .ctx-pathway.open .ctx-body { max-height: 1200px; padding: 0 20px 20px; }
+  .ctx-stem { margin: 16px 0 8px; font-size: 0.88rem; color: var(--parchment-dim); background: rgba(74,45,107,0.15); padding: 12px 14px; border-radius: 4px; border-left: 3px solid #8b5cf6; }
+
+  /* SAQ */
+  .saq-box { background: rgba(107,45,45,0.1); border: 1px solid rgba(107,45,45,0.25); border-radius: 8px; padding: 20px; margin-bottom: 20px; }
+  .saq-intro { font-size: 0.85rem; color: var(--parchment-dim); margin-bottom: 16px; padding: 12px 16px; background: rgba(255,255,255,0.02); border-radius: 4px; font-style: italic; line-height: 1.6; }
+  .saq-part { margin-bottom: 18px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 5px; border: 1px solid rgba(255,255,255,0.06); }
+  .saq-part-label { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: #e0a2a2; font-weight: 700; margin-bottom: 6px; }
+  .saq-part-prompt { font-size: 0.88rem; color: var(--parchment); margin-bottom: 4px; }
+  .saq-verb-tag { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; background: rgba(107,45,45,0.3); border: 1px solid rgba(139,61,61,0.5); color: #e09090; padding: 2px 8px; border-radius: 3px; margin-bottom: 8px; }
+
+  /* SYNTHESIS */
+  .synthesis-box { background: linear-gradient(135deg, rgba(74,45,107,0.15), rgba(26,61,110,0.15)); border: 1px solid rgba(74,45,107,0.3); border-radius: 6px; padding: 20px; margin-bottom: 20px; }
+  .synthesis-box h4 { font-family: 'Playfair Display', serif; color: #c4a2e0; margin-bottom: 10px; font-size: 1rem; }
+  .synthesis-box p { font-size: 0.88rem; color: var(--parchment-dim); margin-bottom: 8px; line-height: 1.6; }
+  .synthesis-box ul { font-size: 0.85rem; color: var(--parchment-dim); padding-left: 20px; }
+  .synthesis-box ul li { margin-bottom: 6px; }
+
+  /* SELF-ASSESSMENT */
+  .sa-wrap { margin-top: 8px; }
+  .sa-item { display: flex; align-items: center; gap: 14px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .sa-item:last-child { border-bottom: none; }
+  .sa-skill { flex: 1; font-size: 0.86rem; color: var(--parchment-dim); }
+  .sa-skill code { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--text-muted); background: rgba(255,255,255,0.05); padding: 2px 6px; border-radius: 3px; margin-left: 6px; }
+  .sa-dots { display: flex; gap: 8px; }
+  .sa-dot-btn { width: 24px; height: 24px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.12); background: transparent; cursor: pointer; transition: all 0.2s; }
+  .sa-dot-btn:hover { border-color: rgba(212,168,32,0.5); }
+  .sa-dot-btn.active-1 { background: #8b3d3d; border-color: #e09090; }
+  .sa-dot-btn.active-2 { background: #7a6a00; border-color: var(--gold); }
+  .sa-dot-btn.active-3 { background: var(--dok1); border-color: #4a9e3f; }
+  .sa-labels { display: flex; gap: 8px; justify-content: flex-end; }
+  .sa-label-item { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--text-muted); min-width: 28px; white-space: nowrap; text-align: center; }
+
+  /* LEQ WORKSHOP */
+  .leq-section { margin-top: 40px; border: 1px solid rgba(212,168,32,0.25); border-radius: 8px; overflow: hidden; }
+  .leq-header { background: linear-gradient(135deg, rgba(212,168,32,0.2), rgba(212,168,32,0.08)); padding: 18px 24px; display: flex; align-items: center; gap: 16px; }
+  .leq-badge { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; padding: 4px 10px; background: var(--gold-dim); color: #0d1117; border-radius: 3px; font-weight: 700; }
+  .leq-title { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--parchment); flex: 1; }
+  .leq-body { padding: 24px; background: rgba(255,255,255,0.01); }
+  .leq-prompt { background: rgba(212,168,32,0.08); border: 1px solid rgba(212,168,32,0.25); border-radius: 6px; padding: 16px 20px; font-style: italic; font-size: 0.92rem; color: var(--parchment); margin-bottom: 20px; line-height: 1.6; }
+  .leq-step { margin-bottom: 18px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 5px; border-left: 3px solid var(--gold-dim); }
+  .leq-step-label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--gold-dim); margin-bottom: 6px; }
+  .leq-step p { font-size: 0.88rem; color: var(--parchment); margin-bottom: 6px; }
+  .leq-step small { font-size: 0.78rem; color: var(--text-muted); }
+
+  /* UTILITY */
+  .section-divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(212,168,32,0.15), transparent); margin: 28px 0; }
+  .subtext { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px; }
+  strong { color: var(--parchment); }
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div id="progress-bar-wrap">
+  <span class="prog-label">Unit Progress</span>
+  <div id="progress-track"><div id="progress-fill"></div></div>
+  <div class="prog-dots">
+    <div class="prog-dot" id="pdot1"></div>
+    <div class="prog-dot" id="pdot2"></div>
+    <div class="prog-dot" id="pdot3"></div>
+    <div class="prog-dot" id="pdot4"></div>
+  </div>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="unit-label">AP World History: Modern &middot; Unit 9 &middot; Topic 9.0</div>
+  <h1 class="page-title">Globalization</h1>
+  <div class="page-subtitle">Unit Overview &amp; Orientation</div>
+  <div class="page-meta">c. 1900 to the present &middot; 8&ndash;10% of AP Exam &middot; Causation &middot; CCOT &middot; Argumentation</div>
+</div>
+
+<!-- HOW-TO BANNER -->
+<div class="howto-banner">
+  <strong>How to Use This Module</strong>
+  <p>This is your orientation to Unit 9. Work through all four DOK sections in order. <strong>DOK 1</strong> builds your vocabulary and recall. <strong>DOK 2</strong> asks you to apply the unit&rsquo;s three-part framework. <strong>DOK 3</strong> pushes you to analyze causes and evaluate arguments. <strong>DOK 4</strong> connects everything and prepares you for AP writing. Mark each section complete as you finish it.</p>
+  <div class="central-q">
+    &#127760; Central Question to Keep in Mind: <em>&ldquo;In what ways has globalization connected the world &mdash; and what has been gained or lost as a result?&rdquo;</em>
+  </div>
+</div>
+
+<div class="main">
+
+<!-- DOK 1 -->
+<div class="dok-section dok1" id="dok1-section">
+  <div class="dok-header">
+    <div class="dok-badge">DOK 1</div>
+    <div class="dok-title-group">
+      <div class="dok-title">Knowledge Acquisition</div>
+      <div class="dok-subtitle">Watch &middot; Define &middot; Recall</div>
+    </div>
+    <button class="complete-btn" id="btn1" onclick="markComplete(1)">Mark Section Complete &#10003;</button>
+  </div>
+  <div class="dok-body">
+
+    <div class="callout-video">
+      <strong>&#128250; Watch the Video Explainer First</strong>
+      <p>Before doing anything else, watch the Unit 9.0 Overview video. As you watch, listen for these three things:</p>
+      <ul>
+        <li>What single word does the video say <em>defines the world we live in</em> today?</li>
+        <li>What are the three main parts Unit 9 is organized around?</li>
+        <li>What three historical thinking skills does the video call your &ldquo;secret weapon&rdquo; for this unit?</li>
+      </ul>
+    </div>
+
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/ZmuOTxGDJb8" allowfullscreen title="APWH 9.0 Globalization Overview"></iframe>
+    </div>
+
+    <div class="opening-quote">
+      &ldquo;This unit is all about figuring out how we got here&hellip; In what ways has globalization connected the world &mdash; and what has been gained or lost as a result?&rdquo;
+    </div>
+
+    <div class="section-title">The Unit 9 Roadmap <span>From the Video</span></div>
+    <p class="subtext">The video organizes Unit 9 into three big themes. Use this as your mental map throughout the unit.</p>
+    <div class="framework-grid">
+      <div class="framework-card">
+        <div class="fc-num">I</div>
+        <div class="fc-title">Technology &amp; Environment</div>
+        <div class="fc-topics">Topics 9.1 &middot; 9.2 &middot; 9.3</div>
+        <div class="fc-desc">The engines of globalization: airplanes, the internet, global disease, and environmental debates.</div>
+      </div>
+      <div class="framework-card">
+        <div class="fc-num">II</div>
+        <div class="fc-title">People, Economies &amp; Culture</div>
+        <div class="fc-topics">Topics 9.4 &middot; 9.5 &middot; 9.6</div>
+        <div class="fc-desc">How globalization reshaped free markets, social movements, and everyday cultural life worldwide.</div>
+      </div>
+      <div class="framework-card">
+        <div class="fc-num">III</div>
+        <div class="fc-title">Global Systems &amp; Reactions</div>
+        <div class="fc-topics">Topics 9.7 &middot; 9.8 &middot; 9.9</div>
+        <div class="fc-desc">Resistance movements, international institutions, and the big-picture CCOT argument.</div>
+      </div>
+    </div>
+
+    <div class="section-title">Key Vocabulary <span>Click cards to flip</span></div>
+    <div class="flip-grid" id="flipGrid"></div>
+
+    <div class="section-title">Recall Check <span>5 Questions &middot; Instant Feedback</span></div>
+    <div class="mcq-set" id="mcq-container"></div>
+
+    <div class="section-title">Matching Activity <span>Connect each term to its description</span></div>
+    <div class="matching-wrap">
+      <p class="subtext">Click a term on the left, then click its matching description on the right.</p>
+      <div class="matching-grid">
+        <div class="match-col" id="match-terms"></div>
+        <div class="match-col" id="match-defs"></div>
+      </div>
+      <button class="match-btn" onclick="resetMatching()">&#8635; Reset</button>
+      <div id="match-result" style="font-size:0.85rem;color:var(--parchment-dim);margin-top:8px;"></div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- DOK 2 -->
+<div class="dok-section dok2" id="dok2-section">
+  <div class="dok-header">
+    <div class="dok-badge">DOK 2</div>
+    <div class="dok-title-group">
+      <div class="dok-title">Knowledge Application</div>
+      <div class="dok-subtitle">Explain &middot; Compare &middot; Apply</div>
+    </div>
+    <button class="complete-btn" id="btn2" onclick="markComplete(2)">Mark Section Complete &#10003;</button>
+  </div>
+  <div class="dok-body">
+
+    <div class="callout-infographic">
+      <strong>&#128202; Review the Infographic Now</strong>
+      <p>Open the NotebookLM infographic for Unit 9.0 and keep it nearby. Use it as a reference as you complete the activities below. Look especially for: the timeline of key events, the three-part unit structure, and the central question framing.</p>
+    </div>
+
+    <div class="section-title">Explain Drills <span>Causation &middot; HTS-1</span></div>
+
+    <div class="drill-box">
+      <div class="drill-label">EXPLAIN DRILL 1 OF 2</div>
+      <div class="drill-prompt">Explain how technological development after 1900 drove the process of globalization.</div>
+      <div class="drill-verb">EXPLAIN &rarr; show HOW or WHY, not just WHAT</div>
+      <p class="subtext">Name a specific technology, explain how it worked, and connect it to global integration.</p>
+      <textarea placeholder="Write your explanation here. Aim for 3-5 sentences. Name a specific technology, explain how it worked, and connect it to global integration..."></textarea>
+      <button class="reveal-btn" onclick="toggleAccordion('drill1-sample')">&#9660; Show Sample Answer</button>
+      <div class="sample-accordion" id="drill1-sample">
+        <div class="sample-label">SAMPLE ANSWER &mdash; EXPLAIN (Causation)</div>
+        The development of aviation technology after 1900 drove globalization by dramatically reducing the time and cost of moving people and goods across continents. Before the Wright Brothers&rsquo; 1903 flight, intercontinental travel required weeks by sea. Commercial aviation, which expanded rapidly after World War II, compressed those journeys to hours &mdash; making international trade, migration, and tourism accessible to millions rather than only the wealthy elite. This physical compression of space accelerated the economic and cultural interconnections that define globalization.
+      </div>
+    </div>
+
+    <div class="drill-box">
+      <div class="drill-label">EXPLAIN DRILL 2 OF 2</div>
+      <div class="drill-prompt">Explain why globalization produced both cooperation and conflict rather than one or the other.</div>
+      <div class="drill-verb">EXPLAIN &rarr; address the tension, not just one side</div>
+      <textarea placeholder="Think about why the same process (globalization) produced the UN AND the WTO protests, vaccines AND new pandemics..."></textarea>
+      <button class="reveal-btn" onclick="toggleAccordion('drill2-sample')">&#9660; Show Sample Answer</button>
+      <div class="sample-accordion" id="drill2-sample">
+        <div class="sample-label">SAMPLE ANSWER &mdash; EXPLAIN (Causation)</div>
+        Globalization produced both cooperation and conflict because it simultaneously created shared problems that demanded international solutions and generated economic inequalities that sparked resistance. When diseases like the 1918 influenza crossed borders, nations found they could not protect their populations alone &mdash; driving the creation of the World Health Organization and international health cooperation. But when trade liberalization through bodies like the WTO transferred manufacturing jobs from wealthy nations to cheaper labor markets, workers and activists organized massive protests, as seen in Seattle in 1999. The same interconnection that made cooperation necessary also made inequality more visible and more contested.
+      </div>
+    </div>
+
+    <div class="section-title">Comparison Table <span>Benefits vs. Costs &middot; HTS-2</span></div>
+    <p class="subtext">For each category, identify at least one specific example. Be specific, not vague.</p>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Gains from Globalization</th>
+          <th>Losses / Costs from Globalization</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Technology</strong></td>
+          <td><textarea style="min-height:70px" placeholder="e.g., the internet connected..."></textarea></td>
+          <td><textarea style="min-height:70px" placeholder="e.g., same technology enabled..."></textarea></td>
+        </tr>
+        <tr>
+          <td><strong>Economics</strong></td>
+          <td><textarea style="min-height:70px" placeholder="e.g., free trade allowed..."></textarea></td>
+          <td><textarea style="min-height:70px" placeholder="e.g., multinational corporations..."></textarea></td>
+        </tr>
+        <tr>
+          <td><strong>Culture</strong></td>
+          <td><textarea style="min-height:70px" placeholder="e.g., shared cultural products..."></textarea></td>
+          <td><textarea style="min-height:70px" placeholder="e.g., local cultures were threatened..."></textarea></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="reveal-btn" onclick="toggleAccordion('compare-sample')">&#9660; Show Sample Comparisons</button>
+    <div class="sample-accordion" id="compare-sample">
+      <div class="sample-label">SAMPLE COMPARISONS</div>
+      <strong>Technology &mdash; Gain:</strong> The World Wide Web (1990) enabled instant global communication and knowledge-sharing, making international scientific collaboration like the Human Genome Project possible across dozens of nations.<br><br>
+      <strong>Technology &mdash; Cost:</strong> The same global transportation networks that brought vaccines to remote areas also enabled pathogens like HIV and SARS to spread worldwide far faster than in any previous era.<br><br>
+      <strong>Economics &mdash; Gain:</strong> Export-led growth strategies in East Asia allowed millions to rise out of poverty through access to global markets, as seen in South Korea and Taiwan&rsquo;s rapid industrialization.<br><br>
+      <strong>Economics &mdash; Cost:</strong> Multinational corporations could exploit cheaper labor in the Global South, keeping wages low through the threat of relocating production elsewhere.<br><br>
+      <strong>Culture &mdash; Gain:</strong> Global media platforms allowed oppressed groups to share their stories and build international solidarity movements, as seen in the Arab Spring&rsquo;s use of social media.<br><br>
+      <strong>Culture &mdash; Cost:</strong> American and Western cultural products dominated global media, threatening indigenous languages, traditional practices, and local artistic traditions.
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="section-title">Apply Activity: The Double-Edged Sword <span>Cross-Unit Connection</span></div>
+    <div class="drill-box">
+      <div class="drill-label">APPLY ACTIVITY</div>
+      <div class="drill-prompt">The video describes technology in the era of globalization as &ldquo;a double-edged sword.&rdquo; Describe one historical example from <em>before</em> Unit 9 that illustrates this same pattern &mdash; where a technology or innovation brought both significant benefits and serious costs.</div>
+      <div class="drill-verb">DESCRIBE &rarr; provide relevant characteristics, not just a term alone</div>
+      <textarea placeholder="Think about: the printing press (information vs. propaganda), Columbian Exchange crops (food security vs. ecological disruption), industrial machinery (production vs. labor conditions), gunpowder weapons (military power vs. civilian suffering)... Pick one and describe both edges."></textarea>
+      <button class="reveal-btn" onclick="toggleAccordion('apply-sample')">&#9660; Show Sample Answer</button>
+      <div class="sample-accordion" id="apply-sample">
+        <div class="sample-label">SAMPLE ANSWER &mdash; DESCRIBE (Cross-Unit Connection)</div>
+        The introduction of the printing press in 15th-century Europe illustrates the double-edged nature of transformative technology. On one hand, the press dramatically accelerated the spread of literacy, scientific knowledge, and religious reform &mdash; Martin Luther&rsquo;s 95 Theses could reach thousands in weeks rather than years. On the other hand, those same capabilities allowed the rapid spread of inflammatory pamphlets, religious propaganda, and nationalist ideas that contributed to decades of violent religious warfare across Europe. The technology was neither inherently good nor bad &mdash; its effects depended entirely on who used it and for what purposes.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- DOK 3 -->
+<div class="dok-section dok3" id="dok3-section">
+  <div class="dok-header">
+    <div class="dok-badge">DOK 3</div>
+    <div class="dok-title-group">
+      <div class="dok-title">Knowledge Analysis</div>
+      <div class="dok-subtitle">Analyze &middot; Evaluate &middot; Construct Arguments</div>
+    </div>
+    <button class="complete-btn" id="btn3" onclick="markComplete(3)">Mark Section Complete &#10003;</button>
+  </div>
+  <div class="dok-body">
+
+    <div class="section-title">Causal Chain <span>Causation &middot; HTS-1 &mdash; Fill in the 2 blank nodes</span></div>
+    <p class="subtext">This chain traces how new technology eventually produced global governance institutions. Write your best answer in the blank nodes, then click &ldquo;Reveal Answers.&rdquo;</p>
+
+    <div class="causal-chain">
+      <div class="chain-row">
+        <div class="node-num">1</div>
+        <div class="node-box">
+          <div class="node-title">CAUSE</div>
+          Rapid advances in transportation and communication technology after 1900 &mdash; aviation, radio, satellite, internet &mdash; compressed distance and dramatically accelerated the movement of goods, people, and ideas across the globe.
+        </div>
+      </div>
+      <div class="chain-arrow">&#8595;</div>
+
+      <div class="chain-row">
+        <div class="node-num">2</div>
+        <div class="node-box blank">
+          <div class="node-title">BLANK &mdash; What new global problems did this connectivity create?</div>
+          <textarea class="causal-input" style="min-height:60px;background:transparent;border:none;padding:4px 0;font-size:0.85rem;" placeholder="What challenges arose because people, goods, and ideas could cross borders so rapidly? (Think: disease, economic crises, environmental damage...)"></textarea>
+        </div>
+      </div>
+      <div class="chain-answer" id="chain2-answer"></div>
+      <div class="chain-arrow">&#8595;</div>
+
+      <div class="chain-row">
+        <div class="node-num">3</div>
+        <div class="node-box">
+          <div class="node-title">CONNECTING DEVELOPMENT</div>
+          These cross-border problems could not be solved by any single nation-state acting alone &mdash; they required coordinated international responses.
+        </div>
+      </div>
+      <div class="chain-arrow">&#8595;</div>
+
+      <div class="chain-row">
+        <div class="node-num">4</div>
+        <div class="node-box blank">
+          <div class="node-title">BLANK &mdash; What was the institutional response?</div>
+          <textarea class="causal-input" style="min-height:60px;background:transparent;border:none;padding:4px 0;font-size:0.85rem;" placeholder="What types of organizations did nations create to manage global problems? Name specific examples if you can..."></textarea>
+        </div>
+      </div>
+      <div class="chain-answer" id="chain4-answer"></div>
+      <div class="chain-arrow">&#8595;</div>
+
+      <div class="chain-row">
+        <div class="node-num">5</div>
+        <div class="node-box">
+          <div class="node-title">RESULT</div>
+          A new layer of global governance emerged &mdash; international institutions that both reflected and reinforced the interconnected world of globalization, while simultaneously generating new debates about sovereignty and inequality.
+        </div>
+      </div>
+
+      <button class="reveal-btn" style="margin-top:16px" onclick="revealChain()">&#9660; Reveal Answers</button>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="section-title">Continuity &amp; Change Grid <span>CCOT &middot; HTS-3</span></div>
+    <p class="subtext">Unit 9 asks you to identify what was genuinely new after 1900 <em>and</em> what old patterns persisted. Practice both sides.</p>
+    <div class="ccot-grid">
+      <div class="ccot-box change">
+        <h4>&#128309; Changes After 1900</h4>
+        <p>What was genuinely new in the era of globalization? What had not existed before?</p>
+        <textarea style="min-height:120px" placeholder="Examples: speed of communication, scale of international trade, new forms of global governance, nature of pandemics..."></textarea>
+      </div>
+      <div class="ccot-box continuity">
+        <h4>&#128992; Continuities After 1900</h4>
+        <p>What old patterns persisted even as the world became more connected?</p>
+        <textarea style="min-height:120px" placeholder="Examples: economic inequality between regions, imperial-style relationships (neo-colonialism), resistance to outside cultural influence, great power competition..."></textarea>
+      </div>
+    </div>
+    <button class="reveal-btn" onclick="toggleAccordion('ccot-sample')">&#9660; Show Sample CCOT Analysis</button>
+    <div class="sample-accordion" id="ccot-sample">
+      <div class="sample-label">SAMPLE CCOT ANALYSIS</div>
+      <strong>Changes:</strong> The 20th century saw genuinely unprecedented developments. The internet created instant global communication at a scale impossible in any prior era; international organizations like the UN and WTO represented a new attempt to govern above the nation-state level; and the speed at which financial crises, information, and pandemics could spread globally had no historical parallel.<br><br>
+      <strong>Continuities:</strong> Despite these changes, several patterns persisted from earlier periods. Economic inequality between the Global North and South continued older imperial-era hierarchies through new mechanisms like debt dependency and unequal trade terms. Resistance to cultural homogenization echoed earlier responses to imperialism. Great power competition &mdash; though now fought through economic and soft-power tools &mdash; continued the rivalry dynamics visible in Units 7 and 8.
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="section-title">Thesis Evaluator <span>Argumentation &middot; HTS-5 &mdash; Click each card to reveal verdict</span></div>
+    <p class="subtext">An AP LEQ might ask: <em>&ldquo;Evaluate the extent to which globalization transformed the world in the period c. 1900 to the present.&rdquo;</em> Four thesis attempts below &mdash; click each to see if it earns the AP Thesis point and why.</p>
+    <div class="thesis-grid" id="thesis-grid">
+      <!-- Injected by JS to avoid quote-escaping issues -->
+    </div>
+
+  </div>
+</div>
+
+
+<!-- DOK 4 -->
+<div class="dok-section dok4" id="dok4-section">
+  <div class="dok-header">
+    <div class="dok-badge">DOK 4</div>
+    <div class="dok-title-group">
+      <div class="dok-title">Knowledge Augmentation</div>
+      <div class="dok-subtitle">Contextualize &middot; SAQ Practice &middot; Synthesize</div>
+    </div>
+    <button class="complete-btn" id="btn4" onclick="markComplete(4)">Mark Section Complete &#10003;</button>
+  </div>
+  <div class="dok-body">
+
+    <div class="section-title">Contextualization Builder <span>HTS-4 &middot; 3 Pathways</span></div>
+    <p class="subtext">Contextualization connects your topic to a broader historical development. For Unit 9, that means reaching back into Units 7 or 8. Click a pathway to open it, write your own, then read the model response.</p>
+
+    <div class="ctx-pathway" id="ctx1">
+      <div class="ctx-header" onclick="toggleCtx('ctx1')">
+        <div>
+          <div class="ctx-pathway-label">PATHWAY 1 &middot; Units 7&ndash;8 Connection</div>
+          <div class="ctx-pathway-title">World War II and the Institutional Origins of Globalization</div>
+        </div>
+        <div class="ctx-toggle">&#9660;</div>
+      </div>
+      <div class="ctx-body">
+        <div class="ctx-stem"><strong>Stem:</strong> &ldquo;In the aftermath of World War II, political and economic leaders sought to prevent another catastrophic global conflict by building new international institutions. This context helps explain why&hellip;&rdquo;</div>
+        <p style="font-size:0.88rem;color:var(--text-muted);margin:12px 0 6px;">Your Contextualization &mdash; Pathway 1:</p>
+        <textarea rows="5" style="min-height:110px;" placeholder="Use the stem above. Connect WWII's aftermath to the rise of globalization's institutional architecture (UN, World Bank, IMF, GATT/WTO). Explain the mechanism — why did the experience of war produce these institutions?"></textarea>
+        <div class="sample-label" style="margin-top:12px;">Model Contextualization &mdash; Pathway 1</div>
+        <div style="padding:14px 16px;background:rgba(212,168,32,0.06);border:1px solid rgba(212,168,32,0.2);border-radius:4px;font-size:0.85rem;color:var(--parchment-dim);line-height:1.6;margin-top:6px;">
+          In the aftermath of World War II, political and economic leaders across the victorious Allied powers concluded that the failures of the interwar period &mdash; the Great Depression, economic nationalism, and the collapse of international cooperation &mdash; had contributed directly to the conditions that made fascism and total war possible. Determined to build a more stable international order, the United States and its allies established new international institutions beginning in 1944&ndash;1945: the Bretton Woods system created the International Monetary Fund and World Bank to stabilize currencies and fund reconstruction, while the United Nations (1945) provided a forum for diplomatic conflict resolution. These institutions formed the foundational architecture of the globalized world that Unit 9 examines &mdash; they reflect how the trauma of total war pushed states toward cooperation and management of interconnection rather than autarky and rivalry.
+        </div>
+      </div>
+    </div>
+
+    <div class="ctx-pathway" id="ctx2">
+      <div class="ctx-header" onclick="toggleCtx('ctx2')">
+        <div>
+          <div class="ctx-pathway-label">PATHWAY 2 &middot; Units 7&ndash;8 Connection</div>
+          <div class="ctx-pathway-title">Decolonization and the Unequal Terms of Global Integration</div>
+        </div>
+        <div class="ctx-toggle">&#9660;</div>
+      </div>
+      <div class="ctx-body">
+        <div class="ctx-stem"><strong>Stem:</strong> &ldquo;The wave of decolonization that followed World War II fundamentally shaped the terms on which newly independent nations entered the globalized economy, because&hellip;&rdquo;</div>
+        <p style="font-size:0.88rem;color:var(--text-muted);margin:12px 0 6px;">Your Contextualization &mdash; Pathway 2:</p>
+        <textarea rows="5" style="min-height:110px;" placeholder="How did the colonial legacy — infrastructure built for extraction, commodity-export economies — shape how former colonies entered the globalized world of the late 20th century?"></textarea>
+        <div class="sample-label" style="margin-top:12px;">Model Contextualization &mdash; Pathway 2</div>
+        <div style="padding:14px 16px;background:rgba(212,168,32,0.06);border:1px solid rgba(212,168,32,0.2);border-radius:4px;font-size:0.85rem;color:var(--parchment-dim);line-height:1.6;margin-top:6px;">
+          The wave of decolonization that swept Asia, Africa, and the Caribbean between 1945 and the 1970s brought political independence to dozens of new nations &mdash; but independence did not erase the economic structures that colonial powers had built over the previous century. Colonial economies had been deliberately organized around raw material extraction and export to the metropole, not domestic industrialization or diversified development. When newly independent states entered the globalized economy of the late 20th century, they largely remained dependent on exporting primary commodities at volatile world prices while importing more expensive manufactured goods &mdash; a structural inequality that international institutions like the IMF would later reinforce through structural adjustment programs. This colonial legacy explains why globalization&rsquo;s economic benefits were distributed so unevenly, generating the resistance and reform movements examined in Topics 9.5 and 9.7.
+        </div>
+      </div>
+    </div>
+
+    <div class="ctx-pathway" id="ctx3">
+      <div class="ctx-header" onclick="toggleCtx('ctx3')">
+        <div>
+          <div class="ctx-pathway-label">PATHWAY 3 &middot; Cross-Period Connection</div>
+          <div class="ctx-pathway-title">Early Exchange Networks: Silk Roads and the Columbian Exchange</div>
+        </div>
+        <div class="ctx-toggle">&#9660;</div>
+      </div>
+      <div class="ctx-body">
+        <div class="ctx-stem"><strong>Stem:</strong> &ldquo;The globalization of the 20th century was not the first time networks of exchange had connected the world &mdash; earlier examples like the Silk Roads demonstrate that&hellip; however, what made post-1900 globalization distinct was&hellip;&rdquo;</div>
+        <p style="font-size:0.88rem;color:var(--text-muted);margin:12px 0 6px;">Your Contextualization &mdash; Pathway 3:</p>
+        <textarea rows="5" style="min-height:110px;" placeholder="What did earlier exchange networks have in common with post-1900 globalization? Then explain what was genuinely different — scale, speed, intentionality, institutional management?"></textarea>
+        <div class="sample-label" style="margin-top:12px;">Model Contextualization &mdash; Pathway 3</div>
+        <div style="padding:14px 16px;background:rgba(212,168,32,0.06);border:1px solid rgba(212,168,32,0.2);border-radius:4px;font-size:0.85rem;color:var(--parchment-dim);line-height:1.6;margin-top:6px;">
+          The globalization of the 20th century was not humanity&rsquo;s first experience with cross-regional exchange. The Silk Roads of the classical and post-classical periods connected East Asia, Central Asia, the Middle East, and Europe in networks of trade, cultural diffusion, and disease transmission &mdash; most catastrophically demonstrated when bubonic plague traveled those same routes in the 14th century. The Columbian Exchange after 1492 created genuinely hemispheric biological and agricultural integration with transformative consequences for every region. These earlier networks establish that long-distance connection is a recurring pattern in world history. What distinguished post-1900 globalization, however, was its unprecedented speed, scale, and intentional institutional management: where the Silk Roads emerged organically over centuries of incremental trade, post-WWII globalization was consciously designed through international agreements and organizations, and the digital revolution compressed communication from weeks to milliseconds. This context helps explain why Unit 9 focuses so heavily on institutional responses &mdash; the scale and speed of modern globalization demanded governance frameworks that earlier eras never attempted.
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="section-title">SAQ Practice <span>Short Answer Question &middot; 3 Parts &middot; AP Format</span></div>
+    <div class="saq-box">
+      <div class="saq-intro">
+        <strong>Directions:</strong> Answer all three parts of the question below. Each part can be answered in approximately 2&ndash;3 sentences. You do not need to write an introduction or conclusion. Label each answer (A), (B), (C).
+      </div>
+
+      <div class="saq-part">
+        <div class="saq-part-label">PART A</div>
+        <div class="saq-part-prompt">Identify the central organizing concept of AP World History Unit 9 and describe one way it manifested in the period after 1900.</div>
+        <div class="saq-verb-tag">IDENTIFY + DESCRIBE</div>
+        <textarea placeholder="Part A — Identify the concept (1 sentence), then describe one specific manifestation with enough detail to make it clear..."></textarea>
+        <button class="reveal-btn" onclick="toggleAccordion('saq-a-sample')">&#9660; Show Sample Answer</button>
+        <div class="sample-accordion" id="saq-a-sample">
+          <div class="sample-label">SAMPLE ANSWER &mdash; PART A</div>
+          The central organizing concept of Unit 9 is globalization &mdash; the accelerating process by which people, goods, ideas, and diseases became interconnected across the world at unprecedented speed and scale. One manifestation of globalization after 1900 was the rise of multinational corporations that operated simultaneously in multiple countries, allowing companies to establish production facilities across several nations and sell products globally, integrating national economies into a single worldwide market.
+        </div>
+      </div>
+
+      <div class="saq-part">
+        <div class="saq-part-label">PART B</div>
+        <div class="saq-part-prompt">Explain how the &ldquo;double-edged sword&rdquo; framework from the overview video applies to one specific development in the period c. 1900&ndash;present.</div>
+        <div class="saq-verb-tag">EXPLAIN &rarr; show HOW the framework applies</div>
+        <textarea placeholder="Part B — Apply the double-edged sword concept to one specific historical development. Name it, explain the benefit, explain the cost, and show why both came from the same source..."></textarea>
+        <button class="reveal-btn" onclick="toggleAccordion('saq-b-sample')">&#9660; Show Sample Answer</button>
+        <div class="sample-accordion" id="saq-b-sample">
+          <div class="sample-label">SAMPLE ANSWER &mdash; PART B</div>
+          The development of global air travel after World War II illustrates the double-edged nature of globalization: the same technology that connected continents and enabled international trade in perishable goods also allowed infectious diseases to spread across the world within hours rather than weeks. When SARS emerged in 2003 or COVID-19 in 2019&ndash;2020, international flights carried pathogens from their origins to dozens of countries before health authorities could respond. Both the benefit and the danger came from the same source: the elimination of distance.
+        </div>
+      </div>
+
+      <div class="saq-part">
+        <div class="saq-part-label">PART C</div>
+        <div class="saq-part-prompt">Explain how one development from Units 7 or 8 helped create the conditions for the globalization described in Unit 9.</div>
+        <div class="saq-verb-tag">EXPLAIN &rarr; show causation across units</div>
+        <textarea placeholder="Part C — Choose a development from WWI/WWII/Cold War/Decolonization. Explain the mechanism connecting it to the rise of globalization in Unit 9..."></textarea>
+        <button class="reveal-btn" onclick="toggleAccordion('saq-c-sample')">&#9660; Show Sample Answer</button>
+        <div class="sample-accordion" id="saq-c-sample">
+          <div class="sample-label">SAMPLE ANSWER &mdash; PART C</div>
+          The Cold War rivalry between the United States and Soviet Union created conditions for economic globalization by pushing the United States to promote liberal free-trade policies as both an economic strategy and a tool of ideological competition. To counter Soviet influence in newly decolonized nations, the US championed international trade institutions like GATT (later the WTO) and provided foreign aid through the World Bank, integrating developing nations into a US-led economic order. This Cold War competition thus accelerated the creation of the very international economic architecture &mdash; free markets, multilateral trade agreements, development finance &mdash; that defines the globalized economy of Unit 9.
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="section-title">Cross-Unit Synthesis <span>Looking Forward &amp; Backward</span></div>
+    <div class="synthesis-box">
+      <h4>&#128279; Connecting Unit 9 to the Full Course</h4>
+      <p>Unit 9 is the final chapter of AP World History: Modern &mdash; but it doesn&rsquo;t appear from nowhere. It is the culmination of all the threads you have followed since c. 1200. Consider the connections below:</p>
+      <ul>
+        <li><strong>From Units 3&ndash;4:</strong> The Silk Roads and Indian Ocean trade networks established the pattern of long-distance exchange that globalization scales up dramatically after 1900.</li>
+        <li><strong>From Unit 5:</strong> European colonialism built the economic hierarchies (raw-material exporters vs. industrial importers) that persist into globalization&rsquo;s unequal terms.</li>
+        <li><strong>From Unit 6:</strong> Industrial capitalism and its ideological challenges (Marxism, nationalism) created the political economies that globalization both extends and transforms.</li>
+        <li><strong>From Units 7&ndash;8:</strong> World Wars and the Cold War directly shaped the institutional architecture of post-1945 globalization and determined its winners and losers.</li>
+      </ul>
+      <p style="margin-top:12px;"><strong>Your Synthesis Task:</strong> Choose ONE connection above (or identify your own). Write 3&ndash;5 sentences explaining how a development from an earlier unit laid the groundwork for something you expect to study in Unit 9.</p>
+      <textarea style="min-height:120px;" placeholder="Choose a connection and explain the mechanism. Don't just identify the connection — explain WHY and HOW the earlier development created conditions for Unit 9's story..."></textarea>
+      <button class="reveal-btn" style="margin-top:4px;" onclick="toggleAccordion('synth-sample')">&#9660; Show Sample Synthesis</button>
+      <div class="sample-accordion" id="synth-sample">
+        <div class="sample-label">SAMPLE SYNTHESIS</div>
+        European industrialization in the 19th century (Unit 6) directly created the technological and economic foundations for 20th-century globalization. The factory system, steam power, and telegraph networks of the Industrial Revolution established both the infrastructure for global trade and the model of export-oriented economic growth that would define globalization. More importantly, industrialization created the enormous productivity gap between industrialized and non-industrialized nations that persisted into the 20th century &mdash; a gap that globalization&rsquo;s free trade institutions often reinforced rather than closed. The multinational corporations, containerized shipping, and financial markets of Unit 9 are not breaks from industrialization but its fullest global extension.
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="section-title">Rate Your AP Skills <span>Self-Assessment &middot; 3-Level Rating</span></div>
+    <p class="subtext">Rate yourself honestly. Use this to guide your review. <span style="color:#e09090">&#9679;</span> Not Yet &nbsp; <span style="color:var(--gold)">&#9679;</span> Getting There &nbsp; <span style="color:#4a9e3f">&#9679;</span> Confident</p>
+    <div class="sa-labels" style="padding-right:0;margin-bottom:4px;justify-content:flex-end;gap:8px;">
+      <div class="sa-label-item">Not Yet</div>
+      <div class="sa-label-item">Getting There</div>
+      <div class="sa-label-item">Confident</div>
+    </div>
+    <div class="sa-wrap" id="sa-wrap"></div>
+
+  </div>
+</div>
+
+
+<!-- LEQ WORKSHOP -->
+<div class="leq-section" id="leq-section">
+  <div class="leq-header">
+    <div class="leq-badge">LEQ WORKSHOP</div>
+    <div class="leq-title">Unit 9 Overview &mdash; Long Essay Practice</div>
+  </div>
+  <div class="leq-body">
+    <p class="subtext" style="margin-bottom:16px;">The LEQ is worth 15% of your AP exam score. Unit 9 content commonly appears on LEQ prompts about globalization, technological change, and continuity vs. change. Work through each step below.</p>
+
+    <div class="leq-prompt">
+      <strong>LEQ Prompt:</strong> &ldquo;Evaluate the extent to which globalization transformed the world in the period c. 1900 to the present.&rdquo;
+    </div>
+
+    <div class="leq-step">
+      <div class="leq-step-label">STEP 1 &middot; THESIS (1 point)</div>
+      <p>Write a thesis that makes a defensible claim with a line of reasoning. Include a &ldquo;because&rdquo; &mdash; connect your claim to your reasoning.</p>
+      <small>Your thesis should establish your position AND preview the categories or reasons you will argue.</small>
+      <textarea style="min-height:100px;" placeholder="Write your thesis here. Check: Does it make a defensible claim? Does it have a 'because' or line of reasoning? Does it avoid simply restating the prompt?"></textarea>
+    </div>
+
+    <div class="leq-step">
+      <div class="leq-step-label">STEP 2 &middot; CONTEXTUALIZATION (1 point)</div>
+      <p>Write a contextualization paragraph that connects Unit 9 to a broader historical development from <em>before</em> the period.</p>
+      <small>3&ndash;5 sentences. The context must be relevant and explained &mdash; not just mentioned.</small>
+      <textarea style="min-height:110px;" placeholder="Write your contextualization here. Use one of the three pathways from above, or develop your own. Remember: you must EXPLAIN the connection, not just name the earlier event."></textarea>
+    </div>
+
+    <div class="leq-step">
+      <div class="leq-step-label">STEP 3 &middot; EVIDENCE PLANNING (0&ndash;2 points)</div>
+      <p>Plan at least 3 specific pieces of evidence &mdash; names, dates, events, institutions &mdash; and note how each connects to your thesis.</p>
+      <small>Specific evidence earns points; vague generalities do not.</small>
+      <textarea style="min-height:130px;" placeholder="Evidence 1: [Event/development] — supports my thesis because...&#10;Evidence 2: [Event/development] — supports my thesis because...&#10;Evidence 3: [Event/development] — supports my thesis because..."></textarea>
+    </div>
+
+    <div class="leq-step">
+      <div class="leq-step-label">STEP 4 &middot; HISTORICAL REASONING (0&ndash;2 points)</div>
+      <p>Identify which historical reasoning skill you&rsquo;ll use to structure your argument and explain how you&rsquo;ll apply it.</p>
+      <small>For this prompt: CCOT or Causation work well. Explain your organizational structure.</small>
+      <textarea style="min-height:90px;" placeholder="I will use [CCOT / Causation / Comparison] because... My body paragraphs will be organized around..."></textarea>
+    </div>
+
+    <button class="reveal-btn" onclick="toggleAccordion('leq-sample')">&#9660; Show LEQ Planning Model</button>
+    <div class="sample-accordion" id="leq-sample">
+      <div class="sample-label">LEQ PLANNING MODEL</div>
+      <strong>Thesis:</strong> &ldquo;While globalization brought unprecedented technological integration and economic growth after 1900, it transformed the world most significantly in the <em>uneven distribution</em> of its benefits, because the same international institutions that spread free trade and investment also reinforced economic hierarchies that left former colonial nations dependent on wealthier states.&rdquo;<br><br>
+      <strong>Contextualization:</strong> European colonialism (c. 1450&ndash;1900) built global economic hierarchies organized around raw-material extraction in Asia, Africa, and the Americas for the benefit of European industrial economies. These structures did not disappear with decolonization &mdash; they were absorbed into the post-WWII globalized economy through unequal trade terms, debt relationships, and the structure of international financial institutions.<br><br>
+      <strong>Evidence Plan:</strong><br>
+      1. IMF structural adjustment programs in the 1980s&ndash;90s required developing nations to privatize industries and open markets, often deepening poverty &mdash; demonstrates unequal terms of globalization.<br>
+      2. East Asian &ldquo;Tiger&rdquo; economies (South Korea, Taiwan) achieved rapid development through state-directed industrial policy, partially contradicting the free-market model &mdash; shows complexity.<br>
+      3. The 1999 WTO protests in Seattle brought together labor unions, environmental groups, and anti-colonial activists &mdash; demonstrates organized resistance to globalization&rsquo;s terms.<br><br>
+      <strong>Historical Reasoning:</strong> CCOT &mdash; argument structures around what genuinely changed (speed/scale of integration, institutional architecture) vs. what persisted (north-south economic inequality, resistance to cultural homogenization).
+    </div>
+  </div>
+</div>
+
+</div><!-- /main -->
+
+<script>
+// PROGRESS
+const progressState = [false,false,false,false];
+function markComplete(n) {
+  progressState[n-1] = true;
+  const btn = document.getElementById('btn'+n);
+  btn.classList.add('done');
+  btn.textContent = '\u2713 Complete';
+  document.getElementById('pdot'+n).classList.add('done');
+  const done = progressState.filter(Boolean).length;
+  document.getElementById('progress-fill').style.width = (done*25)+'%';
+}
+
+// FLIP CARDS
+const vocab = [
+  {term:'Globalization', def:'The accelerating process connecting people, goods, ideas, and diseases across the world at unprecedented speed and scale after 1900.'},
+  {term:'Multinational Corporation', def:'A company that operates production and sales simultaneously in multiple nations, integrating national economies into global markets.'},
+  {term:'IMF', def:'International Monetary Fund \u2014 a Bretton Woods institution (1944) created to stabilize currencies and provide loans to nations in economic crisis.'},
+  {term:'World Trade Organization', def:'International body (replacing GATT, 1995) that sets rules for global trade and resolves disputes between member nations.'},
+  {term:'United Nations', def:'International organization founded in 1945 to maintain peace and facilitate cooperation \u2014 a direct institutional response to the devastation of WWII.'},
+  {term:'Structural Adjustment', def:'IMF/World Bank policy conditions requiring privatization, spending cuts, and open markets in exchange for loans \u2014 often imposed on Global South nations.'},
+  {term:'Non-Governmental Organization', def:'A nonprofit operating independently of government that addresses global issues \u2014 from Amnesty International to M\u00e9decins Sans Fronti\u00e8res.'},
+  {term:'Neo-Colonialism', def:'Wealthier nations maintaining economic dominance over former colonies through trade, debt, and investment rather than direct political control.'},
+  {term:'World Wide Web', def:'Tim Berners-Lee\u2019s 1990 invention that made the internet publicly accessible, fundamentally accelerating the global flow of information.'},
+  {term:'Paris Agreement', def:'2015 international accord in which nations committed to limiting carbon emissions \u2014 a landmark example of global environmental governance.'}
+];
+
+const fg = document.getElementById('flipGrid');
+vocab.forEach(v => {
+  const card = document.createElement('div');
+  card.className = 'flip-card';
+  card.innerHTML = '<div class="flip-inner"><div class="flip-front"><div class="flip-term">'+v.term+'</div><div class="flip-hint">click to flip</div></div><div class="flip-back"><div class="flip-def">'+v.def+'</div></div></div>';
+  card.onclick = function(){ this.classList.toggle('flipped'); };
+  fg.appendChild(card);
+});
+
+// MCQs
+const mcqData = [
+  {q:'1. According to the Unit 9 overview video, what single concept is described as the "absolute core" of the entire unit?',choices:['Industrialization','Globalization','Decolonization','Imperialism'],correct:1,explanation:'Correct \u2014 B. The video explicitly states that globalization is "the absolute core of this entire unit" and "defines the world you and I navigate every single day."'},
+  {q:'2. The video organizes Unit 9 into three main parts. Which correctly identifies the second part?',choices:['Technology, Medicine & Environment (9.1\u20139.3)','People, Economies & Culture (9.4\u20139.6)','Global Systems & Reactions (9.7\u20139.9)','Resistance, Institutions & Argumentation'],correct:1,explanation:'Correct \u2014 B. The video\u2019s three parts are: (1) Technology & Environment, (2) People, Economies & Culture, and (3) Global Systems & Reactions.'},
+  {q:'3. The AP CED places Unit 9 at approximately what percentage of the total AP exam?',choices:['3\u20135%','6\u20137%','8\u201310%','12\u201315%'],correct:2,explanation:'Correct \u2014 C. The CED and the video both state Unit 9 is worth approximately 8\u201310% of the total exam score.'},
+  {q:'4. The video calls causation, continuity and change, and argumentation your "secret weapon." What does it say these skills help you do?',choices:['Memorize dates more effectively','Explain the how and why behind our modern world','Write longer essays on the AP exam','Identify the most important events in chronological order'],correct:1,explanation:'Correct \u2014 B. The video says these skills "let you explain the how and the why behind our modern world" and help you "see beyond just a list of facts."'},
+  {q:'5. Which event from the video\'s timeline best represents the "conflict" side of globalization rather than its "cooperation" side?',choices:['Formation of the United Nations in 1945','Development of the polio vaccine in 1955','Launch of the World Wide Web in 1990','Protests against the World Trade Organization'],correct:3,explanation:'Correct \u2014 D. The video specifically cites WTO protests as an example of "pushback" and resistance \u2014 representing conflict and tension, not the cooperation side.'}
+];
+
+const mc = document.getElementById('mcq-container');
+mc.innerHTML = mcqData.map((q,qi) => '<div class="mcq-item" id="mcq'+qi+'"><div class="mcq-question">'+q.q+'</div><div class="mcq-options">'+q.choices.map((c,ci) => '<button class="mcq-option" onclick="checkMCQ('+qi+','+ci+')" id="mcq'+qi+'opt'+ci+'">'+String.fromCharCode(65+ci)+'. '+c+'</button>').join('')+'</div><div class="mcq-feedback" id="mcqfb'+qi+'">'+q.explanation+'</div></div>').join('');
+
+function checkMCQ(qi,ci){
+  const q=mcqData[qi];
+  const fb=document.getElementById('mcqfb'+qi);
+  if(!fb._orig) fb._orig=fb.innerHTML;
+  const btn=document.getElementById('mcq'+qi+'opt'+ci);
+  if(ci===q.correct){
+    for(let i=0;i<q.choices.length;i++){
+      const b=document.getElementById('mcq'+qi+'opt'+i);
+      b.classList.add('disabled'); b.onclick=null;
+    }
+    btn.classList.add('correct');
+    fb.innerHTML=fb._orig;
+    fb.classList.remove('wrong-fb');
+    fb.classList.add('show');
+  } else {
+    btn.classList.add('incorrect','disabled'); btn.onclick=null;
+    fb.innerHTML='<strong>Incorrect.</strong> That\u2019s not right \u2014 try another answer.';
+    fb.classList.add('show','wrong-fb');
+  }
+}
+
+// MATCHING
+const matchData = [
+  {term:'Globalization', def:'The wiring of the entire planet together through accelerating connections in trade, culture, disease, and technology'},
+  {term:'Bretton Woods System', def:'Post-WWII economic framework that created the IMF and World Bank to stabilize the international economy'},
+  {term:'Structural Adjustment', def:'IMF policy requiring privatization and market liberalization in exchange for loans, often imposed on Global South nations'},
+  {term:'Neo-Colonialism', def:'Economic dominance of wealthy nations over former colonies through trade and debt rather than direct political control'},
+  {term:'World Wide Web', def:'1990 invention that made the internet publicly accessible, massively accelerating the global flow of information'}
+];
+
+let selectedTerm=null, selectedTermEl=null, matchedCount=0;
+const shuffledDefs=[...matchData].sort(()=>Math.random()-0.5);
+const termsCol=document.getElementById('match-terms');
+const defsCol=document.getElementById('match-defs');
+
+matchData.forEach(item=>{
+  const el=document.createElement('div');
+  el.className='match-item match-term-item';
+  el.textContent=item.term;
+  el.dataset.term=item.term;
+  el.onclick=()=>selectTerm(el,item.term);
+  termsCol.appendChild(el);
+});
+shuffledDefs.forEach(item=>{
+  const el=document.createElement('div');
+  el.className='match-item match-def-item';
+  el.textContent=item.def;
+  el.dataset.term=item.term;
+  el.onclick=()=>selectDef(el,item.term);
+  defsCol.appendChild(el);
+});
+
+function selectTerm(el,term){
+  if(el.classList.contains('matched-correct')) return;
+  document.querySelectorAll('.match-term-item').forEach(e=>e.classList.remove('selected'));
+  selectedTerm=term; selectedTermEl=el;
+  el.classList.add('selected');
+}
+function selectDef(el,term){
+  if(!selectedTerm||el.classList.contains('matched-correct')) return;
+  if(term===selectedTerm){
+    el.classList.add('matched-correct');
+    selectedTermEl.classList.add('matched-correct');
+    selectedTermEl.classList.remove('selected');
+    matchedCount++;
+    selectedTerm=null; selectedTermEl=null;
+    if(matchedCount===matchData.length){
+      const r=document.getElementById('match-result');
+      r.textContent='\u2713 All matched correctly!';
+      r.style.color='#4a9e3f';
+    }
+  } else {
+    el.classList.add('matched-wrong');
+    setTimeout(()=>el.classList.remove('matched-wrong'),800);
+  }
+}
+function resetMatching(){
+  selectedTerm=null; selectedTermEl=null; matchedCount=0;
+  document.querySelectorAll('.match-item').forEach(e=>e.classList.remove('selected','matched-correct','matched-wrong'));
+  document.getElementById('match-result').textContent='';
+}
+
+// ACCORDIONS
+function toggleAccordion(id){
+  const el=document.getElementById(id);
+  el.classList.toggle('open');
+}
+
+// CAUSAL CHAIN
+function revealChain(){
+  const a2=document.getElementById('chain2-answer');
+  const a4=document.getElementById('chain4-answer');
+  a2.innerHTML='<strong>Model Answer \u2014 Node 2:</strong> Accelerating global connectivity created new cross-border problems that individual nations could not manage alone: infectious diseases like the 1918 influenza and later HIV spread along the same transportation routes that carried trade; financial crises cascaded from one national economy to others; and industrial growth produced environmental damage \u2014 deforestation, carbon emissions \u2014 that affected all nations regardless of their own policies.';
+  a2.style.display='block';
+  a4.innerHTML='<strong>Model Answer \u2014 Node 4:</strong> Nations responded by creating multilateral international institutions designed to manage shared problems: the United Nations (1945) for peace and diplomacy; the IMF and World Bank (1944) for economic stability; the World Health Organization (1948) for global health; and the WTO (1995) for trade. These institutions represent humanity\u2019s attempt to govern the problems that globalization created.';
+  a4.style.display='block';
+}
+
+// THESIS EVALUATOR
+const thesisData = [
+  {
+    label:'Thesis Attempt A',
+    text:'"Globalization changed the world significantly in the period from 1900 to the present, as new technologies, economies, and cultures were transformed by increased global connections."',
+    verdict:'fail',
+    explanation:'FAIL: This is a restatement of the prompt. It simply echoes back the question without making a defensible claim or establishing any line of reasoning. A reader has no idea what argument this essay will make.'
+  },
+  {
+    label:'Thesis Attempt B',
+    text:'"Globalization significantly transformed the world by increasing economic inequality between wealthy and developing nations in the period c. 1900 to the present."',
+    verdict:'fail',
+    explanation:'FAIL: This makes a defensible claim but provides no line of reasoning. There is no "because" connecting the claim to an explanation of how or why. It states a position without establishing the argument that will support it.'
+  },
+  {
+    label:'Thesis Attempt C',
+    text:'"While globalization transformed political and cultural life after 1900, it most significantly reshaped the world economically, because the integration of free markets created unprecedented wealth for some nations while entrenching dependency and inequality for others."',
+    verdict:'pass',
+    explanation:'PASS: This earns the point. It makes a defensible claim, provides a "because" with a clear line of reasoning, and previews an analytical category. A reader knows exactly what argument is coming.'
+  },
+  {
+    label:'Thesis Attempt D',
+    text:'"Although globalization spread new technologies and economic systems worldwide after 1900, its transformative impact was limited by persistent resistance, because both cultural nationalist movements and political backlash from affected communities repeatedly forced international institutions to compromise or retreat."',
+    verdict:'pass',
+    explanation:'PASS: This also earns the point with a different but equally valid argument. It emphasizes limits to transformation via resistance, includes a "because," and uses two analytical categories. Note that the two passing theses reach opposite conclusions \u2014 showing "evaluate the extent" is genuinely open-ended.'
+  }
+];
+
+const tg = document.getElementById('thesis-grid');
+thesisData.forEach((td, i) => {
+  const card = document.createElement('div');
+  card.className = 'thesis-card';
+  card.dataset.verdict = td.verdict;
+  card.dataset.explanation = td.explanation;
+  card.innerHTML = '<div class="tc-prompt">'+td.label+'</div>'+td.text+'<div class="tc-click-hint">click to reveal</div>';
+  card.onclick = function(){
+    if(this.classList.contains('revealed')) return;
+    this.classList.add('revealed', this.dataset.verdict);
+    const hint = this.querySelector('.tc-click-hint');
+    if(hint) hint.remove();
+    const vDiv = document.createElement('div');
+    vDiv.className='thesis-verdict';
+    vDiv.textContent = this.dataset.verdict.toUpperCase();
+    const eDiv = document.createElement('div');
+    eDiv.className='thesis-explanation';
+    eDiv.textContent = this.dataset.explanation;
+    this.appendChild(vDiv);
+    this.appendChild(eDiv);
+  };
+  tg.appendChild(card);
+});
+
+// CONTEXTUALIZATION
+function toggleCtx(id){
+  document.getElementById(id).classList.toggle('open');
+}
+
+// SELF-ASSESSMENT
+const saItems = [
+  {skill:'I can identify the three major themes of Unit 9 and explain what topics each covers', code:'Recall \u00b7 DOK 1'},
+  {skill:'I can explain how technological development after 1900 drove globalization', code:'Causation \u00b7 DOK 2'},
+  {skill:'I can compare the benefits and costs of globalization across multiple categories', code:'Comparison \u00b7 DOK 2'},
+  {skill:'I can construct a causal chain connecting technology to global institutions', code:'Causation \u00b7 DOK 3'},
+  {skill:'I can identify what makes a Unit 9 thesis earn or fail the AP point', code:'Argumentation \u00b7 DOK 3'},
+  {skill:'I can write a contextualization paragraph connecting Unit 9 to Units 7\u20138', code:'Contextualization \u00b7 DOK 4'},
+  {skill:'I can write a complete AP SAQ response using identify, describe, and explain correctly', code:'SAQ Skills \u00b7 DOK 4'}
+];
+
+const saWrap = document.getElementById('sa-wrap');
+saItems.forEach((item,i) => {
+  const row = document.createElement('div');
+  row.className = 'sa-item';
+  row.innerHTML = '<div class="sa-skill">'+item.skill+'<code>'+item.code+'</code></div><div class="sa-dots"><button class="sa-dot-btn" title="Not Yet" onclick="rateSelf(this,'+i+',1)"></button><button class="sa-dot-btn" title="Getting There" onclick="rateSelf(this,'+i+',2)"></button><button class="sa-dot-btn" title="Confident" onclick="rateSelf(this,'+i+',3)"></button></div>';
+  saWrap.appendChild(row);
+});
+
+function rateSelf(btn,idx,level){
+  const dots = btn.parentElement.querySelectorAll('.sa-dot-btn');
+  dots.forEach(d=>{ d.classList.remove('active-1','active-2','active-3'); });
+  btn.classList.add('active-'+level);
+}
+</script>
+</body>
+</html>

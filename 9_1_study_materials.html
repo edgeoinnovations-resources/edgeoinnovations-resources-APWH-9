@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9.1 Technological Advances After 1900 — AP World History</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  /* ===== ROOT VARIABLES ===== */
+  :root {
+    --bg-deep:       #0d0d1a;
+    --bg-card:       #13132a;
+    --bg-elevated:   #1a1a35;
+    --gold:          #b8860b;
+    --gold-light:    #d4a017;
+    --gold-dim:      rgba(184,134,11,0.25);
+    --parchment:     #e8dfc8;
+    --text-secondary:#b0a890;
+    --text-muted:    #7a7060;
+    --accent-green:  #4a9e3f;
+    --accent-red:    #c0392b;
+    --accent-blue:   #2e6da4;
+    --accent-purple: #7c5cbf;
+    --border-subtle: rgba(184,134,11,0.15);
+    --border-mid:    rgba(184,134,11,0.3);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg-deep);
+    color: var(--parchment);
+    font-family: 'Source Serif 4', serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* ===== HEADER ===== */
+  .page-header {
+    background: linear-gradient(135deg, #0a0a18 0%, #1a1030 50%, #0d0d1a 100%);
+    border-bottom: 2px solid var(--gold);
+    padding: 40px 24px 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(184,134,11,0.08) 0%, transparent 70%);
+  }
+  .unit-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .page-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    font-weight: 600;
+    color: var(--parchment);
+    letter-spacing: 0.03em;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+  .page-subtitle {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  /* ===== MAIN LAYOUT ===== */
+  .main-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+  }
+
+  /* ===== DOK SECTION HEADERS ===== */
+  .dok-section {
+    margin-bottom: 52px;
+  }
+  .dok-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .dok-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  .dok1 .dok-badge { background: rgba(46,109,164,0.2); color: #6ab0de; border: 1px solid rgba(46,109,164,0.4); }
+  .dok2 .dok-badge { background: rgba(74,158,63,0.2); color: #7dd17a; border: 1px solid rgba(74,158,63,0.4); }
+  .dok3 .dok-badge { background: rgba(184,134,11,0.2); color: #d4a017; border: 1px solid rgba(184,134,11,0.4); }
+  .dok4 .dok-badge { background: rgba(124,92,191,0.2); color: #b08fe8; border: 1px solid rgba(124,92,191,0.4); }
+
+  .dok-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--parchment);
+  }
+  .dok-subtitle {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-left: auto;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* ===== CARDS ===== */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+  .card-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  /* ===== VIDEO EMBED ===== */
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border-mid);
+  }
+  .video-wrapper iframe {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+  }
+  .opening-quote {
+    font-style: italic;
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    border-left: 3px solid var(--gold);
+    padding: 10px 16px;
+    margin: 16px 0 0;
+    background: rgba(184,134,11,0.05);
+    border-radius: 0 4px 4px 0;
+  }
+  .opening-quote cite {
+    display: block;
+    font-style: normal;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+    margin-top: 6px;
+  }
+
+  /* ===== VISUAL FRAMEWORK / TIMELINE ===== */
+  .framework-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  @media(max-width:600px){ .framework-grid { grid-template-columns: 1fr; } }
+
+  .fw-item {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 14px 16px;
+  }
+  .fw-item-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 6px;
+  }
+  .fw-item-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--parchment);
+    margin-bottom: 4px;
+  }
+  .fw-item-desc {
+    font-size: 0.83rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  .sword-diagram {
+    margin-top: 16px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-mid);
+    border-radius: 6px;
+    padding: 16px;
+  }
+  .sword-diagram-title {
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+  .sword-row {
+    display: grid;
+    grid-template-columns: 1fr 48px 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    font-size: 0.84rem;
+  }
+  .sword-win {
+    background: rgba(74,158,63,0.12);
+    border: 1px solid rgba(74,158,63,0.3);
+    border-radius: 4px;
+    padding: 8px 10px;
+    color: #9dd98a;
+    text-align: right;
+  }
+  .sword-cost {
+    background: rgba(192,57,43,0.12);
+    border: 1px solid rgba(192,57,43,0.3);
+    border-radius: 4px;
+    padding: 8px 10px;
+    color: #e8827a;
+    text-align: left;
+  }
+  .sword-label {
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    line-height: 1.2;
+  }
+
+  /* ===== FLIP CARDS ===== */
+  .flip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .flip-card {
+    height: 130px;
+    perspective: 800px;
+    cursor: pointer;
+  }
+  .flip-inner {
+    position: relative;
+    width: 100%; height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.45s ease;
+  }
+  .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
+  .flip-front, .flip-back {
+    position: absolute; inset: 0;
+    backface-visibility: hidden;
+    border-radius: 6px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    min-height: 120px;
+  }
+  .flip-front {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-mid);
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--parchment);
+  }
+  .flip-back {
+    background: rgba(184,134,11,0.08);
+    border: 1px solid var(--gold);
+    transform: rotateY(180deg);
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+  }
+  .flip-hint {
+    position: absolute;
+    bottom: 8px;
+    left: 0; right: 0;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--text-muted);
+  }
+
+  /* ===== MCQ ===== */
+  .mcq-item { margin-bottom: 24px; }
+  .mcq-question {
+    font-size: 0.92rem;
+    color: var(--parchment);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .mcq-options { display: flex; flex-direction: column; gap: 6px; }
+  .mcq-option {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    padding: 9px 14px;
+    text-align: left;
+    color: var(--text-secondary);
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .mcq-option:hover:not(.disabled) {
+    border-color: var(--gold);
+    color: var(--parchment);
+    background: rgba(184,134,11,0.08);
+  }
+  .mcq-option.correct {
+    background: rgba(74,158,63,0.15);
+    border-color: var(--accent-green);
+    color: #a0e090;
+  }
+  .mcq-option.incorrect {
+    background: rgba(192,57,43,0.12);
+    border-color: var(--accent-red);
+    color: #e07070;
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+  .mcq-option.disabled { cursor: default; pointer-events: none; }
+  .mcq-feedback {
+    display: none;
+    margin-top: 10px;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 0.83rem;
+    background: rgba(74,158,63,0.1);
+    border: 1px solid rgba(74,158,63,0.3);
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  .mcq-feedback.show { display: block; }
+  .mcq-feedback.wrong-fb {
+    background: rgba(107,45,45,0.3);
+    border-color: #f08080;
+    color: #e8c0c0;
+  }
+
+  /* ===== MATCHING ===== */
+  .match-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 8px;
+  }
+  @media(max-width:580px){ .match-grid { grid-template-columns: 1fr; } }
+  .match-col-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .match-item {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    padding: 9px 12px;
+    font-size: 0.83rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+  }
+  .match-item:hover { border-color: var(--gold); color: var(--parchment); }
+  .match-item.selected { border-color: var(--gold-light); background: rgba(184,134,11,0.1); color: var(--parchment); }
+  .match-item.matched-correct { border-color: var(--accent-green); background: rgba(74,158,63,0.12); color: #a0e090; cursor: default; pointer-events: none; }
+  .match-item.matched-wrong { border-color: var(--accent-red); background: rgba(192,57,43,0.12); color: #e07070; }
+  .match-result {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 0.83rem;
+    padding: 8px;
+    border-radius: 4px;
+    display: none;
+  }
+  .match-result.show { display: block; }
+  .match-result.success { background: rgba(74,158,63,0.1); color: #a0e090; border: 1px solid rgba(74,158,63,0.3); }
+  .match-reset-btn {
+    margin-top: 10px;
+    background: transparent;
+    border: 1px solid var(--border-mid);
+    border-radius: 4px;
+    padding: 7px 16px;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    cursor: pointer;
+    letter-spacing: 0.1em;
+    transition: all 0.2s;
+  }
+  .match-reset-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* ===== TEXTAREAS ===== */
+  textarea {
+    width: 100%;
+    min-height: 100px;
+    margin: 10px 0;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(184,134,11,0.2);
+    border-radius: 4px;
+    color: var(--parchment);
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.88rem;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s;
+    line-height: 1.6;
+  }
+  textarea:focus { border-color: rgba(184,134,11,0.5); }
+  textarea::placeholder { color: var(--text-muted); }
+
+  /* ===== REVEAL BUTTON ===== */
+  .reveal-btn {
+    background: transparent;
+    border: 1px solid var(--border-mid);
+    border-radius: 4px;
+    padding: 8px 20px;
+    color: var(--gold);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 6px;
+  }
+  .reveal-btn:hover { background: rgba(184,134,11,0.08); border-color: var(--gold-light); }
+  .reveal-btn:disabled { opacity: 0.4; cursor: default; }
+
+  .model-answer {
+    display: none;
+    margin-top: 12px;
+    padding: 14px 16px;
+    background: rgba(74,158,63,0.07);
+    border: 1px solid rgba(74,158,63,0.25);
+    border-radius: 4px;
+    font-size: 0.86rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  .model-answer.show { display: block; }
+  .model-answer-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-green);
+    margin-bottom: 8px;
+  }
+
+  /* ===== APPLY ACTIVITY — COMPARISON TABLE ===== */
+  .compare-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+  .compare-table th {
+    background: rgba(184,134,11,0.1);
+    border: 1px solid var(--border-mid);
+    padding: 10px 12px;
+    text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    font-weight: 600;
+  }
+  .compare-table td {
+    border: 1px solid var(--border-subtle);
+    padding: 10px 12px;
+    vertical-align: top;
+    color: var(--text-secondary);
+  }
+  .compare-table td:first-child {
+    font-weight: 600;
+    color: var(--parchment);
+    background: rgba(255,255,255,0.02);
+    width: 22%;
+  }
+  .compare-table textarea {
+    min-height: 70px;
+    margin: 4px 0;
+    font-size: 0.82rem;
+  }
+
+  /* ===== CAUSAL CHAIN ===== */
+  .chain-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 8px;
+  }
+  .chain-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 4px;
+  }
+  .node-num {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--gold-dim);
+    border: 1px solid var(--border-mid);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--gold-light);
+    flex-shrink: 0;
+    margin-top: 8px;
+  }
+  .node-box {
+    flex: 1;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 12px 14px;
+    font-size: 0.87rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  .node-box.blank {
+    border-style: dashed;
+    border-color: rgba(184,134,11,0.3);
+    background: rgba(184,134,11,0.03);
+  }
+  .node-box.blank textarea {
+    min-height: 60px;
+    margin: 0;
+    background: transparent;
+    border: none;
+    color: var(--parchment);
+    font-size: 0.87rem;
+    resize: vertical;
+    outline: none;
+    padding: 0;
+  }
+  .node-box.blank textarea:focus { border: none; }
+  .chain-arrow {
+    margin-left: 36px;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1;
+    padding: 2px 0;
+  }
+  .chain-answer-box {
+    display: none;
+    margin-left: 44px;
+    margin-top: 6px;
+    margin-bottom: 8px;
+    padding: 10px 14px;
+    background: rgba(74,158,63,0.1);
+    border: 1px solid rgba(74,158,63,0.3);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  /* ===== THESIS EVALUATOR ===== */
+  .thesis-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  @media(max-width:600px){ .thesis-grid { grid-template-columns: 1fr; } }
+  .thesis-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.87rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+  }
+  .thesis-card:hover:not(.revealed) { border-color: var(--gold); }
+  .thesis-card-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .thesis-card.revealed.pass {
+    border-color: var(--accent-green);
+    background: rgba(74,158,63,0.08);
+    cursor: default;
+  }
+  .thesis-card.revealed.fail {
+    border-color: var(--accent-red);
+    background: rgba(192,57,43,0.08);
+    cursor: default;
+  }
+  .thesis-verdict {
+    display: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin-top: 12px;
+    padding: 4px 0;
+  }
+  .thesis-card.revealed .thesis-verdict { display: block; }
+  .thesis-card.revealed.pass .thesis-verdict { color: #7dd17a; }
+  .thesis-card.revealed.fail .thesis-verdict { color: #e07070; }
+  .thesis-explanation {
+    display: none;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 8px;
+    line-height: 1.5;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 8px;
+  }
+  .thesis-card.revealed .thesis-explanation { display: block; }
+  .thesis-hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  /* ===== CONTEXTUALIZATION BUILDER ===== */
+  .ctx-pathway {
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .ctx-header {
+    background: var(--bg-elevated);
+    padding: 14px 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: background 0.2s;
+  }
+  .ctx-header:hover { background: rgba(184,134,11,0.06); }
+  .ctx-pathway-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+  .ctx-pathway-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--parchment);
+    flex: 1;
+  }
+  .ctx-toggle {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    transition: transform 0.3s;
+  }
+  .ctx-pathway.open .ctx-toggle { transform: rotate(180deg); }
+  .ctx-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s;
+    padding: 0 20px;
+  }
+  .ctx-pathway.open .ctx-body {
+    max-height: 1200px;
+    padding: 0 20px 20px;
+  }
+  .ctx-stem {
+    background: rgba(124,92,191,0.08);
+    border: 1px solid rgba(124,92,191,0.25);
+    border-radius: 4px;
+    padding: 12px 14px;
+    font-size: 0.85rem;
+    color: #c0b0e8;
+    margin-top: 14px;
+    line-height: 1.55;
+  }
+  .ctx-stem strong { color: var(--parchment); }
+  .sample-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-green);
+    margin-top: 14px;
+    margin-bottom: 6px;
+  }
+  .sample-body {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    background: rgba(74,158,63,0.06);
+    border: 1px solid rgba(74,158,63,0.2);
+    border-radius: 4px;
+    padding: 12px 14px;
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  /* ===== SAQ PRACTICE ===== */
+  .saq-context {
+    background: rgba(46,109,164,0.08);
+    border: 1px solid rgba(46,109,164,0.25);
+    border-radius: 4px;
+    padding: 14px 16px;
+    font-size: 0.87rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  .saq-context strong { color: var(--parchment); }
+  .saq-part { margin-bottom: 22px; }
+  .saq-part-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-blue);
+    margin-bottom: 6px;
+  }
+  .saq-part-prompt {
+    font-size: 0.9rem;
+    color: var(--parchment);
+    margin-bottom: 4px;
+    line-height: 1.55;
+  }
+  .saq-ap-skill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+  }
+
+  /* ===== CROSS-UNIT SYNTHESIS ===== */
+  .synthesis-connections {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .synth-item {
+    background: var(--bg-elevated);
+    border-left: 3px solid var(--accent-purple);
+    padding: 10px 14px;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.86rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  .synth-item strong { color: var(--parchment); }
+
+  /* ===== SELF-ASSESSMENT ===== */
+  .sa-skill { margin-bottom: 18px; }
+  .sa-skill-name {
+    font-size: 0.9rem;
+    color: var(--parchment);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .sa-skill-desc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    line-height: 1.45;
+  }
+  .sa-rating {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .sa-btn {
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    padding: 6px 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: all 0.2s;
+  }
+  .sa-btn:hover { border-color: var(--gold); color: var(--gold); }
+  .sa-btn.selected-notyet { border-color: var(--accent-red); background: rgba(192,57,43,0.1); color: #e07070; }
+  .sa-btn.selected-getting { border-color: var(--gold); background: rgba(184,134,11,0.1); color: var(--gold-light); }
+  .sa-btn.selected-confident { border-color: var(--accent-green); background: rgba(74,158,63,0.1); color: #7dd17a; }
+  .sa-label-item { min-width: 28px; white-space: nowrap; }
+
+  /* ===== DIVIDER ===== */
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--border-subtle);
+    margin: 40px 0;
+  }
+
+  /* ===== INFO BOX ===== */
+  .info-box {
+    background: rgba(46,109,164,0.07);
+    border: 1px solid rgba(46,109,164,0.2);
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    font-size: 0.86rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  .info-box strong { color: var(--parchment); }
+</style>
+</head>
+<body>
+
+<!-- ===== PAGE HEADER ===== -->
+<header class="page-header">
+  <div class="unit-label">AP World History: Modern · Unit 9 · Section 9.1</div>
+  <h1 class="page-title">Technological Advances After 1900</h1>
+  <p class="page-subtitle">From the shipping container to the birth control pill — how technology reshaped every corner of modern life, and at what cost.</p>
+</header>
+
+<main class="main-content">
+
+<!-- ═══════════════════════════════════════════════════
+     DOK 1 — KNOWLEDGE ACQUISITION
+     ═══════════════════════════════════════════════════ -->
+<section class="dok-section dok1">
+  <div class="dok-header">
+    <span class="dok-badge">DOK 1</span>
+    <span class="dok-title">Knowledge Acquisition</span>
+    <span class="dok-subtitle">Answer Correctly</span>
+  </div>
+
+  <!-- VIDEO EXPLAINER -->
+  <div class="card">
+    <div class="card-title">▶ Video Explainer</div>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/OPnHg-eeTDM" allowfullscreen
+        title="APWH 9.1 Technological Advances After 1900"></iframe>
+    </div>
+    <blockquote class="opening-quote">
+      "We invented all this technology to support a bigger world. And now that bigger world literally cannot exist without it."
+      <cite>— The core paradox of modern technological development</cite>
+    </blockquote>
+  </div>
+
+  <!-- VISUAL FRAMEWORK -->
+  <div class="card">
+    <div class="card-title">◈ Visual Framework — Six Domains of Technological Change</div>
+    <div class="framework-grid">
+      <div class="fw-item">
+        <div class="fw-item-label">Domain 1</div>
+        <div class="fw-item-title">🌐 Communications &amp; Transportation</div>
+        <div class="fw-item-desc">Shipping container, jet travel, internet, mobile phones — the world shrank from months to milliseconds.</div>
+      </div>
+      <div class="fw-item">
+        <div class="fw-item-label">Domain 2</div>
+        <div class="fw-item-title">⚡ Energy Production</div>
+        <div class="fw-item-desc">~90% of energy still from fossil fuels. Nuclear power added risk of radiation. Renewable push follows unintended consequences.</div>
+      </div>
+      <div class="fw-item">
+        <div class="fw-item-label">Domain 3</div>
+        <div class="fw-item-title">🌾 The Green Revolution</div>
+        <div class="fw-item-desc">Hybrid grains, genetic engineering, fertilizers &amp; pesticides. Fed billions — but hurt biodiversity and small farmers.</div>
+      </div>
+      <div class="fw-item">
+        <div class="fw-item-label">Domain 4</div>
+        <div class="fw-item-title">💊 Medical Advances</div>
+        <div class="fw-item-desc">Penicillin (1928), mass vaccines. Smallpox eradicated. But antibiotic overuse created resistant superbugs.</div>
+      </div>
+      <div class="fw-item">
+        <div class="fw-item-label">Domain 5</div>
+        <div class="fw-item-title">⚧ Birth Control Pill (1960)</div>
+        <div class="fw-item-desc">First reliable female contraception. Enabled women's education and careers. Reshaped family structures globally.</div>
+      </div>
+      <div class="fw-item">
+        <div class="fw-item-label">The Big Idea</div>
+        <div class="fw-item-title">⚔ The Double-Edged Sword</div>
+        <div class="fw-item-desc">Every technological solution creates new problems. Intended wins always carry unintended costs. This is the AP exam framework.</div>
+      </div>
+    </div>
+
+    <div class="sword-diagram">
+      <div class="sword-diagram-title">The Double-Edged Sword — Intended Wins vs. Unintended Costs</div>
+      <div class="sword-row">
+        <div class="sword-win">Powered modern civilization</div>
+        <div class="sword-label">Fossil<br>Fuels</div>
+        <div class="sword-cost">Pollution &amp; climate change</div>
+      </div>
+      <div class="sword-row">
+        <div class="sword-win">Fed billions on same land</div>
+        <div class="sword-label">Green<br>Revolution</div>
+        <div class="sword-cost">Lost biodiversity; hurt small farmers</div>
+      </div>
+      <div class="sword-row">
+        <div class="sword-win">Saved millions from infection</div>
+        <div class="sword-label">Antibiotics</div>
+        <div class="sword-cost">Created resistant superbugs</div>
+      </div>
+      <div class="sword-row">
+        <div class="sword-win">Connected humanity instantly</div>
+        <div class="sword-label">Internet</div>
+        <div class="sword-cost">Spread of misinformation</div>
+      </div>
+      <div class="sword-row">
+        <div class="sword-win">Cheaper, faster global trade</div>
+        <div class="sword-label">Shipping<br>Container</div>
+        <div class="sword-cost">Accelerated economic inequality</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLIP CARDS -->
+  <div class="card">
+    <div class="card-title">⟳ Vocabulary Flip Cards — Click to Reveal Definitions</div>
+    <div class="flip-grid">
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Green Revolution<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">Mid-20th century program using hybrid seeds, fertilizers, pesticides, and irrigation to dramatically increase crop yields worldwide — especially in Asia and Latin America.</div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Penicillin<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">The world's first antibiotic, discovered accidentally by Alexander Fleming in 1928. Mass-produced during WWII; revolutionized treatment of bacterial infections.</div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Antibiotic Resistance<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">When bacteria evolve to survive antibiotic drugs due to overuse. Predicted by Fleming himself in his 1945 Nobel Prize speech. A major global health threat today.</div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Shipping Container<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">Standardized metal box that revolutionized global trade by making loading and unloading cargo dramatically faster and cheaper — the "unsung hero" of economic globalization.</div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Norman Borlaug<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">"Father of the Green Revolution." Developed high-yield wheat varieties. Called his achievement a "temporary success, a breathing space" — acknowledging it was not a permanent fix for hunger.</div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Birth Control Pill<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">Approved in the U.S. in 1960. First reliable contraception controlled by women. Enabled women to pursue education and careers; reshaped gender dynamics and family structures globally.</div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Fossil Fuels<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">Coal, oil, and natural gas — non-renewable energy sources that power ~90% of modern civilization. Major driver of industrialization, but also of air pollution and greenhouse gas emissions.</div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Vaccination<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">Mass immunization campaigns after 1900 eradicated smallpox and made polio and measles rare. Vaccines prevent an estimated 3 million deaths per year worldwide.</div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Unintended Consequences<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">The unexpected negative outcomes created by technologies designed to solve problems. Central AP theme: every solution creates new problems (e.g., antibiotics → superbugs).</div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Arab Spring<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">2010–2012 pro-democracy uprisings in North Africa and the Middle East. The internet and social media played a key role in organizing protesters — an unintended political consequence of communications technology.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- RECALL MCQs -->
+  <div class="card">
+    <div class="card-title">✎ Recall Practice — Multiple Choice (5 Questions)</div>
+    <div class="info-box">Select an answer. Wrong choices are disabled so you can keep trying. When you get it right, the full explanation appears.</div>
+
+    <!-- Q1 -->
+    <div class="mcq-item" id="mcq1">
+      <div class="mcq-question">1. Which technology did the video describe as the "unsung hero" that unlocked the global economy?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(A) The internet</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,true)">(B) The shipping container</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(C) The jet engine</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(D) Nuclear power</button>
+      </div>
+      <div class="mcq-feedback" id="mcq1-fb"><strong>Correct — B.</strong> The shipping container standardized cargo transport, making loading and unloading dramatically faster and cheaper. Though seemingly simple, it was the key infrastructure that made modern global trade possible.</div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="mcq-item" id="mcq2">
+      <div class="mcq-question">2. Alexander Fleming discovered penicillin in 1928 when he noticed that mold was killing bacteria in his lab. What unintended consequence did he himself predict in his Nobel Prize speech?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(A) That penicillin would be too expensive for poor countries</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(B) That viruses would mutate to resemble bacteria</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,true)">(C) That overuse would cause bacteria to evolve resistance to antibiotics</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(D) That mass production would reduce the drug's effectiveness immediately</button>
+      </div>
+      <div class="mcq-feedback" id="mcq2-fb"><strong>Correct — C.</strong> Fleming warned in his 1945 Nobel Prize acceptance speech that overuse of penicillin would allow bacteria to evolve resistance — creating "superbugs." This prediction has proven tragically accurate and remains a critical global health issue.</div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="mcq-item" id="mcq3">
+      <div class="mcq-question">3. The Green Revolution is best described as a set of agricultural changes that:</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(A) Expanded the amount of farmland by clearing forests globally</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,true)">(B) Used hybrid seeds, fertilizers, and modern irrigation to grow far more food on roughly the same land</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(C) Redistributed land from wealthy landowners to peasant farmers</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(D) Encouraged nations to return to traditional subsistence farming</button>
+      </div>
+      <div class="mcq-feedback" id="mcq3-fb"><strong>Correct — B.</strong> The Green Revolution was a scientific attack on hunger using hybrid grains (later genetic engineering), fertilizers, pesticides, and irrigation. China's grain production rose from ~120 million tons (1950) to over 500 million tons (2010) — feeding the world's booming population on essentially the same land area.</div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="mcq-item" id="mcq4">
+      <div class="mcq-question">4. Approximately what percentage of global energy still comes from non-renewable fossil fuels?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(A) 40%</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(B) 60%</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(C) 75%</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,true)">(D) 90%</button>
+      </div>
+      <div class="mcq-feedback" id="mcq4-fb"><strong>Correct — D.</strong> Approximately 90% of global energy still derives from fossil fuels (coal, oil, natural gas). This statistic underscores the core tension: our modern world was built on a resource that will eventually run out, and whose use creates serious environmental consequences.</div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="mcq-item" id="mcq5">
+      <div class="mcq-question">5. The approval of the birth control pill in 1960 is historically significant primarily because it:</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(A) Was the first contraceptive method ever developed in human history</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(B) Was developed specifically to address global overpopulation concerns</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,true)">(C) Gave women reliable control over their own fertility, enabling new social and economic roles</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(D) Was immediately adopted by all nations regardless of religious or cultural norms</button>
+      </div>
+      <div class="mcq-feedback" id="mcq5-fb"><strong>Correct — C.</strong> The pill was a "social revolution in a tiny package." For the first time, women had reliable, easy personal control over reproduction. This opened doors to higher education, careers, and reshaped gender dynamics, family structures, and ultimately the global economy.</div>
+    </div>
+  </div>
+
+  <!-- MATCHING ACTIVITY -->
+  <div class="card">
+    <div class="card-title">⇄ Matching — Connect Each Technology to Its Primary Unintended Consequence</div>
+    <div class="info-box">Click a term on the left, then click its matching consequence on the right.</div>
+    <div class="match-grid">
+      <div>
+        <div class="match-col-label">Technology</div>
+        <div class="match-item" id="mt-A" onclick="selectMatch('mt-A','A')">A. Antibiotics</div>
+        <div class="match-item" id="mt-B" onclick="selectMatch('mt-B','B')">B. Green Revolution</div>
+        <div class="match-item" id="mt-C" onclick="selectMatch('mt-C','C')">C. Fossil Fuels</div>
+        <div class="match-item" id="mt-D" onclick="selectMatch('mt-D','D')">D. Internet</div>
+        <div class="match-item" id="mt-E" onclick="selectMatch('mt-E','E')">E. Birth Control Pill</div>
+      </div>
+      <div>
+        <div class="match-col-label">Unintended Consequence</div>
+        <div class="match-item" id="mc-3" onclick="selectMatch('mc-3','3')">3. Loss of crop biodiversity and displacement of small farmers</div>
+        <div class="match-item" id="mc-1" onclick="selectMatch('mc-1','1')">1. Evolution of drug-resistant superbugs</div>
+        <div class="match-item" id="mc-5" onclick="selectMatch('mc-5','5')">5. Restructuring of family roles and gender expectations</div>
+        <div class="match-item" id="mc-2" onclick="selectMatch('mc-2','2')">2. Greenhouse gas emissions and air pollution</div>
+        <div class="match-item" id="mc-4" onclick="selectMatch('mc-4','4')">4. Rapid spread of misinformation</div>
+      </div>
+    </div>
+    <div id="match-result" class="match-result"></div>
+    <button class="match-reset-btn" onclick="resetMatch()">↺ Reset Matching</button>
+  </div>
+
+</section><!-- end DOK 1 -->
+
+<hr class="section-divider">
+
+<!-- ═══════════════════════════════════════════════════
+     DOK 2 — KNOWLEDGE APPLICATION
+     ═══════════════════════════════════════════════════ -->
+<section class="dok-section dok2">
+  <div class="dok-header">
+    <span class="dok-badge">DOK 2</span>
+    <span class="dok-title">Knowledge Application</span>
+    <span class="dok-subtitle">Establish &amp; Explain with Examples</span>
+  </div>
+
+  <!-- EXPLAIN DRILL 1 -->
+  <div class="card">
+    <div class="card-title">✍ Explain Drill 1 of 2</div>
+    <div class="info-box">
+      <strong>The AP Explain Skill:</strong> Don't just say <em>what</em> happened. Show <em>how or why</em> a relationship exists. Connect cause to effect.
+    </div>
+    <p style="font-size:0.92rem; color:var(--parchment); margin-bottom:8px; font-weight:600;">
+      Explain how the Green Revolution both solved and created problems for global food security after 1900.
+    </p>
+    <p class="saq-ap-skill">AP Skill: Explain (cause/effect) · Historical Thinking: Causation</p>
+    <textarea placeholder="Write your response here. Aim for 3–5 sentences. Use the words 'because,' 'however,' and 'as a result' to help you build your explanation..."></textarea>
+    <button class="reveal-btn" onclick="revealModel(this,'drill1-model')">Reveal Model Response</button>
+    <div id="drill1-model" class="model-answer">
+      <div class="model-answer-label">Model Response</div>
+      The Green Revolution solved the immediate crisis of feeding a rapidly growing global population by using hybrid seeds, chemical fertilizers, pesticides, and modern irrigation to dramatically multiply crop yields on the same amount of land. Because of these methods, countries like China saw grain production rise from roughly 120 million tons in 1950 to over 500 million by 2010, which prevented mass famine. However, the revolution created new problems: the expensive seeds and chemicals pushed small farmers off their land, heavy chemical use degraded soil quality and polluted waterways, and the widespread adoption of a few high-yield crop varieties caused thousands of older seed varieties to disappear, reducing biodiversity. As a result, the world became more food-secure in the short term but more environmentally vulnerable and dependent on industrial agriculture in the long term.
+    </div>
+  </div>
+
+  <!-- EXPLAIN DRILL 2 -->
+  <div class="card">
+    <div class="card-title">✍ Explain Drill 2 of 2</div>
+    <p style="font-size:0.92rem; color:var(--parchment); margin-bottom:8px; font-weight:600;">
+      Explain how advances in communications technology after 1900 contributed to political change in the early 21st century.
+    </p>
+    <p class="saq-ap-skill">AP Skill: Explain (how/why) · Historical Thinking: Causation</p>
+    <textarea placeholder="Think about: What specific technologies changed communication? How did access to information change what ordinary people could do politically? Use a specific example (e.g., Arab Spring)..."></textarea>
+    <button class="reveal-btn" onclick="revealModel(this,'drill2-model')">Reveal Model Response</button>
+    <div id="drill2-model" class="model-answer">
+      <div class="model-answer-label">Model Response</div>
+      After 1900, advances in communications technology progressively reduced the cost of sharing information until, by the early 21st century, ordinary individuals could broadcast to millions. The internet — originally a Cold War military project — became a global public platform, and when combined with the mobile phone, it placed the power to create and share information directly in billions of people's hands. This shift contributed to political change by enabling rapid grassroots organization outside of traditional power structures. The most dramatic example was the Arab Spring (2010–2012), in which protesters in Tunisia, Egypt, and other countries used social media platforms to coordinate demonstrations, share images of government violence with the outside world, and sustain pressure on authoritarian governments. The technology did not cause the political grievances, but it dramatically accelerated and amplified the movements built around them.
+    </div>
+  </div>
+
+  <!-- APPLY ACTIVITY — COMPARISON TABLE -->
+  <div class="card">
+    <div class="card-title">⊞ Apply Activity — The Double-Edged Sword Comparison Table</div>
+    <div class="info-box">
+      <strong>Directions:</strong> For each technology, fill in (1) the specific problem it was designed to solve and (2) a key unintended consequence it created. Use your own words.
+    </div>
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Technology</th>
+            <th>Intended Purpose<br><span style="font-weight:400;font-style:italic;">What problem was it designed to solve?</span></th>
+            <th>Unintended Consequence<br><span style="font-weight:400;font-style:italic;">What new problem did it create?</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Shipping Container</td>
+            <td><textarea placeholder="What was it designed to do?"></textarea></td>
+            <td><textarea placeholder="What problem did it create?"></textarea></td>
+          </tr>
+          <tr>
+            <td>Penicillin / Antibiotics</td>
+            <td><textarea placeholder="What was it designed to do?"></textarea></td>
+            <td><textarea placeholder="What problem did it create?"></textarea></td>
+          </tr>
+          <tr>
+            <td>Fossil Fuel Energy</td>
+            <td><textarea placeholder="What was it designed to do?"></textarea></td>
+            <td><textarea placeholder="What problem did it create?"></textarea></td>
+          </tr>
+          <tr>
+            <td>Vaccines</td>
+            <td><textarea placeholder="What was it designed to do?"></textarea></td>
+            <td><textarea placeholder="What new challenge emerged?"></textarea></td>
+          </tr>
+          <tr>
+            <td>Birth Control Pill</td>
+            <td><textarea placeholder="What was it designed to do?"></textarea></td>
+            <td><textarea placeholder="What social changes did it trigger?"></textarea></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</section><!-- end DOK 2 -->
+
+<hr class="section-divider">
+
+<!-- ═══════════════════════════════════════════════════
+     DOK 3 — KNOWLEDGE ANALYSIS
+     ═══════════════════════════════════════════════════ -->
+<section class="dok-section dok3">
+  <div class="dok-header">
+    <span class="dok-badge">DOK 3</span>
+    <span class="dok-title">Knowledge Analysis</span>
+    <span class="dok-subtitle">Examine &amp; Explain with Evidence</span>
+  </div>
+
+  <!-- CAUSAL CHAIN -->
+  <div class="card">
+    <div class="card-title">⛓ Causal Chain — From Scientific Discovery to Social Transformation</div>
+    <div class="info-box">
+      <strong>Directions:</strong> Two nodes in this chain are blank. In each blank node, write what belongs there based on your knowledge. Then click <em>Reveal Answers</em> to check.
+    </div>
+
+    <div class="chain-container">
+
+      <div class="chain-row">
+        <span class="node-num">1</span>
+        <div class="node-box">
+          Alexander Fleming accidentally discovers that mold (Penicillium) kills bacteria in a lab dish (1928), leading to the development of <strong>penicillin</strong> — the world's first antibiotic.
+        </div>
+      </div>
+      <div class="chain-arrow">↓</div>
+
+      <div class="chain-row">
+        <span class="node-num">2</span>
+        <div class="node-box blank">
+          <textarea placeholder="What happened next? How was penicillin first used on a large scale, and what was the immediate effect on human mortality?"></textarea>
+        </div>
+      </div>
+      <div id="chain2-answer" class="chain-answer-box"></div>
+      <div class="chain-arrow">↓</div>
+
+      <div class="chain-row">
+        <span class="node-num">3</span>
+        <div class="node-box">
+          After WWII, penicillin and subsequent antibiotics became widely available to the public, curing diseases like tuberculosis, syphilis, and pneumonia that had killed humans for millennia. Combined with mass vaccination campaigns, life expectancy rose sharply across the globe.
+        </div>
+      </div>
+      <div class="chain-arrow">↓</div>
+
+      <div class="chain-row">
+        <span class="node-num">4</span>
+        <div class="node-box blank">
+          <textarea placeholder="What unintended consequence emerged from the widespread overuse of antibiotics? What did Fleming himself predict about this in 1945?"></textarea>
+        </div>
+      </div>
+      <div id="chain4-answer" class="chain-answer-box"></div>
+      <div class="chain-arrow">↓</div>
+
+      <div class="chain-row">
+        <span class="node-num">5</span>
+        <div class="node-box">
+          Today, antibiotic-resistant bacteria (superbugs) are a global health crisis. Common infections that were once easily treated now require last-resort drugs or are untreatable, threatening to reverse decades of medical progress — the double-edged sword in action.
+        </div>
+      </div>
+
+    </div>
+
+    <button class="reveal-btn" style="margin-top:14px;" onclick="revealChain()">Reveal Answers for Blank Nodes</button>
+  </div>
+
+  <!-- THESIS EVALUATOR -->
+  <div class="card">
+    <div class="card-title">⚖ Thesis Evaluator — Click Each Card to See the Verdict</div>
+    <div class="info-box">
+      <strong>Directions:</strong> Each card contains a possible thesis statement responding to this prompt:<br>
+      <em style="color:var(--parchment);">"Evaluate the extent to which technological advances after 1900 improved the quality of human life."</em><br>
+      Click each card to find out if it earns the AP thesis point and why.
+    </div>
+
+    <div class="thesis-grid">
+
+      <div class="thesis-card" onclick="revThesis(this,\x27fail\x27,\x27FAIL — This is a restatement of the prompt, not a thesis. It does not establish a line of reasoning or make a defensible claim about degree. The reader learns nothing about how or why technology improved life.\x27)">
+        <div class="thesis-card-label">Thesis Attempt A</div>
+        "Technological advances after 1900 greatly improved the quality of human life in many ways."
+        <div class="thesis-verdict"></div>
+        <div class="thesis-explanation"></div>
+      </div>
+
+      <div class="thesis-card" onclick="revThesis(this,\x27pass\x27,\x27PASS — This thesis establishes a clear line of reasoning. It makes a defensible claim (significant improvement), identifies specific categories of evidence (medicine, food), and introduces a qualifying nuance (unintended costs) that sets up a sophisticated argument.\x27)">
+        <div class="thesis-card-label">Thesis Attempt B</div>
+        "While technological advances in medicine and agriculture after 1900 dramatically extended human lifespans and reduced famine, these same technologies generated unintended consequences — from antibiotic-resistant superbugs to environmental degradation — that complicated and sometimes undermined those gains."
+        <div class="thesis-verdict"></div>
+        <div class="thesis-explanation"></div>
+      </div>
+
+      <div class="thesis-card" onclick="revThesis(this,\x27fail\x27,\x27FAIL — This thesis takes an extreme, indefensible position. It ignores substantial evidence that technology did improve life in measurable ways (vaccines, longer lifespans, reduced famine). An AP thesis must be historically defensible — not every position qualifies.\x27)">
+        <div class="thesis-card-label">Thesis Attempt C</div>
+        "Technological advances after 1900 did not improve human life at all because every invention created more problems than it solved, leaving humanity worse off than before."
+        <div class="thesis-verdict"></div>
+        <div class="thesis-explanation"></div>
+      </div>
+
+      <div class="thesis-card" onclick="revThesis(this,\x27pass\x27,\x27PASS — This thesis earns the point by establishing clear analytic categories (communications and medical technology) as the primary drivers of change, and by framing the argument around an extent claim (transformative but uneven). It previews a line of reasoning the essay can actually follow.\x27)">
+        <div class="thesis-card-label">Thesis Attempt D</div>
+        "Advances in communications and medical technology after 1900 were transformative enough to fundamentally reshape daily life for billions of people, though their benefits were distributed unevenly across class and gender lines, revealing that technological progress does not automatically produce social equality."
+        <div class="thesis-verdict"></div>
+        <div class="thesis-explanation"></div>
+      </div>
+
+    </div>
+    <div class="thesis-hint">↑ Click each card to reveal the verdict and explanation</div>
+  </div>
+
+</section><!-- end DOK 3 -->
+
+<hr class="section-divider">
+
+<!-- ═══════════════════════════════════════════════════
+     DOK 4 — KNOWLEDGE AUGMENTATION
+     ═══════════════════════════════════════════════════ -->
+<section class="dok-section dok4">
+  <div class="dok-header">
+    <span class="dok-badge">DOK 4</span>
+    <span class="dok-title">Knowledge Augmentation</span>
+    <span class="dok-subtitle">Explore &amp; Explain with Examples &amp; Evidence</span>
+  </div>
+
+  <!-- CONTEXTUALIZATION BUILDER -->
+  <div class="card">
+    <div class="card-title">◎ Contextualization Builder — 3 Pathways</div>
+    <div class="info-box">
+      <strong>AP Contextualization Tip:</strong> Contextualization is NOT just background. You must describe a broader historical development and <em>explain how it connects</em> to the specific topic. Aim for 3–5 sentences.
+    </div>
+
+    <!-- Pathway 1 -->
+    <div class="ctx-pathway" id="ctx1">
+      <div class="ctx-header" onclick="toggleCtx('ctx1')">
+        <span class="ctx-pathway-num">Pathway 1</span>
+        <span class="ctx-pathway-title">The Industrial Revolution as the Foundation for 20th-Century Technology</span>
+        <span class="ctx-toggle">▼</span>
+      </div>
+      <div class="ctx-body">
+        <div class="ctx-stem">
+          <strong>Stem:</strong> Technological advances after 1900 did not emerge in isolation — they built on the transformations set in motion by the Industrial Revolution of the 18th and 19th centuries. Consider: How did industrialization create the infrastructure, scientific culture, and global economic networks that made 20th-century technological leaps possible?
+        </div>
+        <p style="font-size:0.88rem; color:var(--text-muted); margin:12px 0 6px;">
+          Your Contextualization — Pathway 1:
+        </p>
+        <textarea rows="5" placeholder="Write your contextualization paragraph using the Pathway 1 stem above. Start before 1900 and connect to the technologies covered in this section..."></textarea>
+        <div class="sample-label">Model Contextualization — Pathway 1</div>
+        <div class="sample-body">
+          The technological advances that transformed life after 1900 were made possible by the scientific and economic infrastructure built during the Industrial Revolution of the eighteenth and nineteenth centuries. Industrialization shifted economies from agricultural subsistence to mechanized manufacturing, concentrating capital, labor, and knowledge in ways that funded the universities, laboratories, and factories needed to produce penicillin, synthetic fertilizers, and mass-produced goods. The fossil fuel economy that powered industrial factories also provided the energy foundation on which 20th-century global transportation and communications networks were built. Furthermore, industrial capitalism created a global trading system — including shipping routes and financial instruments — that the shipping container and later the internet would further accelerate. In this way, the double-edged technologies of the 20th century were the direct offspring of the double-edged industrial revolution that preceded them.
+        </div>
+      </div>
+    </div>
+
+    <!-- Pathway 2 -->
+    <div class="ctx-pathway" id="ctx2">
+      <div class="ctx-header" onclick="toggleCtx('ctx2')">
+        <span class="ctx-pathway-num">Pathway 2</span>
+        <span class="ctx-pathway-title">World War II as an Accelerant of Technological Development</span>
+        <span class="ctx-toggle">▼</span>
+      </div>
+      <div class="ctx-body">
+        <div class="ctx-stem">
+          <strong>Stem:</strong> Several technologies covered in this section — including penicillin, nuclear power, and the internet's predecessor ARPANET — were directly developed or accelerated by World War II and Cold War military investment. How did global conflict reshape the trajectory of technological development after 1900?
+        </div>
+        <p style="font-size:0.88rem; color:var(--text-muted); margin:12px 0 6px;">
+          Your Contextualization — Pathway 2:
+        </p>
+        <textarea rows="5" placeholder="Write your contextualization paragraph using the Pathway 2 stem above. Focus on how war and geopolitical competition drove technological investment..."></textarea>
+        <div class="sample-label">Model Contextualization — Pathway 2</div>
+        <div class="sample-body">
+          World War II served as a massive accelerant for the technological advances that would define life after 1945. The desperate need to prevent soldiers from dying of infected wounds led the Allied governments to fund the mass production of penicillin — a drug that had been discovered in 1928 but barely developed. Similarly, the nuclear weapons programs of the Manhattan Project, though designed for destruction, laid the foundation for nuclear energy and radiation medicine. After the war, Cold War competition between the United States and the Soviet Union drove enormous government investment in science and engineering, including the creation of ARPANET — the military communications network that eventually became the public internet. The global conflict and superpower rivalry of the 20th century thus paradoxically accelerated both the most destructive and the most beneficial technological changes in human history, illustrating how war and geopolitical pressure have consistently shaped the pace and direction of innovation.
+        </div>
+      </div>
+    </div>
+
+    <!-- Pathway 3 -->
+    <div class="ctx-pathway" id="ctx3">
+      <div class="ctx-header" onclick="toggleCtx('ctx3')">
+        <span class="ctx-pathway-num">Pathway 3</span>
+        <span class="ctx-pathway-title">Population Growth and the Demand for New Solutions</span>
+        <span class="ctx-toggle">▼</span>
+      </div>
+      <div class="ctx-body">
+        <div class="ctx-stem">
+          <strong>Stem:</strong> The world's population roughly quadrupled over the 20th century, from ~1.6 billion in 1900 to over 6 billion by 2000. This explosive growth created unprecedented demand for food, energy, medicine, and communication — and was itself partly <em>caused by</em> the technologies designed to meet that demand. How does population growth connect to the technological story of this era?
+        </div>
+        <p style="font-size:0.88rem; color:var(--text-muted); margin:12px 0 6px;">
+          Your Contextualization — Pathway 3:
+        </p>
+        <textarea rows="5" placeholder="Write your contextualization paragraph using the Pathway 3 stem above. Consider both how population growth drove technology AND how technology drove population growth..."></textarea>
+        <div class="sample-label">Model Contextualization — Pathway 3</div>
+        <div class="sample-body">
+          The explosive growth of the global population over the 20th century created urgent demand for the very technologies covered in this section, while simultaneously being shaped by them. In 1900, the world held approximately 1.6 billion people; by 2000, that number exceeded six billion — a change driven in part by the medical advances (vaccines, antibiotics) and agricultural breakthroughs (Green Revolution) that dramatically reduced death rates. This created a paradox: the technologies that saved lives contributed to a population growth that then demanded even more technological solutions for food and energy. Norman Borlaug himself acknowledged this cycle when he called the Green Revolution a "temporary success, a breathing space" — recognizing that without addressing population dynamics alongside agricultural production, hunger would eventually return. The birth control pill introduced yet another dimension, allowing individuals — especially women — to manage reproduction and thus participate in reshaping the demographic pressures that had driven so much of the century's technological development.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SAQ PRACTICE -->
+  <div class="card">
+    <div class="card-title">✎ SAQ Practice — Parts A, B, C</div>
+    <div class="saq-context">
+      <strong>Use the following information to answer parts A, B, and C.</strong><br><br>
+      "We called it a temporary success, a breathing space. The Green Revolution has won a temporary victory in man's war against hunger and deprivation; it has given man a breathing space. If fully implemented, the revolution can provide sufficient food for sustenance to the swelling ranks of mankind during the next three decades. But the frightening power of human reproduction must also be curbed; otherwise the success of the Green Revolution will be ephemeral only."
+      <br><br>
+      <em>— Norman Borlaug, Nobel Peace Prize acceptance speech, 1970</em>
+    </div>
+
+    <div class="saq-part">
+      <div class="saq-part-label">Part A</div>
+      <div class="saq-part-prompt"><strong>Identify</strong> one specific claim Borlaug makes in the passage about the limitations of the Green Revolution.</div>
+      <div class="saq-ap-skill">AP Verb: Identify · 1–2 sentences · No explanation needed, just name the claim</div>
+      <textarea placeholder="Part A response (1–2 sentences)..."></textarea>
+    </div>
+
+    <div class="saq-part">
+      <div class="saq-part-label">Part B</div>
+      <div class="saq-part-prompt"><strong>Describe</strong> one specific historical development from the period after 1900 that provides evidence supporting Borlaug's concern about human reproduction and food supply.</div>
+      <div class="saq-ap-skill">AP Verb: Describe · 2–3 sentences · Provide relevant characteristics, not just a term</div>
+      <textarea placeholder="Part B response (2–3 sentences). Name a specific development and describe its relevant characteristics..."></textarea>
+    </div>
+
+    <div class="saq-part">
+      <div class="saq-part-label">Part C</div>
+      <div class="saq-part-prompt"><strong>Explain</strong> how one technology other than agricultural advances both addressed and complicated the challenge of sustaining a rapidly growing global population after 1900.</div>
+      <div class="saq-ap-skill">AP Verb: Explain · 3–4 sentences · Must show HOW/WHY — connect cause to effect, show the complication</div>
+      <textarea placeholder="Part C response (3–4 sentences). Choose ONE technology (e.g., medicine, energy, birth control) and explain both how it helped AND how it created complications for the same challenge..."></textarea>
+    </div>
+  </div>
+
+  <!-- CROSS-UNIT SYNTHESIS -->
+  <div class="card">
+    <div class="card-title">⊕ Cross-Unit Synthesis — Connecting 9.1 to the Broader AP Course</div>
+    <div class="info-box">
+      The AP exam rewards students who can connect topics across time periods and units. Each connection below links Section 9.1 to earlier or concurrent developments in the course.
+    </div>
+
+    <div class="synthesis-connections">
+      <div class="synth-item">
+        <strong>→ Unit 5 (Industrialization):</strong> The fossil fuel energy that powered 20th-century globalization was built on the coal and steam foundation of the 19th-century Industrial Revolution. How did the energy sources change — and how did the environmental consequences escalate?
+      </div>
+      <div class="synth-item">
+        <strong>→ Unit 7 (Global Conflict):</strong> World War II directly accelerated several technologies in this section — penicillin mass production, nuclear power, and jet engines. How did the violence of total war paradoxically advance human welfare?
+      </div>
+      <div class="synth-item">
+        <strong>→ Unit 8 (Cold War):</strong> The internet originated as ARPANET, a Cold War military communications project. How did superpower competition shape civilian technology in ways that neither the U.S. nor U.S.S.R. intended?
+      </div>
+      <div class="synth-item">
+        <strong>→ Unit 9.5 (Calls for Reform):</strong> The birth control pill was both a medical technology and a catalyst for the women's rights movements of the 1960s–70s. How does this show that technological change and social/political change are inseparable?
+      </div>
+    </div>
+
+    <p style="font-size:0.88rem; color:var(--parchment); font-weight:600; margin-bottom:4px;">
+      Synthesis Response Prompt:
+    </p>
+    <p style="font-size:0.86rem; color:var(--text-secondary); margin-bottom:6px;">
+      Choose <strong>one</strong> of the connections above. In 4–6 sentences, explain how it deepens your understanding of technological change after 1900. Use specific evidence from both units.
+    </p>
+    <textarea style="min-height:120px;" placeholder="Choose one connection and develop it with specific evidence from both the earlier unit and Section 9.1..."></textarea>
+  </div>
+
+  <!-- SELF-ASSESSMENT -->
+  <div class="card">
+    <div class="card-title">◉ Self-Assessment — Rate Your AP Skills</div>
+    <div class="info-box">Be honest with yourself. "Not Yet" is not a failure — it tells you exactly what to review before the exam.</div>
+
+    <div class="sa-skill">
+      <div class="sa-skill-name">Identify &amp; Describe Key Technologies</div>
+      <div class="sa-skill-desc">I can name specific technologies (e.g., penicillin, shipping container, birth control pill) and describe their relevant characteristics without just listing terms.</div>
+      <div class="sa-rating">
+        <button class="sa-btn sa-label-item" onclick="rateSelf(this,'notyet')">Not Yet</button>
+        <button class="sa-btn sa-label-item" onclick="rateSelf(this,'getting')">Getting There</button>
+        <button class="sa-btn sa-label-item" onclick="rateSelf(this,'confident')">Confident</button>
+      </div>
+    </div>
+
+    <div class="sa-skill">
+      <div class="sa-skill-name">Explain Unintended Consequences</div>
+      <div class="sa-skill-desc">I can explain (how/why) the unintended costs of a specific technology — not just identify that consequences existed, but trace the causal mechanism.</div>
+      <div class="sa-rating">
+        <button class="sa-btn sa-label-item" onclick="rateSelf(this,'notyet')">Not Yet</button>
+        <button class="sa-btn sa-label-item" onclick="rateSelf(this,'getting')">Getting There</button>
+        <button class="sa-btn sa-label-item" onclick="rateSelf(this,'confident')">Confident</button>
+      </div>
+    </div>
+
+    <div class="sa-skill">
+      <div class="sa-skill-name">Apply the Double-Edged Sword Framework</div>
+      <div class="sa-skill-desc">I can use the three-step formula on any AP question about technology after 1900: (1) identify the technology, (2) describe its intended purpose, (3) explain an unintended consequence.</div>
+      <div class="sa-rating">
+        <button class="sa-btn sa-label-item" onclick="rateSelf(this,'notyet')">Not Yet</button>
+        <button class="sa-btn sa-label-item" onclick="rateSelf(this,'getting')">Getting There</button>
+        <button class="sa-btn sa-label-item" onclick="rateSelf(this,'confident')">Confident</button>
+      </div>
+    </div>
+
+    <div class="sa-skill">
+      <div class="sa-skill-name">Write a Defensible Thesis</div>
+      <div class="sa-skill-desc">I can write an AP thesis on technology after 1900 that makes a defensible "extent" claim, establishes a line of reasoning, and does NOT simply restate the prompt.</div>
+      <div class="sa-rating">
+        <button class="sa-btn sa-label-item" onclick="rateSelf(this,'notyet')">Not Yet</button>
+        <button class="sa-btn sa-label-item" onclick="rateSelf(this,'getting')">Getting There</button>
+        <button class="sa-btn sa-label-item" onclick="rateSelf(this,'confident')">Confident</button>
+      </div>
+    </div>
+
+    <div class="sa-skill">
+      <div class="sa-skill-name">Write Contextualization</div>
+      <div class="sa-skill-desc">I can write a contextualization paragraph that connects 9.1 technology to a broader preceding or concurrent development (e.g., Industrial Revolution, WWII, population growth) AND explains the connection.</div>
+      <div class="sa-rating">
+        <button class="sa-btn sa-label-item" onclick="rateSelf(this,'notyet')">Not Yet</button>
+        <button class="sa-btn sa-label-item" onclick="rateSelf(this,'getting')">Getting There</button>
+        <button class="sa-btn sa-label-item" onclick="rateSelf(this,'confident')">Confident</button>
+      </div>
+    </div>
+
+    <div class="sa-skill">
+      <div class="sa-skill-name">SAQ Response Quality</div>
+      <div class="sa-skill-desc">I can correctly match the AP verb (identify vs. describe vs. explain) and write responses that earn the point — specific, 2–3 sentences, historically accurate, no fluff.</div>
+      <div class="sa-rating">
+        <button class="sa-btn sa-label-item" onclick="rateSelf(this,'notyet')">Not Yet</button>
+        <button class="sa-btn sa-label-item" onclick="rateSelf(this,'getting')">Getting There</button>
+        <button class="sa-btn sa-label-item" onclick="rateSelf(this,'confident')">Confident</button>
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- end DOK 4 -->
+
+</main><!-- end main-content -->
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+/* ---- MCQ ---- */
+function checkMCQ(qid, btn, isCorrect) {
+  const item = document.getElementById(qid);
+  const fb = document.getElementById(qid + '-fb');
+  if (!fb._orig) fb._orig = fb.innerHTML;
+  if (isCorrect) {
+    item.querySelectorAll('.mcq-option').forEach(b => {
+      b.classList.add('disabled');
+      b.onclick = null;
+    });
+    btn.classList.add('correct');
+    fb.innerHTML = fb._orig;
+    fb.classList.remove('wrong-fb');
+    fb.classList.add('show');
+  } else {
+    btn.classList.add('incorrect', 'disabled');
+    btn.onclick = null;
+    fb.innerHTML = '<strong>Incorrect.</strong> That\x27s not it \u2014 try again.';
+    fb.classList.add('show', 'wrong-fb');
+  }
+}
+
+/* ---- MATCHING ---- */
+const matchKey = { A:'1', B:'3', C:'2', D:'4', E:'5' };
+let selectedTerm = null;
+let selectedTermId = null;
+let matchedCount = 0;
+
+function selectMatch(id, code) {
+  const el = document.getElementById(id);
+  if (el.classList.contains('matched-correct')) return;
+
+  // Determine if term (A-E) or consequence (1-5)
+  const isTerm = ['A','B','C','D','E'].includes(code);
+
+  if (!selectedTerm) {
+    if (!isTerm) return; // must select term first
+    // Deselect any previously selected
+    document.querySelectorAll('.match-item.selected').forEach(e => e.classList.remove('selected'));
+    el.classList.add('selected');
+    selectedTerm = code;
+    selectedTermId = id;
+  } else {
+    if (isTerm) {
+      // Reselect term
+      document.querySelectorAll('.match-item.selected').forEach(e => e.classList.remove('selected'));
+      el.classList.add('selected');
+      selectedTerm = code;
+      selectedTermId = id;
+      return;
+    }
+    // Check match
+    const termEl = document.getElementById(selectedTermId);
+    const correct = matchKey[selectedTerm] === code;
+    if (correct) {
+      termEl.classList.remove('selected');
+      termEl.classList.add('matched-correct');
+      el.classList.add('matched-correct');
+      matchedCount++;
+      if (matchedCount === 5) {
+        const result = document.getElementById('match-result');
+        result.textContent = '\u2713 All matched correctly! Technology always comes with trade-offs.';
+        result.classList.add('show','success');
+      }
+    } else {
+      termEl.classList.remove('selected');
+      termEl.classList.add('matched-wrong');
+      el.classList.add('matched-wrong');
+      setTimeout(() => {
+        termEl.classList.remove('matched-wrong');
+        el.classList.remove('matched-wrong');
+      }, 900);
+    }
+    selectedTerm = null;
+    selectedTermId = null;
+  }
+}
+
+function resetMatch() {
+  document.querySelectorAll('.match-item').forEach(el => {
+    el.className = 'match-item';
+    el.onclick = el.id.startsWith('mt-')
+      ? function(){ selectMatch(this.id, this.id.replace('mt-','')) }.bind(el)
+      : function(){ selectMatch(this.id, this.id.replace('mc-','')) }.bind(el);
+  });
+  // Rebind onclick properly
+  document.querySelectorAll('[id^="mt-"]').forEach(el => {
+    const code = el.id.replace('mt-','');
+    el.onclick = () => selectMatch(el.id, code);
+  });
+  document.querySelectorAll('[id^="mc-"]').forEach(el => {
+    const code = el.id.replace('mc-','');
+    el.onclick = () => selectMatch(el.id, code);
+  });
+  const result = document.getElementById('match-result');
+  result.classList.remove('show','success');
+  result.textContent = '';
+  selectedTerm = null;
+  selectedTermId = null;
+  matchedCount = 0;
+}
+
+/* ---- REVEAL MODEL ---- */
+function revealModel(btn, id) {
+  const el = document.getElementById(id);
+  el.classList.add('show');
+  btn.disabled = true;
+  btn.textContent = 'Model Shown';
+}
+
+/* ---- CAUSAL CHAIN ---- */
+function revealChain() {
+  const a2 = document.getElementById('chain2-answer');
+  const a4 = document.getElementById('chain4-answer');
+  a2.textContent = 'During World War II, Allied governments funded the mass production of penicillin to treat infected wounds in soldiers. This had an immediate and dramatic effect: thousands of soldiers who would have died from infected wounds, gangrene, or sepsis survived. Some historians estimate that penicillin saved over 100,000 Allied lives in the war alone.';
+  a2.style.display = 'block';
+  a4.textContent = 'The widespread overuse and misuse of antibiotics — in humans, livestock, and agriculture — created evolutionary pressure on bacteria. As Fleming himself warned in his 1945 Nobel Prize speech, bacteria evolved resistance to penicillin and subsequent antibiotics, producing drug-resistant "superbugs" such as MRSA (Methicillin-resistant Staphylococcus aureus). This unintended consequence now threatens to reverse decades of medical progress.';
+  a4.style.display = 'block';
+}
+
+/* ---- THESIS EVALUATOR ---- */
+function revThesis(el, verdict, explanation) {
+  if (el.classList.contains('revealed')) return;
+  el.classList.add('revealed', verdict);
+  el.querySelector('.thesis-verdict').textContent = verdict.toUpperCase();
+  el.querySelector('.thesis-explanation').textContent = explanation;
+}
+
+/* ---- CONTEXTUALIZATION BUILDER ---- */
+function toggleCtx(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle('open');
+}
+
+/* ---- SELF-ASSESSMENT ---- */
+function rateSelf(btn, level) {
+  const group = btn.closest('.sa-rating');
+  group.querySelectorAll('.sa-btn').forEach(b => {
+    b.classList.remove('selected-notyet','selected-getting','selected-confident');
+  });
+  if (level === 'notyet') btn.classList.add('selected-notyet');
+  if (level === 'getting') btn.classList.add('selected-getting');
+  if (level === 'confident') btn.classList.add('selected-confident');
+}
+</script>
+
+</body>
+</html>

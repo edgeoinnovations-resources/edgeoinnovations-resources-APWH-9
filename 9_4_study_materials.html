@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9.4 Economics in the Global Age — AP World History</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1410;
+    --parchment: #f0ead8;
+    --parchment-dark: #e2d9c2;
+    --gold: #b8860b;
+    --gold-light: #d4a017;
+    --gold-pale: rgba(184,134,11,0.12);
+    --crimson: #8b1a1a;
+    --teal: #1a5c5c;
+    --text-secondary: #4a3f30;
+    --text-muted: #7a6a55;
+    --border: rgba(184,134,11,0.25);
+    --border-light: rgba(184,134,11,0.12);
+    --dok1: #1a4a1a;
+    --dok1-bg: rgba(26,74,26,0.08);
+    --dok2: #1a3a5c;
+    --dok2-bg: rgba(26,58,92,0.08);
+    --dok3: #5c1a1a;
+    --dok3-bg: rgba(92,26,26,0.08);
+    --dok4: #3a1a5c;
+    --dok4-bg: rgba(58,26,92,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', serif;
+    background: #f5efdf;
+    color: var(--ink);
+    line-height: 1.65;
+  }
+
+  /* ─── HEADER ─── */
+  .site-header {
+    background: var(--ink);
+    padding: 36px 40px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .site-header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 20px,
+      rgba(184,134,11,0.04) 20px,
+      rgba(184,134,11,0.04) 21px
+    );
+  }
+  .header-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    position: relative;
+  }
+  .header-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: var(--parchment);
+    line-height: 1.15;
+    position: relative;
+  }
+  .header-title span {
+    color: var(--gold-light);
+    font-style: italic;
+  }
+  .header-meta {
+    margin-top: 12px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+    position: relative;
+  }
+  .header-eq {
+    margin-top: 14px;
+    padding: 12px 18px;
+    border-left: 3px solid var(--gold);
+    background: rgba(184,134,11,0.08);
+    font-size: 0.88rem;
+    color: var(--parchment-dark);
+    font-style: italic;
+    position: relative;
+  }
+
+  /* ─── NAVIGATION PILLS ─── */
+  .nav-bar {
+    background: var(--parchment-dark);
+    border-bottom: 2px solid var(--border);
+    padding: 0 32px;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-pill {
+    padding: 12px 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+    transition: all 0.2s;
+    border: none;
+    background: none;
+  }
+  .nav-pill:hover { color: var(--ink); }
+  .nav-pill.dok1 { border-bottom-color: transparent; }
+  .nav-pill.dok1:hover, .nav-pill.dok1.active { color: var(--dok1); border-bottom-color: var(--dok1); }
+  .nav-pill.dok2:hover, .nav-pill.dok2.active { color: var(--dok2); border-bottom-color: var(--dok2); }
+  .nav-pill.dok3:hover, .nav-pill.dok3.active { color: var(--dok3); border-bottom-color: var(--dok3); }
+  .nav-pill.dok4:hover, .nav-pill.dok4.active { color: var(--dok4); border-bottom-color: var(--dok4); }
+
+  /* ─── MAIN LAYOUT ─── */
+  .main { max-width: 880px; margin: 0 auto; padding: 0 24px 60px; }
+
+  /* ─── DOK SECTION HEADERS ─── */
+  .dok-header {
+    margin: 40px 0 24px;
+    padding: 20px 28px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .dok-header.dok1 { background: var(--dok1-bg); border-left: 4px solid var(--dok1); }
+  .dok-header.dok2 { background: var(--dok2-bg); border-left: 4px solid var(--dok2); }
+  .dok-header.dok3 { background: var(--dok3-bg); border-left: 4px solid var(--dok3); }
+  .dok-header.dok4 { background: var(--dok4-bg); border-left: 4px solid var(--dok4); }
+  .dok-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+  .dok1 .dok-badge { background: var(--dok1); color: #e8f5e8; }
+  .dok2 .dok-badge { background: var(--dok2); color: #e0eaf5; }
+  .dok3 .dok-badge { background: var(--dok3); color: #f5e0e0; }
+  .dok4 .dok-badge { background: var(--dok4); color: #ece0f5; }
+  .dok-header-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    line-height: 1.2;
+  }
+  .dok1 .dok-header-text h2 { color: var(--dok1); }
+  .dok2 .dok-header-text h2 { color: var(--dok2); }
+  .dok3 .dok-header-text h2 { color: var(--dok3); }
+  .dok4 .dok-header-text h2 { color: var(--dok4); }
+  .dok-header-text p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* ─── CARDS / PANELS ─── */
+  .panel {
+    background: var(--parchment);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 24px 28px;
+    margin-bottom: 20px;
+  }
+  .panel-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: var(--ink);
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  /* ─── VIDEO EMBED ─── */
+  .video-wrap {
+    position: relative;
+    padding-top: 56.25%;
+    border-radius: 2px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    margin-bottom: 16px;
+  }
+  .video-wrap iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+  }
+  .video-quote {
+    padding: 14px 20px;
+    border-left: 3px solid var(--gold);
+    background: var(--gold-pale);
+    font-style: italic;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+  }
+
+  /* ─── VISUAL FRAMEWORK ─── */
+  .framework-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 10px;
+  }
+  .fw-box {
+    padding: 16px;
+    border-radius: 2px;
+    border: 1px solid var(--border-light);
+  }
+  .fw-box h4 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .fw-box ul {
+    padding-left: 16px;
+    font-size: 0.84rem;
+    color: var(--text-secondary);
+  }
+  .fw-box li { margin-bottom: 4px; }
+  .fw-economy { background: rgba(26,74,26,0.06); border-color: rgba(26,74,26,0.2); }
+  .fw-economy h4 { color: var(--dok1); }
+  .fw-mfg { background: rgba(26,58,92,0.06); border-color: rgba(26,58,92,0.2); }
+  .fw-mfg h4 { color: var(--dok2); }
+  .fw-trade { background: rgba(92,60,26,0.06); border-color: rgba(92,60,26,0.2); }
+  .fw-trade h4 { color: #5c3c1a; }
+  .fw-mnc { background: rgba(92,26,26,0.06); border-color: rgba(92,26,26,0.2); }
+  .fw-mnc h4 { color: var(--dok3); }
+  .timeline-bar {
+    display: flex;
+    align-items: stretch;
+    margin: 16px 0;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .tl-event {
+    flex: 1;
+    padding: 12px 10px;
+    font-size: 0.78rem;
+    text-align: center;
+    border-right: 1px solid var(--border-light);
+  }
+  .tl-event:last-child { border-right: none; }
+  .tl-event strong { display: block; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--gold); margin-bottom: 4px; }
+  .tl-event span { color: var(--text-secondary); }
+
+  /* ─── FLIP CARDS ─── */
+  .flip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .flip-card {
+    height: 120px;
+    cursor: pointer;
+    perspective: 800px;
+  }
+  .flip-inner {
+    position: relative;
+    width: 100%; height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
+  .flip-front, .flip-back {
+    position: absolute;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+  .flip-front {
+    background: var(--parchment);
+    border: 1px solid var(--border);
+    min-height: 120px;
+    position: relative;
+  }
+  .flip-front .term {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.88rem;
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .flip-front .flip-hint {
+    position: absolute;
+    bottom: 8px;
+    left: 0; right: 0;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--text-muted);
+  }
+  .flip-back {
+    background: var(--ink);
+    border: 1px solid var(--gold);
+    transform: rotateY(180deg);
+    font-size: 0.78rem;
+    color: var(--parchment-dark);
+    line-height: 1.4;
+  }
+
+  /* ─── MCQ ─── */
+  .mcq-item { margin-bottom: 24px; }
+  .mcq-question { font-weight: 600; font-size: 0.9rem; margin-bottom: 10px; color: var(--ink); }
+  .mcq-options { display: flex; flex-direction: column; gap: 8px; }
+  .mcq-option {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    background: var(--parchment);
+    color: var(--text-secondary);
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.84rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.15s;
+  }
+  .mcq-option:hover:not(.disabled) { border-color: var(--gold); background: var(--gold-pale); }
+  .mcq-option.correct { background: rgba(26,74,26,0.15); border-color: var(--dok1); color: var(--dok1); cursor: default; }
+  .mcq-option.incorrect { background: rgba(92,26,26,0.1); border-color: #c0504d; color: #8b1a1a; text-decoration: line-through; cursor: default; }
+  .mcq-option.disabled { pointer-events: none; }
+  .mcq-feedback {
+    display: none;
+    margin-top: 8px;
+    padding: 10px 14px;
+    border-radius: 3px;
+    font-size: 0.82rem;
+    background: rgba(26,74,26,0.08);
+    border: 1px solid rgba(26,74,26,0.2);
+    color: var(--text-secondary);
+  }
+  .mcq-feedback.show { display: block; }
+  .mcq-feedback.wrong-fb { background: rgba(107,45,45,0.3); border-color: #f08080; color: var(--crimson); }
+
+  /* ─── MATCHING ─── */
+  .match-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .match-col { display: flex; flex-direction: column; gap: 8px; }
+  .match-item {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    font-size: 0.84rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    user-select: none;
+  }
+  .match-item.term {
+    background: var(--parchment);
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .match-item.definition {
+    background: rgba(184,134,11,0.06);
+    color: var(--text-secondary);
+  }
+  .match-item.selected { border-color: var(--gold); background: var(--gold-pale); }
+  .match-item.matched-correct { border-color: var(--dok1); background: rgba(26,74,26,0.1); color: var(--dok1); pointer-events: none; }
+  .match-item.matched-wrong { border-color: #c0504d; background: rgba(92,26,26,0.1); animation: shake 0.4s; }
+  @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-4px)} 75%{transform:translateX(4px)} }
+  .match-feedback { margin-top: 12px; font-size: 0.82rem; color: var(--text-muted); font-style: italic; }
+
+  /* ─── EXPLAIN DRILL ─── */
+  .drill-prompt {
+    padding: 16px 20px;
+    background: rgba(26,58,92,0.07);
+    border-left: 3px solid var(--dok2);
+    border-radius: 0 3px 3px 0;
+    font-size: 0.9rem;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+  .drill-prompt strong { color: var(--dok2); }
+  textarea {
+    width: 100%;
+    min-height: 100px;
+    margin: 10px 0;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.6);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    color: var(--ink);
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.88rem;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  textarea:focus { border-color: var(--gold); }
+  .reveal-btn {
+    padding: 8px 20px;
+    border: 1px solid var(--gold);
+    border-radius: 3px;
+    background: transparent;
+    color: var(--gold);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .reveal-btn:hover { background: var(--gold); color: white; }
+  .model-response {
+    display: none;
+    margin-top: 12px;
+    padding: 14px 18px;
+    background: rgba(26,58,92,0.06);
+    border: 1px solid rgba(26,58,92,0.2);
+    border-radius: 3px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+  .model-response.show { display: block; }
+  .model-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--dok2);
+    margin-bottom: 8px;
+  }
+
+  /* ─── APPLY ACTIVITY TABLE ─── */
+  .apply-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.84rem;
+  }
+  .apply-table th {
+    background: var(--ink);
+    color: var(--parchment);
+    padding: 10px 14px;
+    text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .apply-table td {
+    padding: 10px 14px;
+    border: 1px solid var(--border-light);
+    vertical-align: top;
+    color: var(--text-secondary);
+  }
+  .apply-table tr:nth-child(even) td { background: rgba(184,134,11,0.04); }
+  .apply-table textarea { min-height: 70px; margin: 0; font-size: 0.82rem; }
+
+  /* ─── CAUSAL CHAIN ─── */
+  .chain-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    overflow-x: auto;
+    padding: 10px 0;
+  }
+  .chain-node {
+    flex: 1;
+    min-width: 130px;
+    padding: 14px 12px;
+    border-radius: 3px;
+    border: 1px solid var(--border);
+    background: var(--parchment);
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    text-align: center;
+  }
+  .chain-node.blank {
+    background: rgba(184,134,11,0.05);
+    border-style: dashed;
+    border-color: var(--gold);
+    cursor: pointer;
+  }
+  .chain-node.blank:hover { background: var(--gold-pale); }
+  .chain-node.revealed { background: rgba(26,74,26,0.08); border-color: var(--dok1); border-style: solid; color: var(--dok1); }
+  .chain-arrow {
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+    color: var(--gold);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    align-self: center;
+  }
+  .chain-node-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+  .chain-answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 14px;
+  }
+  .chain-answer-box {
+    display: none;
+    padding: 10px 14px;
+    background: rgba(26,74,26,0.08);
+    border: 1px solid rgba(26,74,26,0.25);
+    border-radius: 3px;
+    font-size: 0.82rem;
+    color: var(--dok1);
+  }
+  .chain-answer-box.show { display: block; }
+
+  /* ─── THESIS EVALUATOR ─── */
+  .thesis-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 12px;
+  }
+  .thesis-card {
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    cursor: pointer;
+    background: var(--parchment);
+    font-size: 0.84rem;
+    font-style: italic;
+    color: var(--text-secondary);
+    transition: all 0.2s;
+    line-height: 1.55;
+  }
+  .thesis-card:hover:not(.revealed) { border-color: var(--gold); background: var(--gold-pale); }
+  .thesis-card.revealed.pass { background: rgba(26,74,26,0.1); border-color: var(--dok1); }
+  .thesis-card.revealed.fail { background: rgba(92,26,26,0.1); border-color: #c0504d; }
+  .thesis-verdict {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+  .pass .thesis-verdict { color: var(--dok1); }
+  .fail .thesis-verdict { color: var(--crimson); }
+  .thesis-explanation {
+    font-style: normal;
+    font-size: 0.78rem;
+    margin-top: 6px;
+    color: var(--text-secondary);
+  }
+  .thesis-instruction {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+  }
+
+  /* ─── CONTEXTUALIZATION BUILDER ─── */
+  .ctx-pathway {
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .ctx-header {
+    padding: 14px 20px;
+    background: var(--parchment-dark);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--ink);
+    transition: background 0.15s;
+  }
+  .ctx-header:hover { background: var(--gold-pale); }
+  .ctx-pathway-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-right: 12px;
+  }
+  .ctx-arrow { transition: transform 0.3s; color: var(--text-muted); }
+  .ctx-pathway.open .ctx-arrow { transform: rotate(180deg); }
+  .ctx-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s;
+    padding: 0 20px;
+  }
+  .ctx-pathway.open .ctx-body {
+    max-height: 1200px;
+    padding: 0 20px 20px;
+  }
+  .ctx-stem {
+    margin: 14px 0 10px;
+    padding: 12px 16px;
+    background: var(--gold-pale);
+    border-left: 3px solid var(--gold);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+  .sample-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 14px 0 6px;
+  }
+  .sample-body {
+    padding: 12px 16px;
+    background: rgba(184,134,11,0.05);
+    border: 1px solid var(--border-light);
+    border-radius: 3px;
+    font-size: 0.83rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+
+  /* ─── SAQ PRACTICE ─── */
+  .saq-scenario {
+    padding: 16px 20px;
+    background: rgba(92,26,26,0.06);
+    border: 1px solid rgba(92,26,26,0.15);
+    border-radius: 3px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 18px;
+    line-height: 1.6;
+  }
+  .saq-part {
+    margin-bottom: 20px;
+    padding: 16px 18px;
+    border: 1px solid var(--border-light);
+    border-radius: 3px;
+    background: var(--parchment);
+  }
+  .saq-part-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--dok3);
+    margin-bottom: 6px;
+  }
+  .saq-part p { font-size: 0.88rem; color: var(--ink); margin-bottom: 8px; }
+
+  /* ─── CROSS-UNIT SYNTHESIS ─── */
+  .synthesis-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .syn-box {
+    padding: 12px 14px;
+    border-radius: 3px;
+    border: 1px solid var(--border-light);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+  }
+  .syn-box h5 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .syn-u7 { background: rgba(26,74,26,0.06); }
+  .syn-u7 h5 { color: var(--dok1); }
+  .syn-u8 { background: rgba(26,58,92,0.06); }
+  .syn-u8 h5 { color: var(--dok2); }
+  .syn-u9 { background: rgba(92,26,26,0.06); }
+  .syn-u9 h5 { color: var(--dok3); }
+
+  /* ─── SELF ASSESSMENT ─── */
+  .sa-grid { display: flex; flex-direction: column; gap: 12px; }
+  .sa-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    border: 1px solid var(--border-light);
+    border-radius: 3px;
+    background: var(--parchment);
+  }
+  .sa-skill { flex: 1; font-size: 0.85rem; color: var(--ink); }
+  .sa-skill code {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+  .sa-buttons { display: flex; gap: 6px; flex-shrink: 0; }
+  .sa-btn {
+    padding: 5px 10px;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    background: transparent;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    white-space: nowrap;
+    color: var(--text-muted);
+    transition: all 0.2s;
+    min-width: 28px;
+  }
+  .sa-btn:hover { border-color: var(--gold); color: var(--gold); }
+  .sa-btn.active-not { background: rgba(92,26,26,0.15); border-color: var(--crimson); color: var(--crimson); }
+  .sa-btn.active-getting { background: rgba(184,134,11,0.15); border-color: var(--gold); color: var(--gold); }
+  .sa-btn.active-conf { background: rgba(26,74,26,0.15); border-color: var(--dok1); color: var(--dok1); }
+  .sa-label-item { min-width: 28px; white-space: nowrap; }
+
+  /* ─── DIVIDERS ─── */
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--border-light);
+    margin: 28px 0;
+  }
+
+  /* ─── HIPP GRID ─── */
+  .hipp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .hipp-cell {
+    padding: 12px 14px;
+    border: 1px solid var(--border-light);
+    border-radius: 3px;
+    background: var(--parchment);
+  }
+  .hipp-cell h5 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .hipp-cell p { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 6px; font-style: italic; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 620px) {
+    .framework-grid, .thesis-grid, .chain-answers, .match-grid, .hipp-grid, .synthesis-grid { grid-template-columns: 1fr; }
+    .flip-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+    .nav-bar { padding: 0 16px; }
+    .main { padding: 0 16px 60px; }
+    .dok-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .timeline-bar { flex-direction: column; }
+    .tl-event { border-right: none; border-bottom: 1px solid var(--border-light); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════ HEADER ══════════════════ -->
+<header class="site-header">
+  <div class="header-eyebrow">AP World History: Modern — Unit 9 Globalization</div>
+  <h1 class="header-title">9.4 Economics in the <span>Global Age</span></h1>
+  <div class="header-meta">ECN Theme · Continuity & Change Over Time · Skill 2.C Sourcing</div>
+  <div class="header-eq">
+    <strong>Essential Question:</strong> How did the global economy change and remain the same from 1900 to the present?
+  </div>
+</header>
+
+<!-- ══════════════════ NAV ══════════════════ -->
+<nav class="nav-bar">
+  <button class="nav-pill dok1 active" onclick="scrollToSection('dok1')">DOK 1 · Acquire</button>
+  <button class="nav-pill dok2" onclick="scrollToSection('dok2')">DOK 2 · Apply</button>
+  <button class="nav-pill dok3" onclick="scrollToSection('dok3')">DOK 3 · Analyze</button>
+  <button class="nav-pill dok4" onclick="scrollToSection('dok4')">DOK 4 · Augment</button>
+</nav>
+
+<div class="main">
+
+<!-- ══════════════════ DOK 1 ══════════════════ -->
+<section id="dok1">
+  <div class="dok-header dok1">
+    <div>
+      <span class="dok-badge">DOK 1</span>
+    </div>
+    <div class="dok-header-text">
+      <h2>Knowledge Acquisition</h2>
+      <p>Answer correctly — recall, recognize, identify</p>
+    </div>
+  </div>
+
+  <!-- Video Explainer -->
+  <div class="panel">
+    <div class="panel-title">📺 Video Explainer</div>
+    <div class="video-quote">
+      "The end of the Cold War wasn't just about politics — it was a decisive victory for free market capitalism, setting the stage for economic liberalization to go global in a way nobody had ever seen before."
+    </div>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/HzwF1hOLI2k" allowfullscreen title="APWH 9.4 Economics in the Global Age"></iframe>
+    </div>
+    <p style="font-size:0.8rem;color:var(--text-muted);margin-top:8px;">Watch the full explainer, then work through the activities below. Take notes on: the four key leaders, the "brains vs. brawn" split, and what sourcing means on the AP exam.</p>
+  </div>
+
+  <!-- Visual Framework -->
+  <div class="panel">
+    <div class="panel-title">🗺 Visual Framework — Four Forces of Global Economic Change</div>
+    <div class="timeline-bar">
+      <div class="tl-event"><strong>1970s–80s</strong><span>Economic liberalization spreads (Reagan, Thatcher, Pinochet, Deng)</span></div>
+      <div class="tl-event"><strong>1980s–90s</strong><span>Knowledge economy grows in developed world; manufacturing shifts to Asia & Latin America</span></div>
+      <div class="tl-event"><strong>1989–91</strong><span>Cold War ends; free market capitalism declared "winner"; former communist states open up</span></div>
+      <div class="tl-event"><strong>1995+</strong><span>WTO, NAFTA, ASEAN; MNCs dominate; global supply chains become standard</span></div>
+    </div>
+    <div class="framework-grid">
+      <div class="fw-box fw-economy">
+        <h4>🏛 Free Market Revolution</h4>
+        <ul>
+          <li>Economic liberalization</li>
+          <li>Reagan (US) — tax cuts, deregulation</li>
+          <li>Thatcher (UK) — privatization</li>
+          <li>Pinochet (Chile) — market reforms</li>
+          <li>Deng Xiaoping (China) — SEZs</li>
+        </ul>
+      </div>
+      <div class="fw-box fw-mfg">
+        <h4>🧠 Knowledge vs. Manufacturing Split</h4>
+        <ul>
+          <li>Knowledge economies: US, Finland, Japan</li>
+          <li>Manufacturing economies: Vietnam, Bangladesh, Mexico</li>
+          <li>Maquiladoras (Mexico–US border factories)</li>
+          <li>"Asian Tigers" rapid industrialization</li>
+        </ul>
+      </div>
+      <div class="fw-box fw-trade">
+        <h4>📜 New Rules & Institutions</h4>
+        <ul>
+          <li>WTO (1995) — global trade rules</li>
+          <li>NAFTA — North American free trade</li>
+          <li>ASEAN — Southeast Asian trade bloc</li>
+          <li>GATT → WTO evolution</li>
+        </ul>
+      </div>
+      <div class="fw-box fw-mnc">
+        <h4>🏢 Multinational Corporations (MNCs)</h4>
+        <ul>
+          <li>Operate across multiple countries</li>
+          <li>Global supply chains</li>
+          <li>Mahindra & Mahindra (socially responsible)</li>
+          <li>Nestlé (labor & water controversies)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flip Cards -->
+  <div class="panel">
+    <div class="panel-title">🃏 Key Vocabulary — Flip Cards</div>
+    <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:12px;">Click each card to reveal the definition.</p>
+    <div class="flip-grid">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="term">Economic Liberalization</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">The opening of a country's economy — cutting taxes, reducing regulations, privatizing industries, and welcoming foreign trade and investment.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="term">Free Market</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">An economic system based on supply and demand with minimal government control; championed by Reagan, Thatcher, and post-Cold War policy makers.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="term">Knowledge Economy</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">An economy where the most valuable products are ideas, data, and innovation rather than manufactured goods; associated with developed nations like the US and Finland.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="term">Maquiladora</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">Foreign-owned factories in Mexico (especially near the US border) that assemble goods for export; expanded after NAFTA; criticized for low wages and poor conditions.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="term">Multinational Corporation (MNC)</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">A company that operates in multiple countries, often designing products in one nation, manufacturing in another, and selling globally. Example: designing in US, assembling in Vietnam, selling worldwide.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="term">WTO</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">World Trade Organization (est. 1995) — the international body that creates and enforces global trade rules, consistently pushing to reduce barriers to free trade.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="term">NAFTA</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">North American Free Trade Agreement — eliminated most tariffs between the US, Canada, and Mexico; accelerated manufacturing shift and maquiladora growth.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="term">ASEAN</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">Association of Southeast Asian Nations — a regional trade bloc that facilitated the growth of manufacturing economies in Vietnam, Bangladesh, and others.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="term">Deng Xiaoping</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">Chinese leader who introduced Special Economic Zones (SEZs) and allowed foreign investment and private enterprise — transforming China's economy while the Communist Party maintained political control.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="term">Sourcing (HIPP)</span><span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">AP exam skill: analyzing a source's Historical situation, Intended audience, Point of view, and Purpose to determine what it reveals and what it limits about understanding the past.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recall MCQs -->
+  <div class="panel">
+    <div class="panel-title">✅ Recall Check — Multiple Choice</div>
+    <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:16px;">Select the best answer. Wrong answers are eliminated; keep trying until you find the right one.</p>
+
+    <div class="mcq-item" id="mcq1">
+      <div class="mcq-question">1. Which of the following best describes "economic liberalization" as it occurred after 1980?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(A) Governments expanded state-owned industries to boost employment</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,true)">(B) Governments reduced regulations, cut taxes, and opened borders to trade and investment</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(C) Communist parties introduced free elections alongside market reforms</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(D) International organizations replaced national governments in managing economies</button>
+      </div>
+      <div class="mcq-feedback" id="mcq1-fb"><strong>Correct — B.</strong> Economic liberalization meant governments "stepped back" — cutting taxes, slashing regulations, privatizing industries, and opening to foreign trade. This was the core policy shift championed by Reagan, Thatcher, Pinochet, and Deng Xiaoping, though in very different political systems.</div>
+    </div>
+
+    <div class="mcq-item" id="mcq2">
+      <div class="mcq-question">2. Deng Xiaoping's economic reforms in China were significant primarily because they</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(A) ended Communist Party rule and established multiparty elections</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(B) joined China to the NAFTA free trade agreement</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,true)">(C) introduced Special Economic Zones and private enterprise while the Communist Party kept political control</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(D) aligned China with the Soviet Union's central planning model</button>
+      </div>
+      <div class="mcq-feedback" id="mcq2-fb"><strong>Correct — C.</strong> Deng Xiaoping's genius was allowing market reforms and foreign investment through Special Economic Zones — fueling explosive economic growth — while the Communist Party maintained iron control over politics. This defied the idea that capitalism and communism couldn't coexist.</div>
+    </div>
+
+    <div class="mcq-item" id="mcq3">
+      <div class="mcq-question">3. The growth of maquiladoras in Mexico in the late 20th century is best understood as a result of</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(A) Mexico developing its own knowledge economy</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(B) the WTO requiring equal distribution of factories across member nations</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,true)">(C) companies in wealthier countries shifting manufacturing to lower-wage economies after NAFTA</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(D) Mexico nationalizing foreign companies to produce goods domestically</button>
+      </div>
+      <div class="mcq-feedback" id="mcq3-fb"><strong>Correct — C.</strong> After NAFTA removed tariff barriers, US companies could build factories in Mexico (maquiladoras) where wages, taxes, and regulations were lower. Workers assembled goods that were then shipped back to the US for sale — a classic example of global production shifting to lower-wage regions.</div>
+    </div>
+
+    <div class="mcq-item" id="mcq4">
+      <div class="mcq-question">4. Which of the following BEST illustrates the difference between a "knowledge economy" and a "manufacturing economy"?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(A) Finland exports raw materials; Vietnam exports software</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,true)">(B) The US designs software products while Bangladesh manufactures garments for export</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(C) The WTO oversees knowledge economies while ASEAN oversees manufacturing economies</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(D) MNCs operate only in knowledge economies, not in manufacturing regions</button>
+      </div>
+      <div class="mcq-feedback" id="mcq4-fb"><strong>Correct — B.</strong> Knowledge economies (US, Finland, Japan) produce ideas, data, and innovation. Manufacturing economies (Vietnam, Bangladesh, Mexico) specialize in assembling and producing physical goods. These two types are interdependent — the design happens in one place, the production in another.</div>
+    </div>
+
+    <div class="mcq-item" id="mcq5">
+      <div class="mcq-question">5. When analyzing a source on the AP exam using the "sourcing" skill, a student should consider which of the following?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(A) Whether the author's last name appears in the textbook</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(B) Only the date the source was created</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(C) Whether the source agrees with the student's thesis</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,true)">(D) The author's point of view, purpose, historical situation, and intended audience</button>
+      </div>
+      <div class="mcq-feedback" id="mcq5-fb"><strong>Correct — D.</strong> Sourcing (HIPP) means analyzing Historical situation, Intended audience, Point of view, and Purpose. A politician's speech and an academic report may reach the same conclusion but for very different reasons — and understanding those differences is the essence of high-level historical analysis on the AP exam.</div>
+    </div>
+  </div>
+
+  <!-- Matching Activity -->
+  <div class="panel">
+    <div class="panel-title">🔗 Matching Activity — Leaders &amp; Their Policies</div>
+    <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:14px;">Click a term on the left, then click its matching description on the right.</p>
+    <div class="match-grid">
+      <div class="match-col" id="terms-col">
+        <div class="match-item term" data-id="reagan" onclick="selectMatch(this)">Ronald Reagan</div>
+        <div class="match-item term" data-id="thatcher" onclick="selectMatch(this)">Margaret Thatcher</div>
+        <div class="match-item term" data-id="deng" onclick="selectMatch(this)">Deng Xiaoping</div>
+        <div class="match-item term" data-id="pinochet" onclick="selectMatch(this)">Augusto Pinochet</div>
+        <div class="match-item term" data-id="wto" onclick="selectMatch(this)">WTO</div>
+      </div>
+      <div class="match-col" id="defs-col">
+        <div class="match-item definition" data-id="thatcher" onclick="selectMatch(this)">UK leader who privatized major industries and challenged trade unions to promote free markets</div>
+        <div class="match-item definition" data-id="wto" onclick="selectMatch(this)">Created in 1995 to establish and enforce global trade rules, pushing for fewer tariff barriers</div>
+        <div class="match-item definition" data-id="deng" onclick="selectMatch(this)">Set up Special Economic Zones in communist China, allowing foreign investment while retaining party rule</div>
+        <div class="match-item definition" data-id="reagan" onclick="selectMatch(this)">US president who championed "Reaganomics" — tax cuts and deregulation to spur growth</div>
+        <div class="match-item definition" data-id="pinochet" onclick="selectMatch(this)">Chilean authoritarian who implemented free market reforms backed by US-trained economists</div>
+      </div>
+    </div>
+    <div class="match-feedback" id="match-feedback"></div>
+  </div>
+</section>
+
+<!-- ══════════════════ DOK 2 ══════════════════ -->
+<section id="dok2">
+  <div class="dok-header dok2">
+    <div>
+      <span class="dok-badge">DOK 2</span>
+    </div>
+    <div class="dok-header-text">
+      <h2>Knowledge Application</h2>
+      <p>Establish and explain with examples — apply, describe, compare</p>
+    </div>
+  </div>
+
+  <!-- Explain Drill 1 -->
+  <div class="panel">
+    <div class="panel-title">🖊 Explain Drill 1 of 2 — Causation</div>
+    <div class="drill-prompt">
+      <strong>Prompt:</strong> Explain ONE way in which the end of the Cold War <strong>caused</strong> the acceleration of free-market economic policies in the late 20th century.
+      <br><br>
+      <span style="font-size:0.78rem;color:var(--text-muted);">📌 Skill tip: "Explain" means you must show the connection — how or why. A good response names a development AND connects it to the effect. Aim for 2–3 sentences.</span>
+    </div>
+    <textarea placeholder="Write your explanation here. Remember: name the development AND explain HOW or WHY it caused the change..."></textarea>
+    <button class="reveal-btn" onclick="revealModel(this)">Reveal Model Response</button>
+    <div class="model-response">
+      <div class="model-label">Model Response</div>
+      The collapse of the Soviet Union and the end of the Cold War in 1989–1991 discredited communism as a viable global economic alternative, removing the main ideological challenge to free market capitalism. With central planning largely "off the table," governments across Eastern Europe, Latin America, and Asia faced pressure — from international lenders like the IMF and from trading partners — to embrace economic liberalization policies such as privatization, deregulation, and open trade. The decisive failure of the Soviet command economy gave free market advocates like Reagan and Thatcher powerful evidence that markets, not governments, should drive economic growth.
+    </div>
+  </div>
+
+  <!-- Explain Drill 2 -->
+  <div class="panel">
+    <div class="panel-title">🖊 Explain Drill 2 of 2 — Continuity &amp; Change</div>
+    <div class="drill-prompt">
+      <strong>Prompt:</strong> Explain ONE way in which the global economic divide between wealthier and poorer nations <strong>continued</strong> even as the global economy became more interconnected after 1980.
+      <br><br>
+      <span style="font-size:0.78rem;color:var(--text-muted);">📌 CCOT tip: Look for something that seems new on the surface but reflects an older pattern of inequality. Use a specific example to anchor your answer.</span>
+    </div>
+    <textarea placeholder="Write your explanation here. Name a specific continuity and explain WHY it persisted despite new global connections..."></textarea>
+    <button class="reveal-btn" onclick="revealModel(this)">Reveal Model Response</button>
+    <div class="model-response">
+      <div class="model-label">Model Response</div>
+      Even as globalization created new trade networks and jobs in developing nations, the fundamental economic hierarchy between wealthy and poorer nations persisted. Countries like Vietnam, Bangladesh, and Mexico gained manufacturing jobs, but the higher-value activities — design, research, patents, and profits — remained concentrated in developed knowledge economies like the United States, Finland, and Japan. Maquiladoras in Mexico, for example, created employment but were notorious for low wages and poor working conditions, while the profits flowed back to foreign corporations. This mirrored earlier patterns of economic imperialism where peripheral nations supplied labor or raw materials while the core nations captured most of the economic gains.
+    </div>
+  </div>
+
+  <!-- Apply Activity: HIPP Sourcing -->
+  <div class="panel">
+    <div class="panel-title">⚖️ Apply Activity — HIPP Sourcing Comparison</div>
+    <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:14px;">The video compared two sources on the impact of free trade. Use the HIPP framework to analyze each one below. Remember: both sources may reach similar conclusions but for very different reasons.</p>
+
+    <div style="margin-bottom:18px;">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Source A — Political Speech</div>
+      <div class="saq-scenario" style="background:rgba(26,58,92,0.06);border-color:rgba(26,58,92,0.2);">
+        <em>"I have opposed NAFTA from day one. These trade deals have allowed corporations to shut down American factories, fire American workers, and move production to countries where workers are paid a fraction of what American workers earn."</em>
+        <br>— Bernie Sanders, Presidential Primary Debate, 2016
+      </div>
+      <div class="hipp-grid">
+        <div class="hipp-cell">
+          <h5>Historical Situation</h5>
+          <p>When &amp; what broader events shaped this source?</p>
+          <textarea style="min-height:60px;" placeholder="What historical context surrounds this source?"></textarea>
+        </div>
+        <div class="hipp-cell">
+          <h5>Intended Audience</h5>
+          <p>Who was this made for?</p>
+          <textarea style="min-height:60px;" placeholder="Who is listening and why does that matter?"></textarea>
+        </div>
+        <div class="hipp-cell">
+          <h5>Point of View</h5>
+          <p>What perspective shapes this source?</p>
+          <textarea style="min-height:60px;" placeholder="What biases or values does the author bring?"></textarea>
+        </div>
+        <div class="hipp-cell">
+          <h5>Purpose</h5>
+          <p>Why was this created?</p>
+          <textarea style="min-height:60px;" placeholder="What is the author trying to accomplish?"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom:18px;">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Source B — Academic Report</div>
+      <div class="saq-scenario" style="background:rgba(26,58,92,0.06);border-color:rgba(26,58,92,0.2);">
+        <em>"Analysis of employment data from 1995 to 2010 reveals a statistically significant correlation between increased import competition from Mexico and the offshoring of manufacturing positions previously held by American workers in sectors including textiles, electronics assembly, and automotive parts."</em>
+        <br>— Dr. Timothy Hogan, Economic Policy Research Institute, 2012
+      </div>
+      <div class="hipp-grid">
+        <div class="hipp-cell">
+          <h5>Historical Situation</h5>
+          <p>When &amp; what broader events shaped this source?</p>
+          <textarea style="min-height:60px;" placeholder="What historical context surrounds this source?"></textarea>
+        </div>
+        <div class="hipp-cell">
+          <h5>Intended Audience</h5>
+          <p>Who was this made for?</p>
+          <textarea style="min-height:60px;" placeholder="Who is the audience and why does it matter?"></textarea>
+        </div>
+        <div class="hipp-cell">
+          <h5>Point of View</h5>
+          <p>What perspective shapes this source?</p>
+          <textarea style="min-height:60px;" placeholder="What does the author's position mean for the source's limitations?"></textarea>
+        </div>
+        <div class="hipp-cell">
+          <h5>Purpose</h5>
+          <p>Why was this created?</p>
+          <textarea style="min-height:60px;" placeholder="What is this source trying to do that makes it different from Source A?"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:16px;">
+      <p style="font-size:0.85rem;font-weight:600;color:var(--ink);margin-bottom:8px;">Synthesis Question: Both sources reach similar conclusions about the impact of free trade. Explain ONE way the differences in audience and purpose affect how you would use these sources in an AP argument.</p>
+      <textarea placeholder="Your synthesis response: How do the different authors, audiences, and purposes change how you'd USE these sources as historical evidence?"></textarea>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ DOK 3 ══════════════════ -->
+<section id="dok3">
+  <div class="dok-header dok3">
+    <div>
+      <span class="dok-badge">DOK 3</span>
+    </div>
+    <div class="dok-header-text">
+      <h2>Knowledge Analysis</h2>
+      <p>Examine and explain with evidence — argue, evaluate, construct</p>
+    </div>
+  </div>
+
+  <!-- Causal Chain -->
+  <div class="panel">
+    <div class="panel-title">⛓ Causal Chain — From Cold War End to Global Inequality</div>
+    <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:16px;">Two nodes in this chain are blank. Click them to reveal the missing step, then use the textareas below to write your own version first.</p>
+    <div class="chain-container">
+      <div class="chain-node">
+        <div class="chain-node-label">Node 1</div>
+        Cold War ends (1989–91); communism discredited as economic model
+      </div>
+      <div class="chain-arrow">→</div>
+      <div class="chain-node blank" id="cc1" onclick="revealChainAnswer('cc1')">
+        <div class="chain-node-label">Blank 1</div>
+        <span style="font-size:0.78rem;font-style:italic;color:var(--text-muted);">What ideology fills the vacuum? What do governments do?</span>
+        <span style="display:block;margin-top:6px;font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--gold);">click to reveal</span>
+      </div>
+      <div class="chain-arrow">→</div>
+      <div class="chain-node">
+        <div class="chain-node-label">Node 3</div>
+        MNCs move production to Asia &amp; Latin America for lower costs; knowledge economy concentrates in wealthy nations
+      </div>
+      <div class="chain-arrow">→</div>
+      <div class="chain-node blank" id="cc2" onclick="revealChainAnswer('cc2')">
+        <div class="chain-node-label">Blank 2</div>
+        <span style="font-size:0.78rem;font-style:italic;color:var(--text-muted);">What is the ultimate effect on global inequality?</span>
+        <span style="display:block;margin-top:6px;font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--gold);">click to reveal</span>
+      </div>
+    </div>
+    <div class="chain-answers">
+      <div>
+        <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:4px;font-family:'JetBrains Mono',monospace;font-size:0.7rem;">Your answer for Blank 1:</p>
+        <textarea style="min-height:70px;" placeholder="Write what you think belongs in the blank before you click to reveal..."></textarea>
+        <div class="chain-answer-box" id="cc1-answer"></div>
+      </div>
+      <div>
+        <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:4px;font-family:'JetBrains Mono',monospace;font-size:0.7rem;">Your answer for Blank 2:</p>
+        <textarea style="min-height:70px;" placeholder="Write what you think belongs in the blank before you click to reveal..."></textarea>
+        <div class="chain-answer-box" id="cc2-answer"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Thesis Evaluator -->
+  <div class="panel">
+    <div class="panel-title">🎯 Thesis Evaluator</div>
+    <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:6px;"><strong>Prompt:</strong> Evaluate the extent to which economic globalization after 1980 changed the global economy.</p>
+    <p class="thesis-instruction">Click each thesis to reveal whether it PASSES or FAILS the AP standard — and why.</p>
+    <div class="thesis-grid">
+      <div class="thesis-card" onclick="revThesis(this,\x27fail\x27,\x27FAIL — This restates the prompt without making an argument. It tells us globalization changed things but offers no line of reasoning about how or why, and no categories to organize the argument.\x27)">
+        "Economic globalization after 1980 changed the global economy in many significant ways."
+      </div>
+      <div class="thesis-card" onclick="revThesis(this,\x27fail\x27,\x27FAIL — This is a defensible claim but not a thesis. It identifies what happened without establishing a LINE OF REASONING. There are no categories, no degree of change argued, and no preview of how the essay will be organized.\x27)">
+        "Economic globalization created new trade organizations like the WTO and NAFTA."
+      </div>
+      <div class="thesis-card" onclick="revThesis(this,\x27pass\x27,\x27PASS — This thesis establishes a clear line of reasoning with analytic categories (who benefited vs. who was harmed) and makes an argument about degree. It previews that the essay will address both sides, which sets up a nuanced argument.\x27)">
+        "While economic globalization after 1980 generated significant wealth for multinational corporations and knowledge economies in the developed world, it largely reproduced historical patterns of inequality by confining developing nations like Vietnam and Mexico to low-wage manufacturing roles."
+      </div>
+      <div class="thesis-card" onclick="revThesis(this,\x27pass\x27,\x27PASS — This thesis makes a clear evaluative claim with a line of reasoning: globalization created a new form of interdependence, but the dominant change was the emergence of a \x22brains vs. brawn\x22 divide. The categories (knowledge vs. manufacturing economies) are specific and would support organized body paragraphs.\x27)">
+        "Economic globalization after 1980 fundamentally transformed the global economy by splitting it into interdependent knowledge economies — concentrated in wealthy nations — and manufacturing economies in Asia and Latin America, creating new forms of both opportunity and exploitation."
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ DOK 4 ══════════════════ -->
+<section id="dok4">
+  <div class="dok-header dok4">
+    <div>
+      <span class="dok-badge">DOK 4</span>
+    </div>
+    <div class="dok-header-text">
+      <h2>Knowledge Augmentation</h2>
+      <p>Explore and explain with examples &amp; evidence — extend, connect, synthesize</p>
+    </div>
+  </div>
+
+  <!-- Contextualization Builder -->
+  <div class="panel">
+    <div class="panel-title">🌐 Contextualization Builder — 3 Pathways</div>
+    <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:16px;">Write your own contextualization paragraph using one of these stems, then compare it to the model. A strong contextualization paragraph is 3–5 sentences and connects your topic to a <em>broader</em> historical development — not just background facts.</p>
+
+    <!-- Pathway 1 -->
+    <div class="ctx-pathway" id="ctx1">
+      <div class="ctx-header" onclick="toggleCtx('ctx1')">
+        <span><span class="ctx-pathway-num">Pathway 1</span>Connect to pre-1980 economic history (earlier globalization waves)</span>
+        <span class="ctx-arrow">▼</span>
+      </div>
+      <div class="ctx-body">
+        <div class="ctx-stem">
+          <strong>Sentence Stem:</strong> "Although the free market globalization of the late 20th century seemed unprecedented, it was part of a longer history of economic integration dating back to..."
+        </div>
+        <p style="font-size:0.82rem;color:var(--text-muted);margin:10px 0 6px;">Your Contextualization — Pathway 1:</p>
+        <textarea rows="5" placeholder="Write your contextualization paragraph using the Pathway 1 stem above. Connect 9.4 to an earlier wave of globalization — think Indian Ocean trade, the Columbian Exchange, or early 20th century imperialism..."></textarea>
+        <div class="sample-label">Model Contextualization — Pathway 1</div>
+        <div class="sample-body">Although the free market globalization of the late 20th century seemed unprecedented, it was part of a longer history of economic integration dating back centuries. European imperialism of the 19th century had already created a global division of labor in which colonies supplied raw materials while industrialized powers produced manufactured goods for export — a structure that profoundly shaped the economic geography of Africa, Asia, and Latin America. The post-1980 globalization era mirrored this pattern in new forms: former colonial regions now supplied low-cost manufacturing labor, while former imperial powers transitioned into knowledge and service economies. Understanding this continuity helps explain why many developing nations and critics viewed late 20th century free trade not as liberation but as a repackaged version of economic dependency.</div>
+      </div>
+    </div>
+
+    <!-- Pathway 2 -->
+    <div class="ctx-pathway" id="ctx2">
+      <div class="ctx-header" onclick="toggleCtx('ctx2')">
+        <span><span class="ctx-pathway-num">Pathway 2</span>Connect to Cold War ideology and the fall of communism</span>
+        <span class="ctx-arrow">▼</span>
+      </div>
+      <div class="ctx-body">
+        <div class="ctx-stem">
+          <strong>Sentence Stem:</strong> "The rapid spread of free market economics after 1980 must be understood against the backdrop of the decades-long ideological struggle between capitalism and communism..."
+        </div>
+        <p style="font-size:0.82rem;color:var(--text-muted);margin:10px 0 6px;">Your Contextualization — Pathway 2:</p>
+        <textarea rows="5" placeholder="Write your contextualization paragraph using the Pathway 2 stem above. Connect the free market revolution to the Cold War ideological contest — why did the end of the Cold War matter so much economically?"></textarea>
+        <div class="sample-label">Model Contextualization — Pathway 2</div>
+        <div class="sample-body">The rapid spread of free market economics after 1980 must be understood against the backdrop of the decades-long ideological struggle between capitalism and communism that defined the Cold War. For much of the 20th century, Soviet-style central planning represented a credible alternative economic model, and many newly independent nations in Africa, Asia, and Latin America experimented with state-led development or non-alignment. However, by the 1970s and 1980s, communist economies were visibly struggling — stagnant growth, shortages, and technological lag — while capitalist economies in the West surged ahead. When the Soviet Union collapsed in 1991, it effectively removed the main ideological barrier to free market dominance, creating the conditions for the WTO, regional trade blocs, and multinational corporations to reshape the global economy on capitalist terms.</div>
+      </div>
+    </div>
+
+    <!-- Pathway 3 -->
+    <div class="ctx-pathway" id="ctx3">
+      <div class="ctx-header" onclick="toggleCtx('ctx3')">
+        <span><span class="ctx-pathway-num">Pathway 3</span>Connect to technological revolution and communications (9.1 link)</span>
+        <span class="ctx-arrow">▼</span>
+      </div>
+      <div class="ctx-body">
+        <div class="ctx-stem">
+          <strong>Sentence Stem:</strong> "The emergence of knowledge economies and global supply chains in the late 20th century would have been impossible without the simultaneous revolution in information and communications technology..."
+        </div>
+        <p style="font-size:0.82rem;color:var(--text-muted);margin:10px 0 6px;">Your Contextualization — Pathway 3:</p>
+        <textarea rows="5" placeholder="Write your contextualization paragraph using the Pathway 3 stem above. Connect the economic changes in 9.4 to the tech revolution from 9.1. How did computers, the internet, and communications make this economic shift possible?"></textarea>
+        <div class="sample-label">Model Contextualization — Pathway 3</div>
+        <div class="sample-body">The emergence of knowledge economies and global supply chains in the late 20th century would have been impossible without the simultaneous revolution in information and communications technology. The development of the internet, personal computers, and international telecommunications infrastructure in the 1970s–1990s allowed companies to coordinate production across multiple continents in real time — a design team in California could work with a manufacturer in Vietnam and sell the finished product in Germany through a single, seamlessly managed supply chain. This technological infrastructure was the "backbone" of economic globalization, enabling the knowledge economy to flourish in developed nations while connecting manufacturing regions in Asia and Latin America to global markets. Without these technological advances, the MNC-driven model of dispersed production simply could not have existed at the scale it reached by the early 21st century.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SAQ Practice -->
+  <div class="panel">
+    <div class="panel-title">📝 SAQ Practice</div>
+    <div class="saq-scenario">
+      <strong>Source (No Stimulus — Q4 Type):</strong> Answer all parts of the question that follows.<br><br>
+      Historians debate the extent to which economic globalization after 1980 transformed the global economy and the relationship between developed and developing nations.
+    </div>
+
+    <div class="saq-part">
+      <div class="saq-part-label">Part A</div>
+      <p><strong>Identify</strong> ONE specific development that contributed to the acceleration of free market economic policies in the late 20th century.</p>
+      <textarea placeholder="Part A — Identify (1–2 sentences). Name the specific development with enough detail that the reader knows exactly what you mean. No need to explain HOW or WHY yet."></textarea>
+    </div>
+
+    <div class="saq-part">
+      <div class="saq-part-label">Part B</div>
+      <p><strong>Explain</strong> ONE way in which revolutions in information and communications technology led to the growth of knowledge economies in the late 20th century.</p>
+      <textarea placeholder="Part B — Explain (2–3 sentences). Name a specific technology or development AND show how/why it caused knowledge economies to grow. Connect cause to effect."></textarea>
+    </div>
+
+    <div class="saq-part">
+      <div class="saq-part-label">Part C</div>
+      <p><strong>Explain</strong> ONE way in which the growth of manufacturing economies in Asia or Latin America reflected a <em>continuity</em> in the global economic order despite the changes brought by globalization.</p>
+      <textarea placeholder="Part C — Explain a CONTINUITY (2–3 sentences). Identify what stayed the same (a pattern from earlier eras) AND explain HOW/WHY this older pattern persisted even as the economy was supposedly being transformed."></textarea>
+    </div>
+
+    <div style="margin-top:14px;padding:12px 16px;background:rgba(58,26,92,0.06);border:1px solid rgba(58,26,92,0.15);border-radius:3px;">
+      <p style="font-size:0.78rem;font-family:'JetBrains Mono',monospace;color:var(--dok4);margin-bottom:8px;">SAQ SCORING REMINDER</p>
+      <p style="font-size:0.82rem;color:var(--text-secondary);">Each part (A, B, C) is worth 1 point independently. Part A needs a <em>specific</em> identification. Parts B and C need HOW/WHY — not just WHAT happened. Part C specifically requires showing a historical pattern that persisted despite apparent change — this tests your Continuity &amp; Change Over Time (CCOT) skill.</p>
+    </div>
+  </div>
+
+  <!-- Cross-Unit Synthesis -->
+  <div class="panel">
+    <div class="panel-title">🔄 Cross-Unit Synthesis</div>
+    <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:14px;">Topic 9.4 connects to major themes across Units 7, 8, and 9. Use the connections below to deepen your argument-building for LEQs and DBQs.</p>
+    <div class="synthesis-grid">
+      <div class="syn-box syn-u7">
+        <h5>Unit 7 Connection</h5>
+        <strong>WWI/WWII Economic Disruption</strong>
+        <p style="font-size:0.78rem;margin-top:6px;">The wars devastated European economies and forced nations to rebuild. US emerged as dominant economic power — setting preconditions for post-war institutions that later shaped globalization.</p>
+      </div>
+      <div class="syn-box syn-u8">
+        <h5>Unit 8 Connection</h5>
+        <strong>Cold War Economic Rivalry</strong>
+        <p style="font-size:0.78rem;margin-top:6px;">The US-Soviet competition over economic models set the stage for 9.4 — when the Soviet command economy collapsed, free market capitalism filled the vacuum and went global.</p>
+      </div>
+      <div class="syn-box syn-u9">
+        <h5>Unit 9 Cross-Topic</h5>
+        <strong>9.1 + 9.4 = Economic Revolution</strong>
+        <p style="font-size:0.78rem;margin-top:6px;">Without the tech advances in 9.1, the economic globalization in 9.4 was impossible. Knowledge economies depend on the internet; global supply chains depend on real-time communications.</p>
+      </div>
+    </div>
+    <p style="font-size:0.85rem;font-weight:600;color:var(--ink);margin-bottom:8px;">Synthesis Prompt: In what ways does the "brains vs. brawn" split in the late 20th century global economy reflect both a <em>change from</em> AND a <em>continuity with</em> earlier patterns of global economic inequality? Use evidence from at least TWO different units or time periods in your response.</p>
+    <textarea placeholder="Your cross-unit synthesis response. Aim for 3–5 sentences. Identify ONE thing that changed AND ONE that stayed the same, and connect both to specific evidence from different units or eras..."></textarea>
+  </div>
+
+  <!-- Self-Assessment -->
+  <div class="panel">
+    <div class="panel-title">🎓 Self-Assessment — Rate Your AP Skills</div>
+    <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:16px;">Rate your current confidence level for each AP skill from this section. Be honest — this helps you know what to review before the exam.</p>
+    <div class="sa-grid">
+      <div class="sa-row">
+        <div class="sa-skill">
+          Explain the causes of economic liberalization after 1980
+          <code>Causation · Learning Objective D</code>
+        </div>
+        <div class="sa-buttons">
+          <button class="sa-btn sa-label-item" onclick="rateSkill(this,'not')">Not Yet</button>
+          <button class="sa-btn sa-label-item" onclick="rateSkill(this,'getting')">Getting There</button>
+          <button class="sa-btn sa-label-item" onclick="rateSkill(this,'conf')">Confident</button>
+        </div>
+      </div>
+      <div class="sa-row">
+        <div class="sa-skill">
+          Describe the knowledge economy vs. manufacturing economy split with specific examples
+          <code>CCOT · KC-6.3.I.E</code>
+        </div>
+        <div class="sa-buttons">
+          <button class="sa-btn sa-label-item" onclick="rateSkill(this,'not')">Not Yet</button>
+          <button class="sa-btn sa-label-item" onclick="rateSkill(this,'getting')">Getting There</button>
+          <button class="sa-btn sa-label-item" onclick="rateSkill(this,'conf')">Confident</button>
+        </div>
+      </div>
+      <div class="sa-row">
+        <div class="sa-skill">
+          Explain the role of MNCs, WTO, NAFTA, and ASEAN in the new global economy
+          <code>Institutions · KC-6.3.II.B</code>
+        </div>
+        <div class="sa-buttons">
+          <button class="sa-btn sa-label-item" onclick="rateSkill(this,'not')">Not Yet</button>
+          <button class="sa-btn sa-label-item" onclick="rateSkill(this,'getting')">Getting There</button>
+          <button class="sa-btn sa-label-item" onclick="rateSkill(this,'conf')">Confident</button>
+        </div>
+      </div>
+      <div class="sa-row">
+        <div class="sa-skill">
+          Perform HIPP sourcing analysis on a document about globalization
+          <code>Sourcing Skill 2.C</code>
+        </div>
+        <div class="sa-buttons">
+          <button class="sa-btn sa-label-item" onclick="rateSkill(this,'not')">Not Yet</button>
+          <button class="sa-btn sa-label-item" onclick="rateSkill(this,'getting')">Getting There</button>
+          <button class="sa-btn sa-label-item" onclick="rateSkill(this,'conf')">Confident</button>
+        </div>
+      </div>
+      <div class="sa-row">
+        <div class="sa-skill">
+          Write a thesis that evaluates the EXTENT of economic change vs. continuity
+          <code>Argumentation · LEQ/DBQ Skill</code>
+        </div>
+        <div class="sa-buttons">
+          <button class="sa-btn sa-label-item" onclick="rateSkill(this,'not')">Not Yet</button>
+          <button class="sa-btn sa-label-item" onclick="rateSkill(this,'getting')">Getting There</button>
+          <button class="sa-btn sa-label-item" onclick="rateSkill(this,'conf')">Confident</button>
+        </div>
+      </div>
+      <div class="sa-row">
+        <div class="sa-skill">
+          Write a full SAQ with Identify + Explain + CCOT (Parts A, B, C)
+          <code>SAQ Skills · All Three Verbs</code>
+        </div>
+        <div class="sa-buttons">
+          <button class="sa-btn sa-label-item" onclick="rateSkill(this,'not')">Not Yet</button>
+          <button class="sa-btn sa-label-item" onclick="rateSkill(this,'getting')">Getting There</button>
+          <button class="sa-btn sa-label-item" onclick="rateSkill(this,'conf')">Confident</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /main -->
+
+<script>
+// ─── NAVIGATION ───
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  document.querySelectorAll('.nav-pill').forEach(p => p.classList.remove('active'));
+  event.target.classList.add('active');
+}
+
+// ─── MCQ ───
+function checkMCQ(qid, btn, isCorrect) {
+  const item = document.getElementById(qid);
+  const fb = document.getElementById(qid + '-fb');
+  if (!fb._orig) fb._orig = fb.innerHTML;
+  if (isCorrect) {
+    item.querySelectorAll('.mcq-option').forEach(b => {
+      b.classList.add('disabled');
+      b.onclick = null;
+    });
+    btn.classList.add('correct');
+    fb.innerHTML = fb._orig;
+    fb.classList.remove('wrong-fb');
+    fb.classList.add('show');
+  } else {
+    btn.classList.add('incorrect', 'disabled');
+    btn.onclick = null;
+    fb.innerHTML = '<strong>Incorrect.</strong> That\u0027s not the best answer \u2014 try again.';
+    fb.classList.add('show', 'wrong-fb');
+  }
+}
+
+// ─── MATCHING ───
+let selectedMatch = null;
+
+function selectMatch(el) {
+  if (el.classList.contains('matched-correct')) return;
+
+  if (selectedMatch === null) {
+    if (selectedMatch) selectedMatch.classList.remove('selected');
+    el.classList.add('selected');
+    selectedMatch = el;
+  } else {
+    if (selectedMatch === el) {
+      el.classList.remove('selected');
+      selectedMatch = null;
+      return;
+    }
+    const a = selectedMatch;
+    const b = el;
+    const aTerm = a.classList.contains('term');
+    const bTerm = b.classList.contains('term');
+
+    if ((aTerm && bTerm) || (!aTerm && !bTerm)) {
+      a.classList.remove('selected');
+      a.classList.add('matched-wrong');
+      b.classList.add('matched-wrong');
+      document.getElementById('match-feedback').textContent = 'Match terms with definitions, not term-to-term or definition-to-definition.';
+      setTimeout(() => { a.classList.remove('matched-wrong', 'selected'); b.classList.remove('matched-wrong'); document.getElementById('match-feedback').textContent = ''; }, 1200);
+      selectedMatch = null;
+      return;
+    }
+
+    if (a.dataset.id === b.dataset.id) {
+      a.classList.remove('selected');
+      a.classList.add('matched-correct');
+      b.classList.add('matched-correct');
+      document.getElementById('match-feedback').textContent = '✓ Correct match!';
+      setTimeout(() => { document.getElementById('match-feedback').textContent = ''; }, 1500);
+    } else {
+      a.classList.remove('selected');
+      a.classList.add('matched-wrong');
+      b.classList.add('matched-wrong');
+      document.getElementById('match-feedback').textContent = '✗ Not quite — try a different pairing.';
+      setTimeout(() => { a.classList.remove('matched-wrong'); b.classList.remove('matched-wrong'); document.getElementById('match-feedback').textContent = ''; }, 1200);
+    }
+    selectedMatch = null;
+  }
+}
+
+// ─── REVEAL MODEL ───
+function revealModel(btn) {
+  const mr = btn.nextElementSibling;
+  mr.classList.toggle('show');
+  btn.textContent = mr.classList.contains('show') ? 'Hide Model Response' : 'Reveal Model Response';
+}
+
+// ─── CAUSAL CHAIN ───
+const chainAnswers = {
+  'cc1': 'Free market capitalism spreads globally: governments embrace economic liberalization — cutting taxes, deregulating, and opening to foreign trade. The WTO, NAFTA, and ASEAN are created to build the architecture of the new global economy.',
+  'cc2': 'Global inequality persists in a new form: developed nations capture the profits of innovation and design (knowledge economy), while developing nations are locked into low-wage manufacturing roles — recreating historical patterns of core vs. periphery economic dependency.'
+};
+
+function revealChainAnswer(id) {
+  const node = document.getElementById(id);
+  if (!node || node.classList.contains('revealed')) return;
+  node.innerHTML = '<div class="chain-node-label">Revealed</div>' + chainAnswers[id];
+  node.classList.add('revealed');
+  const answerBox = document.getElementById(id + '-answer');
+  if (answerBox) {
+    answerBox.textContent = chainAnswers[id];
+    answerBox.classList.add('show');
+  }
+}
+
+// ─── THESIS EVALUATOR ───
+function revThesis(el, verdict, explanation) {
+  if (el.classList.contains('revealed')) return;
+  el.classList.add('revealed', verdict);
+  el.innerHTML += '<div class="thesis-verdict">' + verdict.toUpperCase() + '</div><div class="thesis-explanation">' + explanation + '</div>';
+}
+
+// ─── CONTEXTUALIZATION BUILDER ───
+function toggleCtx(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle('open');
+}
+
+// ─── SELF ASSESSMENT ───
+function rateSkill(btn, level) {
+  const row = btn.closest('.sa-row');
+  row.querySelectorAll('.sa-btn').forEach(b => b.classList.remove('active-not','active-getting','active-conf'));
+  if (level === 'not') btn.classList.add('active-not');
+  else if (level === 'getting') btn.classList.add('active-getting');
+  else btn.classList.add('active-conf');
+}
+</script>
+</body>
+</html>

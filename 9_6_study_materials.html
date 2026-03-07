@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9.6 Globalized Culture After 1900 — AP World History</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0d0b;
+    --surface: #161410;
+    --surface2: #1c1a16;
+    --gold: #c9a84c;
+    --gold-dim: rgba(201,168,76,0.15);
+    --gold-border: rgba(201,168,76,0.25);
+    --parchment: #e8dfc8;
+    --text-secondary: #b8a98a;
+    --text-muted: #6b6050;
+    --green: #4a9e3f;
+    --green-dim: rgba(74,158,63,0.12);
+    --red: #c0392b;
+    --red-dim: rgba(192,57,43,0.15);
+    --blue: #3a7bd5;
+    --blue-dim: rgba(58,123,213,0.12);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--parchment);
+    font-family: 'Source Serif 4', serif;
+    font-size: 1rem;
+    line-height: 1.65;
+    min-height: 100vh;
+  }
+  /* ── HEADER ── */
+  .page-header {
+    background: linear-gradient(135deg, #1a1508 0%, #0e0d0b 60%);
+    border-bottom: 1px solid var(--gold-border);
+    padding: 48px 24px 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .unit-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 900;
+    color: var(--parchment);
+    line-height: 1.15;
+    max-width: 700px;
+    margin: 0 auto 16px;
+  }
+  .page-header .essential-q {
+    font-style: italic;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+  /* ── MAIN LAYOUT ── */
+  .main-wrap { max-width: 900px; margin: 0 auto; padding: 0 20px 80px; }
+
+  /* ── SECTION HEADERS ── */
+  .dok-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 48px 0 6px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--gold-border);
+  }
+  .dok-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    padding: 4px 10px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .dok1 .dok-badge { background: rgba(58,123,213,0.2); color: #7eb3f5; border: 1px solid rgba(58,123,213,0.3); }
+  .dok2 .dok-badge { background: rgba(74,158,63,0.2); color: #7ec97a; border: 1px solid rgba(74,158,63,0.3); }
+  .dok3 .dok-badge { background: rgba(201,168,76,0.2); color: var(--gold); border: 1px solid var(--gold-border); }
+  .dok4 .dok-badge { background: rgba(192,57,43,0.2); color: #e07060; border: 1px solid rgba(192,57,43,0.3); }
+  .dok-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--parchment);
+  }
+  .dok-header .dok-desc {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-left: auto;
+  }
+  /* ── SECTION LABELS ── */
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin: 28px 0 10px;
+  }
+  /* ── VIDEO EMBED ── */
+  .video-wrap {
+    background: var(--surface);
+    border: 1px solid var(--gold-border);
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 12px 0 6px;
+  }
+  .video-wrap .opening-quote {
+    padding: 18px 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-style: italic;
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+  }
+  .video-wrap .opening-quote span {
+    display: block;
+    margin-top: 6px;
+    font-style: normal;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--text-muted);
+  }
+  .video-wrap iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: none;
+  }
+  /* ── TIMELINE ── */
+  .timeline {
+    background: var(--surface);
+    border: 1px solid var(--gold-border);
+    border-radius: 6px;
+    padding: 20px;
+    margin: 10px 0;
+  }
+  .timeline-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .tl-row {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 0 16px;
+    margin-bottom: 0;
+  }
+  .tl-row:not(:last-child) .tl-content { border-bottom: 1px solid rgba(255,255,255,0.04); padding-bottom: 12px; margin-bottom: 12px; }
+  .tl-year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--gold);
+    padding-top: 2px;
+    text-align: right;
+  }
+  .tl-content { font-size: 0.9rem; color: var(--text-secondary); }
+  .tl-content strong { color: var(--parchment); font-weight: 600; }
+  /* ── FLIP CARDS ── */
+  .flip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    margin: 10px 0;
+  }
+  .flip-card {
+    height: 120px;
+    perspective: 800px;
+    cursor: pointer;
+  }
+  .flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+  }
+  .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
+  .flip-front, .flip-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+  .flip-front {
+    background: var(--surface2);
+    border: 1px solid var(--gold-border);
+    font-family: 'Playfair Display', serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--parchment);
+    position: relative;
+    min-height: 120px;
+  }
+  .flip-hint {
+    position: absolute;
+    bottom: 8px;
+    left: 0; right: 0;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--text-muted);
+  }
+  .flip-back {
+    background: var(--surface);
+    border: 1px solid rgba(74,158,63,0.3);
+    transform: rotateY(180deg);
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+  }
+  /* ── MCQ ── */
+  .mcq-set { margin: 10px 0; }
+  .mcq-item {
+    background: var(--surface);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 5px;
+    padding: 16px 18px;
+    margin-bottom: 10px;
+  }
+  .mcq-question { font-size: 0.92rem; margin-bottom: 12px; color: var(--parchment); }
+  .mcq-options { display: flex; flex-direction: column; gap: 7px; }
+  .mcq-option {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 4px;
+    color: var(--text-secondary);
+    padding: 8px 12px;
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.85rem;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .mcq-option:hover:not(.disabled) { background: rgba(201,168,76,0.08); border-color: var(--gold-border); }
+  .mcq-option.correct { background: rgba(74,158,63,0.2); border-color: rgba(74,158,63,0.5); color: #a8e6a0; }
+  .mcq-option.incorrect { background: rgba(192,57,43,0.15); border-color: rgba(192,57,43,0.35); color: #e08070; }
+  .mcq-option.disabled { cursor: default; pointer-events: none; opacity: 0.55; }
+  .mcq-option.incorrect.disabled { opacity: 0.4; }
+  .mcq-feedback {
+    display: none;
+    margin-top: 10px;
+    padding: 10px 14px;
+    background: var(--green-dim);
+    border: 1px solid rgba(74,158,63,0.25);
+    border-radius: 4px;
+    font-size: 0.83rem;
+    color: var(--text-secondary);
+  }
+  .mcq-feedback.show { display: block; }
+  .mcq-feedback.wrong-fb { background: rgba(107,45,45,0.3); border-color: #f08080; }
+  /* ── MATCHING ── */
+  .match-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  .match-col { display: flex; flex-direction: column; gap: 8px; }
+  .match-col-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .match-item {
+    background: var(--surface);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 4px;
+    padding: 9px 12px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    color: var(--text-secondary);
+  }
+  .match-item:hover { border-color: var(--gold-border); }
+  .match-item.selected { border-color: var(--gold); background: var(--gold-dim); color: var(--parchment); }
+  .match-item.matched { border-color: rgba(74,158,63,0.4); background: var(--green-dim); color: #a8e6a0; cursor: default; }
+  .match-item.wrong { border-color: rgba(192,57,43,0.4); background: var(--red-dim); }
+  .match-reset-btn {
+    background: none;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text-muted);
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+  .match-reset-btn:hover { border-color: var(--gold-border); color: var(--gold); }
+  /* ── EXPLAIN DRILLS ── */
+  .drill-box {
+    background: var(--surface);
+    border: 1px solid var(--gold-border);
+    border-radius: 6px;
+    padding: 20px 22px;
+    margin: 10px 0;
+  }
+  .drill-prompt {
+    font-size: 0.95rem;
+    color: var(--parchment);
+    margin-bottom: 14px;
+  }
+  .drill-prompt .drill-cmd {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  textarea {
+    width: 100%;
+    min-height: 100px;
+    margin: 10px 0;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(184,134,11,0.2);
+    border-radius: 4px;
+    color: var(--parchment);
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.88rem;
+    resize: vertical;
+    outline: none;
+  }
+  textarea:focus { border-color: rgba(201,168,76,0.4); }
+  .reveal-btn {
+    background: none;
+    border: 1px solid var(--gold-border);
+    color: var(--gold);
+    padding: 7px 18px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .reveal-btn:hover { background: var(--gold-dim); }
+  .model-response {
+    display: none;
+    margin-top: 14px;
+    padding: 14px 16px;
+    background: rgba(74,158,63,0.08);
+    border: 1px solid rgba(74,158,63,0.25);
+    border-radius: 4px;
+    font-size: 0.87rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  .model-response.show { display: block; }
+  .model-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--green);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  /* ── APPLY TABLE ── */
+  .apply-table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 0.85rem; }
+  .apply-table th {
+    background: rgba(201,168,76,0.1);
+    border: 1px solid var(--gold-border);
+    padding: 9px 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: left;
+  }
+  .apply-table td {
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 8px 12px;
+    color: var(--text-secondary);
+    vertical-align: top;
+  }
+  .apply-table td textarea { min-height: 80px; margin: 4px 0; }
+  /* ── CAUSAL CHAIN ── */
+  .chain-wrap { margin: 10px 0; }
+  .chain-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .node-num {
+    width: 28px;
+    height: 28px;
+    background: var(--gold-dim);
+    border: 1px solid var(--gold-border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+  .node-box {
+    flex: 1;
+    background: var(--surface2);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 5px;
+    padding: 10px 14px;
+    font-size: 0.87rem;
+    color: var(--text-secondary);
+  }
+  .node-box.blank {
+    border-style: dashed;
+    border-color: rgba(201,168,76,0.25);
+    background: rgba(201,168,76,0.03);
+  }
+  .node-box.blank textarea {
+    min-height: 60px;
+    margin: 2px 0 0;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+  .chain-arrow {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-left: 38px;
+    margin-bottom: 4px;
+  }
+  .chain-answer {
+    display: none;
+    margin-left: 42px;
+    margin-top: 6px;
+    padding: 9px 14px;
+    background: var(--green-dim);
+    border: 1px solid rgba(74,158,63,0.25);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+  /* ── THESIS EVALUATOR ── */
+  .thesis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+  .thesis-card {
+    background: var(--surface);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 6px;
+    padding: 16px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    font-size: 0.87rem;
+    color: var(--text-secondary);
+    position: relative;
+  }
+  .thesis-card:hover { border-color: var(--gold-border); }
+  .thesis-card .click-hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .thesis-card.revealed { cursor: default; }
+  .thesis-card.revealed.pass { border-color: rgba(74,158,63,0.4); background: rgba(74,158,63,0.06); }
+  .thesis-card.revealed.fail { border-color: rgba(192,57,43,0.4); background: rgba(192,57,43,0.06); }
+  .thesis-verdict {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    margin-top: 12px;
+    padding: 4px 10px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .pass .thesis-verdict { background: rgba(74,158,63,0.2); color: #7ec97a; }
+  .fail .thesis-verdict { background: rgba(192,57,43,0.2); color: #e07060; }
+  .thesis-explanation {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+  /* ── CONTEXTUALIZATION BUILDER ── */
+  .ctx-pathway {
+    background: var(--surface);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 6px;
+    margin: 8px 0;
+    overflow: hidden;
+  }
+  .ctx-pathway-header {
+    padding: 14px 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+  }
+  .ctx-pathway-header:hover { background: rgba(255,255,255,0.02); }
+  .ctx-num {
+    width: 24px;
+    height: 24px;
+    background: var(--gold-dim);
+    border: 1px solid var(--gold-border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+  .ctx-pathway-header span {
+    font-size: 0.9rem;
+    color: var(--parchment);
+    flex: 1;
+  }
+  .ctx-toggle {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    transition: transform 0.3s;
+  }
+  .ctx-pathway.open .ctx-toggle { transform: rotate(180deg); }
+  .ctx-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s;
+    padding: 0 20px;
+  }
+  .ctx-pathway.open .ctx-body { max-height: 1200px; padding: 0 20px 20px; }
+  .ctx-stem {
+    padding: 12px 16px;
+    background: rgba(201,168,76,0.06);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 4px 4px 0;
+    font-size: 0.87rem;
+    color: var(--text-secondary);
+    margin: 12px 0;
+    font-style: italic;
+  }
+  .sample-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--green);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 12px 0 6px;
+  }
+  .sample-body {
+    font-size: 0.87rem;
+    color: var(--text-secondary);
+    background: var(--green-dim);
+    border: 1px solid rgba(74,158,63,0.2);
+    border-radius: 4px;
+    padding: 12px 14px;
+    line-height: 1.6;
+  }
+  /* ── SAQ ── */
+  .saq-box {
+    background: var(--surface);
+    border: 1px solid var(--gold-border);
+    border-radius: 6px;
+    padding: 22px 24px;
+    margin: 10px 0;
+  }
+  .saq-context {
+    font-size: 0.87rem;
+    color: var(--text-secondary);
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin-bottom: 18px;
+    font-style: italic;
+  }
+  .saq-part {
+    margin-bottom: 18px;
+  }
+  .saq-part-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+  }
+  .saq-part p { font-size: 0.9rem; color: var(--parchment); margin-bottom: 6px; }
+  /* ── CROSS-UNIT ── */
+  .cross-unit-box {
+    background: var(--surface);
+    border: 1px solid rgba(192,57,43,0.25);
+    border-radius: 6px;
+    padding: 20px 22px;
+    margin: 10px 0;
+  }
+  .cross-unit-box h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: #e07060;
+    margin-bottom: 12px;
+  }
+  .cross-prompts { list-style: none; }
+  .cross-prompts li {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    padding: 6px 0 6px 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    position: relative;
+  }
+  .cross-prompts li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--text-muted);
+  }
+  /* ── SELF-ASSESSMENT ── */
+  .sa-table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 0.85rem; }
+  .sa-table th {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 8px 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-align: left;
+  }
+  .sa-table td {
+    border: 1px solid rgba(255,255,255,0.04);
+    padding: 8px 12px;
+    color: var(--text-secondary);
+    font-size: 0.87rem;
+  }
+  .sa-labels {
+    display: flex;
+    gap: 4px;
+  }
+  .sa-label-item {
+    padding: 4px 8px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 3px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: background 0.15s;
+    min-width: 28px;
+    white-space: nowrap;
+  }
+  .sa-label-item:hover { border-color: var(--gold-border); color: var(--gold); }
+  .sa-label-item.active-not { background: rgba(192,57,43,0.2); border-color: rgba(192,57,43,0.4); color: #e07060; }
+  .sa-label-item.active-get { background: rgba(201,168,76,0.15); border-color: var(--gold-border); color: var(--gold); }
+  .sa-label-item.active-conf { background: rgba(74,158,63,0.2); border-color: rgba(74,158,63,0.4); color: #7ec97a; }
+  /* ── CED BOX ── */
+  .ced-box {
+    background: rgba(58,123,213,0.05);
+    border: 1px solid rgba(58,123,213,0.2);
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 16px 0 8px;
+    font-size: 0.85rem;
+  }
+  .ced-box .ced-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: #7eb3f5;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .ced-box ul { list-style: none; }
+  .ced-box ul li {
+    color: var(--text-secondary);
+    padding: 3px 0 3px 16px;
+    position: relative;
+  }
+  .ced-box ul li::before { content: '•'; position: absolute; left: 0; color: #7eb3f5; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════ PAGE HEADER ══════════════ -->
+<header class="page-header">
+  <div class="unit-label">AP World History: Modern · Unit 9 · Topic 9.6</div>
+  <h1>Globalized Culture After 1900</h1>
+  <p class="essential-q">Essential Question: How has globalization changed culture since 1900?</p>
+</header>
+
+<div class="main-wrap">
+
+  <!-- CED Quick Reference -->
+  <div class="ced-box" style="margin-top:28px;">
+    <div class="ced-label">AP CED — What the College Board Expects</div>
+    <ul>
+      <li><strong>Learning Objective 9F:</strong> Explain how and why globalization changed culture over time.</li>
+      <li><strong>Thematic Focus:</strong> Cultural Developments and Interactions (CDI)</li>
+      <li><strong>Key Skill:</strong> Contextualization (4.B) — Explain how a development is situated within a broader historical context.</li>
+      <li><strong>KC-6.3.IV.i:</strong> Political and social changes of the 20th century led to changes in the arts and popular/consumer culture.</li>
+      <li><strong>KC-6.3.IV.ii:</strong> Arts, entertainment, and popular culture increasingly reflected a globalized society.</li>
+      <li><strong>KC-6.3.IV.iii:</strong> Consumer culture became globalized and transcended national borders.</li>
+    </ul>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       DOK 1 — KNOWLEDGE ACQUISITION
+  ══════════════════════════════════════════════════ -->
+  <div class="dok-header dok1">
+    <div class="dok-badge">DOK 1</div>
+    <h2>Knowledge Acquisition</h2>
+    <span class="dok-desc">Answer correctly</span>
+  </div>
+
+  <!-- VIDEO -->
+  <div class="section-label">Video Explainer</div>
+  <div class="video-wrap">
+    <div class="opening-quote">
+      "What is interesting is the power and the impact of social media. . . . So we must try to use social media in a good way."
+      <span>— Malala Yousafzai, Pakistani human rights activist (born 1997)</span>
+    </div>
+    <iframe src="https://www.youtube.com/embed/pIIgg0Wfaio" allowfullscreen loading="lazy" title="APWH 9.6 Globalized Culture After 1900"></iframe>
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="section-label">Visual Framework — Stages of Cultural Globalization</div>
+  <div class="timeline">
+    <div class="timeline-title">How Global Culture Developed After 1900</div>
+    <div class="tl-row">
+      <div class="tl-year">1900s–1920s</div>
+      <div class="tl-content"><strong>Political & Artistic Shifts:</strong> Modernism emerges; Cubism, stream-of-consciousness writing, atonal music reject tradition. WWI reshapes global consciousness.</div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-year">1920s–1940s</div>
+      <div class="tl-content"><strong>Mass Media Rise:</strong> Radio and movies bring popular culture to millions. Harlem Renaissance makes jazz an international language. WWII reshapes global alignments.</div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-year">1945–1970s</div>
+      <div class="tl-content"><strong>Consumer Culture:</strong> Post-WWII prosperity creates consumer identity. TV spreads advertising globally. Reggae (Jamaica) blends traditions; Bob Marley globalizes it in the 1970s.</div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-year">1970s–1990s</div>
+      <div class="tl-content"><strong>Global Brands & Sports:</strong> Multinational brands (Toyota, Coca-Cola, Nike) transcend borders. Bollywood becomes world's largest film industry. Modern Olympics & World Cup unite billions.</div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-year">1990s–present</div>
+      <div class="tl-content"><strong>Digital Revolution:</strong> Internet, e-commerce (Amazon, Alibaba, eBay), social media (Facebook, Twitter). K-pop goes global via YouTube. China creates censored alternatives: WeChat, Weibo.</div>
+    </div>
+  </div>
+
+  <!-- FLIP CARDS -->
+  <div class="section-label">Vocabulary — Flip Cards</div>
+  <div class="flip-grid">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">Modernism<div class="flip-hint">click to flip</div></div>
+        <div class="flip-back">Early 20th-century artistic movement rejecting tradition in favor of experimentation. Ex: Cubism (Picasso), stream-of-consciousness writing (Joyce), atonal music (Schoenberg).</div>
+      </div>
+    </div>
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">Consumer Culture<div class="flip-hint">click to flip</div></div>
+        <div class="flip-back">Post-WWII identity shift in which people defined themselves by what they bought and owned rather than where they lived or what they believed.</div>
+      </div>
+    </div>
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">Popular Culture<div class="flip-hint">click to flip</div></div>
+        <div class="flip-back">The culture of everyday people (not elites), packaged and shared via new media — radio, film, TV, and later the internet — reaching billions globally.</div>
+      </div>
+    </div>
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">Harlem Renaissance<div class="flip-hint">click to flip</div></div>
+        <div class="flip-back">A "rebirth" of African American cultural expression centered in Harlem, NYC. Jazz emerged and became an international language transcending its origins.</div>
+      </div>
+    </div>
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">Bollywood<div class="flip-hint">click to flip</div></div>
+        <div class="flip-back">The popular name for India's film industry (Bombay/Mumbai). It produces more films than any other country and has a global fanbase — an example of non-Western cultural globalization.</div>
+      </div>
+    </div>
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">Reggae<div class="flip-hint">click to flip</div></div>
+        <div class="flip-back">Music from Jamaica blending New Orleans jazz, R&B, mento (African/European fusion), and Rastafari beliefs. Globalized in the 1970s by Bob Marley as a form of Pan-Africanism.</div>
+      </div>
+    </div>
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">K-pop<div class="flip-hint">click to flip</div></div>
+        <div class="flip-back">Korean popular music fusing multiple traditions; artists sing in Korean and English. Became a global phenomenon via YouTube, boosting South Korean cultural exports.</div>
+      </div>
+    </div>
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">Anime<div class="flip-hint">click to flip</div></div>
+        <div class="flip-back">Japanese hand-drawn animation style. By 2016, 60% of the world's animated TV shows were based on anime. Globalized via Akira (1980s) and shows like Pokémon and Dragon Ball.</div>
+      </div>
+    </div>
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">Americanization<div class="flip-hint">click to flip</div></div>
+        <div class="flip-back">The spread of U.S. brands, media, and culture globally. Created both widespread adoption and significant resentment/resistance as some felt it threatened unique local identities.</div>
+      </div>
+    </div>
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">Internationalism<div class="flip-hint">click to flip</div></div>
+        <div class="flip-back">The idea of unique nations and cultures participating together in a shared global community. Distinct from Americanization — cultural traffic flows in all directions, not just outward from the U.S.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MCQ -->
+  <div class="section-label">Recall Check — Multiple Choice (5 Questions)</div>
+  <div class="mcq-set">
+    <div class="mcq-item" id="mcq1">
+      <div class="mcq-question">1. Which of the following best identifies the primary political condition that enabled cultural globalization in the late 20th century?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(A) The intensification of Cold War tensions between the United States and Soviet Union</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,true)">(B) The fall of Cold War barriers and the formation of cooperative international organizations</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(C) The rise of nationalist movements that emphasized cultural uniqueness</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(D) The decline of multinational corporations following World War II</button>
+      </div>
+      <div class="mcq-feedback" id="mcq1-fb"><strong>Correct — B.</strong> After the Cold War, barriers fell and nations formed cooperative organizations (EU, UN, WTO), creating conditions for the cross-border flow of culture, goods, and ideas.</div>
+    </div>
+    <div class="mcq-item" id="mcq2">
+      <div class="mcq-question">2. Reggae music from Jamaica is best used as an example of which of the following?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(A) Americanization spreading Western culture to developing nations</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(B) How colonial powers used culture to maintain influence after decolonization</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,true)">(C) A non-Western culture using globalization to become a worldwide cultural force</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(D) The homogenization of world cultures into a single global identity</button>
+      </div>
+      <div class="mcq-feedback" id="mcq2-fb"><strong>Correct — C.</strong> Reggae originated in Jamaica blending multiple traditions and became globally influential via Bob Marley. Like K-pop and Bollywood, it shows globalization flowing in multiple directions, not just from the West.</div>
+    </div>
+    <div class="mcq-item" id="mcq3">
+      <div class="mcq-question">3. Which development MOST directly enabled online shopping to become a global phenomenon?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(A) The spread of television advertising in the 1950s and 1960s</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(B) The standardization of international trade tariffs by the WTO</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,true)">(C) The rise of internet-based platforms such as Alibaba, Amazon, and eBay</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(D) The collapse of the Soviet Union opening Eastern European markets</button>
+      </div>
+      <div class="mcq-feedback" id="mcq3-fb"><strong>Correct — C.</strong> E-commerce sites like Alibaba (Asia), Amazon (17+ countries), and eBay (30 countries) created a single global marketplace operating 24/7, transcending national shopping borders.</div>
+    </div>
+    <div class="mcq-item" id="mcq4">
+      <div class="mcq-question">4. China's creation of social media platforms like WeChat and Weibo BEST illustrates which of the following patterns?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(A) The willingness of authoritarian governments to embrace Western technology</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,true)">(B) Government resistance to the free flow of global information while maintaining state control</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(C) The inability of developing nations to compete with Western technology companies</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(D) The spread of democratic ideals through digital communication networks</button>
+      </div>
+      <div class="mcq-feedback" id="mcq4-fb"><strong>Correct — B.</strong> China banned external social media but created its own censored platforms, allowing it to participate in global communication while censoring any criticism of the Communist Party — a classic resistance pattern explored in Topic 9.7.</div>
+    </div>
+    <div class="mcq-item" id="mcq5">
+      <div class="mcq-question">5. The 2016 Rio Olympics attracting 3.6 billion viewers is most useful as evidence for which historical claim?</div>
+      <div class="mcq-options">
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(A) The dominance of American broadcasting companies in international media markets</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(B) The decline of national identity as a source of meaning in the late 20th century</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(C) The political importance of international sporting competitions during the Cold War</button>
+        <button class="mcq-option" onclick="checkMCQ('mcq5',this,true)">(D) Sports becoming a shared global experience that unified populations across national borders</button>
+      </div>
+      <div class="mcq-feedback" id="mcq5-fb"><strong>Correct — D.</strong> Nearly half the planet watching the same event demonstrates how global popular culture (sports, in this case) created shared experiences across national, regional, and cultural divides — a core feature of cultural globalization.</div>
+    </div>
+  </div>
+
+  <!-- MATCHING -->
+  <div class="section-label">Matching Activity</div>
+  <div style="background:var(--surface);border:1px solid rgba(255,255,255,0.05);border-radius:6px;padding:16px 18px;margin:10px 0;">
+    <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:14px;">Click an item on the left, then click its match on the right. Match each cultural example to the historical pattern it best illustrates.</p>
+    <div class="match-grid">
+      <div class="match-col">
+        <div class="match-col-label">Cultural Example</div>
+        <div class="match-item" id="ml-1" data-id="1" onclick="selectMatch('left','1')">K-pop via YouTube</div>
+        <div class="match-item" id="ml-2" data-id="2" onclick="selectMatch('left','2')">Weibo &amp; WeChat (China)</div>
+        <div class="match-item" id="ml-3" data-id="3" onclick="selectMatch('left','3')">Harlem Renaissance / Jazz</div>
+        <div class="match-item" id="ml-4" data-id="4" onclick="selectMatch('left','4')">Coca-Cola &amp; Toyota</div>
+        <div class="match-item" id="ml-5" data-id="5" onclick="selectMatch('left','5')">World Cup Soccer</div>
+      </div>
+      <div class="match-col">
+        <div class="match-col-label">Historical Pattern</div>
+        <div class="match-item" id="mr-A" data-id="A" onclick="selectMatch('right','A')">Global consumer culture transcending national borders</div>
+        <div class="match-item" id="mr-B" data-id="B" onclick="selectMatch('right','B')">State censorship of global information flow</div>
+        <div class="match-item" id="mr-C" data-id="C" onclick="selectMatch('right','C')">Non-Western culture becoming a global force via new media</div>
+        <div class="match-item" id="mr-D" data-id="D" onclick="selectMatch('right','D')">Sports creating shared global experiences</div>
+        <div class="match-item" id="mr-E" data-id="E" onclick="selectMatch('right','E')">Marginalized voices entering the global cultural mainstream</div>
+      </div>
+    </div>
+    <button class="match-reset-btn" onclick="resetMatch()">↺ Reset</button>
+    <div id="match-status" style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--text-muted);margin-top:8px;"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       DOK 2 — KNOWLEDGE APPLICATION
+  ══════════════════════════════════════════════════ -->
+  <div class="dok-header dok2">
+    <div class="dok-badge">DOK 2</div>
+    <h2>Knowledge Application</h2>
+    <span class="dok-desc">Establish and explain with examples</span>
+  </div>
+
+  <!-- EXPLAIN DRILL 1 -->
+  <div class="section-label">Explain Drill 1 of 2</div>
+  <div class="drill-box">
+    <div class="drill-prompt">
+      <span class="drill-cmd">Explain</span>
+      How did political and social changes in the 20th century create the conditions for cultural globalization? Use at least two specific examples in your response.
+    </div>
+    <textarea placeholder="Write your explanation here. Remember: 'explain' means you must show HOW or WHY something happened, not just list facts..."></textarea>
+    <button class="reveal-btn" onclick="revealModel('dr1')">Reveal Model Response</button>
+    <div class="model-response" id="dr1">
+      <div class="model-label">Model Response</div>
+      Political and social changes dismantled the barriers that had kept cultures isolated. Politically, the end of the Cold War replaced rigid ideological divisions with cooperative international organizations like the UN and WTO, which encouraged economic and cultural exchange across borders. Socially, rights movements — particularly civil rights and women's rights — brought formerly marginalized voices into the global mainstream, diversifying the kinds of cultural expression that gained worldwide audiences. For example, jazz, which emerged from African American communities during the Harlem Renaissance, became an international language precisely because social changes created space for non-elite cultural expression. These shifts combined with new communication technologies to create a world where culture could flow across borders with unprecedented speed.
+    </div>
+  </div>
+
+  <!-- EXPLAIN DRILL 2 -->
+  <div class="section-label">Explain Drill 2 of 2</div>
+  <div class="drill-box">
+    <div class="drill-prompt">
+      <span class="drill-cmd">Explain</span>
+      Why is it historically inaccurate to describe cultural globalization simply as "Americanization"? Use specific examples from non-Western cultures that became global forces.
+    </div>
+    <textarea placeholder="Challenge the one-way-street narrative. Use examples like Bollywood, reggae, K-pop, anime, and/or the World Cup to build your case..."></textarea>
+    <button class="reveal-btn" onclick="revealModel('dr2')">Reveal Model Response</button>
+    <div class="model-response" id="dr2">
+      <div class="model-label">Model Response</div>
+      Describing globalization as simply "Americanization" misrepresents the multidirectional nature of cultural exchange. While American brands and media were powerful global forces, non-Western cultures used the same tools of globalization to reach worldwide audiences. India's Bollywood became the world's largest film industry by total output, attracting fans globally with a distinct style that blended multiple national influences. Reggae from Jamaica, rooted in African diaspora traditions, became globally influential through Bob Marley in the 1970s. South Korea's K-pop used YouTube and streaming platforms to become a 21st-century phenomenon powerful enough that the South Korean government actively invested in its promotion. Japanese anime, by 2016, accounted for 60% of the world's animated TV shows. These examples show that globalization created a multi-lane superhighway of cultural traffic flowing in every direction — not a one-way street from the United States outward.
+    </div>
+  </div>
+
+  <!-- APPLY — Comparison Table -->
+  <div class="section-label">Apply Activity — Global Culture Comparison</div>
+  <div style="background:var(--surface);border:1px solid rgba(255,255,255,0.05);border-radius:6px;padding:16px 18px;margin:10px 0;">
+    <p style="font-size:0.88rem;color:var(--text-secondary);margin-bottom:14px;">Complete the table below by identifying the <strong style="color:var(--parchment)">origin</strong>, <strong style="color:var(--parchment)">key vehicle of spread</strong>, and <strong style="color:var(--parchment)">global significance</strong> for each cultural example.</p>
+    <div style="overflow-x:auto;">
+      <table class="apply-table">
+        <thead>
+          <tr>
+            <th>Cultural Form</th>
+            <th>Region of Origin</th>
+            <th>Key Vehicle of Spread</th>
+            <th>Why It Matters for AP Exam</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Reggae</strong></td>
+            <td><textarea placeholder="Origin region..."></textarea></td>
+            <td><textarea placeholder="How it spread globally..."></textarea></td>
+            <td><textarea placeholder="Its AP exam significance..."></textarea></td>
+          </tr>
+          <tr>
+            <td><strong>Bollywood</strong></td>
+            <td><textarea placeholder="Origin region..."></textarea></td>
+            <td><textarea placeholder="How it spread globally..."></textarea></td>
+            <td><textarea placeholder="Its AP exam significance..."></textarea></td>
+          </tr>
+          <tr>
+            <td><strong>Anime</strong></td>
+            <td><textarea placeholder="Origin region..."></textarea></td>
+            <td><textarea placeholder="How it spread globally..."></textarea></td>
+            <td><textarea placeholder="Its AP exam significance..."></textarea></td>
+          </tr>
+          <tr>
+            <td><strong>K-pop</strong></td>
+            <td><textarea placeholder="Origin region..."></textarea></td>
+            <td><textarea placeholder="How it spread globally..."></textarea></td>
+            <td><textarea placeholder="Its AP exam significance..."></textarea></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:0.8rem;color:var(--text-muted);margin-top:10px;">Reflection: What pattern do you notice across all four examples?</p>
+    <textarea style="min-height:70px;" placeholder="What do reggae, Bollywood, anime, and K-pop have in common? What does this pattern tell us about the nature of cultural globalization?"></textarea>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       DOK 3 — KNOWLEDGE ANALYSIS
+  ══════════════════════════════════════════════════ -->
+  <div class="dok-header dok3">
+    <div class="dok-badge">DOK 3</div>
+    <h2>Knowledge Analysis</h2>
+    <span class="dok-desc">Examine and explain with evidence</span>
+  </div>
+
+  <!-- CAUSAL CHAIN -->
+  <div class="section-label">Causal Chain — From Political Change to Global Culture</div>
+  <div class="chain-wrap">
+    <div class="chain-row">
+      <span class="node-num">1</span>
+      <div class="node-box">
+        <strong>Cold War Ends / Barriers Fall</strong><br>
+        <span style="font-size:0.82rem;">Cooperative international organizations form (UN, WTO, EU, NAFTA). Trade restrictions loosen. Political walls crumble between former rivals.</span>
+      </div>
+    </div>
+    <div class="chain-arrow">↓</div>
+    <div class="chain-row">
+      <span class="node-num">2</span>
+      <div class="node-box blank">
+        <strong style="color:var(--gold);font-size:0.82rem;">BLANK — What economic change followed?</strong>
+        <textarea class="causal-input" placeholder="What happened to trade and commerce as political barriers fell? Think about global brands, multinationals, and e-commerce..."></textarea>
+      </div>
+    </div>
+    <div id="chain2-answer" class="chain-answer"></div>
+    <div class="chain-arrow">↓</div>
+    <div class="chain-row">
+      <span class="node-num">3</span>
+      <div class="node-box">
+        <strong>Communication Technology Explodes</strong><br>
+        <span style="font-size:0.82rem;">Radio → TV → Internet → Social Media. New platforms allow cultural content (music, film, sports, ideas) to reach billions instantly, bypassing traditional gatekeepers.</span>
+      </div>
+    </div>
+    <div class="chain-arrow">↓</div>
+    <div class="chain-row">
+      <span class="node-num">4</span>
+      <div class="node-box blank">
+        <strong style="color:var(--gold);font-size:0.82rem;">BLANK — What was the cultural result?</strong>
+        <textarea class="causal-input" placeholder="What happened to global culture when economic integration AND communication technology combined? Think about the AP Learning Objective: how and why did globalization change culture?"></textarea>
+      </div>
+    </div>
+    <div id="chain4-answer" class="chain-answer"></div>
+    <div style="margin-top:14px;">
+      <button class="reveal-btn" onclick="revealChain()">Reveal Answers</button>
+    </div>
+  </div>
+
+  <!-- THESIS EVALUATOR -->
+  <div class="section-label">Thesis Evaluator — Click Each Card to Reveal Verdict</div>
+  <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:12px;">Each card contains a sample thesis responding to: <em style="color:var(--parchment);">"Evaluate the extent to which globalization homogenized world culture in the 20th century."</em> Click each card to see if it earns the point.</p>
+  <div class="thesis-grid">
+    <div class="thesis-card" onclick="revThesis(this,\x27fail\x27,\x27FAIL — This is a restatement, not an argument. It tells us what happened without establishing a line of reasoning. There is no \x22because\x22, no categories, and no claim about degree (how much? homogenized vs. diversified?). The reader does not know what the essay will argue.\x27)">
+      <div class="click-hint">Click to Evaluate</div>
+      "Globalization changed culture around the world in the 20th century through the spread of music, movies, brands, and the internet."
+    </div>
+    <div class="thesis-card" onclick="revThesis(this,\x27pass\x27,\x27PASS — This thesis earns the point. It makes a defensible claim with a line of reasoning: cultural globalization was NOT homogenization but multidirectional exchange. It establishes categories (Western AND non-Western) and implies a \x22to what extent\x22 argument (limited homogenization because of counter-flows). The essay will analyze why the traffic flowed in multiple directions.\x27)">
+      <div class="click-hint">Click to Evaluate</div>
+      "Although American brands and media spread globally, cultural globalization was not simply homogenization — non-Western cultural forms like K-pop, Bollywood, and reggae used the same technological networks to become worldwide forces, demonstrating that globalization created multidirectional cultural exchange rather than a single dominant culture."
+    </div>
+    <div class="thesis-card" onclick="revThesis(this,\x27fail\x27,\x27FAIL — This thesis is historically defensible but does not establish a line of reasoning. Saying both \x22yes\x22 and \x22no\x22 without specifying why or in what way is not an argument — it is a description of complexity. To earn the point, the student needs to commit to a degree claim and preview the categories of their argument.\x27)">
+      <div class="click-hint">Click to Evaluate</div>
+      "Globalization both homogenized and diversified world culture in the 20th century, as some local traditions were lost while others spread globally."
+    </div>
+    <div class="thesis-card" onclick="revThesis(this,\x27pass\x27,\x27PASS — This thesis earns the point. It makes a defensible degree claim (\x22significantly but unevenly\x22), provides two analytic categories (economic pressure + political resistance), and establishes a clear line of reasoning. An AP reader knows exactly what this essay will argue and how it will be organized.\x27)">
+      <div class="click-hint">Click to Evaluate</div>
+      "While American consumer culture significantly shaped global tastes through multinational corporations and media, cultural homogenization was limited by both the rise of non-Western popular culture and government censorship, demonstrating that globalization produced a contested, uneven exchange rather than a uniform global identity."
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       DOK 4 — KNOWLEDGE AUGMENTATION
+  ══════════════════════════════════════════════════ -->
+  <div class="dok-header dok4">
+    <div class="dok-badge">DOK 4</div>
+    <h2>Knowledge Augmentation</h2>
+    <span class="dok-desc">Explore and explain with examples &amp; evidence</span>
+  </div>
+
+  <!-- CONTEXTUALIZATION BUILDER -->
+  <div class="section-label">Contextualization Builder — 3 Pathways</div>
+  <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:12px;">Contextualization requires you to explain how a specific development is <em>situated within</em> a broader historical context. Choose a pathway, write your contextualization paragraph, then compare with the model response.</p>
+
+  <div class="ctx-pathway" id="ctx1">
+    <div class="ctx-pathway-header" onclick="toggleCtx('ctx1')">
+      <span class="ctx-num">1</span>
+      <span>Pathway: Earlier Periods of Cultural Exchange as Context</span>
+      <span class="ctx-toggle">▼</span>
+    </div>
+    <div class="ctx-body">
+      <div class="ctx-stem">Stem: How do earlier periods of long-distance trade and cultural diffusion (Units 1–6) provide context for understanding why cultural globalization accelerated after 1900?</div>
+      <p style="font-size:0.82rem;color:var(--text-muted);margin:10px 0 4px;">Your Contextualization — Pathway 1:</p>
+      <textarea rows="5" style="width:100%;background:#1a1a2e;color:#e0d6f0;border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:10px;font-size:0.92rem;resize:vertical;" placeholder="Write your contextualization paragraph using the Pathway 1 stem above. Aim for 3–5 sentences that describe a relevant earlier historical pattern before connecting it to Topic 9.6..."></textarea>
+      <div class="sample-label">Model Contextualization — Pathway 1</div>
+      <div class="sample-body">Long before the 20th century, human societies had been exchanging cultural practices across long distances. The Silk Roads of the ancient and classical world facilitated the spread of Buddhism, artistic styles, and agricultural products across Eurasia. The Indian Ocean trading networks of the post-classical era spread Islam and blended local traditions from East Africa to Southeast Asia. Even in the early modern period, the Columbian Exchange dramatically reshaped food cultures on every continent. However, all of these exchanges were slow, geographically limited, and dependent on physical movement of people and goods. The political transformations of the 20th century — especially the end of the Cold War — and the invention of instantaneous communication technologies radically accelerated this millennia-old pattern, enabling cultural exchange to occur at a speed, scale, and multidirectionality that was genuinely unprecedented in human history.</div>
+    </div>
+  </div>
+
+  <div class="ctx-pathway" id="ctx2">
+    <div class="ctx-pathway-header" onclick="toggleCtx('ctx2')">
+      <span class="ctx-num">2</span>
+      <span>Pathway: Decolonization and New Global Voices as Context</span>
+      <span class="ctx-toggle">▼</span>
+    </div>
+    <div class="ctx-body">
+      <div class="ctx-stem">Stem: How did the decolonization movements of the mid-20th century (Unit 8) create conditions for non-Western cultural forms to gain global audiences?</div>
+      <p style="font-size:0.82rem;color:var(--text-muted);margin:10px 0 4px;">Your Contextualization — Pathway 2:</p>
+      <textarea rows="5" style="width:100%;background:#1a1a2e;color:#e0d6f0;border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:10px;font-size:0.92rem;resize:vertical;" placeholder="Write your contextualization paragraph using the Pathway 2 stem. Connect decolonization (Unit 8) to the emergence of non-Western cultural forces like Bollywood, reggae, or K-pop..."></textarea>
+      <div class="sample-label">Model Contextualization — Pathway 2</div>
+      <div class="sample-body">The wave of decolonization that swept Asia, Africa, and the Caribbean between the 1940s and 1970s was more than a political transformation — it was a profound cultural assertion. As colonized peoples reclaimed political independence, they also sought to define their own cultural identities outside the frameworks imposed by European colonizers. Movements like the Harlem Renaissance had already shown, earlier in the century, how marginalized communities could use cultural expression to assert dignity and challenge hierarchies. As newly independent nations gained sovereignty, their cultural industries gained both investment and legitimacy. This context helps explain why Bollywood emerged from independent India as a globally influential film industry, why Jamaican reggae carried explicit messages of Pan-African dignity, and why South Korea's government actively backed K-pop as a cultural export. The global spread of these non-Western cultural forms was not coincidental — it was rooted in the assertion of cultural agency that decolonization had made possible.</div>
+    </div>
+  </div>
+
+  <div class="ctx-pathway" id="ctx3">
+    <div class="ctx-pathway-header" onclick="toggleCtx('ctx3')">
+      <span class="ctx-num">3</span>
+      <span>Pathway: Industrial Revolution and Mass Media as Context</span>
+      <span class="ctx-toggle">▼</span>
+    </div>
+    <div class="ctx-body">
+      <div class="ctx-stem">Stem: How did the communication and transportation technologies of the Industrial Revolution (Units 5–6) lay the groundwork for 20th-century cultural globalization?</div>
+      <p style="font-size:0.82rem;color:var(--text-muted);margin:10px 0 4px;">Your Contextualization — Pathway 3:</p>
+      <textarea rows="5" style="width:100%;background:#1a1a2e;color:#e0d6f0;border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:10px;font-size:0.92rem;resize:vertical;" placeholder="Write your contextualization paragraph using the Pathway 3 stem. Discuss how the telegraph, steam-powered printing, railroads, and early mass media created the infrastructure that later enabled cultural globalization..."></textarea>
+      <div class="sample-label">Model Contextualization — Pathway 3</div>
+      <div class="sample-body">The Industrial Revolution of the 18th and 19th centuries did not only transform economic production — it also fundamentally changed how information and culture moved. The telegraph created instantaneous long-distance communication for the first time. Steam-powered printing presses enabled mass-produced newspapers, reaching literate urban populations at unprecedented scale. Railroads and steamships shrank travel times, allowing people, ideas, and cultural products to move more quickly across continents and oceans. These developments established the infrastructure and the cultural expectation of mass communication. When radio emerged in the 1920s and television in the 1950s, they were building on a communications revolution already decades in the making. The 20th-century explosion of cultural globalization — from Hollywood to streaming to social media — was therefore not a sudden break with the past but an acceleration of a technological trajectory that had begun with the Industrial Revolution.</div>
+    </div>
+  </div>
+
+  <!-- SAQ PRACTICE -->
+  <div class="section-label">SAQ Practice</div>
+  <div class="saq-box">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px;">Short Answer Question — No Stimulus (Type: Q4)</p>
+    <div class="saq-context">
+      Use your knowledge of AP World History: Modern to answer all parts of the following question. No external source is provided — your response should draw entirely on your content knowledge.
+    </div>
+    <div class="saq-part">
+      <div class="saq-part-label">Part A</div>
+      <p><strong>Identify</strong> one political or social change in the 20th century that contributed to cultural globalization.</p>
+      <textarea placeholder="Part A — 2–3 sentences. Just identify and briefly characterize the development. You do not need to explain yet."></textarea>
+    </div>
+    <div class="saq-part">
+      <div class="saq-part-label">Part B</div>
+      <p><strong>Explain</strong> how one non-Western cultural form became a global phenomenon. Use a specific example.</p>
+      <textarea placeholder="Part B — 2–3 sentences. Name the cultural form, describe it briefly, and explain HOW it spread globally. Name specific technologies, figures, or events."></textarea>
+    </div>
+    <div class="saq-part">
+      <div class="saq-part-label">Part C</div>
+      <p><strong>Explain</strong> why cultural globalization is best understood as a multidirectional exchange rather than a one-way process of Americanization.</p>
+      <textarea placeholder="Part C — 2–3 sentences. This is your analysis. Reference specific evidence from multiple regions to make your case. Remember: explain means HOW or WHY, not just list."></textarea>
+    </div>
+    <div style="background:rgba(201,168,76,0.06);border:1px solid var(--gold-border);border-radius:4px;padding:12px 14px;margin-top:16px;">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--gold);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;">AP Scoring Reminder</div>
+      <ul style="font-size:0.82rem;color:var(--text-secondary);padding-left:18px;">
+        <li><strong>Part A</strong> — 1 point: Identify = name with enough specificity. 2–3 sentences is plenty. No explanation required.</li>
+        <li><strong>Part B</strong> — 1 point: Explain = show HOW or WHY it spread. Name the specific cultural form, the technology or person, and the global reach.</li>
+        <li><strong>Part C</strong> — 1 point: Explain = must engage the "multidirectional" argument with evidence. Simply asserting the idea without examples will not earn the point.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CROSS-UNIT SYNTHESIS -->
+  <div class="section-label">Cross-Unit Synthesis</div>
+  <div class="cross-unit-box">
+    <h4>Connecting 9.6 to the Broader AP Narrative</h4>
+    <ul class="cross-prompts">
+      <li><strong>9.6 ↔ 9.7:</strong> For every globalization action, there is a resistance reaction. How do the examples in this topic (Bollywood, K-pop, Weibo) already contain elements of both globalization AND resistance?</li>
+      <li><strong>9.6 ↔ Unit 8:</strong> How did decolonization create the political space for non-Western cultures to assert themselves globally?</li>
+      <li><strong>9.6 ↔ 9.1:</strong> How did the technological advances covered in Topic 9.1 (telegraph, radio, internet) directly enable the cultural changes in 9.6?</li>
+      <li><strong>9.6 ↔ Unit 6:</strong> Compare Americanization in the 21st century to European cultural imperialism during the Age of Empire. What are the key similarities and differences?</li>
+    </ul>
+    <textarea style="min-height:100px;margin-top:14px;" placeholder="Choose ONE connection above and write 3–4 sentences analyzing it. Be specific — reference events, examples, or processes from both topics."></textarea>
+  </div>
+
+  <!-- SELF-ASSESSMENT -->
+  <div class="section-label">Self-Assessment — Rate Your AP Skills</div>
+  <div style="background:var(--surface);border:1px solid rgba(255,255,255,0.05);border-radius:6px;padding:16px 18px;margin:10px 0;">
+    <p style="font-size:0.83rem;color:var(--text-secondary);margin-bottom:14px;">Rate yourself honestly on each skill after completing this section. This will help you know what to review before the exam.</p>
+    <table class="sa-table">
+      <thead>
+        <tr>
+          <th>AP Skill</th>
+          <th>I Can...</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--gold);">Contextualization (4.B)</td>
+          <td>Explain 9.6 within a broader historical context (3 pathways)</td>
+          <td>
+            <div class="sa-labels">
+              <div class="sa-label-item" onclick="setSA(this,'not')">Not Yet</div>
+              <div class="sa-label-item" onclick="setSA(this,'get')">Getting There</div>
+              <div class="sa-label-item" onclick="setSA(this,'conf')">Confident</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--gold);">Argumentation</td>
+          <td>Write a thesis with a defensible claim and line of reasoning</td>
+          <td>
+            <div class="sa-labels">
+              <div class="sa-label-item" onclick="setSA(this,'not')">Not Yet</div>
+              <div class="sa-label-item" onclick="setSA(this,'get')">Getting There</div>
+              <div class="sa-label-item" onclick="setSA(this,'conf')">Confident</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--gold);">Causation</td>
+          <td>Explain how political/social changes caused cultural globalization</td>
+          <td>
+            <div class="sa-labels">
+              <div class="sa-label-item" onclick="setSA(this,'not')">Not Yet</div>
+              <div class="sa-label-item" onclick="setSA(this,'get')">Getting There</div>
+              <div class="sa-label-item" onclick="setSA(this,'conf')">Confident</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--gold);">SAQ Skills</td>
+          <td>Answer Identify / Describe / Explain prompts correctly in 2–3 sentences</td>
+          <td>
+            <div class="sa-labels">
+              <div class="sa-label-item" onclick="setSA(this,'not')">Not Yet</div>
+              <div class="sa-label-item" onclick="setSA(this,'get')">Getting There</div>
+              <div class="sa-label-item" onclick="setSA(this,'conf')">Confident</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--gold);">Key Content</td>
+          <td>Identify and use specific examples (Bollywood, reggae, K-pop, Weibo, etc.)</td>
+          <td>
+            <div class="sa-labels">
+              <div class="sa-label-item" onclick="setSA(this,'not')">Not Yet</div>
+              <div class="sa-label-item" onclick="setSA(this,'get')">Getting There</div>
+              <div class="sa-label-item" onclick="setSA(this,'conf')">Confident</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="margin-top:16px;padding:12px 14px;background:rgba(201,168,76,0.05);border-left:3px solid var(--gold);border-radius:0 4px 4px 0;font-size:0.82rem;color:var(--text-secondary);">
+      <strong style="color:var(--gold);">Pro Tip for the Exam:</strong> Topic 9.6 (cultural globalization) and Topic 9.7 (resistance to globalization) are frequently paired in AP questions. For every cultural spread you can name in 9.6, be ready to pair it with a resistance example in 9.7. The College Board loves to test both sides of this relationship.
+    </div>
+  </div>
+
+</div><!-- /main-wrap -->
+
+<script>
+// ── MCQ ──
+function checkMCQ(qid, btn, isCorrect) {
+  const item = document.getElementById(qid);
+  const fb = document.getElementById(qid + '-fb');
+  if (!fb._orig) fb._orig = fb.innerHTML;
+  if (isCorrect) {
+    item.querySelectorAll('.mcq-option').forEach(b => {
+      b.classList.add('disabled');
+      b.onclick = null;
+    });
+    btn.classList.add('correct');
+    fb.innerHTML = fb._orig;
+    fb.classList.remove('wrong-fb');
+    fb.classList.add('show');
+  } else {
+    btn.classList.add('incorrect', 'disabled');
+    btn.onclick = null;
+    fb.innerHTML = '<strong>Incorrect.</strong> That\u0027s not right \u2014 try another option.';
+    fb.classList.add('show', 'wrong-fb');
+  }
+}
+
+// ── MATCHING ──
+const matchKey = { '1':'C', '2':'B', '3':'E', '4':'A', '5':'D' };
+let selectedLeft = null, selectedRight = null, matchedPairs = new Set();
+
+function selectMatch(side, id) {
+  if (side === 'left') {
+    if (matchedPairs.has(id)) return;
+    if (selectedLeft) document.getElementById('ml-' + selectedLeft).classList.remove('selected');
+    selectedLeft = id;
+    document.getElementById('ml-' + id).classList.add('selected');
+  } else {
+    if ([...matchedPairs.values()].some(v => matchKey[v] === id)) return;
+    selectedRight = id;
+  }
+  if (selectedLeft && selectedRight) {
+    const correct = matchKey[selectedLeft] === selectedRight;
+    if (correct) {
+      document.getElementById('ml-' + selectedLeft).classList.remove('selected');
+      document.getElementById('ml-' + selectedLeft).classList.add('matched');
+      document.getElementById('mr-' + selectedRight).classList.add('matched');
+      matchedPairs.add(selectedLeft);
+      const count = matchedPairs.size;
+      document.getElementById('match-status').textContent = count + ' of 5 matched' + (count === 5 ? ' \u2014 All correct!' : '');
+    } else {
+      const lEl = document.getElementById('ml-' + selectedLeft);
+      const rEl = document.getElementById('mr-' + selectedRight);
+      lEl.classList.add('wrong'); rEl.classList.add('wrong');
+      setTimeout(() => {
+        lEl.classList.remove('wrong', 'selected');
+        rEl.classList.remove('wrong');
+      }, 700);
+    }
+    selectedLeft = null; selectedRight = null;
+  }
+}
+
+function resetMatch() {
+  matchedPairs.clear(); selectedLeft = null; selectedRight = null;
+  document.querySelectorAll('.match-item').forEach(el => el.className = 'match-item');
+  document.getElementById('match-status').textContent = '';
+}
+
+// ── REVEAL MODEL ──
+function revealModel(id) {
+  const el = document.getElementById(id);
+  el.classList.add('show');
+}
+
+// ── CAUSAL CHAIN ──
+function revealChain() {
+  const a2 = document.getElementById('chain2-answer');
+  const a4 = document.getElementById('chain4-answer');
+  a2.textContent = 'Global economic integration accelerated. Multinational corporations spread products and brands across borders (Toyota, Coca-Cola, Nike). E-commerce platforms like Amazon, Alibaba, and eBay created a single 24/7 global marketplace. Consumer culture — defining identity through what you buy — became a worldwide phenomenon that transcended national origins.';
+  a2.style.display = 'block';
+  a4.textContent = 'Popular and consumer culture became genuinely global and multidirectional. Arts, entertainment, and sports reflected a globalized society: Bollywood, K-pop, anime, and reggae became worldwide forces alongside Hollywood and American brands. Social media (Facebook, Twitter) connected billions across borders, while some governments (like China) responded with censorship and state-controlled alternatives. The result was not cultural homogenization but a contested, multidirectional cultural exchange.';
+  a4.style.display = 'block';
+}
+
+// ── THESIS EVALUATOR ──
+function revThesis(el, verdict, explanation) {
+  if (el.classList.contains('revealed')) return;
+  el.classList.add('revealed', verdict);
+  el.innerHTML += '<div class="thesis-verdict">' + verdict.toUpperCase() + '</div><div class="thesis-explanation">' + explanation + '</div>';
+}
+
+// ── CONTEXTUALIZATION ──
+function toggleCtx(id) {
+  document.getElementById(id).classList.toggle('open');
+}
+
+// ── SELF-ASSESSMENT ──
+function setSA(el, level) {
+  const row = el.closest('.sa-labels');
+  row.querySelectorAll('.sa-label-item').forEach(i => i.classList.remove('active-not','active-get','active-conf'));
+  if (level === 'not') el.classList.add('active-not');
+  else if (level === 'get') el.classList.add('active-get');
+  else el.classList.add('active-conf');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:,">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 9: Globalization — AP World History Study Modules</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --parchment: #f5f0e8;
+    --gold: #b8860b;
+    --gold-light: #d4a820;
+    --smoke: #6b6355;
+    --bg: #2a2016;
+    --bg-card: #32291a;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--parchment);
+    font-family: 'Source Serif 4', serif;
+    font-size: 16px;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .site-header {
+    background: linear-gradient(135deg, #1a1208 0%, #2a1e0e 50%, #1e160a 100%);
+    border-bottom: 2px solid var(--gold);
+    padding: 3rem 2rem 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .site-header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(184,134,11,0.03) 40px, rgba(184,134,11,0.03) 41px);
+  }
+  .header-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    position: relative;
+  }
+  .header-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 900;
+    color: var(--parchment);
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+    position: relative;
+  }
+  .header-title span { color: var(--gold); }
+  .header-sub {
+    color: #b8a88a;
+    font-size: 1rem;
+    font-style: italic;
+    max-width: 620px;
+    margin: 0 auto 1.5rem;
+    position: relative;
+  }
+
+  /* STUDENT NAME */
+  .name-bar {
+    background: rgba(26,16,6,0.95);
+    backdrop-filter: blur(8px);
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(184,134,11,0.15);
+  }
+  .name-bar-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .name-bar label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--smoke);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .name-bar input {
+    flex: 1;
+    min-width: 200px;
+    max-width: 350px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(184,134,11,0.2);
+    border-radius: 4px;
+    color: var(--parchment);
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.88rem;
+    padding: 0.4rem 0.8rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .name-bar input:focus { border-color: var(--gold); }
+  .name-bar input::placeholder { color: var(--smoke); font-style: italic; }
+
+  /* MAIN */
+  .main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+  }
+
+  /* HOW TO USE */
+  .how-to {
+    background: rgba(184,134,11,0.08);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .how-to-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .how-to p { font-size: 0.9rem; color: #c8b898; }
+  .how-to strong { color: var(--parchment); }
+
+  /* CHAPTER LIST */
+  .chapter-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .chapter-item {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid rgba(184,134,11,0.15);
+    border-bottom: none;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.15s;
+    position: relative;
+  }
+  .chapter-item:first-child { border-radius: 8px 8px 0 0; }
+  .chapter-item:last-child { border-bottom: 1px solid rgba(184,134,11,0.15); border-radius: 0 0 8px 8px; }
+  .chapter-item:hover {
+    background: rgba(184,134,11,0.08);
+    border-color: rgba(184,134,11,0.3);
+  }
+  .chapter-item:hover + .chapter-item { border-top-color: rgba(184,134,11,0.3); }
+
+  .chapter-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gold);
+    min-width: 2.5rem;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .chapter-info { flex: 1; }
+  .chapter-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: var(--parchment);
+    margin-bottom: 0.2rem;
+  }
+  .chapter-desc {
+    font-size: 0.82rem;
+    color: var(--smoke);
+    font-style: italic;
+  }
+  .chapter-chips {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-top: 0.3rem;
+  }
+  .chip-sm {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.55rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 100px;
+    border: 1px solid rgba(184,134,11,0.25);
+    color: #a89a7a;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .chapter-status {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--smoke);
+    text-align: right;
+    min-width: 90px;
+    flex-shrink: 0;
+  }
+  .chapter-status.submitted { color: #a8e0a0; }
+  .chapter-status.in-progress { color: var(--gold-light); }
+
+  .chapter-arrow {
+    color: rgba(184,134,11,0.4);
+    font-size: 1rem;
+    flex-shrink: 0;
+    transition: color 0.15s;
+  }
+  .chapter-item:hover .chapter-arrow { color: var(--gold); }
+
+  /* FOOTER */
+  .site-footer {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  .site-footer p {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--smoke);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .chapter-item { padding: 1rem; gap: 0.75rem; }
+    .chapter-desc { display: none; }
+    .chapter-chips { display: none; }
+    .chapter-status { min-width: 70px; font-size: 0.55rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="site-header">
+  <div class="header-eyebrow">AP World History: Modern</div>
+  <h1 class="header-title">Unit 9: <span>Globalization</span></h1>
+  <p class="header-sub">10 interactive study modules covering c. 1900-present. Work through each chapter in order — each builds on the one before it.</p>
+</div>
+
+<div class="name-bar">
+  <div class="name-bar-inner">
+    <label for="studentNameInput">Your Name</label>
+    <input type="text" id="studentNameInput" placeholder="Enter your full name (saved automatically)">
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="how-to">
+    <div class="how-to-title">How This Works</div>
+    <p>Each module has <strong>4 levels</strong> (DOK 1-4) that build from basic recall to argumentation. Start with the video, work through each level in order, then <strong>submit your completion report</strong> when you finish. Your progress is saved automatically in your browser. Complete the chapters in order — they tell a connected story.</p>
+  </div>
+
+  <div class="chapter-list">
+
+    <a class="chapter-item" href="9_0_study_materials.html">
+      <div class="chapter-num">9.0</div>
+      <div class="chapter-info">
+        <div class="chapter-title">Globalization Overview</div>
+        <div class="chapter-desc">The interconnected modern world — trade, technology, culture, and conflict</div>
+        <div class="chapter-chips">
+          <span class="chip-sm">c. 1900-present</span>
+          <span class="chip-sm">Overview</span>
+        </div>
+      </div>
+      <div class="chapter-status" id="status-9_0">Not started</div>
+      <div class="chapter-arrow">&#8250;</div>
+    </a>
+
+    <a class="chapter-item" href="9_1_study_materials.html">
+      <div class="chapter-num">9.1</div>
+      <div class="chapter-info">
+        <div class="chapter-title">Technological Advances After 1900</div>
+        <div class="chapter-desc">How new technologies transformed communication, transportation, and daily life</div>
+        <div class="chapter-chips">
+          <span class="chip-sm">c. 1900-present</span>
+          <span class="chip-sm">Technology</span>
+          <span class="chip-sm">Causation</span>
+        </div>
+      </div>
+      <div class="chapter-status" id="status-9_1">Not started</div>
+      <div class="chapter-arrow">&#8250;</div>
+    </a>
+
+    <a class="chapter-item" href="9_2_study_materials.html">
+      <div class="chapter-num">9.2</div>
+      <div class="chapter-info">
+        <div class="chapter-title">Disease After 1900</div>
+        <div class="chapter-desc">Pandemics, public health responses, and the global impact of disease</div>
+        <div class="chapter-chips">
+          <span class="chip-sm">c. 1900-present</span>
+          <span class="chip-sm">Disease</span>
+          <span class="chip-sm">Comparison</span>
+        </div>
+      </div>
+      <div class="chapter-status" id="status-9_2">Not started</div>
+      <div class="chapter-arrow">&#8250;</div>
+    </a>
+
+    <a class="chapter-item" href="9_3_study_materials.html">
+      <div class="chapter-num">9.3</div>
+      <div class="chapter-info">
+        <div class="chapter-title">Technology and the Environment</div>
+        <div class="chapter-desc">Industrialization, resource extraction, and environmental consequences</div>
+        <div class="chapter-chips">
+          <span class="chip-sm">c. 1900-present</span>
+          <span class="chip-sm">Environment</span>
+          <span class="chip-sm">Causation</span>
+        </div>
+      </div>
+      <div class="chapter-status" id="status-9_3">Not started</div>
+      <div class="chapter-arrow">&#8250;</div>
+    </a>
+
+    <a class="chapter-item" href="9_4_study_materials.html">
+      <div class="chapter-num">9.4</div>
+      <div class="chapter-info">
+        <div class="chapter-title">Economics in the Global Age</div>
+        <div class="chapter-desc">Free trade, multinational corporations, and global economic inequality</div>
+        <div class="chapter-chips">
+          <span class="chip-sm">c. 1900-present</span>
+          <span class="chip-sm">Economics</span>
+          <span class="chip-sm">CCOT</span>
+        </div>
+      </div>
+      <div class="chapter-status" id="status-9_4">Not started</div>
+      <div class="chapter-arrow">&#8250;</div>
+    </a>
+
+    <a class="chapter-item" href="9_5_study_materials.html">
+      <div class="chapter-num">9.5</div>
+      <div class="chapter-info">
+        <div class="chapter-title">Calls for Reform After 1900</div>
+        <div class="chapter-desc">Human rights movements, feminist activism, and social justice campaigns</div>
+        <div class="chapter-chips">
+          <span class="chip-sm">c. 1900-present</span>
+          <span class="chip-sm">Reform</span>
+          <span class="chip-sm">CDI</span>
+        </div>
+      </div>
+      <div class="chapter-status" id="status-9_5">Not started</div>
+      <div class="chapter-arrow">&#8250;</div>
+    </a>
+
+    <a class="chapter-item" href="9_6_study_materials.html">
+      <div class="chapter-num">9.6</div>
+      <div class="chapter-info">
+        <div class="chapter-title">Globalized Culture After 1900</div>
+        <div class="chapter-desc">Cultural diffusion, media, consumer culture, and resistance to homogenization</div>
+        <div class="chapter-chips">
+          <span class="chip-sm">c. 1900-present</span>
+          <span class="chip-sm">Culture</span>
+          <span class="chip-sm">Comparison</span>
+        </div>
+      </div>
+      <div class="chapter-status" id="status-9_6">Not started</div>
+      <div class="chapter-arrow">&#8250;</div>
+    </a>
+
+    <a class="chapter-item" href="9_7_study_materials.html">
+      <div class="chapter-num">9.7</div>
+      <div class="chapter-info">
+        <div class="chapter-title">Resistance to Globalization</div>
+        <div class="chapter-desc">Anti-globalization movements, nationalism, and critiques of global integration</div>
+        <div class="chapter-chips">
+          <span class="chip-sm">c. 1900-present</span>
+          <span class="chip-sm">Resistance</span>
+          <span class="chip-sm">Argumentation</span>
+        </div>
+      </div>
+      <div class="chapter-status" id="status-9_7">Not started</div>
+      <div class="chapter-arrow">&#8250;</div>
+    </a>
+
+    <a class="chapter-item" href="9_8_study_materials.html">
+      <div class="chapter-num">9.8</div>
+      <div class="chapter-info">
+        <div class="chapter-title">Institutions in a Globalized World</div>
+        <div class="chapter-desc">The UN, NGOs, multinational organizations, and global governance</div>
+        <div class="chapter-chips">
+          <span class="chip-sm">c. 1945-present</span>
+          <span class="chip-sm">Governance</span>
+          <span class="chip-sm">Institutions</span>
+        </div>
+      </div>
+      <div class="chapter-status" id="status-9_8">Not started</div>
+      <div class="chapter-arrow">&#8250;</div>
+    </a>
+
+    <a class="chapter-item" href="9_9_study_materials.html">
+      <div class="chapter-num">9.9</div>
+      <div class="chapter-info">
+        <div class="chapter-title">Globalization and Argumentation</div>
+        <div class="chapter-desc">Unit 9 capstone — historical argumentation and LEQ practice</div>
+        <div class="chapter-chips">
+          <span class="chip-sm">Capstone</span>
+          <span class="chip-sm">LEQ</span>
+          <span class="chip-sm">Synthesis</span>
+        </div>
+      </div>
+      <div class="chapter-status" id="status-9_9">Not started</div>
+      <div class="chapter-arrow">&#8250;</div>
+    </a>
+
+  </div>
+
+</div>
+
+<div class="site-footer">
+  <p>AP World History: Modern &middot; Unit 9 &middot; Mr. Strootman</p>
+</div>
+
+<script src="shared.js"></script>
+<script>
+  // Save student name from home page
+  const nameInput = document.getElementById('studentNameInput');
+  const saved = localStorage.getItem('apwh_student_name');
+  if (saved) nameInput.value = saved;
+  nameInput.addEventListener('input', () => {
+    localStorage.setItem('apwh_student_name', nameInput.value);
+  });
+
+  // Update completion status for all chapters
+  updateHomePageStatus();
+</script>
+</body>
+</html>

@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9.8 Institutions in a Globalized World — AP World History</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0e16;
+    --surface: #14141f;
+    --surface2: #1c1c2e;
+    --gold: #c9a84c;
+    --gold-dim: rgba(201,168,76,0.15);
+    --gold-border: rgba(201,168,76,0.25);
+    --parchment: #e8dfc8;
+    --text-muted: rgba(232,223,200,0.45);
+    --text-secondary: rgba(232,223,200,0.75);
+    --green: #4a9e3f;
+    --green-dim: rgba(74,158,63,0.12);
+    --green-border: rgba(74,158,63,0.35);
+    --red: #c05050;
+    --red-dim: rgba(192,80,80,0.12);
+    --red-border: rgba(192,80,80,0.35);
+    --blue: #4a7fc1;
+    --blue-dim: rgba(74,127,193,0.12);
+    --blue-border: rgba(74,127,193,0.3);
+    --purple: #7c5cbf;
+    --purple-dim: rgba(124,92,191,0.12);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--parchment);
+    font-family: 'Source Serif 4', serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(160deg, #0a0a14 0%, #101022 50%, #0e0e16 100%);
+    border-bottom: 1px solid var(--gold-border);
+    padding: 52px 24px 44px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 60% at 50% 0%, rgba(201,168,76,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 900;
+    color: var(--parchment);
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+  .hero-sub {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto 20px;
+  }
+  .hero-tags {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--gold-border);
+    color: var(--gold);
+    background: var(--gold-dim);
+    letter-spacing: 0.06em;
+  }
+
+  /* ── LAYOUT ── */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+  }
+
+  /* ── DOK SECTION HEADERS ── */
+  .dok-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 40px 0 16px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    margin-top: 40px;
+  }
+  .dok-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    padding: 6px 12px;
+    border-radius: 4px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .dok1 .dok-badge { background: rgba(74,127,193,0.2); border: 1px solid var(--blue-border); color: #7ab0e8; }
+  .dok2 .dok-badge { background: rgba(74,158,63,0.2); border: 1px solid var(--green-border); color: #7ed66f; }
+  .dok3 .dok-badge { background: rgba(201,168,76,0.2); border: 1px solid var(--gold-border); color: var(--gold); }
+  .dok4 .dok-badge { background: rgba(124,92,191,0.2); border: 1px solid rgba(124,92,191,0.35); color: #b09ee0; }
+  .dok-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  .dok-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* ── CARDS & PANELS ── */
+  .panel {
+    background: var(--surface);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 8px;
+    padding: 24px;
+    margin: 20px 0;
+  }
+  .panel-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  /* ── VIDEO EMBED ── */
+  .video-wrap {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #000;
+    margin: 20px 0;
+  }
+  .video-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  .video-quote {
+    border-left: 3px solid var(--gold);
+    padding: 12px 18px;
+    margin: 16px 0;
+    background: var(--gold-dim);
+    border-radius: 0 6px 6px 0;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+  .video-quote cite {
+    display: block;
+    font-style: normal;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-top: 6px;
+  }
+
+  /* ── VISUAL FRAMEWORK TIMELINE ── */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 20px 0;
+    position: relative;
+    padding-left: 40px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--blue), var(--gold), var(--purple));
+  }
+  .tl-item {
+    position: relative;
+    padding: 12px 16px 12px 20px;
+    margin-bottom: 6px;
+  }
+  .tl-dot {
+    position: absolute;
+    left: -30px;
+    top: 18px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+    background: var(--bg);
+  }
+  .tl-year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--gold);
+    margin-bottom: 2px;
+  }
+  .tl-event {
+    font-size: 0.88rem;
+    color: var(--parchment);
+    font-weight: 600;
+  }
+  .tl-detail {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  /* ── FLIP CARDS ── */
+  .flip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .flip-card {
+    perspective: 1000px;
+    height: 120px;
+    cursor: pointer;
+  }
+  .flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease;
+  }
+  .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
+  .flip-front, .flip-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 12px;
+    min-height: 120px;
+  }
+  .flip-front {
+    background: var(--surface2);
+    border: 1px solid var(--blue-border);
+    font-weight: 600;
+    font-size: 0.88rem;
+    position: relative;
+  }
+  .flip-back {
+    background: var(--surface);
+    border: 1px solid var(--gold-border);
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    transform: rotateY(180deg);
+    line-height: 1.5;
+  }
+  .flip-hint {
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--text-muted);
+  }
+
+  /* ── MCQ ── */
+  .mcq-item {
+    background: var(--surface2);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 6px;
+    padding: 18px;
+    margin-bottom: 12px;
+  }
+  .mcq-question {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    color: var(--parchment);
+  }
+  .mcq-options {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .mcq-option {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 4px;
+    padding: 10px 14px;
+    text-align: left;
+    color: var(--parchment);
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.84rem;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .mcq-option:hover:not(.disabled) { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.15); }
+  .mcq-option.correct { background: var(--green-dim) !important; border-color: var(--green-border) !important; color: #a8e6a0; }
+  .mcq-option.incorrect { background: var(--red-dim) !important; border-color: var(--red-border) !important; color: #e8a0a0; text-decoration: line-through; }
+  .mcq-option.disabled { cursor: default; pointer-events: none; opacity: 0.6; }
+  .mcq-feedback {
+    display: none;
+    margin-top: 10px;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 0.82rem;
+    background: var(--green-dim);
+    border: 1px solid var(--green-border);
+    color: var(--text-secondary);
+  }
+  .mcq-feedback.show { display: block; }
+  .mcq-feedback.wrong-fb { background: var(--red-dim); border-color: var(--red-border); }
+
+  /* ── MATCHING ── */
+  .match-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 14px 0;
+  }
+  .match-col-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+  }
+  .match-item {
+    background: var(--surface2);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 0.83rem;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+    user-select: none;
+  }
+  .match-item:hover { border-color: var(--blue-border); }
+  .match-item.selected { border-color: var(--gold); background: var(--gold-dim); }
+  .match-item.matched { border-color: var(--green-border); background: var(--green-dim); color: #a8e6a0; cursor: default; }
+  .match-item.wrong { border-color: var(--red-border); background: var(--red-dim); animation: shake 0.3s ease; }
+  @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-4px)} 75%{transform:translateX(4px)} }
+  .match-result {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  /* ── EXPLAIN DRILL ── */
+  .drill-prompt {
+    font-size: 0.95rem;
+    color: var(--parchment);
+    margin-bottom: 14px;
+    padding: 14px 18px;
+    background: var(--gold-dim);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 6px 6px 0;
+  }
+  textarea {
+    width: 100%;
+    min-height: 100px;
+    margin: 10px 0;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 4px;
+    color: var(--parchment);
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.88rem;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  textarea:focus { border-color: rgba(201,168,76,0.5); }
+  .reveal-btn {
+    background: transparent;
+    border: 1px solid var(--gold-border);
+    color: var(--gold);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    padding: 8px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    letter-spacing: 0.08em;
+    transition: background 0.15s;
+  }
+  .reveal-btn:hover { background: var(--gold-dim); }
+  .model-response {
+    display: none;
+    margin-top: 12px;
+    padding: 14px 18px;
+    background: var(--green-dim);
+    border: 1px solid var(--green-border);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+  .model-response.show { display: block; }
+  .model-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--green);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+
+  /* ── APPLY ACTIVITY — HIPP GRID ── */
+  .hipp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 14px 0;
+  }
+  .hipp-cell {
+    background: var(--surface2);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 6px;
+    padding: 14px;
+  }
+  .hipp-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+  }
+  .hipp-question {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .hipp-cell textarea { min-height: 70px; }
+
+  /* ── CAUSAL CHAIN ── */
+  .chain-wrap {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    overflow-x: auto;
+    padding: 20px 4px;
+  }
+  .chain-node {
+    min-width: 140px;
+    flex: 0 0 140px;
+    background: var(--surface2);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 6px;
+    padding: 12px 10px;
+    text-align: center;
+    font-size: 0.78rem;
+  }
+  .chain-node.given {
+    border-color: var(--blue-border);
+    background: var(--blue-dim);
+  }
+  .chain-node.blank {
+    border: 2px dashed rgba(201,168,76,0.35);
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .chain-node.blank:hover { background: var(--gold-dim); }
+  .chain-node.revealed {
+    border: 1px solid var(--green-border);
+    background: var(--green-dim);
+    color: #a8e6a0;
+    cursor: default;
+  }
+  .chain-node-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+  .blank-hint {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 6px;
+  }
+  .chain-arrow {
+    color: var(--gold);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+  .chain-textareas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 10px 0;
+  }
+  .chain-textareas textarea { min-height: 60px; }
+
+  /* ── THESIS EVALUATOR ── */
+  .thesis-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .thesis-card {
+    background: var(--surface2);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 6px;
+    padding: 16px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    font-size: 0.83rem;
+    font-style: italic;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  .thesis-card:hover:not(.revealed) { border-color: var(--gold-border); }
+  .thesis-card.revealed { cursor: default; }
+  .thesis-card.revealed.pass { border-color: var(--green-border); background: var(--green-dim); }
+  .thesis-card.revealed.fail { border-color: var(--red-border); background: var(--red-dim); }
+  .thesis-verdict {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0.12em;
+    margin-top: 10px;
+  }
+  .thesis-card.pass .thesis-verdict { color: var(--green); }
+  .thesis-card.fail .thesis-verdict { color: var(--red); }
+  .thesis-explanation {
+    font-style: normal;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+  .thesis-instruction {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+
+  /* ── CONTEXTUALIZATION BUILDER ── */
+  .ctx-pathway {
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 6px;
+    margin: 12px 0;
+    overflow: hidden;
+  }
+  .ctx-header {
+    background: var(--surface2);
+    padding: 14px 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+  .ctx-header:hover { background: rgba(255,255,255,0.04); }
+  .ctx-pathway-title {
+    font-size: 0.88rem;
+    font-weight: 600;
+  }
+  .ctx-toggle {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--gold);
+    transition: transform 0.25s;
+  }
+  .ctx-pathway.open .ctx-toggle { transform: rotate(180deg); }
+  .ctx-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s;
+  }
+  .ctx-pathway.open .ctx-body {
+    max-height: 1200px;
+    padding: 0 20px 20px;
+  }
+  .ctx-stem {
+    padding: 14px 18px;
+    background: var(--gold-dim);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 6px 6px 0;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 14px 0 10px;
+  }
+  .sample-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--green);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 14px 0 6px;
+  }
+  .sample-body {
+    background: var(--green-dim);
+    border: 1px solid var(--green-border);
+    border-radius: 6px;
+    padding: 14px 16px;
+    font-size: 0.83rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  /* ── SAQ ── */
+  .saq-part {
+    margin-bottom: 20px;
+    padding: 16px 18px;
+    background: var(--surface2);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 6px;
+  }
+  .saq-part-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+  }
+  .saq-prompt {
+    font-size: 0.88rem;
+    color: var(--parchment);
+    margin-bottom: 10px;
+  }
+  .saq-rubric {
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    font-style: italic;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 8px;
+    margin-top: 8px;
+  }
+
+  /* ── CROSS UNIT SYNTHESIS ── */
+  .synthesis-prompt {
+    font-size: 0.9rem;
+    color: var(--parchment);
+    padding: 16px 20px;
+    background: var(--purple-dim);
+    border: 1px solid rgba(124,92,191,0.25);
+    border-radius: 6px;
+    margin-bottom: 14px;
+  }
+
+  /* ── SELF ASSESSMENT ── */
+  .sa-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    margin-top: 12px;
+  }
+  .sa-table th {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .sa-table td {
+    padding: 10px 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    vertical-align: middle;
+  }
+  .sa-labels {
+    display: flex;
+    gap: 6px;
+  }
+  .sa-label-item {
+    min-width: 28px;
+    white-space: nowrap;
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.08);
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.15s, border-color 0.15s;
+    color: var(--text-muted);
+  }
+  .sa-label-item:hover { border-color: var(--gold-border); color: var(--gold); }
+  .sa-label-item.active-red { background: var(--red-dim); border-color: var(--red-border); color: #e8a0a0; }
+  .sa-label-item.active-yellow { background: rgba(201,168,76,0.15); border-color: var(--gold-border); color: var(--gold); }
+  .sa-label-item.active-green { background: var(--green-dim); border-color: var(--green-border); color: #a8e6a0; }
+
+  /* ── TWO-ARG COMPARE ── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0;
+  }
+  .compare-card {
+    background: var(--surface2);
+    border-radius: 6px;
+    padding: 16px;
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+  .compare-card.pro { border-top: 3px solid var(--green); }
+  .compare-card.con { border-top: 3px solid var(--red); }
+  .compare-header {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .compare-card.pro .compare-header { color: var(--green); }
+  .compare-card.con .compare-header { color: var(--red); }
+  .compare-quote {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  .compare-who {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-top: 6px;
+    font-style: normal;
+  }
+
+  @media (max-width: 600px) {
+    .thesis-grid, .hipp-grid, .compare-grid, .match-grid, .chain-textareas { grid-template-columns: 1fr; }
+    .flip-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+<div class="hero">
+  <div class="hero-label">AP World History · Unit 9 · Topic 9.8</div>
+  <h1>Institutions in a Globalized World</h1>
+  <p class="hero-sub">How and why globalization changed international interactions among states</p>
+  <div class="hero-tags">
+    <span class="tag">Learning Objective H</span>
+    <span class="tag">Causation</span>
+    <span class="tag">Skill 3.C — Compare Arguments</span>
+    <span class="tag">Governance (GOV)</span>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!--  DOK 1 — KNOWLEDGE ACQUISITION                                    -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+
+<div class="dok-header dok1">
+  <div>
+    <div class="dok-badge">DOK 1 · Knowledge Acquisition</div>
+    <div class="dok-title">What do I need to know?</div>
+    <div class="dok-desc">answer correctly — recall, recognize, identify</div>
+  </div>
+</div>
+
+<!-- VIDEO EXPLAINER -->
+<div class="panel">
+  <div class="panel-title">📺 Video Explainer — Watch First</div>
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/Sk_wyubGTDA" allowfullscreen title="APWH 9.8 Institutions in a Globalized World"></iframe>
+  </div>
+  <div class="video-quote">
+    "We have actively sought and are actively seeking to make the United Nations an effective instrument of international cooperation."
+    <cite>— Dean Acheson, U.S. Secretary of State (1893–1971)</cite>
+  </div>
+</div>
+
+<!-- VISUAL FRAMEWORK — TIMELINE -->
+<div class="panel">
+  <div class="panel-title">🗺️ Visual Framework — Timeline of Key Events</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1920</div>
+      <div class="tl-event">League of Nations Founded</div>
+      <div class="tl-detail">First modern international peace organization — US never joins; fails to prevent WWII</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1943–1944</div>
+      <div class="tl-event">UN Planning Begins</div>
+      <div class="tl-detail">Allied powers (US, UK, Soviet Union, China) begin designing a successor institution</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">Oct. 24, 1945</div>
+      <div class="tl-event">United Nations Officially Founded</div>
+      <div class="tl-detail">51 founding member states; Security Council veto granted to five permanent members</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1945–1948</div>
+      <div class="tl-event">Bretton Woods Institutions Created</div>
+      <div class="tl-detail">IMF and World Bank established to manage global economy and prevent another Great Depression</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1948</div>
+      <div class="tl-event">Universal Declaration of Human Rights</div>
+      <div class="tl-detail">First international standard for how governments must treat their own citizens</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1949</div>
+      <div class="tl-event">NATO Founded</div>
+      <div class="tl-detail">Western military alliance — collective defense against Soviet expansion</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1947–1994</div>
+      <div class="tl-event">GATT → WTO</div>
+      <div class="tl-detail">General Agreement on Tariffs and Trade eventually becomes World Trade Organization in 1995</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">Post-1990</div>
+      <div class="tl-event">Surge in UN Peacekeeping</div>
+      <div class="tl-detail">After Cold War ends, peacekeeping missions skyrocket — but major failures emerge (Rwanda, Bosnia)</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">Today</div>
+      <div class="tl-event">193 UN Member States</div>
+      <div class="tl-detail">Grown from 51 to nearly every nation on earth — debate over effectiveness continues</div>
+    </div>
+  </div>
+</div>
+
+<!-- FLIP CARDS -->
+<div class="panel">
+  <div class="panel-title">🃏 Vocabulary Flash Cards — Click to Flip</div>
+  <div class="flip-grid">
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">United Nations<span class="flip-hint">click to flip</span></div>
+        <div class="flip-back">International organization founded 1945 with 51 members (now 193) to maintain world peace, facilitate cooperation, and prevent a repeat of two world wars.</div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">Security Council<span class="flip-hint">click to flip</span></div>
+        <div class="flip-back">The most powerful UN body with 15 members; 5 permanent members (US, UK, France, Russia, China) hold veto power over any resolution.</div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">Veto Power<span class="flip-hint">click to flip</span></div>
+        <div class="flip-back">The ability of any P5 nation to block any UN Security Council resolution. Designed to keep great powers in the UN, but frequently caused Cold War gridlock.</div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">League of Nations<span class="flip-hint">click to flip</span></div>
+        <div class="flip-back">1920 international peace organization created after WWI. Failed because the US never joined and it lacked enforcement power; dissolved after failing to prevent WWII.</div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">Universal Declaration of Human Rights<span class="flip-hint">click to flip</span></div>
+        <div class="flip-back">1948 UN document establishing universal standards for how governments must treat citizens — including rights to justice, dignity, and freedom. Not legally binding.</div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">International Monetary Fund (IMF)<span class="flip-hint">click to flip</span></div>
+        <div class="flip-back">Bretton Woods institution providing emergency loans to countries in financial crisis — often with conditions requiring economic reforms (structural adjustment).</div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">World Bank<span class="flip-hint">click to flip</span></div>
+        <div class="flip-back">International financial institution funding development projects (dams, roads, infrastructure) in developing nations — criticized for attaching policy conditions to loans.</div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">World Trade Organization (WTO)<span class="flip-hint">click to flip</span></div>
+        <div class="flip-back">International body (successor to GATT, est. 1995) that sets rules for global trade and resolves trade disputes between nations; promotes free trade.</div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">Structural Adjustment Programs<span class="flip-hint">click to flip</span></div>
+        <div class="flip-back">IMF/World Bank loan conditions requiring countries to cut government spending, privatize industries, and open markets. Critics say they hurt developing nations.</div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">NATO<span class="flip-hint">click to flip</span></div>
+        <div class="flip-back">North Atlantic Treaty Organization (1949) — Western military alliance based on collective defense. If one member is attacked, all members respond.</div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">UN Peacekeeping ("Blue Helmets")<span class="flip-hint">click to flip</span></div>
+        <div class="flip-back">UN military forces deployed to conflict zones to maintain ceasefires and protect civilians. Surged after the Cold War; criticized for failures in Rwanda and Bosnia.</div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">General Assembly<span class="flip-hint">click to flip</span></div>
+        <div class="flip-back">UN body where all 193 member states have one equal vote. Sets agenda and passes non-binding resolutions; less powerful than the Security Council.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- RECALL MCQs -->
+<div class="panel">
+  <div class="panel-title">✅ Recall Check — Multiple Choice</div>
+
+  <div class="mcq-item" id="mcq1">
+    <div class="mcq-question">1. The League of Nations ultimately failed for which of the following reasons?</div>
+    <div class="mcq-options">
+      <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(A) It was dominated by Germany and therefore biased.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq1',this,true)">(B) The United States never joined, leaving it without its most powerful potential member.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(C) It was destroyed during World War II bombing campaigns.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(D) The Soviet Union refused to allow any international peacekeeping.</button>
+    </div>
+    <div class="mcq-feedback" id="mcq1-fb"><strong>Correct — B.</strong> The video and textbook both emphasize that the League's fatal flaw was US non-participation. This lesson directly shaped the UN's design, which made great power participation non-negotiable by granting them veto power.</div>
+  </div>
+
+  <div class="mcq-item" id="mcq2">
+    <div class="mcq-question">2. What was the purpose of the veto power given to the five permanent members of the UN Security Council?</div>
+    <div class="mcq-options">
+      <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(A) To ensure that smaller nations could not outvote major powers in the General Assembly.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(B) To give the Secretary-General emergency authority to deploy troops.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq2',this,true)">(C) To keep great powers invested in the UN by preventing them from being overruled on matters they opposed.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(D) To allow any nation to block trade sanctions imposed by the WTO.</button>
+    </div>
+    <div class="mcq-feedback" id="mcq2-fb"><strong>Correct — C.</strong> The veto was a deliberate compromise. Without it, the US or USSR could simply walk out — as the US did with the League. The trade-off: great powers stayed in the UN but gained power to create gridlock.</div>
+  </div>
+
+  <div class="mcq-item" id="mcq3">
+    <div class="mcq-question">3. The IMF and World Bank were created primarily to address which problem?</div>
+    <div class="mcq-options">
+      <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(A) Military aggression from the Soviet Union in Eastern Europe.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq3',this,true)">(B) Economic instability that planners believed had contributed to the conditions leading to World War II.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(C) The spread of communism through economic aid to developing nations.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(D) Conflicts over colonial territories in Asia and Africa.</button>
+    </div>
+    <div class="mcq-feedback" id="mcq3-fb"><strong>Correct — B.</strong> The Great Depression and the economic chaos of the 1930s were seen as key contributors to the rise of fascism and WWII. The Bretton Woods institutions (IMF, World Bank) were designed to prevent such economic collapse from happening again.</div>
+  </div>
+
+  <div class="mcq-item" id="mcq4">
+    <div class="mcq-question">4. The Universal Declaration of Human Rights (1948) was historically significant because it:</div>
+    <div class="mcq-options">
+      <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(A) Created a binding legal obligation on all nations to protect citizens' rights, enforced by UN courts.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(B) Gave the Security Council authority to intervene militarily in any nation violating human rights.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq4',this,true)">(C) Established for the first time an international standard declaring that how governments treat their own people was a matter of global concern.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(D) Replaced the Geneva Conventions as the primary framework for protecting soldiers in wartime.</button>
+    </div>
+    <div class="mcq-feedback" id="mcq4-fb"><strong>Correct — C.</strong> The UDHR was revolutionary in principle: it declared that human rights were universal, not merely domestic affairs. However, it was not legally binding — nations could (and did) ignore it without automatic consequences.</div>
+  </div>
+
+  <div class="mcq-item" id="mcq5">
+    <div class="mcq-question">5. How many member states did the United Nations have at its founding in 1945?</div>
+    <div class="mcq-options">
+      <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(A) 14</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq5',this,true)">(B) 51</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(C) 193</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(D) 126</button>
+    </div>
+    <div class="mcq-feedback" id="mcq5-fb"><strong>Correct — B.</strong> The UN was founded with 51 member states in 1945. By 2019, membership had grown to 193 — nearly every country on earth — reflecting how decolonization dramatically expanded the community of recognized nations.</div>
+  </div>
+</div>
+
+<!-- MATCHING -->
+<div class="panel">
+  <div class="panel-title">🔗 Matching Activity — Connect Institution to Function</div>
+  <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:14px;">Click a term on the left, then click its matching function on the right.</p>
+  <div class="match-grid">
+    <div>
+      <div class="match-col-label">Institution / Term</div>
+      <div class="match-item" id="mt-a" onclick="selectMatch('mt-a','IMF')">International Monetary Fund</div>
+      <div class="match-item" id="mt-b" onclick="selectMatch('mt-b','UDHR')">Universal Declaration of Human Rights</div>
+      <div class="match-item" id="mt-c" onclick="selectMatch('mt-c','SC')">Security Council Veto</div>
+      <div class="match-item" id="mt-d" onclick="selectMatch('mt-d','WTO')">World Trade Organization</div>
+      <div class="match-item" id="mt-e" onclick="selectMatch('mt-e','NATO')">NATO</div>
+    </div>
+    <div>
+      <div class="match-col-label">Primary Function</div>
+      <div class="match-item" id="mf-SC" onclick="selectMatch('mf-SC','SC')">Keeps great powers invested in the UN while risking gridlock</div>
+      <div class="match-item" id="mf-WTO" onclick="selectMatch('mf-WTO','WTO')">Sets rules for international trade and resolves trade disputes</div>
+      <div class="match-item" id="mf-IMF" onclick="selectMatch('mf-IMF','IMF')">Provides emergency loans with structural adjustment conditions</div>
+      <div class="match-item" id="mf-NATO" onclick="selectMatch('mf-NATO','NATO')">Military collective defense alliance: attack one, attack all</div>
+      <div class="match-item" id="mf-UDHR" onclick="selectMatch('mf-UDHR','UDHR')">First international human rights standard — non-binding but historic</div>
+    </div>
+  </div>
+  <div class="match-result" id="match-result">Select a term, then its matching function.</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!--  DOK 2 — KNOWLEDGE APPLICATION                                    -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+
+<div class="dok-header dok2">
+  <div>
+    <div class="dok-badge">DOK 2 · Knowledge Application</div>
+    <div class="dok-title">Can I explain and apply it?</div>
+    <div class="dok-desc">establish and explain with examples</div>
+  </div>
+</div>
+
+<!-- EXPLAIN DRILL 1 -->
+<div class="panel">
+  <div class="panel-title">✍️ Explain Drill 1 of 2</div>
+  <div class="drill-prompt">
+    <strong>Explain</strong> why the founders of the United Nations gave veto power to the five permanent members of the Security Council, and why this decision was both necessary and problematic.
+  </div>
+  <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:6px;">Write 3–5 sentences. Use the word <em>because</em> or <em>therefore</em> to show the mechanism.</p>
+  <textarea placeholder="Your explanation here... (How did the lesson of the League of Nations shape this decision? What problem did it solve? What problem did it create?)"></textarea>
+  <button class="reveal-btn" onclick="toggleReveal('rev1')">▼ Show Model Response</button>
+  <div class="model-response" id="rev1">
+    <div class="model-label">Model Response</div>
+    The founders gave veto power to the five permanent members because they had learned a crucial lesson from the League of Nations: without the participation of major powers, any international organization is doomed. The US never joined the League, which fatally weakened it. Therefore, designers of the UN needed to guarantee that the great powers—especially the US and Soviet Union—would stay in the organization even when they disagreed with its decisions. However, this created a serious structural problem: both the US and USSR could now block any Security Council resolution they opposed, and because these two superpowers were often on opposite sides during the Cold War, the veto produced frequent gridlock that prevented the UN from acting in many crises.
+  </div>
+</div>
+
+<!-- EXPLAIN DRILL 2 -->
+<div class="panel">
+  <div class="panel-title">✍️ Explain Drill 2 of 2</div>
+  <div class="drill-prompt">
+    <strong>Explain</strong> why critics argued that IMF and World Bank structural adjustment programs were unfair to developing nations.
+  </div>
+  <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:6px;">Write 3–5 sentences. Include a specific example of what "structural adjustment" required and why critics saw it as harmful.</p>
+  <textarea placeholder="Your explanation here... (What conditions came with the loans? Who benefited? Who was harmed? Why did this seem unfair?)"></textarea>
+  <button class="reveal-btn" onclick="toggleReveal('rev2')">▼ Show Model Response</button>
+  <div class="model-response" id="rev2">
+    <div class="model-label">Model Response</div>
+    Critics argued that structural adjustment programs were unfair because the loans came with conditions that often hurt the very people they claimed to help. To receive emergency funding, countries had to cut government spending, privatize state-owned companies, and open their economies to foreign competition. Because wealthy nations controlled the IMF and World Bank, critics argued these conditions were designed to benefit rich-country investors and corporations rather than local populations. When governments cut spending to meet loan conditions, public services like healthcare and education often suffered, harming working-class citizens in developing nations. Many critics saw the system as a new form of economic control by wealthy nations over poorer ones.
+  </div>
+</div>
+
+<!-- APPLY ACTIVITY — HIPP -->
+<div class="panel">
+  <div class="panel-title">🔍 Apply Activity — HIPP Source Analysis</div>
+  <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:14px;">
+    <strong>Source:</strong> The UN Charter Preamble (1945) opens: <em>"We the Peoples of the United Nations, determined to save succeeding generations from the scourge of war, which twice in our lifetime has brought untold sorrow to mankind..."</em>
+  </p>
+  <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:14px;">Complete each HIPP box for this source. Write 1–2 sentences in each cell.</p>
+  <div class="hipp-grid">
+    <div class="hipp-cell">
+      <div class="hipp-label">H — Historical Situation</div>
+      <div class="hipp-question">What was happening in the world when this was written? How does that context shape the document?</div>
+      <textarea placeholder="The world in 1945 was..."></textarea>
+    </div>
+    <div class="hipp-cell">
+      <div class="hipp-label">I — Intended Audience</div>
+      <div class="hipp-question">Who was this document written for? How does the audience affect the language and tone?</div>
+      <textarea placeholder="This document was addressed to..."></textarea>
+    </div>
+    <div class="hipp-cell">
+      <div class="hipp-label">P — Point of View</div>
+      <div class="hipp-question">What perspective does the author/institution represent? What might they leave out?</div>
+      <textarea placeholder="The UN founders' perspective reflects..."></textarea>
+    </div>
+    <div class="hipp-cell">
+      <div class="hipp-label">P — Purpose</div>
+      <div class="hipp-question">Why was this written? What was the UN Charter meant to accomplish?</div>
+      <textarea placeholder="The purpose of this document was to..."></textarea>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!--  DOK 3 — KNOWLEDGE ANALYSIS                                       -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+
+<div class="dok-header dok3">
+  <div>
+    <div class="dok-badge">DOK 3 · Knowledge Analysis</div>
+    <div class="dok-title">Can I analyze with evidence?</div>
+    <div class="dok-desc">examine and explain with evidence — strategic thinking, compare arguments</div>
+  </div>
+</div>
+
+<!-- CAUSAL CHAIN — HORIZONTAL with textareas below -->
+<div class="panel">
+  <div class="panel-title">⛓️ Causal Chain — Failure to Reform</div>
+  <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:10px;">Click the blank nodes to reveal answers. First, write your own responses in the text boxes below.</p>
+
+  <div class="chain-wrap">
+    <div class="chain-node given">
+      <div class="chain-node-label">Cause</div>
+      WWI ends; League of Nations created without US membership
+    </div>
+    <div class="chain-arrow">→</div>
+    <div class="chain-node blank" id="cc1" onclick="revealChainAnswer('cc1')">
+      <div class="chain-node-label">Blank 1</div>
+      <span style="font-size:0.8rem;color:var(--text-muted);font-style:italic;">What was the consequence of US absence?</span>
+      <span class="blank-hint">click to reveal</span>
+    </div>
+    <div class="chain-arrow">→</div>
+    <div class="chain-node given">
+      <div class="chain-node-label">Effect</div>
+      League fails; WWII erupts 1939–1945; cities in rubble
+    </div>
+    <div class="chain-arrow">→</div>
+    <div class="chain-node blank" id="cc2" onclick="revealChainAnswer('cc2')">
+      <div class="chain-node-label">Blank 2</div>
+      <span style="font-size:0.8rem;color:var(--text-muted);font-style:italic;">How did this shape the UN design?</span>
+      <span class="blank-hint">click to reveal</span>
+    </div>
+    <div class="chain-arrow">→</div>
+    <div class="chain-node given">
+      <div class="chain-node-label">Result</div>
+      UN veto creates Cold War gridlock in Security Council
+    </div>
+  </div>
+
+  <div class="chain-textareas">
+    <textarea placeholder="Blank 1: My answer — the consequence of US absence from the League was..."></textarea>
+    <textarea placeholder="Blank 2: My answer — the lesson learned shaped the UN by..."></textarea>
+  </div>
+</div>
+
+<!-- COMPARING ARGUMENTS — Key Exam Skill 3.C -->
+<div class="panel">
+  <div class="panel-title">⚖️ AP Skill 3.C — Compare Arguments About the UN</div>
+  <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:14px;">The AP exam will ask you to compare two sources arguing different positions. Study both perspectives below, then complete the analysis task.</p>
+
+  <div class="compare-grid">
+    <div class="compare-card pro">
+      <div class="compare-header">▲ Argument FOR Global Institutions</div>
+      <div class="compare-quote">For global problems that affect all countries — climate change, pandemics, nuclear weapons — you need a forum where all nations are at the table. The UN, for all its flaws, is our best hope for cooperative solutions.</div>
+      <div class="compare-who">— William Burke-White, Professor of International Law</div>
+    </div>
+    <div class="compare-card con">
+      <div class="compare-header">▼ Argument AGAINST / Critiquing Global Institutions</div>
+      <div class="compare-quote">The UN is largely all talk and no action. Its failures to prevent nuclear proliferation and stop atrocities like Rwanda show that its rules don't actually make a difference on the ground when powerful nations don't want them to.</div>
+      <div class="compare-who">— Abraham Bell, Law Professor and Policy Critic</div>
+    </div>
+  </div>
+
+  <p style="font-size:0.82rem;color:var(--text-muted);margin:14px 0 8px;font-style:italic;">Now analyze: What evidence from 9.8 supports Burke-White? What evidence supports Bell? Then write your own position.</p>
+
+  <div style="display:grid;gap:10px;margin-bottom:10px;">
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--green);margin-bottom:4px;">EVIDENCE SUPPORTING BURKE-WHITE (pro-institution)</div>
+      <textarea placeholder="List 2–3 specific examples from what you've learned that support his argument that the UN has real value..."></textarea>
+    </div>
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--red);margin-bottom:4px;">EVIDENCE SUPPORTING BELL (institutional critique)</div>
+      <textarea placeholder="List 2–3 specific examples (veto gridlock, peacekeeping failures, SAP criticisms) that support Bell's skepticism..."></textarea>
+    </div>
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--gold);margin-bottom:4px;">YOUR ANALYTICAL CONCLUSION</div>
+      <textarea placeholder="Which argument is better supported by historical evidence? Why? Can both be partially correct? Write 3–4 sentences with evidence."></textarea>
+    </div>
+  </div>
+</div>
+
+<!-- THESIS EVALUATOR -->
+<div class="panel">
+  <div class="panel-title">🎯 Thesis Evaluator — Click Each Card to Reveal Its Verdict</div>
+  <div class="thesis-instruction">Each of these attempts to answer: “Explain how globalization changed international interactions among states after 1900.” Click to see if it earns the AP thesis point.</div>
+  <div class="thesis-grid">
+
+    <div class="thesis-card" onclick="revThesis(this,'fail','FAIL — This is a factual restatement, not a thesis. It tells us what happened but makes no argument about HOW or WHY globalization changed international interactions. A thesis needs a line of reasoning.')">
+      “Globalization led to the creation of the United Nations and other international organizations after 1900.”
+    </div>
+
+    <div class="thesis-card" onclick="revThesis(this,'pass','PASS — This thesis makes a defensible argument with a line of reasoning. It identifies a specific mechanism and explains the structural trade-off, establishing analytic categories for the essay.')">
+      “Although globalization demanded new institutions for international cooperation, the UN’s effectiveness was structurally limited because keeping great powers engaged required granting them veto power, which produced Cold War paralysis rather than collective security.”
+    </div>
+
+    <div class="thesis-card" onclick="revThesis(this,'fail','FAIL — Too vague. Saying something had a big impact is not an argument. A thesis must specify the nature of the change and why it occurred.')">
+      “International organizations like the UN, IMF, and World Bank had a big impact on globalization and international relations in the twentieth century.”
+    </div>
+
+    <div class="thesis-card" onclick="revThesis(this,'pass','PASS — This thesis establishes analytic categories (economic cooperation vs. security failures) and makes a qualifying argument. The contrast gives the essay a clear, defensible line of reasoning to develop.')">
+      “While global institutions after 1900 genuinely advanced international cooperation in economic management and human rights norms, their effectiveness in preventing conflict remained deeply compromised by the competing national interests of powerful member states.”
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!--  DOK 4 — KNOWLEDGE AUGMENTATION                                   -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+
+<div class="dok-header dok4">
+  <div>
+    <div class="dok-badge">DOK 4 · Knowledge Augmentation</div>
+    <div class="dok-title">Can I think across contexts?</div>
+    <div class="dok-desc">explore and explain with examples and evidence — extended reasoning</div>
+  </div>
+</div>
+
+<!-- CONTEXTUALIZATION BUILDER -->
+<div class="panel">
+  <div class="panel-title">🌐 Contextualization Builder — 3 Pathways</div>
+  <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:12px;">Pick ONE pathway. Use the stem to write a full contextualization paragraph, then compare to the model.</p>
+
+  <!-- Pathway 1 -->
+  <div class="ctx-pathway" id="ctx1">
+    <div class="ctx-header" onclick="toggleCtx('ctx1')">
+      <span class="ctx-pathway-title">Pathway 1 — The Shadow of World War II</span>
+      <span class="ctx-toggle">▼</span>
+    </div>
+    <div class="ctx-body">
+      <div class="ctx-stem">
+        <strong>Stem:</strong> Before the UN was created in 1945, the world had just experienced the deadliest conflict in human history. Consider how the scale and nature of WWII created specific conditions that made international institution-building feel both urgent and politically possible for the first time.
+      </div>
+      <p style="font-size:0.78rem;color:var(--text-muted);margin:12px 0 6px;">Your Contextualization — Pathway 1:</p>
+      <textarea rows="5" placeholder="Write a 3–5 sentence contextualization paragraph placing the creation of the UN within the broader historical context of WWII and its aftermath..."></textarea>
+      <div class="sample-label">Model Contextualization — Pathway 1</div>
+      <div class="sample-body">The creation of international institutions after 1945 cannot be understood apart from the catastrophic scale of World War II. The conflict killed an estimated 70–85 million people, including the systematic genocide of six million Jews and millions of others in the Holocaust. The war demonstrated that the absence of effective international governance had enabled fascist regimes to expand unchecked, and that national sovereignty alone was insufficient protection against mass violence. By 1945, the Allied powers—having witnessed two world wars in a single generation—shared a political will to build something fundamentally new, making the creation of the United Nations, the IMF, the World Bank, and the UDHR politically feasible in ways that had never been true before.</div>
+    </div>
+  </div>
+
+  <!-- Pathway 2 -->
+  <div class="ctx-pathway" id="ctx2">
+    <div class="ctx-header" onclick="toggleCtx('ctx2')">
+      <span class="ctx-pathway-title">Pathway 2 — Economic Crisis and Interwar Instability</span>
+      <span class="ctx-toggle">▼</span>
+    </div>
+    <div class="ctx-body">
+      <div class="ctx-stem">
+        <strong>Stem:</strong> The Great Depression of the 1930s demonstrated how economic collapse could destabilize entire societies and fuel the rise of extremist governments. Consider how this economic context shaped the specific design of post-war institutions like the IMF and World Bank.
+      </div>
+      <p style="font-size:0.78rem;color:var(--text-muted);margin:12px 0 6px;">Your Contextualization — Pathway 2:</p>
+      <textarea rows="5" placeholder="Write a 3–5 sentence contextualization paragraph connecting the Great Depression and interwar economic chaos to the creation of Bretton Woods financial institutions..."></textarea>
+      <div class="sample-label">Model Contextualization — Pathway 2</div>
+      <div class="sample-body">The Bretton Woods financial institutions emerged directly from the economic lessons of the 1930s, when the Great Depression had demonstrated how rapidly economic collapse could produce political catastrophe. As global trade contracted and unemployment soared, economically desperate populations in Germany, Italy, and Japan turned toward authoritarian regimes that promised national restoration. The resulting cycle of competitive devaluations, protectionist tariffs, and financial panics convinced planners that uncoordinated national economic policies were dangerous in an interconnected world. At the 1944 Bretton Woods Conference, representatives from 44 Allied nations therefore designed the IMF to prevent currency crises and the World Bank to fund reconstruction, hoping that economic stability would serve as a foundation for lasting peace.</div>
+    </div>
+  </div>
+
+  <!-- Pathway 3 -->
+  <div class="ctx-pathway" id="ctx3">
+    <div class="ctx-header" onclick="toggleCtx('ctx3')">
+      <span class="ctx-pathway-title">Pathway 3 — Decolonization and the Expanding World Community</span>
+      <span class="ctx-toggle">▼</span>
+    </div>
+    <div class="ctx-body">
+      <div class="ctx-stem">
+        <strong>Stem:</strong> The UN grew from 51 founding members in 1945 to 193 by 2019. Consider how the wave of decolonization that swept Asia and Africa after WWII transformed the composition and debates of global institutions, and what tensions this created.
+      </div>
+      <p style="font-size:0.78rem;color:var(--text-muted);margin:12px 0 6px;">Your Contextualization — Pathway 3:</p>
+      <textarea rows="5" placeholder="Write a 3–5 sentence contextualization paragraph connecting decolonization to the changing nature of global institutions..."></textarea>
+      <div class="sample-label">Model Contextualization — Pathway 3</div>
+      <div class="sample-body">The rapid decolonization of Asia and Africa in the decades following World War II fundamentally transformed global institutions that had originally been designed by and for Western powers. Between 1945 and 1975, dozens of newly independent nations joined the United Nations, shifting the majority in the General Assembly toward developing nations and giving voice to perspectives that had been entirely absent from international governance. These new members used the UN General Assembly to condemn colonialism, demand economic justice, and challenge Western-dominated institutions like the IMF and World Bank, which they argued served wealthy nations' interests at the expense of the developing world. The tension between the institution's democratic General Assembly and its power-weighted Security Council thus reflected a broader global struggle over who had the right to define the rules of international order.</div>
+    </div>
+  </div>
+</div>
+
+<!-- SAQ PRACTICE -->
+<div class="panel">
+  <div class="panel-title">📝 SAQ Practice — AP-Style Question</div>
+  <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:16px;">Use your knowledge of Topic 9.8. Write 2–3 sentences per part. Label each answer clearly.</p>
+
+  <div class="saq-part">
+    <div class="saq-part-label">Part A</div>
+    <div class="saq-prompt">Identify ONE specific historical development that motivated the creation of the United Nations in 1945.</div>
+    <textarea placeholder="Part A: [Identify one development — name it specifically enough that the reader knows what you mean. No need to explain — just name it clearly.]"></textarea>
+    <div class="saq-rubric">📌 Rubric: 1 point for correctly identifying a specific historical development (e.g., "the failure of the League of Nations," "the devastation of World War II," "the Holocaust"). Must be specific — "a bad thing happened" earns 0.</div>
+  </div>
+
+  <div class="saq-part">
+    <div class="saq-part-label">Part B</div>
+    <div class="saq-prompt">Describe ONE way the United Nations differed from the League of Nations in its design or structure.</div>
+    <textarea placeholder="Part B: [Describe — go beyond just naming. Provide characteristics. What specifically was different and what did that difference mean?]"></textarea>
+    <div class="saq-rubric">📌 Rubric: 1 point for describing a specific structural difference (e.g., great power veto, universal membership goal, Security Council with enforcement powers). Must include enough detail to show understanding — not just "it had more members."</div>
+  </div>
+
+  <div class="saq-part">
+    <div class="saq-part-label">Part C</div>
+    <div class="saq-prompt">Explain ONE way that the Cold War limited the effectiveness of the United Nations as a peacekeeping institution.</div>
+    <textarea placeholder="Part C: [Explain — show HOW or WHY. Connect cause to effect. Use 'because' or 'therefore' to show the mechanism. Don't just describe — explain the relationship.]"></textarea>
+    <div class="saq-rubric">📌 Rubric: 1 point for explaining a specific mechanism by which the Cold War undermined UN effectiveness (e.g., "because the US and USSR both held veto power, they could block any Security Council action targeting their own proxy wars or allies, creating gridlock that prevented collective security from functioning"). Must show cause-effect logic.</div>
+  </div>
+</div>
+
+<!-- CROSS-UNIT SYNTHESIS -->
+<div class="panel">
+  <div class="panel-title">🔀 Cross-Unit Synthesis</div>
+  <div class="synthesis-prompt">
+    <strong>Connect 9.8 to earlier units:</strong> The creation of global institutions after 1945 was not the first time people had attempted to build international systems for managing conflict and cooperation. Using evidence from <strong>at least TWO different time periods or units</strong>, explain how the creation of post-WWII global institutions represented both a continuity of and a change from earlier attempts at international order.
+    <br><br>
+    <em>Consider: The Congress of Vienna (Unit 5), the Concert of Europe, colonialism and its justifications, the League of Nations (Unit 7), or Cold War proxy conflicts (Unit 8).</em>
+  </div>
+  <textarea style="min-height:140px;" placeholder="Your cross-unit synthesis response here... (Identify 2+ connections across different time periods. Explain what changed and what stayed the same about how powerful nations tried to manage international affairs.)"></textarea>
+</div>
+
+<!-- SELF ASSESSMENT -->
+<div class="panel">
+  <div class="panel-title">📊 Self-Assessment — Rate Your AP Skills</div>
+  <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:14px;">Be honest. Click your rating for each skill after completing the activities.</p>
+  <table class="sa-table">
+    <thead>
+      <tr>
+        <th style="width:50%">Skill</th>
+        <th>Not Yet</th>
+        <th>Getting There</th>
+        <th>Confident</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>I can identify the major international institutions created after 1900 and their purposes.</td>
+        <td><button class="sa-label-item" onclick="setSA(this,'red')">Not Yet</button></td>
+        <td><button class="sa-label-item" onclick="setSA(this,'yellow')">Getting There</button></td>
+        <td><button class="sa-label-item" onclick="setSA(this,'green')">Confident</button></td>
+      </tr>
+      <tr>
+        <td>I can explain WHY the UN was designed differently from the League of Nations.</td>
+        <td><button class="sa-label-item" onclick="setSA(this,'red')">Not Yet</button></td>
+        <td><button class="sa-label-item" onclick="setSA(this,'yellow')">Getting There</button></td>
+        <td><button class="sa-label-item" onclick="setSA(this,'green')">Confident</button></td>
+      </tr>
+      <tr>
+        <td>I can compare the Burke-White and Bell arguments about global institutions (Skill 3.C).</td>
+        <td><button class="sa-label-item" onclick="setSA(this,'red')">Not Yet</button></td>
+        <td><button class="sa-label-item" onclick="setSA(this,'yellow')">Getting There</button></td>
+        <td><button class="sa-label-item" onclick="setSA(this,'green')">Confident</button></td>
+      </tr>
+      <tr>
+        <td>I can write an AP thesis that establishes a line of reasoning (not just a restatement).</td>
+        <td><button class="sa-label-item" onclick="setSA(this,'red')">Not Yet</button></td>
+        <td><button class="sa-label-item" onclick="setSA(this,'yellow')">Getting There</button></td>
+        <td><button class="sa-label-item" onclick="setSA(this,'green')">Confident</button></td>
+      </tr>
+      <tr>
+        <td>I can write a contextualization paragraph connecting 9.8 to broader historical context.</td>
+        <td><button class="sa-label-item" onclick="setSA(this,'red')">Not Yet</button></td>
+        <td><button class="sa-label-item" onclick="setSA(this,'yellow')">Getting There</button></td>
+        <td><button class="sa-label-item" onclick="setSA(this,'green')">Confident</button></td>
+      </tr>
+      <tr>
+        <td>I can answer all three parts of a SAQ with specific historical evidence.</td>
+        <td><button class="sa-label-item" onclick="setSA(this,'red')">Not Yet</button></td>
+        <td><button class="sa-label-item" onclick="setSA(this,'yellow')">Getting There</button></td>
+        <td><button class="sa-label-item" onclick="setSA(this,'green')">Confident</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div><!-- /container -->
+
+<script>
+// ── MCQ RETRY LOGIC ──
+function checkMCQ(qid, btn, isCorrect) {
+  const item = document.getElementById(qid);
+  const fb = document.getElementById(qid + '-fb');
+  if (!fb._orig) fb._orig = fb.innerHTML;
+  if (isCorrect) {
+    item.querySelectorAll('.mcq-option').forEach(b => {
+      b.classList.add('disabled');
+      b.onclick = null;
+    });
+    btn.classList.add('correct');
+    fb.innerHTML = fb._orig;
+    fb.classList.remove('wrong-fb');
+    fb.classList.add('show');
+  } else {
+    btn.classList.add('incorrect', 'disabled');
+    btn.onclick = null;
+    fb.innerHTML = '<strong>Incorrect.</strong> That\u0027s not it \u2014 try again.';
+    fb.classList.add('show', 'wrong-fb');
+  }
+}
+
+// ── MATCHING ──
+let selectedTerm = null;
+let selectedTermId = null;
+
+function selectMatch(elemId, matchKey) {
+  const elem = document.getElementById(elemId);
+  if (elem.classList.contains('matched')) return;
+
+  const isTermSide = elemId.startsWith('mt-');
+  const isFuncSide = elemId.startsWith('mf-');
+
+  if (isTermSide) {
+    // Deselect previous term
+    if (selectedTermId) {
+      const prev = document.getElementById(selectedTermId);
+      if (prev && !prev.classList.contains('matched')) prev.classList.remove('selected');
+    }
+    selectedTerm = matchKey;
+    selectedTermId = elemId;
+    elem.classList.add('selected');
+    document.getElementById('match-result').textContent = 'Now click the matching function on the right.';
+  } else if (isFuncSide && selectedTerm !== null) {
+    // Check match
+    const funcKey = elemId.replace('mf-', '');
+    if (selectedTerm === funcKey) {
+      elem.classList.add('matched');
+      document.getElementById(selectedTermId).classList.remove('selected');
+      document.getElementById(selectedTermId).classList.add('matched');
+      selectedTerm = null;
+      selectedTermId = null;
+      // Check if all matched
+      const allTerms = document.querySelectorAll('[id^="mt-"]');
+      const matched = document.querySelectorAll('[id^="mt-"].matched');
+      if (matched.length === allTerms.length) {
+        document.getElementById('match-result').textContent = '🎉 All matched! Well done.';
+      } else {
+        document.getElementById('match-result').textContent = '✅ Correct! Keep going.';
+      }
+    } else {
+      elem.classList.add('wrong');
+      setTimeout(() => elem.classList.remove('wrong'), 400);
+      document.getElementById('match-result').textContent = '❌ Not a match — try a different function.';
+    }
+  }
+}
+
+// ── REVEAL / TOGGLE ──
+function toggleReveal(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle('show');
+}
+
+// ── CAUSAL CHAIN ──
+function revealChainAnswer(id) {
+  const answers = {
+    'cc1': 'League lacked enforcement power — without the US, it could not compel major powers to comply with its decisions, leaving it unable to stop Japanese expansion in Manchuria or Nazi aggression in Europe.',
+    'cc2': 'UN founders concluded great powers must be inside the tent. Veto power was the price of their participation — without it, the US and USSR would have refused to join, repeating the League\u0027s fatal flaw.'
+  };
+  const node = document.getElementById(id);
+  if (!node || node.classList.contains('revealed')) return;
+  node.innerHTML = '<div class="chain-node-label">Revealed</div>' + answers[id];
+  node.classList.remove('blank');
+  node.classList.add('revealed');
+}
+
+// ── THESIS EVALUATOR ──
+function revThesis(el, verdict, explanation) {
+  if (el.classList.contains('revealed')) return;
+  el.classList.add('revealed', verdict);
+  el.innerHTML += '<div class="thesis-verdict">' + verdict.toUpperCase() + '</div>' +
+    '<div class="thesis-explanation">' + explanation + '</div>';
+}
+
+// ── CONTEXTUALIZATION BUILDER ──
+function toggleCtx(id) {
+  const pathway = document.getElementById(id);
+  pathway.classList.toggle('open');
+}
+
+// ── SELF ASSESSMENT ──
+function setSA(btn, level) {
+  const row = btn.closest('tr');
+  row.querySelectorAll('.sa-label-item').forEach(b => {
+    b.classList.remove('active-red', 'active-yellow', 'active-green');
+  });
+  btn.classList.add('active-' + level);
+}
+</script>
+</body>
+</html>
