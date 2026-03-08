@@ -143,16 +143,16 @@
   .section-title span { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--text-muted); font-weight: 400; margin-left: 10px; vertical-align: middle; }
 
   /* FLIP CARDS */
-  .flip-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px,1fr)); gap: 12px; margin-bottom: 32px; }
-  .flip-card { height: 120px; perspective: 800px; cursor: pointer; }
+  .flip-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px,1fr)); gap: 12px; margin-bottom: 32px; align-items: stretch; grid-auto-rows: 1fr; }
+  .flip-card { min-height: 160px; perspective: 800px; cursor: pointer; position: relative; }
   .flip-inner { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.5s ease; }
   .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
-  .flip-front, .flip-back { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 6px; padding: 12px; }
-  .flip-front { background: rgba(255,255,255,0.04); border: 1px solid rgba(212,168,32,0.2); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 120px; }
+  .flip-front, .flip-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 6px; padding: 12px; box-sizing: border-box; overflow: hidden; }
+  .flip-front { background: rgba(255,255,255,0.04); border: 1px solid rgba(212,168,32,0.2); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; }
   .flip-back { background: rgba(212,168,32,0.08); border: 1px solid rgba(212,168,32,0.3); transform: rotateY(180deg); display: flex; align-items: center; justify-content: center; text-align: center; }
   .flip-term { font-family: 'Playfair Display', serif; font-size: 0.88rem; font-weight: 700; color: var(--parchment); line-height: 1.3; }
   .flip-hint { position: absolute; bottom: 8px; left: 0; right: 0; text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--text-muted); }
-  .flip-def { font-size: 0.78rem; color: var(--parchment-dim); line-height: 1.4; }
+  .flip-def { font-size: 0.78rem; color: var(--parchment-dim); line-height: 1.4; overflow-y: auto; padding: 12px; box-sizing: border-box; max-height: 100%; }
 
   /* MCQ */
   .mcq-set { margin-bottom: 32px; }
@@ -323,9 +323,9 @@
 </div>
 
 <!-- HOW-TO BANNER -->
-<div class="howto-banner">
+<div class="howto-banner" style="max-width:720px;margin:24px auto 0;text-align:center;">
   <strong>How to Use This Module</strong>
-  <p>This is your orientation to Unit 9. Work through all four DOK sections in order. <strong>DOK 1</strong> builds your vocabulary and recall. <strong>DOK 2</strong> asks you to apply the unit&rsquo;s three-part framework. <strong>DOK 3</strong> pushes you to analyze causes and evaluate arguments. <strong>DOK 4</strong> connects everything and prepares you for AP writing. Mark each section complete as you finish it.</p>
+  <p>This is your orientation to Unit 9. Work through all four DOK sections in order. <strong>DOK 1</strong> &mdash; You recall facts, define key terms, and answer correctly &mdash; building the vocabulary you need for everything that follows. <strong>DOK 2</strong> &mdash; You apply the unit&rsquo;s three-part framework and establish and explain with examples &mdash; showing you understand how globalization works, not just what it is. <strong>DOK 3</strong> &mdash; You examine causes and evaluate arguments with evidence &mdash; building the analytical skills AP questions demand. <strong>DOK 4</strong> &mdash; You explore connections across the entire unit and construct your own argument with examples and evidence &mdash; this is full AP writing preparation. Mark each section complete as you finish it.</p>
   <div class="central-q">
     &#127760; Central Question to Keep in Mind: <em>&ldquo;In what ways has globalization connected the world &mdash; and what has been gained or lost as a result?&rdquo;</em>
   </div>
@@ -691,37 +691,37 @@
 
       <div class="saq-part">
         <div class="saq-part-label">PART A</div>
-        <div class="saq-part-prompt">Identify the central organizing concept of AP World History Unit 9 and describe one way it manifested in the period after 1900.</div>
-        <div class="saq-verb-tag">IDENTIFY + DESCRIBE</div>
-        <textarea placeholder="Part A — Identify the concept (1 sentence), then describe one specific manifestation with enough detail to make it clear..."></textarea>
+        <div class="saq-part-prompt">Describe one way that technological developments after 1900 increased the interconnection of people across the world.</div>
+        <div class="saq-verb-tag">DESCRIBE</div>
+        <textarea placeholder="Part A — Describe a specific technology and explain how it connected people, places, or economies across national borders..."></textarea>
         <button class="reveal-btn" onclick="toggleAccordion('saq-a-sample')">&#9660; Show Sample Answer</button>
         <div class="sample-accordion" id="saq-a-sample">
           <div class="sample-label">SAMPLE ANSWER &mdash; PART A</div>
-          The central organizing concept of Unit 9 is globalization &mdash; the accelerating process by which people, goods, ideas, and diseases became interconnected across the world at unprecedented speed and scale. One manifestation of globalization after 1900 was the rise of multinational corporations that operated simultaneously in multiple countries, allowing companies to establish production facilities across several nations and sell products globally, integrating national economies into a single worldwide market.
+          One way technological developments increased global interconnection after 1900 was through the invention and spread of the internet. Tim Berners-Lee&rsquo;s creation of the World Wide Web in 1990 made the internet publicly accessible, allowing people across the world to share information, conduct commerce, and communicate in real time regardless of geographic distance. This dramatically accelerated the movement of ideas and goods across borders, deepening economic and cultural ties between nations that had previously been limited by physical distance.
         </div>
       </div>
 
       <div class="saq-part">
         <div class="saq-part-label">PART B</div>
-        <div class="saq-part-prompt">Explain how the &ldquo;double-edged sword&rdquo; framework from the overview video applies to one specific development in the period c. 1900&ndash;present.</div>
-        <div class="saq-verb-tag">EXPLAIN &rarr; show HOW the framework applies</div>
-        <textarea placeholder="Part B — Apply the double-edged sword concept to one specific historical development. Name it, explain the benefit, explain the cost, and show why both came from the same source..."></textarea>
+        <div class="saq-part-prompt">Explain one cause of resistance to economic globalization in the late twentieth century.</div>
+        <div class="saq-verb-tag">EXPLAIN A CAUSE</div>
+        <textarea placeholder="Part B — Identify a specific cause and explain the connection between that cause and the resistance movements or policies it produced..."></textarea>
         <button class="reveal-btn" onclick="toggleAccordion('saq-b-sample')">&#9660; Show Sample Answer</button>
         <div class="sample-accordion" id="saq-b-sample">
           <div class="sample-label">SAMPLE ANSWER &mdash; PART B</div>
-          The development of global air travel after World War II illustrates the double-edged nature of globalization: the same technology that connected continents and enabled international trade in perishable goods also allowed infectious diseases to spread across the world within hours rather than weeks. When SARS emerged in 2003 or COVID-19 in 2019&ndash;2020, international flights carried pathogens from their origins to dozens of countries before health authorities could respond. Both the benefit and the danger came from the same source: the elimination of distance.
+          One cause of resistance to economic globalization was the perception that institutions like the WTO and IMF disproportionately benefited wealthy nations at the expense of the Global South. IMF structural adjustment programs required developing nations to privatize industries, cut social spending, and open markets in exchange for loans &mdash; policies critics argued deepened poverty and eroded national sovereignty. This fueled organized resistance, most visibly in the 1999 Seattle WTO protests, where tens of thousands of demonstrators challenged free-market globalization as economically unjust.
         </div>
       </div>
 
       <div class="saq-part">
         <div class="saq-part-label">PART C</div>
-        <div class="saq-part-prompt">Explain how one development from Units 7 or 8 helped create the conditions for the globalization described in Unit 9.</div>
-        <div class="saq-verb-tag">EXPLAIN &rarr; show causation across units</div>
-        <textarea placeholder="Part C — Choose a development from WWI/WWII/Cold War/Decolonization. Explain the mechanism connecting it to the rise of globalization in Unit 9..."></textarea>
+        <div class="saq-part-prompt">Explain one way that patterns of economic inequality continued from the colonial era into the period of globalization after 1900.</div>
+        <div class="saq-verb-tag">EXPLAIN A CONTINUITY</div>
+        <textarea placeholder="Part C — Identify a specific continuity and explain how an earlier pattern of inequality persisted or adapted into the globalized world after 1900..."></textarea>
         <button class="reveal-btn" onclick="toggleAccordion('saq-c-sample')">&#9660; Show Sample Answer</button>
         <div class="sample-accordion" id="saq-c-sample">
           <div class="sample-label">SAMPLE ANSWER &mdash; PART C</div>
-          The Cold War rivalry between the United States and Soviet Union created conditions for economic globalization by pushing the United States to promote liberal free-trade policies as both an economic strategy and a tool of ideological competition. To counter Soviet influence in newly decolonized nations, the US championed international trade institutions like GATT (later the WTO) and provided foreign aid through the World Bank, integrating developing nations into a US-led economic order. This Cold War competition thus accelerated the creation of the very international economic architecture &mdash; free markets, multilateral trade agreements, development finance &mdash; that defines the globalized economy of Unit 9.
+          One continuity between the colonial era and the age of globalization was the economic dominance of industrialized nations over developing regions. Just as colonial powers extracted raw materials from colonies while selling finished goods back at a profit, post-colonial structures continued this imbalance. Neo-colonialism &mdash; whereby wealthier nations maintained control through debt, trade agreements, and multinational corporations rather than direct political rule &mdash; meant formerly colonized nations in Africa, Asia, and Latin America remained economically dependent well into the late twentieth century.
         </div>
       </div>
     </div>
@@ -746,17 +746,6 @@
         European industrialization in the 19th century (Unit 6) directly created the technological and economic foundations for 20th-century globalization. The factory system, steam power, and telegraph networks of the Industrial Revolution established both the infrastructure for global trade and the model of export-oriented economic growth that would define globalization. More importantly, industrialization created the enormous productivity gap between industrialized and non-industrialized nations that persisted into the 20th century &mdash; a gap that globalization&rsquo;s free trade institutions often reinforced rather than closed. The multinational corporations, containerized shipping, and financial markets of Unit 9 are not breaks from industrialization but its fullest global extension.
       </div>
     </div>
-
-    <div class="section-divider"></div>
-
-    <div class="section-title">Rate Your AP Skills <span>Self-Assessment &middot; 3-Level Rating</span></div>
-    <p class="subtext">Rate yourself honestly. Use this to guide your review. <span style="color:#e09090">&#9679;</span> Not Yet &nbsp; <span style="color:var(--gold)">&#9679;</span> Getting There &nbsp; <span style="color:#4a9e3f">&#9679;</span> Confident</p>
-    <div class="sa-labels" style="padding-right:0;margin-bottom:4px;justify-content:flex-end;gap:8px;">
-      <div class="sa-label-item">Not Yet</div>
-      <div class="sa-label-item">Getting There</div>
-      <div class="sa-label-item">Confident</div>
-    </div>
-    <div class="sa-wrap" id="sa-wrap"></div>
 
   </div>
 </div>
@@ -815,6 +804,18 @@
       <strong>Historical Reasoning:</strong> CCOT &mdash; argument structures around what genuinely changed (speed/scale of integration, institutional architecture) vs. what persisted (north-south economic inequality, resistance to cultural homogenization).
     </div>
   </div>
+</div>
+
+<!-- SELF-ASSESSMENT -->
+<div style="max-width:900px;margin:40px auto 0;padding:0 24px;">
+  <div class="section-title">Rate Your AP Skills <span>Self-Assessment &middot; 3-Level Rating</span></div>
+  <p class="subtext">Rate yourself honestly. Use this to guide your review. <span style="color:#e09090">&#9679;</span> Not Yet &nbsp; <span style="color:var(--gold)">&#9679;</span> Getting There &nbsp; <span style="color:#4a9e3f">&#9679;</span> Confident</p>
+  <div class="sa-labels" style="padding-right:0;margin-bottom:4px;justify-content:flex-end;gap:8px;">
+    <div class="sa-label-item">Not Yet</div>
+    <div class="sa-label-item">Getting There</div>
+    <div class="sa-label-item">Confident</div>
+  </div>
+  <div class="sa-wrap" id="sa-wrap"></div>
 </div>
 
 </div><!-- /main -->
