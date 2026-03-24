@@ -121,26 +121,16 @@
   .activity-divider { height:1px; background:rgba(255,255,255,0.06); margin:24px 0; }
 
   /* ── FLIP CARDS ── */
-  .flip-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-top:4px; }
-  .flip-card { height:120px; perspective:600px; cursor:pointer; }
-  .flip-inner { position:relative; width:100%; height:100%; transform-style:preserve-3d; transition:transform 0.5s; }
-  .flip-card.flipped .flip-inner { transform:rotateY(180deg); }
-  .flip-front, .flip-back {
-    position:absolute; inset:0; backface-visibility:hidden;
-    background:var(--surface); border:1px solid var(--border);
-    border-radius:6px; padding:10px 8px;
-    display:flex; flex-direction:column; justify-content:center;
-    align-items:center; text-align:center;
-  }
-  .flip-back { transform:rotateY(180deg); background:var(--surface-2); }
-  .flip-front { position:relative; min-height:120px; }
-  .flip-front .flip-term { font-family:'Source Serif 4',serif; font-size:0.82rem; font-weight:600; color:var(--gold-light); }
-  .flip-hint {
-    position:absolute; bottom:8px; left:0; right:0;
-    text-align:center; font-family:'JetBrains Mono',monospace;
-    font-size:9px; color:var(--text-muted);
-  }
-  .flip-back .flip-def { font-size:0.75rem; color:var(--text-secondary); line-height:1.5; }
+  
+  
+  
+  .flip-card.flipped 
+  
+  
+  
+  
+  
+  
 
   /* ── MCQ ── */
   .mcq-item { margin-bottom:20px; padding:16px; background:var(--surface); border:1px solid rgba(255,255,255,0.06); border-radius:6px; }
@@ -215,22 +205,17 @@
   .chain-answer-box { display:none; margin-left:44px; margin-top:4px; margin-bottom:8px; padding:10px 14px; background:rgba(74,158,63,0.1); border:1px solid rgba(74,158,63,0.3); border-radius:4px; font-size:0.87rem; color:var(--text-secondary); }
 
   /* ── THESIS CARDS ── */
-  .thesis-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:6px; }
-  .thesis-card {
-    padding:16px; border-radius:6px; cursor:pointer; transition:all 0.2s;
-    background:var(--surface); border:1px solid rgba(255,255,255,0.08);
-    font-size:0.87rem; color:var(--text-secondary); line-height:1.6;
-    position:relative;
-  }
-  .thesis-card:hover:not(.revealed) { border-color:var(--gold); }
-  .thesis-card.revealed.fail { background:rgba(107,45,45,0.2); border-color:#c14a4a; }
-  .thesis-card.revealed.pass { background:rgba(45,90,39,0.2); border-color:#4a9e3f; }
-  .thesis-verdict { font-family:'JetBrains Mono',monospace; font-size:0.75rem; font-weight:700; margin-top:10px; }
-  .thesis-card.revealed.fail .thesis-verdict { color:#e08080; }
-  .thesis-card.revealed.pass .thesis-verdict { color:#a0e090; }
-  .thesis-explanation { font-size:0.8rem; color:var(--text-secondary); margin-top:6px; border-top:1px solid rgba(255,255,255,0.08); padding-top:8px; }
+  
+  
+  
+  
+  
+  
+  
+  
+  
   .thesis-prompt { font-size:0.85rem; color:var(--text-muted); font-style:italic; margin-bottom:12px; padding:12px 14px; background:rgba(255,255,255,0.02); border-radius:4px; border-left:3px solid var(--gold); }
-  .click-hint { font-family:'JetBrains Mono',monospace; font-size:0.68rem; color:var(--text-muted); text-align:center; margin-top:8px; }
+  
 
   /* ── CCOT GRID ── */
   .ccot-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:10px; }
@@ -310,12 +295,199 @@
   .dbq-label { font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:#4a7fc1; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px; }
 
   @media (max-width:680px) {
-    .flip-grid { grid-template-columns:repeat(2,1fr); }
-    .thesis-grid { grid-template-columns:1fr; }
+    .thesis-grid { grid-template-columns: 1fr; }
+    
+    
     .ccot-grid { grid-template-columns:1fr; }
     .how-to-grid { grid-template-columns:1fr 1fr; }
     .match-grid { grid-template-columns:1fr; }
   }
+
+  /* ===== FLIP CARDS (FIXED) ===== */
+  .flip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .flip-card {
+    height: 200px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+  .flip-card.flipped .flip-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-front, .flip-back {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    border-radius: 6px;
+    padding: 14px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  .flip-front {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,168,32,0.2);
+    transform: rotateY(0deg);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--parchment, #e8dcc8);
+  }
+  .flip-front .flip-term, .flip-front .term {
+    font-family: 'Playfair Display', 'Source Serif 4', serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--parchment, #e8dcc8);
+  }
+  .flip-front .flip-hint {
+    position: absolute;
+    bottom: 8px;
+    left: 0; right: 0;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gold-dim, #b8860b);
+    letter-spacing: 0.05em;
+  }
+  .flip-back {
+    background: rgba(212,168,32,0.08);
+    border: 1px solid rgba(212,168,32,0.35);
+    transform: rotateY(180deg);
+    font-size: 0.8rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.5;
+    overflow-y: auto;
+  }
+  .flip-back .flip-def, .flip-back .def {
+    font-size: 0.8rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.5;
+  }
+
+
+  /* ===== VIDEO BANNER ===== */
+  .video-banner {
+    background: linear-gradient(135deg, rgba(212,168,32,0.08), rgba(212,168,32,0.02));
+    border: 1px solid rgba(212,168,32,0.25);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 28px;
+  }
+  .video-banner-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    color: var(--gold, #d4a820);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .video-banner iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 6px;
+  }
+
+
+  /* THESIS EVALUATOR — FLIP CARD VERSION */
+  .thesis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .thesis-card {
+    min-height: 220px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .thesis-inner {
+    position: relative;
+    width: 100%; height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+  }
+  .thesis-card.flipped .thesis-inner { transform: rotateY(180deg); }
+  .thesis-front, .thesis-back {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    border-radius: 8px;
+    padding: 18px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+  }
+  .thesis-front {
+    background: var(--surface2, rgba(255,255,255,0.04));
+    border: 1px solid rgba(255,255,255,0.12);
+    transform: rotateY(0deg);
+    font-size: 0.87rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.6;
+  }
+  .thesis-front:hover { border-color: rgba(184,134,11,0.4); }
+  .thesis-front .thesis-label, .thesis-front .thesis-card-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-muted, #6b7280);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .thesis-front .thesis-hint, .thesis-front .click-hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gold-dim, #b8860b);
+    text-align: center;
+    margin-top: 10px;
+  }
+  .thesis-back {
+    transform: rotateY(180deg);
+    padding: 16px;
+    line-height: 1.5;
+  }
+  .thesis-back.fail {
+    background: rgba(107,45,45,0.2);
+    border: 1px solid #d67a7a;
+  }
+  .thesis-back.pass {
+    background: rgba(45,90,39,0.2);
+    border: 1px solid #6dbf63;
+  }
+  .thesis-verdict {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+  }
+  .thesis-back.fail .thesis-verdict { color: #d67a7a; }
+  .thesis-back.pass .thesis-verdict { color: #6dbf63; }
+  .thesis-explanation {
+    font-size: 0.82rem;
+    color: var(--text-secondary, #9ca3af);
+    font-style: italic;
+    line-height: 1.55;
+  }
+
 </style>
 </head>
 <body>
@@ -342,6 +514,12 @@
   <span class="ced-skill">CED Skill 6.D — Corroborate, Qualify, or Modify · CCOT Reasoning</span>
 </div>
 
+<section style="background:#1a1206;border:2px solid #c9a84c;border-radius:12px;margin:2rem auto;max-width:1100px;padding:1.5rem 2rem;text-align:center;">
+  <h2 style="font-family:'Playfair Display',serif;color:#c9a84c;font-size:1.4rem;margin:0 0 0.4rem 0;">📋 Graphic Organizer</h2>
+  <p style="font-family:'Source Serif 4',serif;color:#d4c4a0;font-size:0.95rem;margin:0 0 1rem 0;">Use this organizer alongside the video and infographic to structure your notes for this topic.</p>
+  <img src="9.9.png" alt="Graphic Organizer for Topic 9.9" style="width:100%;max-width:1000px;border-radius:8px;border:1px solid #c9a84c;box-shadow:0 4px 20px rgba(0,0,0,0.5);">
+</section>
+
 <!-- HOW-TO BANNER -->
 <div class="how-to-banner">
   <h3>📋 How to Use This Module</h3>
@@ -367,18 +545,22 @@
   </div>
   <div class="dok-body">
 
+    <div class="video-banner">
+      <div class="video-banner-title">📺 Watch the Video Explainer First</div>
+      <iframe src="https://www.youtube.com/embed/9ohmho93RYk" allowfullscreen loading="lazy" title="APWH 9.9 Globalization & Argumentation"></iframe>
+    </div>
+
+
     <!-- NOTEBOOKLM VIDEO CALLOUT -->
     <div class="nb-callout blue">
       <div class="nb-callout-icon">🎬</div>
       <div class="nb-callout-text">
-        <strong>Watch the Video Explainer first.</strong> As you watch <a href="https://youtu.be/9ohmho93RYk" target="_blank">APWH 9.9 Globalization &amp; Argumentation</a>, listen for: (1) the three words that are the <em>keys to complexity</em>, (2) what the acronym <strong>TCERC</strong> stands for, and (3) the difference between a <em>simple</em> and a <em>complex</em> thesis.
+        <strong>Watch the Video Explainer first.</strong> As you watch , listen for: (1) the three words that are the <em>keys to complexity</em>, (2) what the acronym <strong>TCERC</strong> stands for, and (3) the difference between a <em>simple</em> and a <em>complex</em> thesis.
       </div>
     </div>
 
     <!-- VIDEO IFRAME -->
-    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:6px;margin-bottom:22px;">
-      <iframe src="https://www.youtube.com/embed/9ohmho93RYk" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" allowfullscreen></iframe>
-    </div>
+    
 
     <!-- SECTION 1: VOCABULARY FLIP CARDS -->
     <div class="activity-header">
@@ -832,18 +1014,58 @@
     <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:10px;">Click each thesis card to reveal whether it earns the AP thesis point and why.</p>
     <div class="click-hint">↓ Click each card to evaluate ↓</div>
     <div class="thesis-grid" style="margin-top:8px;">
-      <div class="thesis-card" onclick="revThesis(this,\x27fail\x27,\x27FAIL: This restates the prompt. It tells us what the essay is about (globalization transformed societies) but establishes NO line of reasoning — no WHY, no HOW, no degree judgment. A reader cannot predict the argument from this statement.\x27)">
-        <em>"Globalization transformed human societies in many ways from 1900 to the present."</em>
-      </div>
-      <div class="thesis-card" onclick="revThesis(this,\x27fail\x27,\x27FAIL: This is a defensible claim, but it has no line of reasoning. It names ONE effect (cultural exchange) but does not establish WHY or through what mechanism, and it does not address degree or any competing force. It would NOT earn the thesis point.\x27)">
-        <em>"Globalization led to significant cultural exchange between societies around the world after 1900."</em>
-      </div>
-      <div class="thesis-card" onclick="revThesis(this,\x27pass\x27,\x27PASS: This earns the thesis point. It makes a defensible degree claim (transformed fundamentally BUT unevenly), establishes categories of argument (economic integration vs. social inequality), and uses qualifying language (\x27while\x27) to set up a line of reasoning the essay will develop.\x27)">
-        <em>"While globalization after 1900 fundamentally transformed global economies through the rise of multinational corporations and new Asian economic powers, its social impact was deeply uneven — generating new rights movements in some regions while deepening economic dependency and inequality in others."</em>
-      </div>
-      <div class="thesis-card" onclick="revThesis(this,\x27pass\x27,\x27PASS: This also earns the thesis point, taking a different but equally valid position. It makes a defensible claim about LIMITED transformation by emphasizing continuity. The key move is the \x27however\x27 + line of reasoning about old patterns in new forms — this is the CCOT argument and it qualifies the extent of change effectively.\x27)">
-        <em>"Although globalization accelerated the pace of economic and cultural exchange to an unprecedented degree after 1900, its most significant transformations were in form rather than substance — inequality, resource competition, and resistance to outside influence were not new phenomena, but ancient patterns that globalization intensified without fundamentally altering."</em>
-      </div>
+      <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT A</div>
+                <em>"Globalization transformed human societies in many ways from 1900 to the present."</em>
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back fail">
+                <div class="thesis-verdict">FAIL</div>
+                <div class="thesis-explanation">This restates the prompt. It tells us what the essay is about (globalization transformed societies) but establishes NO line of reasoning — no WHY, no HOW, no degree judgment. A reader cannot predict the argument from this statement.</div>
+              </div>
+            </div>
+          </div>
+      <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT B</div>
+                <em>"Globalization led to significant cultural exchange between societies around the world after 1900."</em>
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back fail">
+                <div class="thesis-verdict">FAIL</div>
+                <div class="thesis-explanation">This is a defensible claim, but it has no line of reasoning. It names ONE effect (cultural exchange) but does not establish WHY or through what mechanism, and it does not address degree or any competing force. It would NOT earn the thesis point.</div>
+              </div>
+            </div>
+          </div>
+      <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT C</div>
+                <em>"While globalization after 1900 fundamentally transformed global economies through the rise of multinational corporations and new Asian economic powers, its social impact was deeply uneven — generating new rights movements in some regions while deepening economic dependency and inequality in others."</em>
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back pass">
+                <div class="thesis-verdict">PASS</div>
+                <div class="thesis-explanation">This earns the thesis point. It makes a defensible degree claim (transformed fundamentally BUT unevenly), establishes categories of argument (economic integration vs. social inequality), and uses qualifying language ('while') to set up a line of reasoning the essay will develop.</div>
+              </div>
+            </div>
+          </div>
+      <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT D</div>
+                <em>"Although globalization accelerated the pace of economic and cultural exchange to an unprecedented degree after 1900, its most significant transformations were in form rather than substance — inequality, resource competition, and resistance to outside influence were not new phenomena, but ancient patterns that globalization intensified without fundamentally altering."</em>
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back pass">
+                <div class="thesis-verdict">PASS</div>
+                <div class="thesis-explanation">This also earns the thesis point, taking a different but equally valid position. It makes a defensible claim about LIMITED transformation by emphasizing continuity. The key move is the 'however' + line of reasoning about old patterns in new forms — this is the CCOT argument and it qualifies the extent of change effectively.</div>
+              </div>
+            </div>
+          </div>
     </div>
 
     <div class="activity-divider"></div>

@@ -287,62 +287,14 @@
   .activity-body { padding: 18px; }
 
   /* FLIP CARDS */
-  .flip-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 12px;
-  }
-  .flip-card {
-    height: 130px;
-    cursor: pointer;
-    perspective: 600px;
-  }
-  .flip-inner {
-    width: 100%; height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.5s ease;
-  }
-  .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
-  .flip-front, .flip-back {
-    position: absolute;
-    width: 100%; height: 100%;
-    backface-visibility: hidden;
-    border-radius: 6px;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: absolute;
-    top: 0; left: 0;
-    min-height: 120px;
-  }
-  .flip-front {
-    background: var(--surface2);
-    border: 1px solid rgba(184,134,11,0.2);
-    font-family: 'Playfair Display', serif;
-    font-size: 0.92rem;
-    color: var(--parchment);
-  }
-  .flip-back {
-    background: rgba(184,134,11,0.1);
-    border: 1px solid rgba(184,134,11,0.35);
-    transform: rotateY(180deg);
-    font-size: 0.78rem;
-    color: var(--text-secondary);
-    line-height: 1.5;
-  }
-  .flip-hint {
-    position: absolute;
-    bottom: 8px;
-    left: 0; right: 0;
-    text-align: center;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    color: var(--text-muted);
-  }
+  
+  
+  
+  .flip-card.flipped 
+  
+  
+  
+  
 
   /* VISUAL FRAMEWORK - 3-category disease diagram */
   .disease-diagram {
@@ -626,47 +578,84 @@
     color: var(--text-secondary);
   }
 
-  /* THESIS EVALUATOR */
-  .thesis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  /* THESIS EVALUATOR — FLIP CARD VERSION */
+  .thesis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .thesis-card {
-    background: var(--surface2);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 8px;
-    padding: 16px;
+    min-height: 220px;
+    perspective: 1000px;
     cursor: pointer;
-    transition: all 0.2s;
+  }
+  .thesis-inner {
+    position: relative;
+    width: 100%; height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+  }
+  .thesis-card.flipped .thesis-inner { transform: rotateY(180deg); }
+  .thesis-front, .thesis-back {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    border-radius: 8px;
+    padding: 18px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+  }
+  .thesis-front {
+    background: var(--surface2);
+    border: 1px solid rgba(255,255,255,0.12);
+    transform: rotateY(0deg);
     font-size: 0.87rem;
     color: var(--text-secondary);
     line-height: 1.6;
-    position: relative;
   }
-  .thesis-card:hover:not(.revealed) { border-color: rgba(184,134,11,0.4); }
-  .thesis-card.revealed { cursor: default; }
-  .thesis-card.fail { border-color: #d67a7a; background: rgba(107,45,45,0.15); }
-  .thesis-card.pass { border-color: #6dbf63; background: rgba(45,90,39,0.15); }
-  .thesis-verdict {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    margin-top: 10px;
-    padding-top: 8px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-  }
-  .thesis-card.fail .thesis-verdict { color: #d67a7a; }
-  .thesis-card.pass .thesis-verdict { color: #6dbf63; }
-  .thesis-explanation {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    margin-top: 6px;
-    font-style: italic;
-  }
-  .thesis-hint {
+  .thesis-front:hover { border-color: rgba(184,134,11,0.4); }
+  .thesis-front .thesis-label {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.65rem;
     color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .thesis-front .thesis-hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gold-dim, #b8860b);
     text-align: center;
-    margin-top: 6px;
+    margin-top: 10px;
+  }
+  .thesis-back {
+    transform: rotateY(180deg);
+    padding: 16px;
+    line-height: 1.5;
+  }
+  .thesis-back.fail {
+    background: rgba(107,45,45,0.2);
+    border: 1px solid #d67a7a;
+  }
+  .thesis-back.pass {
+    background: rgba(45,90,39,0.2);
+    border: 1px solid #6dbf63;
+  }
+  .thesis-verdict {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+  }
+  .thesis-back.fail .thesis-verdict { color: #d67a7a; }
+  .thesis-back.pass .thesis-verdict { color: #6dbf63; }
+  .thesis-explanation {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    line-height: 1.55;
   }
 
   /* CCOT GRID */
@@ -861,6 +850,109 @@
     .ccot-grid { grid-template-columns: 1fr; }
     .match-grid { grid-template-columns: 1fr; }
   }
+
+  /* ===== FLIP CARDS (FIXED) ===== */
+  .flip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .flip-card {
+    height: 200px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+  .flip-card.flipped .flip-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-front, .flip-back {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    border-radius: 6px;
+    padding: 14px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  .flip-front {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,168,32,0.2);
+    transform: rotateY(0deg);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--parchment, #e8dcc8);
+  }
+  .flip-front .flip-term, .flip-front .term {
+    font-family: 'Playfair Display', 'Source Serif 4', serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--parchment, #e8dcc8);
+  }
+  .flip-front .flip-hint {
+    position: absolute;
+    bottom: 8px;
+    left: 0; right: 0;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gold-dim, #b8860b);
+    letter-spacing: 0.05em;
+  }
+  .flip-back {
+    background: rgba(212,168,32,0.08);
+    border: 1px solid rgba(212,168,32,0.35);
+    transform: rotateY(180deg);
+    font-size: 0.8rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.5;
+    overflow-y: auto;
+  }
+  .flip-back .flip-def, .flip-back .def {
+    font-size: 0.8rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.5;
+  }
+
+
+  /* ===== VIDEO BANNER ===== */
+  .video-banner {
+    background: linear-gradient(135deg, rgba(212,168,32,0.08), rgba(212,168,32,0.02));
+    border: 1px solid rgba(212,168,32,0.25);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 28px;
+  }
+  .video-banner-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    color: var(--gold, #d4a820);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .video-banner iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 6px;
+  }
+
 </style>
 </head>
 <body>
@@ -881,6 +973,12 @@
   <div class="subtitle">Technological Advances &amp; Limitations — Humans and the Environment</div>
   <div class="theme-pill">ENV · Humans and the Environments</div>
 </div>
+
+<section style="background:#1a1206;border:2px solid #c9a84c;border-radius:12px;margin:2rem auto;max-width:1100px;padding:1.5rem 2rem;text-align:center;">
+  <h2 style="font-family:'Playfair Display',serif;color:#c9a84c;font-size:1.4rem;margin:0 0 0.4rem 0;">📋 Graphic Organizer</h2>
+  <p style="font-family:'Source Serif 4',serif;color:#d4c4a0;font-size:0.95rem;margin:0 0 1rem 0;">Use this organizer alongside the video and infographic to structure your notes for this topic.</p>
+  <img src="9.2.png" alt="Graphic Organizer for Topic 9.2" style="width:100%;max-width:1000px;border-radius:8px;border:1px solid #c9a84c;box-shadow:0 4px 20px rgba(0,0,0,0.5);">
+</section>
 
 <!-- HOW-TO BANNER -->
 <div class="how-to-banner">
@@ -909,16 +1007,20 @@
   </div>
   <div class="dok-body">
 
+    <div class="video-banner">
+      <div class="video-banner-title">📺 Watch the Video Explainer First</div>
+      <iframe src="https://www.youtube.com/embed/8QVlvMjUerY" allowfullscreen loading="lazy" title="APWH 9.2 Disease After 1900"></iframe>
+    </div>
+
+
     <!-- VIDEO CALLOUT -->
-    <div class="callout-video">
-      <div class="callout-title">📺 Watch the Video Explainer First</div>
-      <p>Before doing anything else, watch the Topic 9.2 video. Listen for these three things:</p>
+          <p>Before doing anything else, watch the Topic 9.2 video. Listen for these three things:</p>
       <ul>
         <li>The "double-edged sword" paradox at the heart of modern medicine</li>
         <li>Why poverty — not lack of science — explains persistent diseases</li>
         <li>How the 1918 flu became a global catastrophe specifically because of modern technology</li>
       </ul>
-      <p style="margin-top:8px;"><a href="https://youtu.be/8QVlvMjUerY" target="_blank">▶ Open APWH 9.2 Disease After 1900 video ↗</a></p>
+      
     </div>
 
     <!-- OPENING QUOTE -->
@@ -1357,28 +1459,60 @@
         <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:14px;">Click each thesis card to see if it earns the College Board thesis point and why.</p>
         <div class="thesis-grid">
 
-          <div class="thesis-card" onclick="revThesis(this,'fail','FAIL — This restates the prompt without establishing a line of reasoning. It tells us what happened but not the mechanism or degree.')">
-            <div style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--text-muted);margin-bottom:8px;">CARD 1</div>
-            "Globalization transformed the nature of disease threats after 1900 in many ways, including the spread of new diseases and the development of new medicines."
-            <div class="thesis-hint">click to evaluate ↓</div>
+          <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT A</div>
+                "Globalization transformed the nature of disease threats after 1900 in many ways, including the spread of new diseases and the development of new medicines."
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back fail">
+                <div class="thesis-verdict">FAIL</div>
+                <div class="thesis-explanation">This restates the prompt without establishing a line of reasoning. It tells us what happened but not the mechanism or degree.</div>
+              </div>
+            </div>
           </div>
 
-          <div class="thesis-card" onclick="revThesis(this,'fail','FAIL — This is a defensible historical claim, but it lacks a line of reasoning. It says WHAT happened but not WHY or through WHAT mechanism. No \x22because\x22 or analytical categories.')">
-            <div style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--text-muted);margin-bottom:8px;">CARD 2</div>
-            "Globalization transformed disease threats after 1900 by accelerating the spread of new epidemic diseases around the world."
-            <div class="thesis-hint">click to evaluate ↓</div>
+          <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT B</div>
+                "Globalization transformed disease threats after 1900 by accelerating the spread of new epidemic diseases around the world."
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back fail">
+                <div class="thesis-verdict">FAIL</div>
+                <div class="thesis-explanation">This is a defensible historical claim, but it lacks a line of reasoning. It says WHAT happened but not WHY or through WHAT mechanism. No "because" or analytical categories.</div>
+              </div>
+            </div>
           </div>
 
-          <div class="thesis-card" onclick="revThesis(this,'pass','PASS — Defensible claim + clear line of reasoning. Identifies the mechanism (transportation as disease vector) and establishes analytical categories (epidemics vs. older patterns). The \x22because\x22 clause creates the line of reasoning.')">
-            <div style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--text-muted);margin-bottom:8px;">CARD 3</div>
-            "While diseases of poverty like malaria and tuberculosis persisted due to entrenched inequality, globalization fundamentally transformed epidemic threats because modern transportation networks — trains, steamships, and later air travel — allowed pathogens to spread across the globe at unprecedented speeds, as demonstrated by the catastrophic 1918 influenza pandemic."
-            <div class="thesis-hint">click to evaluate ↓</div>
+          <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT C</div>
+                "While diseases of poverty like malaria and tuberculosis persisted due to entrenched inequality, globalization fundamentally transformed epidemic threats because modern transportation networks — trains, steamships, and later air travel — allowed pathogens to spread across the globe at unprecedented speeds, as demonstrated by the catastrophic 1918 influenza pandemic."
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back pass">
+                <div class="thesis-verdict">PASS</div>
+                <div class="thesis-explanation">Defensible claim + clear line of reasoning. Identifies the mechanism (transportation as disease vector) and establishes analytical categories (epidemics vs. older patterns). The "because" clause creates the line of reasoning.</div>
+              </div>
+            </div>
           </div>
 
-          <div class="thesis-card" onclick="revThesis(this,'pass','PASS — Equally valid line of reasoning taking a more nuanced \x22limited transformation\x22 position. Argues that globalization is one factor among several. The qualifier \x22primarily\x22 with a \x22because\x22 clause establishes the degree and mechanism. Two valid theses can take opposite positions.')">
-            <div style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--text-muted);margin-bottom:8px;">CARD 4</div>
-            "Globalization transformed disease threats only partially after 1900 because the most persistent global killers — malaria, cholera, and tuberculosis — were primarily driven by poverty and lack of access rather than by global connectivity, meaning that the key variable in disease mortality remained economic inequality rather than globalization itself."
-            <div class="thesis-hint">click to evaluate ↓</div>
+          <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT D</div>
+                "Globalization transformed disease threats only partially after 1900 because the most persistent global killers — malaria, cholera, and tuberculosis — were primarily driven by poverty and lack of access rather than by global connectivity, meaning that the key variable in disease mortality remained economic inequality rather than globalization itself."
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back pass">
+                <div class="thesis-verdict">PASS</div>
+                <div class="thesis-explanation">Equally valid line of reasoning taking a more nuanced "limited transformation" position. Argues that globalization is one factor among several. The qualifier "primarily" with a "because" clause establishes the degree and mechanism. Two valid theses can take opposite positions.</div>
+              </div>
+            </div>
           </div>
 
         </div>

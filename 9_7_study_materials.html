@@ -217,7 +217,8 @@
     gap: 12px;
     margin: 20px 0;
   }
-  @media (max-width: 620px) { .three-track { grid-template-columns: 1fr; } }
+  @media (max-width: 620px) {
+    .thesis-grid { grid-template-columns: 1fr; } .three-track { grid-template-columns: 1fr; } }
 
   .track-col {
     background: var(--bg-elevated);
@@ -257,55 +258,13 @@
   .dot-purple { background: #c39bd3; }
 
   /* ── FLIP CARDS ── */
-  .flip-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 14px;
-    margin: 16px 0;
-  }
-  .flip-card {
-    perspective: 800px;
-    height: 120px;
-    cursor: pointer;
-  }
-  .flip-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.5s ease;
-  }
-  .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
-  .flip-front, .flip-back {
-    position: absolute;
-    inset: 0;
-    backface-visibility: hidden;
-    border-radius: 6px;
-    padding: 12px;
-    border: 1px solid var(--border-gold);
-  }
-  .flip-front {
-    background: var(--bg-elevated);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: absolute;
-    min-height: 120px;
-  }
-  .flip-back {
-    background: rgba(184,134,11,0.1);
-    backface-visibility: hidden;
-    transform: rotateY(180deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 0.8rem;
-    color: var(--parchment);
-    line-height: 1.45;
-  }
+  
+  
+  
+  .flip-card.flipped 
+  
+  
+  
   .flip-term {
     font-family: 'Cinzel', serif;
     font-size: 0.82rem;
@@ -313,15 +272,7 @@
     font-weight: 600;
     text-align: center;
   }
-  .flip-hint {
-    position: absolute;
-    bottom: 8px;
-    left: 0; right: 0;
-    text-align: center;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    color: var(--text-muted);
-  }
+  
 
   /* ── MCQ ── */
   .mcq-item { margin-bottom: 28px; }
@@ -635,56 +586,19 @@
   }
 
   /* ── THESIS EVALUATOR ── */
-  .thesis-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    margin: 16px 0;
-  }
-  @media(max-width:580px) { .thesis-grid { grid-template-columns: 1fr; } }
-  .thesis-card {
-    background: var(--bg-elevated);
-    border: 1px solid var(--border-subtle);
-    border-radius: 6px;
-    padding: 16px;
-    cursor: pointer;
-    transition: all 0.25s;
-    user-select: none;
-  }
-  .thesis-card:hover:not(.revealed) { border-color: var(--border-gold); }
-  .thesis-card .thesis-text {
-    font-size: 0.88rem;
-    color: var(--text-secondary);
-    line-height: 1.55;
-    font-style: italic;
-  }
-  .thesis-card .click-hint {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.65rem;
-    color: var(--text-muted);
-    margin-top: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-  .thesis-card.revealed { cursor: default; }
-  .thesis-card.pass { border-color: #4a9e3f; background: rgba(74,158,63,0.1); }
-  .thesis-card.fail { border-color: #c0392b; background: rgba(192,57,43,0.1); }
-  .thesis-verdict {
-    font-family: 'Cinzel', serif;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-top: 12px;
-    padding-top: 10px;
-    border-top: 1px solid var(--border-subtle);
-  }
-  .thesis-card.pass .thesis-verdict { color: #a8e09f; }
-  .thesis-card.fail .thesis-verdict { color: #f08080; }
-  .thesis-explanation {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    margin-top: 8px;
-    line-height: 1.5;
-  }
+  
+  @media(max-width:580px) {  }
+  
+  
+  .thesis-card 
+  .thesis-card 
+  
+  
+  
+  
+  
+  
+  
 
   /* ── CONTEXTUALIZATION BUILDER ── */
   .ctx-pathway {
@@ -884,6 +798,192 @@
     margin-bottom: 20px;
   }
   .info-box strong { color: #74b9e8; }
+
+  /* ===== FLIP CARDS (FIXED) ===== */
+  .flip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .flip-card {
+    height: 200px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+  .flip-card.flipped .flip-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-front, .flip-back {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    border-radius: 6px;
+    padding: 14px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  .flip-front {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,168,32,0.2);
+    transform: rotateY(0deg);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--parchment, #e8dcc8);
+  }
+  .flip-front .flip-term, .flip-front .term {
+    font-family: 'Playfair Display', 'Source Serif 4', serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--parchment, #e8dcc8);
+  }
+  .flip-front .flip-hint {
+    position: absolute;
+    bottom: 8px;
+    left: 0; right: 0;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gold-dim, #b8860b);
+    letter-spacing: 0.05em;
+  }
+  .flip-back {
+    background: rgba(212,168,32,0.08);
+    border: 1px solid rgba(212,168,32,0.35);
+    transform: rotateY(180deg);
+    font-size: 0.8rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.5;
+    overflow-y: auto;
+  }
+  .flip-back .flip-def, .flip-back .def {
+    font-size: 0.8rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.5;
+  }
+
+
+  /* ===== VIDEO BANNER ===== */
+  .video-banner {
+    background: linear-gradient(135deg, rgba(212,168,32,0.08), rgba(212,168,32,0.02));
+    border: 1px solid rgba(212,168,32,0.25);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 28px;
+  }
+  .video-banner-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    color: var(--gold, #d4a820);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .video-banner iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 6px;
+  }
+
+
+  /* THESIS EVALUATOR — FLIP CARD VERSION */
+  .thesis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .thesis-card {
+    min-height: 220px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .thesis-inner {
+    position: relative;
+    width: 100%; height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+  }
+  .thesis-card.flipped .thesis-inner { transform: rotateY(180deg); }
+  .thesis-front, .thesis-back {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    border-radius: 8px;
+    padding: 18px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+  }
+  .thesis-front {
+    background: var(--surface2, rgba(255,255,255,0.04));
+    border: 1px solid rgba(255,255,255,0.12);
+    transform: rotateY(0deg);
+    font-size: 0.87rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.6;
+  }
+  .thesis-front:hover { border-color: rgba(184,134,11,0.4); }
+  .thesis-front .thesis-label, .thesis-front .thesis-card-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-muted, #6b7280);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .thesis-front .thesis-hint, .thesis-front .click-hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gold-dim, #b8860b);
+    text-align: center;
+    margin-top: 10px;
+  }
+  .thesis-back {
+    transform: rotateY(180deg);
+    padding: 16px;
+    line-height: 1.5;
+  }
+  .thesis-back.fail {
+    background: rgba(107,45,45,0.2);
+    border: 1px solid #d67a7a;
+  }
+  .thesis-back.pass {
+    background: rgba(45,90,39,0.2);
+    border: 1px solid #6dbf63;
+  }
+  .thesis-verdict {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+  }
+  .thesis-back.fail .thesis-verdict { color: #d67a7a; }
+  .thesis-back.pass .thesis-verdict { color: #6dbf63; }
+  .thesis-explanation {
+    font-size: 0.82rem;
+    color: var(--text-secondary, #9ca3af);
+    font-style: italic;
+    line-height: 1.55;
+  }
+
 </style>
 </head>
 <body>
@@ -900,6 +1000,12 @@
     <span class="tag">c. 1900 – Present</span>
   </div>
 </div>
+
+<section style="background:#1a1206;border:2px solid #c9a84c;border-radius:12px;margin:2rem auto;max-width:1100px;padding:1.5rem 2rem;text-align:center;">
+  <h2 style="font-family:'Playfair Display',serif;color:#c9a84c;font-size:1.4rem;margin:0 0 0.4rem 0;">📋 Graphic Organizer</h2>
+  <p style="font-family:'Source Serif 4',serif;color:#d4c4a0;font-size:0.95rem;margin:0 0 1rem 0;">Use this organizer alongside the video and infographic to structure your notes for this topic.</p>
+  <img src="9.7.png" alt="Graphic Organizer for Topic 9.7" style="width:100%;max-width:1000px;border-radius:8px;border:1px solid #c9a84c;box-shadow:0 4px 20px rgba(0,0,0,0.5);">
+</section>
 
 <!-- NAV -->
 <nav class="dok-nav">
@@ -918,12 +1024,14 @@
     <h2>Knowledge Acquisition — Recall &amp; Recognize</h2>
   </div>
 
-  <!-- VIDEO -->
+  <div class="video-banner">
+    <div class="video-banner-title">📺 Watch the Video Explainer First</div>
+    <iframe src="https://www.youtube.com/embed/vxDxBdtw-zg" allowfullscreen loading="lazy" title="APWH 9.7 Resistance to Globalization"></iframe>
+  </div>
+
+  <!-- VIDEO CONTEXT -->
   <div class="card">
-    <div class="card-title">📽 Video Explainer</div>
-    <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/vxDxBdtw-zg" allowfullscreen loading="lazy"></iframe>
-    </div>
+    <div class="card-title">📽 Video Context</div>
     <blockquote>
       "Globalization wasn't a system for everyone. It was a system built to serve a tiny, super wealthy slice of the population. And that feeling — that sense of deep inequality — that's the fuel for so much of the resistance we're about to explore."
       <cite>— AP World History Explainer, Topic 9.7</cite>
@@ -1384,23 +1492,67 @@
 
     <div class="thesis-grid">
 
-      <div class="thesis-card" onclick="revThesis(this,'fail',\x27FAIL — This is a restatement of the prompt, not a thesis. It identifies that resistance happened and mentions a category, but establishes no line of reasoning, makes no argument about degree or causation, and sets up no analytical framework for an essay.\x27)">
-        <div class="thesis-text">"After 1900, people around the world resisted globalization in many ways, including economic protests and cultural movements."</div>
+      <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT A</div>
+                <div class="thesis-text">"After 1900, people around the world resisted globalization in many ways, including economic protests and cultural movements."
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back fail">
+                <div class="thesis-verdict">FAIL</div>
+                <div class="thesis-explanation">This is a restatement of the prompt, not a thesis. It identifies that resistance happened and mentions a category, but establishes no line of reasoning, makes no argument about degree or causation, and sets up no analytical framework for an essay.</div>
+              </div>
+            </div>
+          </div>
         <div class="click-hint">↓ click to evaluate</div>
       </div>
 
-      <div class="thesis-card" onclick="revThesis(this,'pass',\x27PASS — This thesis makes a defensible claim (resistance was not primarily economic), establishes an analytical line of reasoning (multiple domains: economic, cultural, political), and previews the argument structure. It directly addresses the \x22extent\x22 language of the prompt.\x27)">
-        <div class="thesis-text">"While economic grievances against institutions like the WTO and IMF provided the initial spark for anti-globalization movements, resistance quickly expanded into cultural and political domains — from China\x27s rejection of Western social media to Brexit — demonstrating that the pushback against globalization was far broader than economics alone."</div>
+      <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT B</div>
+                <div class="thesis-text">"While economic grievances against institutions like the WTO and IMF provided the initial spark for anti-globalization movements, resistance quickly expanded into cultural and political domains — from China\x27s rejection of Western social media to Brexit — demonstrating that the pushback against globalization was far broader than economics alone."
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back pass">
+                <div class="thesis-verdict">PASS</div>
+                <div class="thesis-explanation">This thesis makes a defensible claim (resistance was not primarily economic), establishes an analytical line of reasoning (multiple domains: economic, cultural, political), and previews the argument structure. It directly addresses the "extent" language of the prompt.</div>
+              </div>
+            </div>
+          </div>
         <div class="click-hint">↓ click to evaluate</div>
       </div>
 
-      <div class="thesis-card" onclick="revThesis(this,'fail',\x27FAIL — This is historically defensible but does NOT establish a line of reasoning. It states a fact (economic resistance existed) without making an argument about extent, causation, or significance. A reader cannot tell what the essay will argue beyond \x22economic resistance happened.\x22\x27)">
-        <div class="thesis-text">"Economic resistance to globalization occurred after 1900, including the Battle in Seattle and protests against the IMF."</div>
+      <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT C</div>
+                <div class="thesis-text">"Economic resistance to globalization occurred after 1900, including the Battle in Seattle and protests against the IMF."
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back fail">
+                <div class="thesis-verdict">FAIL</div>
+                <div class="thesis-explanation">This is historically defensible but does NOT establish a line of reasoning. It states a fact (economic resistance existed) without making an argument about extent, causation, or significance. A reader cannot tell what the essay will argue beyond "economic resistance happened."</div>
+              </div>
+            </div>
+          </div>
         <div class="click-hint">↓ click to evaluate</div>
       </div>
 
-      <div class="thesis-card" onclick="revThesis(this,'pass',\x27PASS — This thesis makes a specific, defensible claim with a clear line of reasoning. It acknowledges the economic dimension while arguing it was not primary (the \x22extent\x22 question), and establishes categories: cultural and political resistance driven by sovereignty concerns. Strong roadmap for an essay.\x27)">
-        <div class="thesis-text">"Although economic inequality fueled early resistance to globalization through protests against the WTO and IMF, the most enduring and politically significant forms of pushback — including Brexit and the reassertion of cultural sovereignty in nations like China — were ultimately driven by concerns over identity and national self-determination rather than economics."</div>
+      <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT D</div>
+                <div class="thesis-text">"Although economic inequality fueled early resistance to globalization through protests against the WTO and IMF, the most enduring and politically significant forms of pushback — including Brexit and the reassertion of cultural sovereignty in nations like China — were ultimately driven by concerns over identity and national self-determination rather than economics."
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back pass">
+                <div class="thesis-verdict">PASS</div>
+                <div class="thesis-explanation">This thesis makes a specific, defensible claim with a clear line of reasoning. It acknowledges the economic dimension while arguing it was not primary (the "extent" question), and establishes categories: cultural and political resistance driven by sovereignty concerns. Strong roadmap for an essay.</div>
+              </div>
+            </div>
+          </div>
         <div class="click-hint">↓ click to evaluate</div>
       </div>
 

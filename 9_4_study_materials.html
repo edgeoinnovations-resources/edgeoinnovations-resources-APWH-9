@@ -269,65 +269,15 @@
   .tl-event span { color: var(--text-secondary); }
 
   /* ─── FLIP CARDS ─── */
-  .flip-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 12px;
-    margin-top: 12px;
-  }
-  .flip-card {
-    height: 120px;
-    cursor: pointer;
-    perspective: 800px;
-  }
-  .flip-inner {
-    position: relative;
-    width: 100%; height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-  }
-  .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
-  .flip-front, .flip-back {
-    position: absolute;
-    width: 100%; height: 100%;
-    backface-visibility: hidden;
-    border-radius: 3px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-  }
-  .flip-front {
-    background: var(--parchment);
-    border: 1px solid var(--border);
-    min-height: 120px;
-    position: relative;
-  }
-  .flip-front .term {
-    font-family: 'Playfair Display', serif;
-    font-size: 0.88rem;
-    color: var(--ink);
-    font-weight: 700;
-  }
-  .flip-front .flip-hint {
-    position: absolute;
-    bottom: 8px;
-    left: 0; right: 0;
-    text-align: center;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    color: var(--text-muted);
-  }
-  .flip-back {
-    background: var(--ink);
-    border: 1px solid var(--gold);
-    transform: rotateY(180deg);
-    font-size: 0.78rem;
-    color: var(--parchment-dark);
-    line-height: 1.4;
-  }
+  
+  
+  
+  .flip-card.flipped 
+  
+  
+  
+  
+  
 
   /* ─── MCQ ─── */
   .mcq-item { margin-bottom: 24px; }
@@ -541,44 +491,15 @@
   .chain-answer-box.show { display: block; }
 
   /* ─── THESIS EVALUATOR ─── */
-  .thesis-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    margin-top: 12px;
-  }
-  .thesis-card {
-    padding: 16px;
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    cursor: pointer;
-    background: var(--parchment);
-    font-size: 0.84rem;
-    font-style: italic;
-    color: var(--text-secondary);
-    transition: all 0.2s;
-    line-height: 1.55;
-  }
-  .thesis-card:hover:not(.revealed) { border-color: var(--gold); background: var(--gold-pale); }
-  .thesis-card.revealed.pass { background: rgba(26,74,26,0.1); border-color: var(--dok1); }
-  .thesis-card.revealed.fail { background: rgba(92,26,26,0.1); border-color: #c0504d; }
-  .thesis-verdict {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.72rem;
-    font-weight: 700;
-    font-style: normal;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin-top: 10px;
-  }
-  .pass .thesis-verdict { color: var(--dok1); }
-  .fail .thesis-verdict { color: var(--crimson); }
-  .thesis-explanation {
-    font-style: normal;
-    font-size: 0.78rem;
-    margin-top: 6px;
-    color: var(--text-secondary);
-  }
+  
+  
+  
+  
+  
+  
+  .pass 
+  .fail 
+  
   .thesis-instruction {
     font-size: 0.82rem;
     color: var(--text-muted);
@@ -780,14 +701,201 @@
 
   /* ─── RESPONSIVE ─── */
   @media (max-width: 620px) {
+    .thesis-grid { grid-template-columns: 1fr; }
     .framework-grid, .thesis-grid, .chain-answers, .match-grid, .hipp-grid, .synthesis-grid { grid-template-columns: 1fr; }
-    .flip-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+    
     .nav-bar { padding: 0 16px; }
     .main { padding: 0 16px 60px; }
     .dok-header { flex-direction: column; align-items: flex-start; gap: 8px; }
     .timeline-bar { flex-direction: column; }
     .tl-event { border-right: none; border-bottom: 1px solid var(--border-light); }
   }
+
+  /* ===== FLIP CARDS (FIXED) ===== */
+  .flip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .flip-card {
+    height: 200px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+  .flip-card.flipped .flip-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-front, .flip-back {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    border-radius: 6px;
+    padding: 14px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  .flip-front {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,168,32,0.2);
+    transform: rotateY(0deg);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--parchment, #e8dcc8);
+  }
+  .flip-front .flip-term, .flip-front .term {
+    font-family: 'Playfair Display', 'Source Serif 4', serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--parchment, #e8dcc8);
+  }
+  .flip-front .flip-hint {
+    position: absolute;
+    bottom: 8px;
+    left: 0; right: 0;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gold-dim, #b8860b);
+    letter-spacing: 0.05em;
+  }
+  .flip-back {
+    background: rgba(212,168,32,0.08);
+    border: 1px solid rgba(212,168,32,0.35);
+    transform: rotateY(180deg);
+    font-size: 0.8rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.5;
+    overflow-y: auto;
+  }
+  .flip-back .flip-def, .flip-back .def {
+    font-size: 0.8rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.5;
+  }
+
+
+  /* ===== VIDEO BANNER ===== */
+  .video-banner {
+    background: linear-gradient(135deg, rgba(212,168,32,0.08), rgba(212,168,32,0.02));
+    border: 1px solid rgba(212,168,32,0.25);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 28px;
+  }
+  .video-banner-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    color: var(--gold, #d4a820);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .video-banner iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 6px;
+  }
+
+
+  /* THESIS EVALUATOR — FLIP CARD VERSION */
+  .thesis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .thesis-card {
+    min-height: 220px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .thesis-inner {
+    position: relative;
+    width: 100%; height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+  }
+  .thesis-card.flipped .thesis-inner { transform: rotateY(180deg); }
+  .thesis-front, .thesis-back {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    border-radius: 8px;
+    padding: 18px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+  }
+  .thesis-front {
+    background: var(--surface2, rgba(255,255,255,0.04));
+    border: 1px solid rgba(255,255,255,0.12);
+    transform: rotateY(0deg);
+    font-size: 0.87rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.6;
+  }
+  .thesis-front:hover { border-color: rgba(184,134,11,0.4); }
+  .thesis-front .thesis-label, .thesis-front .thesis-card-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-muted, #6b7280);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .thesis-front .thesis-hint, .thesis-front .click-hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gold-dim, #b8860b);
+    text-align: center;
+    margin-top: 10px;
+  }
+  .thesis-back {
+    transform: rotateY(180deg);
+    padding: 16px;
+    line-height: 1.5;
+  }
+  .thesis-back.fail {
+    background: rgba(107,45,45,0.2);
+    border: 1px solid #d67a7a;
+  }
+  .thesis-back.pass {
+    background: rgba(45,90,39,0.2);
+    border: 1px solid #6dbf63;
+  }
+  .thesis-verdict {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+  }
+  .thesis-back.fail .thesis-verdict { color: #d67a7a; }
+  .thesis-back.pass .thesis-verdict { color: #6dbf63; }
+  .thesis-explanation {
+    font-size: 0.82rem;
+    color: var(--text-secondary, #9ca3af);
+    font-style: italic;
+    line-height: 1.55;
+  }
+
 </style>
 </head>
 <body>
@@ -802,6 +910,12 @@
   </div>
 </header>
 
+<section style="background:#1a1206;border:2px solid #c9a84c;border-radius:12px;margin:2rem auto;max-width:1100px;padding:1.5rem 2rem;text-align:center;">
+  <h2 style="font-family:'Playfair Display',serif;color:#c9a84c;font-size:1.4rem;margin:0 0 0.4rem 0;">📋 Graphic Organizer</h2>
+  <p style="font-family:'Source Serif 4',serif;color:#d4c4a0;font-size:0.95rem;margin:0 0 1rem 0;">Use this organizer alongside the video and infographic to structure your notes for this topic.</p>
+  <img src="9.4.png" alt="Graphic Organizer for Topic 9.4" style="width:100%;max-width:1000px;border-radius:8px;border:1px solid #c9a84c;box-shadow:0 4px 20px rgba(0,0,0,0.5);">
+</section>
+
 <!-- ══════════════════ NAV ══════════════════ -->
 <nav class="nav-bar">
   <button class="nav-pill dok1 active" onclick="scrollToSection('dok1')">DOK 1 · Acquire</button>
@@ -811,6 +925,12 @@
 </nav>
 
 <div class="main">
+
+    <div class="video-banner">
+      <div class="video-banner-title">📺 Watch the Video Explainer First</div>
+      <iframe src="https://www.youtube.com/embed/HzwF1hOLI2k" allowfullscreen loading="lazy" title="APWH 9.4 Economics in the Global Age"></iframe>
+    </div>
+
 
 <!-- ══════════════════ DOK 1 ══════════════════ -->
 <section id="dok1">
@@ -825,16 +945,7 @@
   </div>
 
   <!-- Video Explainer -->
-  <div class="panel">
-    <div class="panel-title">📺 Video Explainer</div>
-    <div class="video-quote">
-      "The end of the Cold War wasn't just about politics — it was a decisive victory for free market capitalism, setting the stage for economic liberalization to go global in a way nobody had ever seen before."
-    </div>
-    <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/HzwF1hOLI2k" allowfullscreen title="APWH 9.4 Economics in the Global Age"></iframe>
-    </div>
-    <p style="font-size:0.8rem;color:var(--text-muted);margin-top:8px;">Watch the full explainer, then work through the activities below. Take notes on: the four key leaders, the "brains vs. brawn" split, and what sourcing means on the AP exam.</p>
-  </div>
+  
 
   <!-- Visual Framework -->
   <div class="panel">
@@ -1214,18 +1325,58 @@
     <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:6px;"><strong>Prompt:</strong> Evaluate the extent to which economic globalization after 1980 changed the global economy.</p>
     <p class="thesis-instruction">Click each thesis to reveal whether it PASSES or FAILS the AP standard — and why.</p>
     <div class="thesis-grid">
-      <div class="thesis-card" onclick="revThesis(this,\x27fail\x27,\x27FAIL — This restates the prompt without making an argument. It tells us globalization changed things but offers no line of reasoning about how or why, and no categories to organize the argument.\x27)">
-        "Economic globalization after 1980 changed the global economy in many significant ways."
-      </div>
-      <div class="thesis-card" onclick="revThesis(this,\x27fail\x27,\x27FAIL — This is a defensible claim but not a thesis. It identifies what happened without establishing a LINE OF REASONING. There are no categories, no degree of change argued, and no preview of how the essay will be organized.\x27)">
-        "Economic globalization created new trade organizations like the WTO and NAFTA."
-      </div>
-      <div class="thesis-card" onclick="revThesis(this,\x27pass\x27,\x27PASS — This thesis establishes a clear line of reasoning with analytic categories (who benefited vs. who was harmed) and makes an argument about degree. It previews that the essay will address both sides, which sets up a nuanced argument.\x27)">
-        "While economic globalization after 1980 generated significant wealth for multinational corporations and knowledge economies in the developed world, it largely reproduced historical patterns of inequality by confining developing nations like Vietnam and Mexico to low-wage manufacturing roles."
-      </div>
-      <div class="thesis-card" onclick="revThesis(this,\x27pass\x27,\x27PASS — This thesis makes a clear evaluative claim with a line of reasoning: globalization created a new form of interdependence, but the dominant change was the emergence of a \x22brains vs. brawn\x22 divide. The categories (knowledge vs. manufacturing economies) are specific and would support organized body paragraphs.\x27)">
-        "Economic globalization after 1980 fundamentally transformed the global economy by splitting it into interdependent knowledge economies — concentrated in wealthy nations — and manufacturing economies in Asia and Latin America, creating new forms of both opportunity and exploitation."
-      </div>
+      <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT A</div>
+                "Economic globalization after 1980 changed the global economy in many significant ways."
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back fail">
+                <div class="thesis-verdict">FAIL</div>
+                <div class="thesis-explanation">This restates the prompt without making an argument. It tells us globalization changed things but offers no line of reasoning about how or why, and no categories to organize the argument.</div>
+              </div>
+            </div>
+          </div>
+      <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT B</div>
+                "Economic globalization created new trade organizations like the WTO and NAFTA."
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back fail">
+                <div class="thesis-verdict">FAIL</div>
+                <div class="thesis-explanation">This is a defensible claim but not a thesis. It identifies what happened without establishing a LINE OF REASONING. There are no categories, no degree of change argued, and no preview of how the essay will be organized.</div>
+              </div>
+            </div>
+          </div>
+      <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT C</div>
+                "While economic globalization after 1980 generated significant wealth for multinational corporations and knowledge economies in the developed world, it largely reproduced historical patterns of inequality by confining developing nations like Vietnam and Mexico to low-wage manufacturing roles."
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back pass">
+                <div class="thesis-verdict">PASS</div>
+                <div class="thesis-explanation">This thesis establishes a clear line of reasoning with analytic categories (who benefited vs. who was harmed) and makes an argument about degree. It previews that the essay will address both sides, which sets up a nuanced argument.</div>
+              </div>
+            </div>
+          </div>
+      <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT A</div>
+                "Economic globalization after 1980 fundamentally transformed the global economy by splitting it into interdependent knowledge economies — concentrated in wealthy nations — and manufacturing economies in Asia and Latin America, creating new forms of both opportunity and exploitation."
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back pass">
+                <div class="thesis-verdict">PASS</div>
+                <div class="thesis-explanation">This thesis makes a clear evaluative claim with a line of reasoning: globalization created a new form of interdependence, but the dominant change was the emergence of a "brains vs. brawn" divide. The categories (knowledge vs. manufacturing economies) are specific and would support organized body paragraphs.</div>
+              </div>
+            </div>
+          </div>
     </div>
   </div>
 </section>

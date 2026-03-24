@@ -143,15 +143,15 @@
   .section-title span { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--text-muted); font-weight: 400; margin-left: 10px; vertical-align: middle; }
 
   /* FLIP CARDS */
-  .flip-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px,1fr)); gap: 12px; margin-bottom: 32px; }
-  .flip-card { height: 200px; perspective: 1000px; cursor: pointer; }
-  .flip-inner { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 0.5s ease; }
-  .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
-  .flip-front, .flip-back { position: absolute; top: 0; left: 0; width: 100%; height: 100%; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 6px; padding: 12px; box-sizing: border-box; overflow: hidden; }
-  .flip-front { background: rgba(255,255,255,0.04); border: 1px solid rgba(212,168,32,0.2); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-  .flip-back { background: rgba(212,168,32,0.08); border: 1px solid rgba(212,168,32,0.3); transform: rotateY(180deg); display: flex; align-items: center; justify-content: center; text-align: center; }
+  
+  
+  
+  .flip-card.flipped 
+  
+  
+  
   .flip-term { font-family: 'Playfair Display', serif; font-size: 0.88rem; font-weight: 700; color: var(--parchment); line-height: 1.3; }
-  .flip-hint { position: absolute; bottom: 8px; left: 0; right: 0; text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--text-muted); }
+  
   .flip-def { font-size: 0.78rem; color: var(--parchment-dim); line-height: 1.4; overflow-y: auto; padding: 12px; box-sizing: border-box; max-height: 100%; }
 
   /* MCQ */
@@ -298,6 +298,109 @@
   .section-divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(212,168,32,0.15), transparent); margin: 28px 0; }
   .subtext { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px; }
   strong { color: var(--parchment); }
+
+  /* ===== FLIP CARDS (FIXED) ===== */
+  .flip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .flip-card {
+    height: 200px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+  .flip-card.flipped .flip-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-front, .flip-back {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    border-radius: 6px;
+    padding: 14px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  .flip-front {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,168,32,0.2);
+    transform: rotateY(0deg);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--parchment, #e8dcc8);
+  }
+  .flip-front .flip-term, .flip-front .term {
+    font-family: 'Playfair Display', 'Source Serif 4', serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--parchment, #e8dcc8);
+  }
+  .flip-front .flip-hint {
+    position: absolute;
+    bottom: 8px;
+    left: 0; right: 0;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gold-dim, #b8860b);
+    letter-spacing: 0.05em;
+  }
+  .flip-back {
+    background: rgba(212,168,32,0.08);
+    border: 1px solid rgba(212,168,32,0.35);
+    transform: rotateY(180deg);
+    font-size: 0.8rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.5;
+    overflow-y: auto;
+  }
+  .flip-back .flip-def, .flip-back .def {
+    font-size: 0.8rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.5;
+  }
+
+
+  /* ===== VIDEO BANNER ===== */
+  .video-banner {
+    background: linear-gradient(135deg, rgba(212,168,32,0.08), rgba(212,168,32,0.02));
+    border: 1px solid rgba(212,168,32,0.25);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 28px;
+  }
+  .video-banner-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    color: var(--gold, #d4a820);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .video-banner iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 6px;
+  }
+
 </style>
 </head>
 <body>
@@ -321,6 +424,12 @@
   <div class="page-subtitle">Unit Overview &amp; Orientation</div>
   <div class="page-meta">c. 1900 to the present &middot; 8&ndash;10% of AP Exam &middot; Causation &middot; CCOT &middot; Argumentation</div>
 </div>
+
+<section style="background:#1a1206;border:2px solid #c9a84c;border-radius:12px;margin:2rem auto;max-width:1100px;padding:1.5rem 2rem;text-align:center;">
+  <h2 style="font-family:'Playfair Display',serif;color:#c9a84c;font-size:1.4rem;margin:0 0 0.4rem 0;">📋 Graphic Organizer</h2>
+  <p style="font-family:'Source Serif 4',serif;color:#d4c4a0;font-size:0.95rem;margin:0 0 1rem 0;">Use this organizer alongside the video and infographic to structure your notes for this topic.</p>
+  <img src="9.0.png" alt="Graphic Organizer for Topic 9.0" style="width:100%;max-width:1000px;border-radius:8px;border:1px solid #c9a84c;box-shadow:0 4px 20px rgba(0,0,0,0.5);">
+</section>
 
 <!-- HOW-TO BANNER -->
 <div style="max-width:720px;margin:24px auto 0;border:1px solid rgba(184,134,11,0.3);border-radius:8px;padding:28px 32px;text-align:left;">
@@ -367,21 +476,13 @@
   </div>
   <div class="dok-body">
 
-    <div class="callout-video">
-      <strong>&#128250; Watch the Video Explainer First</strong>
-      <p>Before doing anything else, watch the Unit 9.0 Overview video. As you watch, listen for these three things:</p>
-      <ul>
-        <li>What single word does the video say <em>defines the world we live in</em> today?</li>
-        <li>What are the three main parts Unit 9 is organized around?</li>
-        <li>What three historical thinking skills does the video call your &ldquo;secret weapon&rdquo; for this unit?</li>
-      </ul>
+    <div class="video-banner">
+      <div class="video-banner-title">📺 Watch the Video Explainer First</div>
+      <iframe src="https://www.youtube.com/embed/ZmuOTxGDJb8" allowfullscreen loading="lazy" title="APWH 9.0 Globalization Overview"></iframe>
     </div>
 
-    <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/ZmuOTxGDJb8" allowfullscreen title="APWH 9.0 Globalization Overview"></iframe>
-    </div>
 
-    <div class="opening-quote">
+        <div class="opening-quote">
       &ldquo;This unit is all about figuring out how we got here&hellip; In what ways has globalization connected the world &mdash; and what has been gained or lost as a result?&rdquo;
     </div>
 

@@ -241,63 +241,14 @@
   }
 
   /* ── FLIP CARDS ── */
-  .flip-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 12px;
-    margin: 16px 0;
-  }
-  .flip-card {
-    perspective: 1000px;
-    height: 120px;
-    cursor: pointer;
-  }
-  .flip-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.4s ease;
-  }
-  .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
-  .flip-front, .flip-back {
-    position: absolute;
-    inset: 0;
-    backface-visibility: hidden;
-    border-radius: 6px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 12px;
-    min-height: 120px;
-  }
-  .flip-front {
-    background: var(--surface2);
-    border: 1px solid var(--blue-border);
-    font-weight: 600;
-    font-size: 0.88rem;
-    position: relative;
-  }
-  .flip-back {
-    background: var(--surface);
-    border: 1px solid var(--gold-border);
-    font-size: 0.78rem;
-    color: var(--text-secondary);
-    transform: rotateY(180deg);
-    line-height: 1.5;
-  }
-  .flip-hint {
-    position: absolute;
-    bottom: 8px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    color: var(--text-muted);
-  }
+  
+  
+  
+  .flip-card.flipped 
+  
+  
+  
+  
 
   /* ── MCQ ── */
   .mcq-item {
@@ -536,46 +487,16 @@
   .chain-textareas textarea { min-height: 60px; }
 
   /* ── THESIS EVALUATOR ── */
-  .thesis-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin: 16px 0;
-  }
-  .thesis-card {
-    background: var(--surface2);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 6px;
-    padding: 16px;
-    cursor: pointer;
-    transition: border-color 0.2s;
-    font-size: 0.83rem;
-    font-style: italic;
-    color: var(--text-secondary);
-    line-height: 1.6;
-  }
-  .thesis-card:hover:not(.revealed) { border-color: var(--gold-border); }
-  .thesis-card.revealed { cursor: default; }
-  .thesis-card.revealed.pass { border-color: var(--green-border); background: var(--green-dim); }
-  .thesis-card.revealed.fail { border-color: var(--red-border); background: var(--red-dim); }
-  .thesis-verdict {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    font-weight: 600;
-    font-style: normal;
-    letter-spacing: 0.12em;
-    margin-top: 10px;
-  }
-  .thesis-card.pass .thesis-verdict { color: var(--green); }
-  .thesis-card.fail .thesis-verdict { color: var(--red); }
-  .thesis-explanation {
-    font-style: normal;
-    font-size: 0.78rem;
-    color: var(--text-secondary);
-    margin-top: 8px;
-    padding-top: 8px;
-    border-top: 1px solid rgba(255,255,255,0.07);
-  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   .thesis-instruction {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.7rem;
@@ -769,9 +690,196 @@
   }
 
   @media (max-width: 600px) {
+    .thesis-grid { grid-template-columns: 1fr; }
     .thesis-grid, .hipp-grid, .compare-grid, .match-grid, .chain-textareas { grid-template-columns: 1fr; }
-    .flip-grid { grid-template-columns: repeat(2, 1fr); }
+    
   }
+
+  /* ===== FLIP CARDS (FIXED) ===== */
+  .flip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .flip-card {
+    height: 200px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+  .flip-card.flipped .flip-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-front, .flip-back {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    border-radius: 6px;
+    padding: 14px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  .flip-front {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,168,32,0.2);
+    transform: rotateY(0deg);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--parchment, #e8dcc8);
+  }
+  .flip-front .flip-term, .flip-front .term {
+    font-family: 'Playfair Display', 'Source Serif 4', serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--parchment, #e8dcc8);
+  }
+  .flip-front .flip-hint {
+    position: absolute;
+    bottom: 8px;
+    left: 0; right: 0;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gold-dim, #b8860b);
+    letter-spacing: 0.05em;
+  }
+  .flip-back {
+    background: rgba(212,168,32,0.08);
+    border: 1px solid rgba(212,168,32,0.35);
+    transform: rotateY(180deg);
+    font-size: 0.8rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.5;
+    overflow-y: auto;
+  }
+  .flip-back .flip-def, .flip-back .def {
+    font-size: 0.8rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.5;
+  }
+
+
+  /* ===== VIDEO BANNER ===== */
+  .video-banner {
+    background: linear-gradient(135deg, rgba(212,168,32,0.08), rgba(212,168,32,0.02));
+    border: 1px solid rgba(212,168,32,0.25);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 28px;
+  }
+  .video-banner-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    color: var(--gold, #d4a820);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .video-banner iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 6px;
+  }
+
+
+  /* THESIS EVALUATOR — FLIP CARD VERSION */
+  .thesis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .thesis-card {
+    min-height: 220px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .thesis-inner {
+    position: relative;
+    width: 100%; height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+  }
+  .thesis-card.flipped .thesis-inner { transform: rotateY(180deg); }
+  .thesis-front, .thesis-back {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    border-radius: 8px;
+    padding: 18px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+  }
+  .thesis-front {
+    background: var(--surface2, rgba(255,255,255,0.04));
+    border: 1px solid rgba(255,255,255,0.12);
+    transform: rotateY(0deg);
+    font-size: 0.87rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.6;
+  }
+  .thesis-front:hover { border-color: rgba(184,134,11,0.4); }
+  .thesis-front .thesis-label, .thesis-front .thesis-card-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-muted, #6b7280);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .thesis-front .thesis-hint, .thesis-front .click-hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gold-dim, #b8860b);
+    text-align: center;
+    margin-top: 10px;
+  }
+  .thesis-back {
+    transform: rotateY(180deg);
+    padding: 16px;
+    line-height: 1.5;
+  }
+  .thesis-back.fail {
+    background: rgba(107,45,45,0.2);
+    border: 1px solid #d67a7a;
+  }
+  .thesis-back.pass {
+    background: rgba(45,90,39,0.2);
+    border: 1px solid #6dbf63;
+  }
+  .thesis-verdict {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+  }
+  .thesis-back.fail .thesis-verdict { color: #d67a7a; }
+  .thesis-back.pass .thesis-verdict { color: #6dbf63; }
+  .thesis-explanation {
+    font-size: 0.82rem;
+    color: var(--text-secondary, #9ca3af);
+    font-style: italic;
+    line-height: 1.55;
+  }
+
 </style>
 </head>
 <body>
@@ -789,7 +897,19 @@
   </div>
 </div>
 
+<section style="background:#1a1206;border:2px solid #c9a84c;border-radius:12px;margin:2rem auto;max-width:1100px;padding:1.5rem 2rem;text-align:center;">
+  <h2 style="font-family:'Playfair Display',serif;color:#c9a84c;font-size:1.4rem;margin:0 0 0.4rem 0;">📋 Graphic Organizer</h2>
+  <p style="font-family:'Source Serif 4',serif;color:#d4c4a0;font-size:0.95rem;margin:0 0 1rem 0;">Use this organizer alongside the video and infographic to structure your notes for this topic.</p>
+  <img src="9.8.png" alt="Graphic Organizer for Topic 9.8" style="width:100%;max-width:1000px;border-radius:8px;border:1px solid #c9a84c;box-shadow:0 4px 20px rgba(0,0,0,0.5);">
+</section>
+
 <div class="container">
+
+    <div class="video-banner">
+      <div class="video-banner-title">📺 Watch the Video Explainer First</div>
+      <iframe src="https://www.youtube.com/embed/Sk_wyubGTDA" allowfullscreen loading="lazy" title="APWH 9.8 Institutions in a Globalized World"></iframe>
+    </div>
+
 
 <!-- ═══════════════════════════════════════════════════════════════════ -->
 <!--  DOK 1 — KNOWLEDGE ACQUISITION                                    -->
@@ -804,16 +924,7 @@
 </div>
 
 <!-- VIDEO EXPLAINER -->
-<div class="panel">
-  <div class="panel-title">📺 Video Explainer — Watch First</div>
-  <div class="video-wrap">
-    <iframe src="https://www.youtube.com/embed/Sk_wyubGTDA" allowfullscreen title="APWH 9.8 Institutions in a Globalized World"></iframe>
-  </div>
-  <div class="video-quote">
-    "We have actively sought and are actively seeking to make the United Nations an effective instrument of international cooperation."
-    <cite>— Dean Acheson, U.S. Secretary of State (1893–1971)</cite>
-  </div>
-</div>
+
 
 <!-- VISUAL FRAMEWORK — TIMELINE -->
 <div class="panel">
@@ -1220,23 +1331,63 @@
   <div class="thesis-instruction">Each of these attempts to answer: “Explain how globalization changed international interactions among states after 1900.” Click to see if it earns the AP thesis point.</div>
   <div class="thesis-grid">
 
-    <div class="thesis-card" onclick="revThesis(this,'fail','FAIL — This is a factual restatement, not a thesis. It tells us what happened but makes no argument about HOW or WHY globalization changed international interactions. A thesis needs a line of reasoning.')">
-      “Globalization led to the creation of the United Nations and other international organizations after 1900.”
-    </div>
+    <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT A</div>
+                “Globalization led to the creation of the United Nations and other international organizations after 1900.”
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back fail">
+                <div class="thesis-verdict">FAIL</div>
+                <div class="thesis-explanation">This is a factual restatement, not a thesis. It tells us what happened but makes no argument about HOW or WHY globalization changed international interactions. A thesis needs a line of reasoning.</div>
+              </div>
+            </div>
+          </div>
 
-    <div class="thesis-card" onclick="revThesis(this,'pass','PASS — This thesis makes a defensible argument with a line of reasoning. It identifies a specific mechanism and explains the structural trade-off, establishing analytic categories for the essay.')">
-      “Although globalization demanded new institutions for international cooperation, the UN’s effectiveness was structurally limited because keeping great powers engaged required granting them veto power, which produced Cold War paralysis rather than collective security.”
-    </div>
+          <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT B</div>
+                “Although globalization demanded new institutions for international cooperation, the UN’s effectiveness was structurally limited because keeping great powers engaged required granting them veto power, which produced Cold War paralysis rather than collective security.”
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back pass">
+                <div class="thesis-verdict">PASS</div>
+                <div class="thesis-explanation">This thesis makes a defensible argument with a line of reasoning. It identifies a specific mechanism and explains the structural trade-off, establishing analytic categories for the essay.</div>
+              </div>
+            </div>
+          </div>
 
-    <div class="thesis-card" onclick="revThesis(this,'fail','FAIL — Too vague. Saying something had a big impact is not an argument. A thesis must specify the nature of the change and why it occurred.')">
-      “International organizations like the UN, IMF, and World Bank had a big impact on globalization and international relations in the twentieth century.”
-    </div>
+          <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT C</div>
+                “International organizations like the UN, IMF, and World Bank had a big impact on globalization and international relations in the twentieth century.”
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back fail">
+                <div class="thesis-verdict">FAIL</div>
+                <div class="thesis-explanation">Too vague. Saying something had a big impact is not an argument. A thesis must specify the nature of the change and why it occurred.</div>
+              </div>
+            </div>
+          </div>
 
-    <div class="thesis-card" onclick="revThesis(this,'pass','PASS — This thesis establishes analytic categories (economic cooperation vs. security failures) and makes a qualifying argument. The contrast gives the essay a clear, defensible line of reasoning to develop.')">
-      “While global institutions after 1900 genuinely advanced international cooperation in economic management and human rights norms, their effectiveness in preventing conflict remained deeply compromised by the competing national interests of powerful member states.”
-    </div>
+          <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT D</div>
+                “While global institutions after 1900 genuinely advanced international cooperation in economic management and human rights norms, their effectiveness in preventing conflict remained deeply compromised by the competing national interests of powerful member states.”
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back pass">
+                <div class="thesis-verdict">PASS</div>
+                <div class="thesis-explanation">This thesis establishes analytic categories (economic cooperation vs. security failures) and makes a qualifying argument. The contrast gives the essay a clear, defensible line of reasoning to develop.</div>
+              </div>
+            </div>
+          </div>
 
-  </div>
+          </div>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════════════════ -->
@@ -1491,13 +1642,6 @@ function revealChainAnswer(id) {
 }
 
 // ── THESIS EVALUATOR ──
-function revThesis(el, verdict, explanation) {
-  if (el.classList.contains('revealed')) return;
-  el.classList.add('revealed', verdict);
-  el.innerHTML += '<div class="thesis-verdict">' + verdict.toUpperCase() + '</div>' +
-    '<div class="thesis-explanation">' + explanation + '</div>';
-}
-
 // ── CONTEXTUALIZATION BUILDER ──
 function toggleCtx(id) {
   const pathway = document.getElementById(id);

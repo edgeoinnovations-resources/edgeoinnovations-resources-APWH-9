@@ -182,7 +182,8 @@
     gap: 12px;
     margin-top: 8px;
   }
-  @media(max-width:600px){ .framework-grid { grid-template-columns: 1fr; } }
+  @media(max-width:600px){
+    .thesis-grid { grid-template-columns: 1fr; } .framework-grid { grid-template-columns: 1fr; } }
 
   .fw-item {
     background: var(--bg-elevated);
@@ -260,66 +261,15 @@
     word-break: keep-all;
   }
 
-  /* ===== FLIP CARDS ===== */
-  .flip-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 12px;
-    margin-top: 8px;
-    align-items: stretch;
-  }
-  .flip-card {
-    min-height: 200px;
-    perspective: 1000px;
-    cursor: pointer;
-  }
-  .flip-inner {
-    position: relative;
-    width: 100%; height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.5s ease;
-  }
-  .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
-  .flip-front, .flip-back {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    border-radius: 6px;
-    padding: 14px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .flip-front {
-    background: var(--bg-elevated);
-    border: 1px solid var(--border-mid);
-    font-weight: 600;
-    font-size: 0.88rem;
-    color: var(--parchment);
-  }
-  .flip-back {
-    background: rgba(184,134,11,0.08);
-    border: 1px solid var(--gold);
-    transform: rotateY(180deg);
-    font-size: 0.78rem;
-    color: var(--text-secondary);
-    line-height: 1.45;
-    overflow-y: auto;
-  }
-  .flip-hint {
-    position: absolute;
-    bottom: 8px;
-    left: 0; right: 0;
-    text-align: center;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    color: var(--text-muted);
-  }
+  
+  
+  
+  
+  .flip-card.flipped 
+  
+  
+  
+  
 
   /* ===== MCQ ===== */
   .mcq-item { margin-bottom: 24px; }
@@ -599,72 +549,20 @@
   }
 
   /* ===== THESIS EVALUATOR ===== */
-  .thesis-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-top: 8px;
-  }
-  @media(max-width:600px){ .thesis-grid { grid-template-columns: 1fr; } }
-  .thesis-card {
-    background: var(--bg-elevated);
-    border: 1px solid var(--border-subtle);
-    border-radius: 6px;
-    padding: 16px;
-    cursor: pointer;
-    transition: all 0.2s;
-    font-size: 0.87rem;
-    color: var(--text-secondary);
-    line-height: 1.55;
-  }
-  .thesis-card:hover:not(.revealed) { border-color: var(--gold); }
-  .thesis-card-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin-bottom: 8px;
-  }
-  .thesis-card.revealed.pass {
-    border-color: var(--accent-green);
-    background: rgba(74,158,63,0.08);
-    cursor: default;
-  }
-  .thesis-card.revealed.fail {
-    border-color: var(--accent-red);
-    background: rgba(192,57,43,0.08);
-    cursor: default;
-  }
-  .thesis-verdict {
-    display: none;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    margin-top: 12px;
-    padding: 4px 0;
-  }
-  .thesis-card.revealed .thesis-verdict { display: block; }
-  .thesis-card.revealed.pass .thesis-verdict { color: #7dd17a; }
-  .thesis-card.revealed.fail .thesis-verdict { color: #e07070; }
-  .thesis-explanation {
-    display: none;
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    margin-top: 8px;
-    line-height: 1.5;
-    border-top: 1px solid var(--border-subtle);
-    padding-top: 8px;
-  }
-  .thesis-card.revealed .thesis-explanation { display: block; }
-  .thesis-hint {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.65rem;
-    color: var(--text-muted);
-    text-align: center;
-    margin-top: 12px;
-  }
+  
+  @media(max-width:600px){  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   /* ===== CONTEXTUALIZATION BUILDER ===== */
   .ctx-pathway {
@@ -852,6 +750,192 @@
     line-height: 1.6;
   }
   .info-box strong { color: var(--parchment); }
+
+  /* ===== FLIP CARDS (FIXED) ===== */
+  .flip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .flip-card {
+    height: 200px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+  .flip-card.flipped .flip-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-front, .flip-back {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    border-radius: 6px;
+    padding: 14px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  .flip-front {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,168,32,0.2);
+    transform: rotateY(0deg);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--parchment, #e8dcc8);
+  }
+  .flip-front .flip-term, .flip-front .term {
+    font-family: 'Playfair Display', 'Source Serif 4', serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--parchment, #e8dcc8);
+  }
+  .flip-front .flip-hint {
+    position: absolute;
+    bottom: 8px;
+    left: 0; right: 0;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gold-dim, #b8860b);
+    letter-spacing: 0.05em;
+  }
+  .flip-back {
+    background: rgba(212,168,32,0.08);
+    border: 1px solid rgba(212,168,32,0.35);
+    transform: rotateY(180deg);
+    font-size: 0.8rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.5;
+    overflow-y: auto;
+  }
+  .flip-back .flip-def, .flip-back .def {
+    font-size: 0.8rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.5;
+  }
+
+
+  /* ===== VIDEO BANNER ===== */
+  .video-banner {
+    background: linear-gradient(135deg, rgba(212,168,32,0.08), rgba(212,168,32,0.02));
+    border: 1px solid rgba(212,168,32,0.25);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 28px;
+  }
+  .video-banner-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    color: var(--gold, #d4a820);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .video-banner iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 6px;
+  }
+
+
+  /* THESIS EVALUATOR — FLIP CARD VERSION */
+  .thesis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .thesis-card {
+    min-height: 220px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .thesis-inner {
+    position: relative;
+    width: 100%; height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+  }
+  .thesis-card.flipped .thesis-inner { transform: rotateY(180deg); }
+  .thesis-front, .thesis-back {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    border-radius: 8px;
+    padding: 18px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+  }
+  .thesis-front {
+    background: var(--surface2, rgba(255,255,255,0.04));
+    border: 1px solid rgba(255,255,255,0.12);
+    transform: rotateY(0deg);
+    font-size: 0.87rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.6;
+  }
+  .thesis-front:hover { border-color: rgba(184,134,11,0.4); }
+  .thesis-front .thesis-label, .thesis-front .thesis-card-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-muted, #6b7280);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .thesis-front .thesis-hint, .thesis-front .click-hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gold-dim, #b8860b);
+    text-align: center;
+    margin-top: 10px;
+  }
+  .thesis-back {
+    transform: rotateY(180deg);
+    padding: 16px;
+    line-height: 1.5;
+  }
+  .thesis-back.fail {
+    background: rgba(107,45,45,0.2);
+    border: 1px solid #d67a7a;
+  }
+  .thesis-back.pass {
+    background: rgba(45,90,39,0.2);
+    border: 1px solid #6dbf63;
+  }
+  .thesis-verdict {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+  }
+  .thesis-back.fail .thesis-verdict { color: #d67a7a; }
+  .thesis-back.pass .thesis-verdict { color: #6dbf63; }
+  .thesis-explanation {
+    font-size: 0.82rem;
+    color: var(--text-secondary, #9ca3af);
+    font-style: italic;
+    line-height: 1.55;
+  }
+
 </style>
 </head>
 <body>
@@ -862,6 +946,12 @@
   <h1 class="page-title">Technological Advances After 1900</h1>
   <p class="page-subtitle">From the shipping container to the birth control pill — how technology reshaped every corner of modern life, and at what cost.</p>
 </header>
+
+<section style="background:#1a1206;border:2px solid #c9a84c;border-radius:12px;margin:2rem auto;max-width:1100px;padding:1.5rem 2rem;text-align:center;">
+  <h2 style="font-family:'Playfair Display',serif;color:#c9a84c;font-size:1.4rem;margin:0 0 0.4rem 0;">📋 Graphic Organizer</h2>
+  <p style="font-family:'Source Serif 4',serif;color:#d4c4a0;font-size:0.95rem;margin:0 0 1rem 0;">Use this organizer alongside the video and infographic to structure your notes for this topic.</p>
+  <img src="9.1.png" alt="Graphic Organizer for Topic 9.1" style="width:100%;max-width:1000px;border-radius:8px;border:1px solid #c9a84c;box-shadow:0 4px 20px rgba(0,0,0,0.5);">
+</section>
 
 <main class="main-content">
 
@@ -875,18 +965,14 @@
     <span class="dok-subtitle">Answer Correctly</span>
   </div>
 
-  <!-- VIDEO EXPLAINER -->
-  <div class="card">
-    <div class="card-title">▶ Video Explainer</div>
-    <div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/OPnHg-eeTDM" allowfullscreen
-        title="APWH 9.1 Technological Advances After 1900"></iframe>
+    <div class="video-banner">
+      <div class="video-banner-title">📺 Watch the Video Explainer First</div>
+      <iframe src="https://www.youtube.com/embed/OPnHg-eeTDM" allowfullscreen loading="lazy" title="APWH 9.1 Technological Advances After 1900"></iframe>
     </div>
-    <blockquote class="opening-quote">
-      "We invented all this technology to support a bigger world. And now that bigger world literally cannot exist without it."
-      <cite>— The core paradox of modern technological development</cite>
-    </blockquote>
-  </div>
+
+
+  <!-- VIDEO EXPLAINER -->
+  
 
   <!-- VISUAL FRAMEWORK -->
   <div class="card">
@@ -1341,29 +1427,73 @@
 
     <div class="thesis-grid">
 
-      <div class="thesis-card" onclick="revThesis(this,\x27fail\x27,\x27FAIL — This is a restatement of the prompt, not a thesis. It does not establish a line of reasoning or make a defensible claim about degree. The reader learns nothing about how or why technology improved life.\x27)">
-        <div class="thesis-card-label">Thesis Attempt A</div>
+      <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT A</div>
+                <div class="thesis-card-label">Thesis Attempt A
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back fail">
+                <div class="thesis-verdict">FAIL</div>
+                <div class="thesis-explanation">This is a restatement of the prompt, not a thesis. It does not establish a line of reasoning or make a defensible claim about degree. The reader learns nothing about how or why technology improved life.</div>
+              </div>
+            </div>
+          </div>
         "Technological advances after 1900 greatly improved the quality of human life in many ways."
         <div class="thesis-verdict"></div>
         <div class="thesis-explanation"></div>
       </div>
 
-      <div class="thesis-card" onclick="revThesis(this,\x27pass\x27,\x27PASS — This thesis establishes a clear line of reasoning. It makes a defensible claim (significant improvement), identifies specific categories of evidence (medicine, food), and introduces a qualifying nuance (unintended costs) that sets up a sophisticated argument.\x27)">
-        <div class="thesis-card-label">Thesis Attempt B</div>
+      <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT B</div>
+                <div class="thesis-card-label">Thesis Attempt B
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back pass">
+                <div class="thesis-verdict">PASS</div>
+                <div class="thesis-explanation">This thesis establishes a clear line of reasoning. It makes a defensible claim (significant improvement), identifies specific categories of evidence (medicine, food), and introduces a qualifying nuance (unintended costs) that sets up a sophisticated argument.</div>
+              </div>
+            </div>
+          </div>
         "While technological advances in medicine and agriculture after 1900 dramatically extended human lifespans and reduced famine, these same technologies generated unintended consequences — from antibiotic-resistant superbugs to environmental degradation — that complicated and sometimes undermined those gains."
         <div class="thesis-verdict"></div>
         <div class="thesis-explanation"></div>
       </div>
 
-      <div class="thesis-card" onclick="revThesis(this,\x27fail\x27,\x27FAIL — This thesis takes an extreme, indefensible position. It ignores substantial evidence that technology did improve life in measurable ways (vaccines, longer lifespans, reduced famine). An AP thesis must be historically defensible — not every position qualifies.\x27)">
-        <div class="thesis-card-label">Thesis Attempt C</div>
+      <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT C</div>
+                <div class="thesis-card-label">Thesis Attempt C
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back fail">
+                <div class="thesis-verdict">FAIL</div>
+                <div class="thesis-explanation">This thesis takes an extreme, indefensible position. It ignores substantial evidence that technology did improve life in measurable ways (vaccines, longer lifespans, reduced famine). An AP thesis must be historically defensible — not every position qualifies.</div>
+              </div>
+            </div>
+          </div>
         "Technological advances after 1900 did not improve human life at all because every invention created more problems than it solved, leaving humanity worse off than before."
         <div class="thesis-verdict"></div>
         <div class="thesis-explanation"></div>
       </div>
 
-      <div class="thesis-card" onclick="revThesis(this,\x27pass\x27,\x27PASS — This thesis earns the point by establishing clear analytic categories (communications and medical technology) as the primary drivers of change, and by framing the argument around an extent claim (transformative but uneven). It previews a line of reasoning the essay can actually follow.\x27)">
-        <div class="thesis-card-label">Thesis Attempt D</div>
+      <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT D</div>
+                <div class="thesis-card-label">Thesis Attempt D
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back pass">
+                <div class="thesis-verdict">PASS</div>
+                <div class="thesis-explanation">This thesis earns the point by establishing clear analytic categories (communications and medical technology) as the primary drivers of change, and by framing the argument around an extent claim (transformative but uneven). It previews a line of reasoning the essay can actually follow.</div>
+              </div>
+            </div>
+          </div>
         "Advances in communications and medical technology after 1900 were transformative enough to fundamentally reshape daily life for billions of people, though their benefits were distributed unevenly across class and gender lines, revealing that technological progress does not automatically produce social equality."
         <div class="thesis-verdict"></div>
         <div class="thesis-explanation"></div>

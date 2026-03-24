@@ -252,64 +252,15 @@
     margin-bottom: 4px;
   }
   .effect-card .eff-text { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; }
-  .flip-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 12px;
-    margin-bottom: 8px;
-  }
-  .flip-card { height: 120px; cursor: pointer; perspective: 800px; }
-  .flip-inner {
-    width: 100%; height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
-  .flip-front, .flip-back {
-    position: absolute; inset: 0;
-    backface-visibility: hidden;
-    border-radius: var(--radius);
-    border: 1px solid var(--border-subtle);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 12px;
-  }
-  .flip-front {
-    background: var(--bg-card);
-    min-height: 120px;
-    position: absolute;
-  }
-  .flip-front .term {
-    font-family: 'Source Serif 4', serif;
-    font-size: 0.88rem;
-    font-weight: 600;
-    color: var(--parchment);
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .flip-hint {
-    position: absolute;
-    bottom: 8px; left: 0; right: 0;
-    text-align: center;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    color: var(--text-muted);
-  }
-  .flip-back {
-    background: linear-gradient(135deg, rgba(184,134,11,0.08), rgba(184,134,11,0.02));
-    border-color: var(--border);
-    transform: rotateY(180deg);
-    font-size: 0.78rem;
-    color: var(--text-secondary);
-    line-height: 1.45;
-    text-align: center;
-  }
+  
+  
+  
+  .flip-card.flipped 
+  
+  
+  
+  
+  
   .mcq-set { display: flex; flex-direction: column; gap: 16px; }
   .mcq-item {
     background: var(--bg-card);
@@ -535,17 +486,11 @@
     color: var(--text-secondary);
     line-height: 1.5;
   }
-  .thesis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 8px; }
-  @media(max-width:600px){ .thesis-grid { grid-template-columns: 1fr; } }
-  .thesis-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius);
-    padding: 16px;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .thesis-card:hover:not(.revealed) { border-color: var(--border); background: var(--bg-hover); }
+  
+  @media(max-width:600px){
+    .thesis-grid { grid-template-columns: 1fr; }  }
+  
+  
   .thesis-card .tc-label {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.62rem;
@@ -556,22 +501,13 @@
   }
   .thesis-card .tc-text { font-size: 0.87rem; color: var(--text-primary); line-height: 1.55; font-style: italic; }
   .thesis-card .tc-click { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--text-muted); margin-top: 10px; text-align: right; }
-  .thesis-card.revealed { cursor: default; }
-  .thesis-card.pass { border-color: var(--green); background: var(--green-dim); }
-  .thesis-card.fail { border-color: var(--red); background: var(--red-dim); }
-  .thesis-verdict {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    margin-top: 12px;
-    padding: 4px 10px;
-    border-radius: 3px;
-    display: inline-block;
-  }
-  .pass .thesis-verdict { background: rgba(58,159,92,0.2); color: #7fd19a; }
-  .fail .thesis-verdict { background: rgba(201,64,64,0.2); color: #e08080; }
-  .thesis-explanation { font-size: 0.82rem; color: var(--text-secondary); margin-top: 8px; line-height: 1.5; border-top: 1px solid var(--border-subtle); padding-top: 8px; }
+  
+  
+  
+  
+  .pass 
+  .fail 
+  
   .ctx-pathway {
     background: var(--bg-card);
     border: 1px solid var(--border-subtle);
@@ -689,8 +625,194 @@
   @media(max-width:600px){
     .causal-flow { flex-direction: column; }
     .apply-table { font-size: 0.78rem; }
-    .thesis-grid { grid-template-columns: 1fr; }
+    
   }
+
+  /* ===== FLIP CARDS (FIXED) ===== */
+  .flip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .flip-card {
+    height: 200px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+  .flip-card.flipped .flip-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-front, .flip-back {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    border-radius: 6px;
+    padding: 14px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  .flip-front {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,168,32,0.2);
+    transform: rotateY(0deg);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--parchment, #e8dcc8);
+  }
+  .flip-front .flip-term, .flip-front .term {
+    font-family: 'Playfair Display', 'Source Serif 4', serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--parchment, #e8dcc8);
+  }
+  .flip-front .flip-hint {
+    position: absolute;
+    bottom: 8px;
+    left: 0; right: 0;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gold-dim, #b8860b);
+    letter-spacing: 0.05em;
+  }
+  .flip-back {
+    background: rgba(212,168,32,0.08);
+    border: 1px solid rgba(212,168,32,0.35);
+    transform: rotateY(180deg);
+    font-size: 0.8rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.5;
+    overflow-y: auto;
+  }
+  .flip-back .flip-def, .flip-back .def {
+    font-size: 0.8rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.5;
+  }
+
+
+  /* ===== VIDEO BANNER ===== */
+  .video-banner {
+    background: linear-gradient(135deg, rgba(212,168,32,0.08), rgba(212,168,32,0.02));
+    border: 1px solid rgba(212,168,32,0.25);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 28px;
+  }
+  .video-banner-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    color: var(--gold, #d4a820);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .video-banner iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 6px;
+  }
+
+
+  /* THESIS EVALUATOR — FLIP CARD VERSION */
+  .thesis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .thesis-card {
+    min-height: 220px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .thesis-inner {
+    position: relative;
+    width: 100%; height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+  }
+  .thesis-card.flipped .thesis-inner { transform: rotateY(180deg); }
+  .thesis-front, .thesis-back {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    border-radius: 8px;
+    padding: 18px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+  }
+  .thesis-front {
+    background: var(--surface2, rgba(255,255,255,0.04));
+    border: 1px solid rgba(255,255,255,0.12);
+    transform: rotateY(0deg);
+    font-size: 0.87rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.6;
+  }
+  .thesis-front:hover { border-color: rgba(184,134,11,0.4); }
+  .thesis-front .thesis-label, .thesis-front .thesis-card-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-muted, #6b7280);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .thesis-front .thesis-hint, .thesis-front .click-hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gold-dim, #b8860b);
+    text-align: center;
+    margin-top: 10px;
+  }
+  .thesis-back {
+    transform: rotateY(180deg);
+    padding: 16px;
+    line-height: 1.5;
+  }
+  .thesis-back.fail {
+    background: rgba(107,45,45,0.2);
+    border: 1px solid #d67a7a;
+  }
+  .thesis-back.pass {
+    background: rgba(45,90,39,0.2);
+    border: 1px solid #6dbf63;
+  }
+  .thesis-verdict {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+  }
+  .thesis-back.fail .thesis-verdict { color: #d67a7a; }
+  .thesis-back.pass .thesis-verdict { color: #6dbf63; }
+  .thesis-explanation {
+    font-size: 0.82rem;
+    color: var(--text-secondary, #9ca3af);
+    font-style: italic;
+    line-height: 1.55;
+  }
+
 </style>
 </head>
 <body>
@@ -706,6 +828,12 @@
   </div>
 </header>
 
+<section style="background:#1a1206;border:2px solid #c9a84c;border-radius:12px;margin:2rem auto;max-width:1100px;padding:1.5rem 2rem;text-align:center;">
+  <h2 style="font-family:'Playfair Display',serif;color:#c9a84c;font-size:1.4rem;margin:0 0 0.4rem 0;">📋 Graphic Organizer</h2>
+  <p style="font-family:'Source Serif 4',serif;color:#d4c4a0;font-size:0.95rem;margin:0 0 1rem 0;">Use this organizer alongside the video and infographic to structure your notes for this topic.</p>
+  <img src="9.3.png" alt="Graphic Organizer for Topic 9.3" style="width:100%;max-width:1000px;border-radius:8px;border:1px solid #c9a84c;box-shadow:0 4px 20px rgba(0,0,0,0.5);">
+</section>
+
 <nav class="dok-nav">
   <a href="#dok1">DOK 1 &middot; Acquire</a>
   <a href="#dok2">DOK 2 &middot; Apply</a>
@@ -715,6 +843,12 @@
 
 <div class="content-wrap">
 
+    <div class="video-banner">
+      <div class="video-banner-title">📺 Watch the Video Explainer First</div>
+      <iframe src="https://www.youtube.com/embed/wVuz1kOYxDw" allowfullscreen loading="lazy" title="APWH 9.3 Environment & Climate After 1900"></iframe>
+    </div>
+
+
 <!-- ══ DOK 1 ══ -->
 <section class="dok-section" id="dok1">
   <div class="dok-badge">DOK 1 &middot; Knowledge Acquisition</div>
@@ -722,9 +856,7 @@
   <p class="dok-desc">Watch, read, recall &#8212; answer correctly by identifying key facts, terms, and developments.</p>
 
   <div class="act-label">&#9658; Video Explainer</div>
-  <div class="video-wrap">
-    <iframe src="https://www.youtube.com/embed/wVuz1kOYxDw" allowfullscreen loading="lazy"></iframe>
-  </div>
+  
   <div class="opening-quote">
     <p>"Climate change does not respect border; it does not respect who you are&#8212;rich and poor, small and big. Therefore this is what we call global challenges which require global solidarity."</p>
     <cite>&#8212; Ban Ki-moon, UN Secretary General, 2007&#8211;2016</cite>
@@ -964,25 +1096,57 @@
   <div class="act-label">&#9658; Thesis Evaluator &#8212; click each card to see if it earns the AP point</div>
   <div class="info-box">Each thesis responds to this prompt: <strong>"Evaluate the extent to which human industrial activity caused environmental changes in the period from 1900 to the present."</strong> Click each card to see the verdict and explanation.</div>
   <div class="thesis-grid">
-    <div class="thesis-card" id="tc1" onclick="revThesis('tc1','fail','FAIL \u2014 This is a restatement of the prompt, not a thesis. It tells us what happened but provides no line of reasoning, no categories of analysis, and no argument about extent or mechanism. A thesis must go beyond restating the obvious.')">
-      <div class="tc-label">Thesis Card 1</div>
-      <div class="tc-text">"Human industrial activity caused many environmental changes after 1900, including deforestation, desertification, air pollution, and global warming."</div>
-      <div class="tc-click">click to evaluate &#9658;</div>
+    <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+      <div class="thesis-inner">
+        <div class="thesis-front">
+          <div class="thesis-label">THESIS ATTEMPT A</div>
+          "Human industrial activity caused many environmental changes after 1900, including deforestation, desertification, air pollution, and global warming."
+          <div class="thesis-hint">click to flip</div>
+        </div>
+        <div class="thesis-back fail">
+          <div class="thesis-verdict">FAIL</div>
+          <div class="thesis-explanation">This is a restatement of the prompt, not a thesis. It tells us what happened but provides no line of reasoning, no categories of analysis, and no argument about extent or mechanism. A thesis must go beyond restating the obvious.</div>
+        </div>
+      </div>
     </div>
-    <div class="thesis-card" id="tc2" onclick="revThesis('tc2','fail','FAIL \u2014 This thesis makes a defensible claim but lacks a line of reasoning. It identifies one effect (greenhouse gases) but does not establish categories of analysis or address extent. It does not explain the mechanism by which industrial activity caused this change, nor does it frame the broader argument.')">
-      <div class="tc-label">Thesis Card 2</div>
-      <div class="tc-text">"After 1900, human industrial activity contributed to the release of greenhouse gases into the atmosphere."</div>
-      <div class="tc-click">click to evaluate &#9658;</div>
+    <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+      <div class="thesis-inner">
+        <div class="thesis-front">
+          <div class="thesis-label">THESIS ATTEMPT B</div>
+          "After 1900, human industrial activity contributed to the release of greenhouse gases into the atmosphere."
+          <div class="thesis-hint">click to flip</div>
+        </div>
+        <div class="thesis-back fail">
+          <div class="thesis-verdict">FAIL</div>
+          <div class="thesis-explanation">This thesis makes a defensible claim but lacks a line of reasoning. It identifies one effect (greenhouse gases) but does not establish categories of analysis or address extent.</div>
+        </div>
+      </div>
     </div>
-    <div class="thesis-card" id="tc3" onclick="revThesis('tc3','pass','PASS \u2014 This thesis earns the point. It makes a defensible claim AND establishes a line of reasoning with two clear categories: direct resource depletion and long-term climate destabilization. It addresses extent (\u201cprimarily\u201d) and previews how the argument will be structured, giving the reader a roadmap.')">
-      <div class="tc-label">Thesis Card 3</div>
-      <div class="tc-text">"Human industrial activity was primarily responsible for environmental changes after 1900, as the burning of fossil fuels and agricultural expansion both directly depleted natural resources like forests and water and contributed to long-term atmospheric changes that destabilized global climate systems."</div>
-      <div class="tc-click">click to evaluate &#9658;</div>
+    <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+      <div class="thesis-inner">
+        <div class="thesis-front">
+          <div class="thesis-label">THESIS ATTEMPT C</div>
+          "Human industrial activity was primarily responsible for environmental changes after 1900, as the burning of fossil fuels and agricultural expansion both directly depleted natural resources like forests and water and contributed to long-term atmospheric changes that destabilized global climate systems."
+          <div class="thesis-hint">click to flip</div>
+        </div>
+        <div class="thesis-back pass">
+          <div class="thesis-verdict">PASS</div>
+          <div class="thesis-explanation">This thesis earns the point. It makes a defensible claim AND establishes a line of reasoning with two clear categories: direct resource depletion and long-term climate destabilization. It addresses extent and previews how the argument will be structured.</div>
+        </div>
+      </div>
     </div>
-    <div class="thesis-card" id="tc4" onclick="revThesis('tc4','pass','PASS \u2014 This thesis earns the point. It establishes a clear line of reasoning using a complexity move: acknowledging the dominant role of industrial nations while introducing the counterpoint about developing nations. This sets up two categories of analysis (historical responsibility, timing of industrialization) and addresses extent through nuanced framing.')">
-      <div class="tc-label">Thesis Card 4</div>
-      <div class="tc-text">"While industrialized nations in Europe and North America drove the majority of environmental change after 1900 through centuries of fossil fuel use, the global nature of climate change created international debates over shared responsibility, particularly as developing nations began industrializing in the late 20th century."</div>
-      <div class="tc-click">click to evaluate &#9658;</div>
+    <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+      <div class="thesis-inner">
+        <div class="thesis-front">
+          <div class="thesis-label">THESIS ATTEMPT D</div>
+          "While industrialized nations in Europe and North America drove the majority of environmental change after 1900 through centuries of fossil fuel use, the global nature of climate change created international debates over shared responsibility, particularly as developing nations began industrializing in the late 20th century."
+          <div class="thesis-hint">click to flip</div>
+        </div>
+        <div class="thesis-back pass">
+          <div class="thesis-verdict">PASS</div>
+          <div class="thesis-explanation">This thesis earns the point. It establishes a clear line of reasoning using a complexity move: acknowledging the dominant role of industrial nations while introducing the counterpoint about developing nations.</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1239,15 +1403,6 @@ function revealChain() {
 }
 
 // ── THESIS EVALUATOR ─────────────────────────────────────────────
-function revThesis(id, verdict, explanation) {
-  const el = document.getElementById(id);
-  if (el.classList.contains('revealed')) return;
-  el.classList.add('revealed', verdict);
-  const clickHint = el.querySelector('.tc-click');
-  if (clickHint) clickHint.style.display = 'none';
-  el.innerHTML += '<div class="thesis-verdict">' + verdict.toUpperCase() + '</div><div class="thesis-explanation">' + explanation + '</div>';
-}
-
 // ── CONTEXTUALIZATION BUILDER ────────────────────────────────────
 function toggleCtx(id) { document.getElementById(id).classList.toggle('open'); }
 

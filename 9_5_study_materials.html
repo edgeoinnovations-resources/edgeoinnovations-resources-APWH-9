@@ -89,16 +89,16 @@
   .framework-card .fc-body { font-size: 0.82rem; color: var(--text-secondary); }
 
   /* FLIP CARDS */
-  .flip-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; margin-bottom: 28px; }
-  .flip-card { height: 140px; cursor: pointer; perspective: 800px; }
-  .flip-inner { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.5s; }
-  .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
-  .flip-front, .flip-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 8px; padding: 12px; }
-  .flip-front { background: var(--bg-card); border: 1px solid rgba(184,134,11,0.25); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; min-height: 120px; }
-  .flip-front .term { font-family: 'Playfair Display', serif; font-size: 0.95rem; color: var(--parchment); }
-  .flip-hint { position: absolute; bottom: 8px; left: 0; right: 0; text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--text-muted); }
-  .flip-back { background: linear-gradient(135deg, var(--bg-card), rgba(184,134,11,0.06)); border: 1px solid rgba(184,134,11,0.4); transform: rotateY(180deg); display: flex; align-items: center; justify-content: center; text-align: center; }
-  .flip-back .def { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5; }
+  
+  
+  
+  .flip-card.flipped 
+  
+  
+  
+  
+  
+  
 
   /* MCQ */
   .mcq-block { margin-bottom: 28px; }
@@ -170,18 +170,7 @@
   .ccot-card .ccot-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--dok3-light); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
   .ccot-card .ccot-body { font-size: 0.82rem; color: var(--text-secondary); }
 
-  /* THESIS EVALUATOR */
-  .thesis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
-  .thesis-card { background: var(--bg-card); border: 2px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 18px; cursor: pointer; transition: all 0.2s; }
-  .thesis-card:hover:not(.revealed) { border-color: rgba(184,134,11,0.4); }
-  .thesis-card .thesis-text { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; font-style: italic; }
-  .thesis-card .click-hint { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--text-muted); margin-top: 10px; }
-  .thesis-card.revealed.fail { border-color: #a04040; background: rgba(107,45,45,0.15); }
-  .thesis-card.revealed.pass { border-color: #4a9840; background: rgba(45,90,39,0.15); }
-  .thesis-verdict { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; margin-top: 12px; }
-  .thesis-card.fail .thesis-verdict { color: #e87a7a; }
-  .thesis-card.pass .thesis-verdict { color: #7ec87a; }
-  .thesis-explanation { font-size: 0.8rem; color: var(--text-secondary); margin-top: 6px; line-height: 1.5; }
+  
 
   /* SAQ */
   .saq-block { background: var(--bg-card); border: 1px solid rgba(107,45,45,0.3); border-radius: 8px; padding: 20px; margin-bottom: 20px; }
@@ -239,12 +228,199 @@
   .section-divider { border: none; border-top: 1px solid rgba(184,134,11,0.1); margin: 30px 0; }
 
   @media (max-width: 640px) {
-    .matching-grid { grid-template-columns: 1fr; }
     .thesis-grid { grid-template-columns: 1fr; }
+    .matching-grid { grid-template-columns: 1fr; }
+    
     .ccot-grid { grid-template-columns: 1fr; }
     .syn-connections { grid-template-columns: 1fr; }
-    .flip-grid { grid-template-columns: repeat(2, 1fr); }
+    
   }
+
+  /* ===== FLIP CARDS (FIXED) ===== */
+  .flip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .flip-card {
+    height: 200px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+  .flip-card.flipped .flip-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-front, .flip-back {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    border-radius: 6px;
+    padding: 14px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  .flip-front {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,168,32,0.2);
+    transform: rotateY(0deg);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--parchment, #e8dcc8);
+  }
+  .flip-front .flip-term, .flip-front .term {
+    font-family: 'Playfair Display', 'Source Serif 4', serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--parchment, #e8dcc8);
+  }
+  .flip-front .flip-hint {
+    position: absolute;
+    bottom: 8px;
+    left: 0; right: 0;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gold-dim, #b8860b);
+    letter-spacing: 0.05em;
+  }
+  .flip-back {
+    background: rgba(212,168,32,0.08);
+    border: 1px solid rgba(212,168,32,0.35);
+    transform: rotateY(180deg);
+    font-size: 0.8rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.5;
+    overflow-y: auto;
+  }
+  .flip-back .flip-def, .flip-back .def {
+    font-size: 0.8rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.5;
+  }
+
+
+  /* ===== VIDEO BANNER ===== */
+  .video-banner {
+    background: linear-gradient(135deg, rgba(212,168,32,0.08), rgba(212,168,32,0.02));
+    border: 1px solid rgba(212,168,32,0.25);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 28px;
+  }
+  .video-banner-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    color: var(--gold, #d4a820);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .video-banner iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 6px;
+  }
+
+
+  /* THESIS EVALUATOR — FLIP CARD VERSION */
+  .thesis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .thesis-card {
+    min-height: 220px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .thesis-inner {
+    position: relative;
+    width: 100%; height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+  }
+  .thesis-card.flipped .thesis-inner { transform: rotateY(180deg); }
+  .thesis-front, .thesis-back {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    border-radius: 8px;
+    padding: 18px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+  }
+  .thesis-front {
+    background: var(--surface2, rgba(255,255,255,0.04));
+    border: 1px solid rgba(255,255,255,0.12);
+    transform: rotateY(0deg);
+    font-size: 0.87rem;
+    color: var(--text-secondary, #9ca3af);
+    line-height: 1.6;
+  }
+  .thesis-front:hover { border-color: rgba(184,134,11,0.4); }
+  .thesis-front .thesis-label, .thesis-front .thesis-card-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-muted, #6b7280);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .thesis-front .thesis-hint, .thesis-front .click-hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gold-dim, #b8860b);
+    text-align: center;
+    margin-top: 10px;
+  }
+  .thesis-back {
+    transform: rotateY(180deg);
+    padding: 16px;
+    line-height: 1.5;
+  }
+  .thesis-back.fail {
+    background: rgba(107,45,45,0.2);
+    border: 1px solid #d67a7a;
+  }
+  .thesis-back.pass {
+    background: rgba(45,90,39,0.2);
+    border: 1px solid #6dbf63;
+  }
+  .thesis-verdict {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+  }
+  .thesis-back.fail .thesis-verdict { color: #d67a7a; }
+  .thesis-back.pass .thesis-verdict { color: #6dbf63; }
+  .thesis-explanation {
+    font-size: 0.82rem;
+    color: var(--text-secondary, #9ca3af);
+    font-style: italic;
+    line-height: 1.55;
+  }
+
 </style>
 </head>
 <body>
@@ -267,6 +443,12 @@
   <h1 class="page-title">Calls for Reform After 1900</h1>
   <p class="page-subtitle">How did 20th-century movements challenge old assumptions about race, class, gender, and religion?</p>
 </div>
+
+<section style="background:#1a1206;border:2px solid #c9a84c;border-radius:12px;margin:2rem auto;max-width:1100px;padding:1.5rem 2rem;text-align:center;">
+  <h2 style="font-family:'Playfair Display',serif;color:#c9a84c;font-size:1.4rem;margin:0 0 0.4rem 0;">📋 Graphic Organizer</h2>
+  <p style="font-family:'Source Serif 4',serif;color:#d4c4a0;font-size:0.95rem;margin:0 0 1rem 0;">Use this organizer alongside the video and infographic to structure your notes for this topic.</p>
+  <img src="9.5.png" alt="Graphic Organizer for Topic 9.5" style="width:100%;max-width:1000px;border-radius:8px;border:1px solid #c9a84c;box-shadow:0 4px 20px rgba(0,0,0,0.5);">
+</section>
 
 <!-- HOW-TO BANNER -->
 <div class="howto-banner" style="max-width:960px;margin:30px auto;">
@@ -293,6 +475,11 @@
     </div>
   </div>
 
+  <div class="video-banner">
+    <div class="video-banner-title">📺 Watch the Video Explainer First</div>
+    <iframe src="https://www.youtube.com/embed/uH2pwyvbW_g" allowfullscreen loading="lazy" title="APWH 9.5 Calls for Reform After 1900"></iframe>
+  </div>
+
   <!-- NOTEBOOKLM VIDEO CALLOUT -->
   <div class="callout blue">
     <div class="callout-title">📽 NotebookLM — Watch the Video Explainer First</div>
@@ -305,9 +492,7 @@
   </div>
 
   <!-- VIDEO EMBED -->
-  <div class="video-wrap">
-    <iframe src="https://www.youtube.com/embed/uH2pwyvbW_g" title="APWH 9.5 Calls for Reform After 1900" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
+  
 
   <!-- VISUAL FRAMEWORK -->
   <h3 style="font-family:'Playfair Display',serif;color:var(--gold-light);margin-bottom:16px;font-size:1.1rem;">The Six-Part Framework: Forces for Reform After 1900</h3>
@@ -743,23 +928,67 @@
   <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:16px;">Prompt: <em>"Evaluate the extent to which calls for reform after 1900 successfully challenged traditional social hierarchies."</em><br>Click each card to reveal whether it earns the thesis point and why.</p>
 
   <div class="thesis-grid">
-    <div class="thesis-card" onclick="revThesis(this,'fail',\x27FAIL — Restates the prompt without a line of reasoning. The phrase \x22calls for reform challenged social hierarchies\x22 simply echoes the question. No argument, no degree judgment, no reasoning established.\x27)">
-      <div class="thesis-text">"Calls for reform after 1900 challenged traditional social hierarchies in many ways. Movements around the world worked to create a more equal society."</div>
+    <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT A</div>
+                <div class="thesis-text">"Calls for reform after 1900 challenged traditional social hierarchies in many ways. Movements around the world worked to create a more equal society."
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back fail">
+                <div class="thesis-verdict">FAIL</div>
+                <div class="thesis-explanation">Restates the prompt without a line of reasoning. The phrase "calls for reform challenged social hierarchies" simply echoes the question. No argument, no degree judgment, no reasoning established.</div>
+              </div>
+            </div>
+          </div>
       <div class="click-hint">click to evaluate →</div>
     </div>
 
-    <div class="thesis-card" onclick="revThesis(this,'fail',\x27FAIL — Makes a defensible claim but offers no line of reasoning. Saying reforms \x22made significant progress\x22 is a degree judgment, but there is no \x22because\x22 — no mechanism explaining WHY or HOW. A thesis needs a line of reasoning, not just a verdict.\x27)">
-      <div class="thesis-text">"Calls for reform after 1900 made significant progress in challenging social hierarchies, particularly in the areas of race and gender equality."</div>
+    <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT B</div>
+                <div class="thesis-text">"Calls for reform after 1900 made significant progress in challenging social hierarchies, particularly in the areas of race and gender equality."
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back fail">
+                <div class="thesis-verdict">FAIL</div>
+                <div class="thesis-explanation">Makes a defensible claim but offers no line of reasoning. Saying reforms "made significant progress" is a degree judgment, but there is no "because" — no mechanism explaining WHY or HOW. A thesis needs a line of reasoning, not just a verdict.</div>
+              </div>
+            </div>
+          </div>
       <div class="click-hint">click to evaluate →</div>
     </div>
 
-    <div class="thesis-card" onclick="revThesis(this,'pass',\x27PASS — Defensible claim with a clear line of reasoning. The thesis argues that reforms achieved legal victories but left structural inequalities intact, and explains the mechanism: legal change outpaced social and economic reality. This is a genuine degree argument with reasoning that can structure an essay.\x27)">
-      <div class="thesis-text">"While 20th-century reform movements achieved landmark legal victories — from the UDHR to the end of apartheid — they only partially challenged social hierarchies because legal equality rarely translated into immediate social and economic equality, leaving structural discrimination intact."</div>
+    <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT C</div>
+                <div class="thesis-text">"While 20th-century reform movements achieved landmark legal victories — from the UDHR to the end of apartheid — they only partially challenged social hierarchies because legal equality rarely translated into immediate social and economic equality, leaving structural discrimination intact."
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back pass">
+                <div class="thesis-verdict">PASS</div>
+                <div class="thesis-explanation">Defensible claim with a clear line of reasoning. The thesis argues that reforms achieved legal victories but left structural inequalities intact, and explains the mechanism: legal change outpaced social and economic reality. This is a genuine degree argument with reasoning that can structure an essay.</div>
+              </div>
+            </div>
+          </div>
       <div class="click-hint">click to evaluate →</div>
     </div>
 
-    <div class="thesis-card" onclick="revThesis(this,'pass',\x27PASS — Equally valid but takes the opposite position. This thesis argues for significant transformation, pointing to the expansion of rights-based discourse as the mechanism. It establishes a line of reasoning (a new global framework shifted the terms of political legitimacy) that differs from Card 3\x27s emphasis on incompleteness. Both are defensible.\x27)">
-      <div class="thesis-text">"Calls for reform after 1900 fundamentally transformed traditional social hierarchies by establishing rights-based discourse as the dominant global framework for political legitimacy, forcing governments from South Africa to India to justify — or dismantle — systems of formal discrimination."</div>
+    <div class="thesis-card" onclick="this.classList.toggle('flipped')">
+            <div class="thesis-inner">
+              <div class="thesis-front">
+                <div class="thesis-label">THESIS ATTEMPT D</div>
+                <div class="thesis-text">"Calls for reform after 1900 fundamentally transformed traditional social hierarchies by establishing rights-based discourse as the dominant global framework for political legitimacy, forcing governments from South Africa to India to justify — or dismantle — systems of formal discrimination."
+                <div class="thesis-hint">click to flip</div>
+              </div>
+              <div class="thesis-back pass">
+                <div class="thesis-verdict">PASS</div>
+                <div class="thesis-explanation">Equally valid but takes the opposite position. This thesis argues for significant transformation, pointing to the expansion of rights-based discourse as the mechanism. It establishes a line of reasoning (a new global framework shifted the terms of political legitimacy) that differs from Card 3's emphasis on incompleteness. Both are defensible.</div>
+              </div>
+            </div>
+          </div>
       <div class="click-hint">click to evaluate →</div>
     </div>
   </div>
