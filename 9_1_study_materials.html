@@ -215,6 +215,7 @@
     border: 1px solid var(--border-mid);
     border-radius: 6px;
     padding: 16px;
+    width: 100%;
   }
   .sword-diagram-title {
     text-align: center;
@@ -227,7 +228,7 @@
   }
   .sword-row {
     display: grid;
-    grid-template-columns: 1fr 48px 1fr;
+    grid-template-columns: 1fr 140px 1fr;
     align-items: center;
     gap: 8px;
     margin-bottom: 10px;
@@ -252,9 +253,11 @@
   .sword-label {
     text-align: center;
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.65rem;
+    font-size: 0.78rem;
     color: var(--text-muted);
-    line-height: 1.2;
+    line-height: 1.3;
+    padding: 0 8px;
+    word-break: keep-all;
   }
 
   /* ===== FLIP CARDS ===== */
@@ -263,31 +266,34 @@
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 12px;
     margin-top: 8px;
+    align-items: stretch;
   }
   .flip-card {
-    height: 130px;
-    perspective: 800px;
+    min-height: 200px;
+    perspective: 1000px;
     cursor: pointer;
   }
   .flip-inner {
     position: relative;
     width: 100%; height: 100%;
     transform-style: preserve-3d;
-    transition: transform 0.45s ease;
+    transition: transform 0.5s ease;
   }
   .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
   .flip-front, .flip-back {
-    position: absolute; inset: 0;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     border-radius: 6px;
-    padding: 12px;
+    padding: 14px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: absolute;
-    min-height: 120px;
   }
   .flip-front {
     background: var(--bg-elevated);
@@ -303,6 +309,7 @@
     font-size: 0.78rem;
     color: var(--text-secondary);
     line-height: 1.45;
+    overflow-y: auto;
   }
   .flip-hint {
     position: absolute;
@@ -919,31 +926,35 @@
 
     <div class="sword-diagram">
       <div class="sword-diagram-title">The Double-Edged Sword — Intended Wins vs. Unintended Costs</div>
-      <div class="sword-row">
-        <div class="sword-win">Powered modern civilization</div>
-        <div class="sword-label">Fossil<br>Fuels</div>
-        <div class="sword-cost">Pollution &amp; climate change</div>
-      </div>
-      <div class="sword-row">
-        <div class="sword-win">Fed billions on same land</div>
-        <div class="sword-label">Green<br>Revolution</div>
-        <div class="sword-cost">Lost biodiversity; hurt small farmers</div>
-      </div>
-      <div class="sword-row">
-        <div class="sword-win">Saved millions from infection</div>
-        <div class="sword-label">Antibiotics</div>
-        <div class="sword-cost">Created resistant superbugs</div>
-      </div>
-      <div class="sword-row">
-        <div class="sword-win">Connected humanity instantly</div>
-        <div class="sword-label">Internet</div>
-        <div class="sword-cost">Spread of misinformation</div>
-      </div>
-      <div class="sword-row">
-        <div class="sword-win">Cheaper, faster global trade</div>
-        <div class="sword-label">Shipping<br>Container</div>
-        <div class="sword-cost">Accelerated economic inequality</div>
-      </div>
+<div style="display:flex;align-items:center;gap:16px;margin-bottom:14px;">
+  <div style="flex:1;padding:14px;background:rgba(30,80,50,0.4);border:1px solid rgba(74,158,63,0.3);border-radius:6px;text-align:center;color:#7dcea0;font-weight:600;">Powered modern civilization</div>
+  <div style="flex:0 0 120px;text-align:center;font-size:0.78rem;line-height:1.4;color:#888;padding:0 8px;">Fossil Fuels</div>
+  <div style="flex:1;padding:14px;background:rgba(80,20,20,0.4);border:1px solid rgba(200,60,60,0.3);border-radius:6px;text-align:center;color:#e88;font-weight:600;">Pollution &amp; climate change</div>
+</div>
+
+<div style="display:flex;align-items:center;gap:16px;margin-bottom:14px;">
+  <div style="flex:1;padding:14px;background:rgba(30,80,50,0.4);border:1px solid rgba(74,158,63,0.3);border-radius:6px;text-align:center;color:#7dcea0;font-weight:600;">Fed billions on same land</div>
+  <div style="flex:0 0 120px;text-align:center;font-size:0.78rem;line-height:1.4;color:#888;padding:0 8px;">Green Revolution</div>
+  <div style="flex:1;padding:14px;background:rgba(80,20,20,0.4);border:1px solid rgba(200,60,60,0.3);border-radius:6px;text-align:center;color:#e88;font-weight:600;">Lost biodiversity; hurt small farmers</div>
+</div>
+
+<div style="display:flex;align-items:center;gap:16px;margin-bottom:14px;">
+  <div style="flex:1;padding:14px;background:rgba(30,80,50,0.4);border:1px solid rgba(74,158,63,0.3);border-radius:6px;text-align:center;color:#7dcea0;font-weight:600;">Saved millions from infection</div>
+  <div style="flex:0 0 120px;text-align:center;font-size:0.78rem;line-height:1.4;color:#888;padding:0 8px;">Antibiotics</div>
+  <div style="flex:1;padding:14px;background:rgba(80,20,20,0.4);border:1px solid rgba(200,60,60,0.3);border-radius:6px;text-align:center;color:#e88;font-weight:600;">Created resistant superbugs</div>
+</div>
+
+<div style="display:flex;align-items:center;gap:16px;margin-bottom:14px;">
+  <div style="flex:1;padding:14px;background:rgba(30,80,50,0.4);border:1px solid rgba(74,158,63,0.3);border-radius:6px;text-align:center;color:#7dcea0;font-weight:600;">Connected humanity instantly</div>
+  <div style="flex:0 0 120px;text-align:center;font-size:0.78rem;line-height:1.4;color:#888;padding:0 8px;">Internet</div>
+  <div style="flex:1;padding:14px;background:rgba(80,20,20,0.4);border:1px solid rgba(200,60,60,0.3);border-radius:6px;text-align:center;color:#e88;font-weight:600;">Spread of misinformation</div>
+</div>
+
+<div style="display:flex;align-items:center;gap:16px;margin-bottom:14px;">
+  <div style="flex:1;padding:14px;background:rgba(30,80,50,0.4);border:1px solid rgba(74,158,63,0.3);border-radius:6px;text-align:center;color:#7dcea0;font-weight:600;">Cheaper, faster global trade</div>
+  <div style="flex:0 0 120px;text-align:center;font-size:0.78rem;line-height:1.4;color:#888;padding:0 8px;">Shipping Container</div>
+  <div style="flex:1;padding:14px;background:rgba(80,20,20,0.4);border:1px solid rgba(200,60,60,0.3);border-radius:6px;text-align:center;color:#e88;font-weight:600;">Accelerated economic inequality</div>
+</div>
     </div>
   </div>
 
@@ -1208,6 +1219,46 @@
         </tbody>
       </table>
     </div>
+    <button class="reveal-btn" style="margin-top:14px;" onclick="toggleAnswerKey()">Reveal Answer Key</button>
+    <div id="answerKeyDiv" class="model-answer">
+      <div class="model-answer-label">Answer Key</div>
+      <table class="compare-table" style="margin-top:8px;">
+        <thead>
+          <tr>
+            <th>Technology</th>
+            <th>Intended Purpose</th>
+            <th>Unintended Consequence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Shipping Container</td>
+            <td>Standardize cargo transport to make loading/unloading dramatically faster and cheaper, enabling efficient global trade.</td>
+            <td>Accelerated economic inequality by making it easy for corporations to move manufacturing to low-wage countries, hollowing out industrial jobs in wealthier nations.</td>
+          </tr>
+          <tr>
+            <td>Penicillin / Antibiotics</td>
+            <td>Cure bacterial infections (tuberculosis, syphilis, pneumonia, wound infections) that had killed humans for millennia.</td>
+            <td>Overuse in humans and livestock created evolutionary pressure producing drug-resistant "superbugs" (e.g., MRSA), threatening to reverse decades of medical progress.</td>
+          </tr>
+          <tr>
+            <td>Fossil Fuel Energy</td>
+            <td>Power industrial economies, transportation, and electricity generation — enabling modern civilization to function at scale.</td>
+            <td>Greenhouse gas emissions driving climate change, air pollution causing respiratory illness, and geopolitical conflicts over oil-producing regions.</td>
+          </tr>
+          <tr>
+            <td>Vaccines</td>
+            <td>Prevent deadly infectious diseases (smallpox, polio, measles) through mass immunization campaigns, saving millions of lives annually.</td>
+            <td>Contributed to rapid population growth by dramatically reducing death rates, intensifying pressure on food, water, and energy resources.</td>
+          </tr>
+          <tr>
+            <td>Birth Control Pill</td>
+            <td>Give women reliable personal control over reproduction, enabling family planning and reducing unwanted pregnancies.</td>
+            <td>Triggered sweeping social changes — reshaping gender roles, family structures, and workforce dynamics — that generated cultural and religious backlash in many societies.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
 </section><!-- end DOK 2 -->
@@ -1358,8 +1409,9 @@
           Your Contextualization — Pathway 1:
         </p>
         <textarea rows="5" placeholder="Write your contextualization paragraph using the Pathway 1 stem above. Start before 1900 and connect to the technologies covered in this section..."></textarea>
-        <div class="sample-label">Model Contextualization — Pathway 1</div>
-        <div class="sample-body">
+        <button class="reveal-btn" onclick="toggleModel(this)">Show Model Contextualization</button>
+        <div class="model-answer">
+          <div class="model-answer-label">Model Contextualization — Pathway 1</div>
           The technological advances that transformed life after 1900 were made possible by the scientific and economic infrastructure built during the Industrial Revolution of the eighteenth and nineteenth centuries. Industrialization shifted economies from agricultural subsistence to mechanized manufacturing, concentrating capital, labor, and knowledge in ways that funded the universities, laboratories, and factories needed to produce penicillin, synthetic fertilizers, and mass-produced goods. The fossil fuel economy that powered industrial factories also provided the energy foundation on which 20th-century global transportation and communications networks were built. Furthermore, industrial capitalism created a global trading system — including shipping routes and financial instruments — that the shipping container and later the internet would further accelerate. In this way, the double-edged technologies of the 20th century were the direct offspring of the double-edged industrial revolution that preceded them.
         </div>
       </div>
@@ -1380,8 +1432,9 @@
           Your Contextualization — Pathway 2:
         </p>
         <textarea rows="5" placeholder="Write your contextualization paragraph using the Pathway 2 stem above. Focus on how war and geopolitical competition drove technological investment..."></textarea>
-        <div class="sample-label">Model Contextualization — Pathway 2</div>
-        <div class="sample-body">
+        <button class="reveal-btn" onclick="toggleModel(this)">Show Model Contextualization</button>
+        <div class="model-answer">
+          <div class="model-answer-label">Model Contextualization — Pathway 2</div>
           World War II served as a massive accelerant for the technological advances that would define life after 1945. The desperate need to prevent soldiers from dying of infected wounds led the Allied governments to fund the mass production of penicillin — a drug that had been discovered in 1928 but barely developed. Similarly, the nuclear weapons programs of the Manhattan Project, though designed for destruction, laid the foundation for nuclear energy and radiation medicine. After the war, Cold War competition between the United States and the Soviet Union drove enormous government investment in science and engineering, including the creation of ARPANET — the military communications network that eventually became the public internet. The global conflict and superpower rivalry of the 20th century thus paradoxically accelerated both the most destructive and the most beneficial technological changes in human history, illustrating how war and geopolitical pressure have consistently shaped the pace and direction of innovation.
         </div>
       </div>
@@ -1402,8 +1455,9 @@
           Your Contextualization — Pathway 3:
         </p>
         <textarea rows="5" placeholder="Write your contextualization paragraph using the Pathway 3 stem above. Consider both how population growth drove technology AND how technology drove population growth..."></textarea>
-        <div class="sample-label">Model Contextualization — Pathway 3</div>
-        <div class="sample-body">
+        <button class="reveal-btn" onclick="toggleModel(this)">Show Model Contextualization</button>
+        <div class="model-answer">
+          <div class="model-answer-label">Model Contextualization — Pathway 3</div>
           The explosive growth of the global population over the 20th century created urgent demand for the very technologies covered in this section, while simultaneously being shaped by them. In 1900, the world held approximately 1.6 billion people; by 2000, that number exceeded six billion — a change driven in part by the medical advances (vaccines, antibiotics) and agricultural breakthroughs (Green Revolution) that dramatically reduced death rates. This created a paradox: the technologies that saved lives contributed to a population growth that then demanded even more technological solutions for food and energy. Norman Borlaug himself acknowledged this cycle when he called the Green Revolution a "temporary success, a breathing space" — recognizing that without addressing population dynamics alongside agricultural production, hunger would eventually return. The birth control pill introduced yet another dimension, allowing individuals — especially women — to manage reproduction and thus participate in reshaping the demographic pressures that had driven so much of the century's technological development.
         </div>
       </div>
@@ -1425,6 +1479,11 @@
       <div class="saq-part-prompt"><strong>Identify</strong> one specific claim Borlaug makes in the passage about the limitations of the Green Revolution.</div>
       <div class="saq-ap-skill">AP Verb: Identify · 1–2 sentences · No explanation needed, just name the claim</div>
       <textarea placeholder="Part A response (1–2 sentences)..."></textarea>
+      <button class="reveal-btn" onclick="revealModel(this,'saq-a-model')">Reveal Model Response</button>
+      <div id="saq-a-model" class="model-answer">
+        <div class="model-answer-label">Model Response — Part A</div>
+        Borlaug claims that the Green Revolution is only a "temporary success" — a "breathing space" rather than a permanent solution to hunger. He argues that unless population growth is also addressed, the agricultural gains will be "ephemeral only."
+      </div>
     </div>
 
     <div class="saq-part">
@@ -1432,6 +1491,11 @@
       <div class="saq-part-prompt"><strong>Describe</strong> one specific historical development from the period after 1900 that provides evidence supporting Borlaug's concern about human reproduction and food supply.</div>
       <div class="saq-ap-skill">AP Verb: Describe · 2–3 sentences · Provide relevant characteristics, not just a term</div>
       <textarea placeholder="Part B response (2–3 sentences). Name a specific development and describe its relevant characteristics..."></textarea>
+      <button class="reveal-btn" onclick="revealModel(this,'saq-b-model')">Reveal Model Response</button>
+      <div id="saq-b-model" class="model-answer">
+        <div class="model-answer-label">Model Response — Part B</div>
+        One development supporting Borlaug's concern is the rapid population growth in sub-Saharan Africa during the late 20th century. While death rates fell due to vaccines and antibiotics, birth rates remained high, and the Green Revolution's hybrid seeds and fertilizers were less widely adopted in Africa than in Asia. As a result, food production did not keep pace with population growth in many African nations, leading to recurring famines and food insecurity — exactly the scenario Borlaug warned about.
+      </div>
     </div>
 
     <div class="saq-part">
@@ -1439,6 +1503,11 @@
       <div class="saq-part-prompt"><strong>Explain</strong> how one technology other than agricultural advances both addressed and complicated the challenge of sustaining a rapidly growing global population after 1900.</div>
       <div class="saq-ap-skill">AP Verb: Explain · 3–4 sentences · Must show HOW/WHY — connect cause to effect, show the complication</div>
       <textarea placeholder="Part C response (3–4 sentences). Choose ONE technology (e.g., medicine, energy, birth control) and explain both how it helped AND how it created complications for the same challenge..."></textarea>
+      <button class="reveal-btn" onclick="revealModel(this,'saq-c-model')">Reveal Model Response</button>
+      <div id="saq-c-model" class="model-answer">
+        <div class="model-answer-label">Model Response — Part C</div>
+        Medical advances such as vaccines and antibiotics both addressed and complicated the challenge of sustaining a growing population. Vaccines eradicated smallpox and made polio and measles rare, while antibiotics cured bacterial infections that had killed millions — together saving countless lives and dramatically extending life expectancy. However, by sharply reducing death rates without a corresponding decline in birth rates, these medical technologies contributed directly to the explosive population growth that Borlaug feared. As a result, the same technologies that saved lives intensified the demand for food, energy, and resources, creating a cycle in which each medical success amplified the very pressures it had originally relieved.
+      </div>
     </div>
   </div>
 
@@ -1471,6 +1540,11 @@
       Choose <strong>one</strong> of the connections above. In 4–6 sentences, explain how it deepens your understanding of technological change after 1900. Use specific evidence from both units.
     </p>
     <textarea style="min-height:120px;" placeholder="Choose one connection and develop it with specific evidence from both the earlier unit and Section 9.1..."></textarea>
+    <button class="reveal-btn" onclick="revealModel(this,'synth-exemplar')">Reveal Exemplar Response</button>
+    <div id="synth-exemplar" class="model-answer">
+      <div class="model-answer-label">Exemplar Response — Unit 7 Connection</div>
+      The connection between Unit 7 (Global Conflict) and Section 9.1 reveals how the destruction of total war paradoxically accelerated technologies that improved human welfare. During World War II, the Allied need to treat battlefield infections drove governments to fund the mass production of penicillin — a drug that had languished in the lab since Fleming's 1928 discovery. The war also produced the Manhattan Project, which created nuclear weapons but simultaneously laid the groundwork for nuclear energy and radiation-based medical treatments. After the war, Cold War competition between the U.S. and U.S.S.R. drove enormous government investment in science and engineering, leading to ARPANET — the military communications network that eventually became the public internet. This pattern shows that the most beneficial civilian technologies of the 20th century were often born from the most destructive military contexts, reinforcing the double-edged sword framework: the same geopolitical violence that killed millions also funded the innovations that saved millions more.
+    </div>
   </div>
 
   <!-- SELF-ASSESSMENT -->
@@ -1654,6 +1728,24 @@ function revealModel(btn, id) {
   el.classList.add('show');
   btn.disabled = true;
   btn.textContent = 'Model Shown';
+}
+
+/* ---- TOGGLE MODEL (for contextualization) ---- */
+function toggleModel(btn) {
+  const el = btn.nextElementSibling;
+  if (el.classList.contains('show')) {
+    el.classList.remove('show');
+    btn.textContent = 'Show Model Contextualization';
+  } else {
+    el.classList.add('show');
+    btn.textContent = 'Hide Model Contextualization';
+  }
+}
+
+/* ---- ANSWER KEY TOGGLE ---- */
+function toggleAnswerKey() {
+  const el = document.getElementById('answerKeyDiv');
+  el.classList.toggle('show');
 }
 
 /* ---- CAUSAL CHAIN ---- */
